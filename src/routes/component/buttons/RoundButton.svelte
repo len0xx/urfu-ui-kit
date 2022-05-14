@@ -1,0 +1,77 @@
+<script lang="ts">
+    import { onMount } from 'svelte'
+    import Code from '$lib/components/Code.svelte'
+    import RoundButton from '$lib/components/RoundButton.svelte'
+    import Heading from '$lib/components/Heading.svelte'
+    import Preloader from '$lib/components/Preloader.svelte'
+    import ParameterType from '$lib/components/ParameterType.svelte'
+
+    import RoundButtonExample from '$lib/../codes/RoundButtonExample'
+
+    let loaded = false
+    let showPreloader = true
+    const pageLoaded = () => {
+        loaded = true
+        setTimeout(() => showPreloader = false, 250)
+    }
+    onMount(pageLoaded)
+</script>
+
+<svelte:head>
+    <title>УрФУ UI Kit – RoundButton</title>
+</svelte:head>
+
+{ #if showPreloader }
+    <Preloader bind:invisible={ loaded } />
+{ /if }
+
+<div class="content">
+    <main>
+        <!-- svelte-ignore a11y-invalid-attribute -->
+        <Heading size={1}>RoundButton <a href="#" class="page-link">🔗</a></Heading>
+        <p class="medium">
+            Круглые кнопки с иконкой внутри
+        </p>
+        <br />
+        <RoundButton variant="plus" size="L" />
+        <RoundButton variant="left" size="L" />
+        <RoundButton variant="right" size="L" />
+    
+        <RoundButton variant="plus" size="M" />
+        <RoundButton variant="left" size="M" />
+        <RoundButton variant="right" size="M" />
+    
+        <RoundButton variant="plus" size="S" />
+        <RoundButton variant="left" size="S" />
+        <RoundButton variant="right" size="S" />
+        <br />
+        <br />
+    
+        <Heading size={3}>Пример использования:</Heading>
+        <Code val={RoundButtonExample} />
+        <br />
+    
+        <Heading size={3}>Параметры:</Heading>
+        <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
+        <p>
+            Иконка, отображаемая внутри кнопки. Поддерживаются три стандартных значения: <code>left</code>, <code>right</code> и <code>plus</code>. <br />
+            Значение по умолчанию: <code>plus</code>
+        </p>
+        <Heading size={4} className="blue-text">size <ParameterType value="enum" /></Heading>
+        <p>
+            Аналог стандартного атрибута action. Поддерживаются три стандартных значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
+            Значение по умолчанию: <code>M</code>
+        </p>
+        <Heading size={4} className="blue-text">animate <ParameterType value="boolean" /></Heading>
+        <p>
+            Анимация кнопки при нажатии <br />
+            Значение по умолчанию: <code>true</code>
+        </p>
+        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <p>Аналог стандартного атрибута class</p>
+        <br />
+    
+        <Heading size={3}>Поддерживаемые события:</Heading>
+        <Heading size={4} className="blue-text">on:click</Heading>
+    </main>
+</div>

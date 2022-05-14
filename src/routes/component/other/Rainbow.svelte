@@ -1,0 +1,62 @@
+<script lang="ts">
+    import { onMount } from 'svelte'
+    import Code from '$lib/components/Code.svelte'
+    import Heading from '$lib/components/Heading.svelte'
+    import Rainbow from '$lib/components/Rainbow.svelte'
+    import Preloader from '$lib/components/Preloader.svelte'
+    import ParameterType from '$lib/components/ParameterType.svelte'
+
+    import RainbowExample from '$lib/../codes/RainbowExample'
+
+    let loaded = false
+    let showPreloader = true
+    const pageLoaded = () => {
+        loaded = true
+        setTimeout(() => showPreloader = false, 250)
+    }
+    onMount(pageLoaded)
+</script>
+
+<svelte:head>
+    <title>УрФУ UI Kit – Rainbow</title>
+</svelte:head>
+
+{ #if showPreloader }
+    <Preloader bind:invisible={ loaded } />
+{ /if }
+
+<div class="content">
+    <main>
+        <!-- svelte-ignore a11y-invalid-attribute -->
+        <Heading size={1}>Rainbow <a href="#" class="page-link">🔗</a></Heading>
+        <p class="medium">
+            Декоративный компонент, с градиентным задним фоном
+        </p>
+        <br />
+        <Rainbow size="S" />
+        <br />
+        <Rainbow size="M" />
+        <br />
+        <Rainbow size="L" />
+        <br />
+        <br />
+    
+        <Heading size={3}>Пример использования:</Heading>
+        <Code val={RainbowExample} />
+        <br />
+    
+        <Heading size={3}>Параметры:</Heading>
+        <Heading size={4} className="blue-text">size <ParameterType value="enum" /></Heading>
+        <p>Размер компонента. Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
+            Значение по умолчанию: <code>M</code></p>
+        <Heading size={4} className="blue-text">fixed <ParameterType value="enum" /></Heading>
+        <p>Опциональный атрибут для привязки компонента к верхнему или нижнему краю родительского элемента. Поддерживаются два значения: <code>top</code> и <code>bottom</code>. <br />
+            Значение по умолчанию: <code>null</code></p>
+        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <p>Аналог стандартного атрибута class</p>
+        <br />
+    
+        <Heading size={3}>Поддерживаемые события:</Heading>
+        <Heading size={4} className="blue-text">on:click</Heading>
+    </main>
+</div>
