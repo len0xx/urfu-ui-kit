@@ -54,12 +54,14 @@
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
         <p>
-            Иконка, отображаемая внутри кнопки. Поддерживаются три стандартных значения: <code>left</code>, <code>right</code> и <code>plus</code>. <br />
+            Иконка, отображаемая внутри кнопки.  <br />
+            Поддерживаются три стандартных значения: <code>left</code>, <code>right</code> и <code>plus</code>. <br />
             Значение по умолчанию: <code>plus</code>
         </p>
         <Heading size={4} className="blue-text">size <ParameterType value="enum" /></Heading>
         <p>
-            Аналог стандартного атрибута action. Поддерживаются три стандартных значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
+            Аналог стандартного атрибута action.  <br />
+            Поддерживаются три стандартных значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
             Значение по умолчанию: <code>M</code>
         </p>
         <Heading size={4} className="blue-text">animate <ParameterType value="boolean" /></Heading>
@@ -73,5 +75,10 @@
     
         <Heading size={3}>Поддерживаемые события:</Heading>
         <Heading size={4} className="blue-text">on:click</Heading>
+        <Heading size={4} className="blue-text">on:focus</Heading>
+        <Heading size={4} className="blue-text">on:mouseover</Heading>
+        <Heading size={4} className="blue-text">on:mouseleave</Heading>
+        <Heading size={4} className="blue-text">on:mouseup</Heading>
+        <Heading size={4} className="blue-text">on:mousedown</Heading>
     </main>
 </div>
