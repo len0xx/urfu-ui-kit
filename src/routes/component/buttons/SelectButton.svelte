@@ -55,13 +55,21 @@
         
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
-        <p>Вариант отображения кнопки. Поддерживаются три значения: <code>default</code>, <code>active</code> и <code>blue</code>. <br />
-            Значение по умолчанию: <code>default</code></p>
+        <p>
+            Вариант отображения кнопки.  <br />
+            Поддерживаются три значения: <code>default</code>, <code>active</code> и <code>blue</code>. <br />
+            Значение по умолчанию: <code>default</code>
+        </p>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
         <p>Аналог стандартного атрибута class</p>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>
         <Heading size={4} className="blue-text">on:click</Heading>
+        <Heading size={4} className="blue-text">on:focus</Heading>
+        <Heading size={4} className="blue-text">on:mouseover</Heading>
+        <Heading size={4} className="blue-text">on:mouseleave</Heading>
+        <Heading size={4} className="blue-text">on:mouseup</Heading>
+        <Heading size={4} className="blue-text">on:mousedown</Heading>
     </main>
 </div>

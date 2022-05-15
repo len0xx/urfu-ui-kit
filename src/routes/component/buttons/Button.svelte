@@ -65,14 +65,22 @@
         
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
-        <p>Вариант отображения кнопки. Поддерживаются два значения: <code>primary</code> и <code>blue</code>.<br />
-            Значение по умолчанию: <code>primary</code></p>
+        <p>
+            Вариант отображения кнопки.  <br />
+            Поддерживаются два значения: <code>primary</code> и <code>blue</code>.<br />
+            Значение по умолчанию: <code>primary</code>
+        </p>
         <Heading size={4} className="blue-text">size <ParameterType value="enum" /></Heading>
-        <p>Размер кнопки. Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
-            Значение по умолчанию: <code>M</code></p>
+        <p>
+            Размер кнопки.  <br />
+            Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
+            Значение по умолчанию: <code>M</code>
+        </p>
         <Heading size={4} className="blue-text">type <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута type. <br />
-            Значение по умолчанию: <code>submit</code></p>
+        <p>
+            Аналог стандартного атрибута type. <br />
+            Значение по умолчанию: <code>submit</code>
+        </p>
         <Heading size={4} className="blue-text">href <ParameterType value="string" /></Heading>
         <p>Используется для добавления кнопке функционала ссылки (переход по страницам по нажатию)</p>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
@@ -81,5 +89,10 @@
         
         <Heading size={3}>Поддерживаемые события:</Heading>
         <Heading size={4} className="blue-text">on:click</Heading>
+        <Heading size={4} className="blue-text">on:focus</Heading>
+        <Heading size={4} className="blue-text">on:mouseover</Heading>
+        <Heading size={4} className="blue-text">on:mouseleave</Heading>
+        <Heading size={4} className="blue-text">on:mouseup</Heading>
+        <Heading size={4} className="blue-text">on:mousedown</Heading>
     </main>
 </div>

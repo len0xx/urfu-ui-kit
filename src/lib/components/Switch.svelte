@@ -18,7 +18,7 @@
     const toggleState = () => setState(!state)
 </script>
 
-<div class="kit-switch {className}">
+<div class="kit-switch {className}" on:focus on:mouseover on:mouseleave on:mouseup on:mousedown>
     { #if left }
         <span class="heading-3" class:blue-text={!state} class:grey-text={state} on:click={() => setState(false)}>{ left }</span>
     { /if }

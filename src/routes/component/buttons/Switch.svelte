@@ -61,5 +61,10 @@
         <Heading size={3}>Поддерживаемые события:</Heading>
         <Heading size={4} className="blue-text">on:change</Heading>
         <p>Передаваемый параметр: <code>&lbrace; state: boolean &rbrace;</code></p>
+        <Heading size={4} className="blue-text">on:focus</Heading>
+        <Heading size={4} className="blue-text">on:mouseover</Heading>
+        <Heading size={4} className="blue-text">on:mouseleave</Heading>
+        <Heading size={4} className="blue-text">on:mouseup</Heading>
+        <Heading size={4} className="blue-text">on:mousedown</Heading>
     </main>
 </div>

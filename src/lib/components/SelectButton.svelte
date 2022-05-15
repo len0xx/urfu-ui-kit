@@ -3,7 +3,15 @@
     export let className = ''
 </script>
 
-<div class="kit-select-button variant-{variant} {className}" on:click>
+<div
+    class="kit-select-button variant-{variant} {className}"
+    on:click
+    on:focus
+    on:mouseover
+    on:mouseleave
+    on:mouseup
+    on:mousedown
+>
     <slot></slot>
 </div>
 
