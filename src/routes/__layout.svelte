@@ -72,6 +72,7 @@
 
     .main-block {
         padding-bottom: 7em;
+	    max-width: calc(100vw - var(--sidebar-width));
     }
 
     footer {
