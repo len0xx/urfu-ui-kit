@@ -1,13 +1,17 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Code from '$lib/components/Code.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import Profile from '$lib/components/Profile.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
     import ParameterType from '$lib/components/ParameterType.svelte'
+    import RoundButton from '$lib/components/RoundButton.svelte'
+    import Preloader from '$lib/components/Preloader.svelte'
+    import Heading from '$lib/components/Heading.svelte'
+    import Warning from '$lib/components/Warning.svelte'
+    import Slider from '$lib/components/Slider.svelte'
+    import Slide from '$lib/components/Slide.svelte'
+    import Link from '$lib/components/Link.svelte'
+    import Text from '$lib/components/Text.svelte'
+    import Code from '$lib/components/Code.svelte'
 
-    import ProfileExample from '$lib/../codes/ProfileExample'
-    import Grid from '$lib/components/Grid.svelte'
+    import SliderExample from '$lib/../codes/SliderExample'
 
     let loaded = false
     let showPreloader = true
@@ -29,55 +33,95 @@
 <div class="content">
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
-        <Heading size={1}>Slider <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
-            Компонент для отображения информации про пользователей
-        </p>
+        <Heading size={ 1 }>Slider <a href="#" class="page-link">🔗</a></Heading>
+        <Text className="medium">
+            Слайдер новостей, разделённый на две половины – текстовая часть слева и изображение справа
+        </Text>
+        <Warning>
+            Внимание: На данный момент из-за сторонних зависимостей данный компонент не поддерживает работу при запуске приложения через <code>npx svelte-kit dev</code> или <code>npm run dev</code> <br /><br />
+            Чтобы запустить приложение в режиме разработки, <br />
+            необходимо использовать команду <code>npx svelte-kit build && npx svelte-kit preview</code>
+        </Warning>
         <br />
-        <Grid m={2} l={3} alignItems="start">
-            <Profile variant="white">
-                <svelte:fragment slot="name">Петров Пётр Петрович</svelte:fragment>
-                <svelte:fragment slot="description">Исполняющий обязанности замещающего заместителя</svelte:fragment>
-                <svelte:fragment slot="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates officiis optio ea, voluptatem eum possimus odio fuga corrupti</svelte:fragment>
-            </Profile>
-            <Profile variant="white">
-                <svelte:fragment slot="name">Иванов Иван Иванович</svelte:fragment>
-                <svelte:fragment slot="description">Заместитель главного заместителя</svelte:fragment>
-                <svelte:fragment slot="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates officiis optio ea, voluptatem eum possimus odio fuga corrupti repudiandae ad pariatur reprehenderit iste, voluptate facilis, ratione deserunt? Dolor, praesentium rem!</svelte:fragment>
-            </Profile>
-            <Profile variant="white">
-                <svelte:fragment slot="name">Николаев Николай Николаевич</svelte:fragment>
-                <svelte:fragment slot="description">Директор директоров</svelte:fragment>
-                <svelte:fragment slot="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates officiis optio ea, voluptatem eum possimus odio fuga corrupti repudiandae ad pariatur reprehenderit iste, voluptate facilis, ratione deserunt? Dolor, praesentium rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates officiis optio ea, voluptatem eum possimus odio fuga corrupti repudiandae ad pariatur reprehenderit iste, voluptate facilis, ratione deserunt? Dolor, praesentium rem!</svelte:fragment>
-            </Profile>
-        </Grid>
-        <br />
-        <br />
-    
+    </main>
+</div>
+
+<Slider let:showPrevPage let:showNextPage background="white">
+    <Slide img="/img/slide1-img.jpg">
+        <Heading size={ 2 } className="blue-text">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
+        <Text className="heading-3">Актуальная информация о поступлении в университет в 2022 году:</Text>
+        <Link href="/bachelor" borderWidth={ 2 }>Бакалавриат и специалитет</Link><br /><br />
+        <Link href="/master" borderWidth={ 2 }>Магистратура</Link><br />
+        <svelte:fragment slot="buttons">
+            <RoundButton size="M" variant="left" on:click={ showPrevPage } />
+            <RoundButton size="M" variant="right" on:click={ showNextPage } />
+        </svelte:fragment>
+    </Slide>
+    <Slide img="/img/slide2-img.jpg">
+        <Heading size={ 2 } className="blue-text">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
+        <Text className="heading-3">Актуальная информация о поступлении в университет в 2022 году:</Text>
+        <Link href="/bachelor" borderWidth={ 2 }>Бакалавриат и специалитет</Link><br /><br />
+        <Link href="/master" borderWidth={ 2 }>Магистратура</Link><br />
+        <svelte:fragment slot="buttons">
+            <RoundButton size="M" variant="left" on:click={ showPrevPage } />
+            <RoundButton size="M" variant="right" on:click={ showNextPage } />
+        </svelte:fragment>
+    </Slide>
+</Slider>
+<br />
+<br />
+
+<div class="content">
+    <main>
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={ProfileExample} />
+        <Code val={SliderExample} />
         <br />
     
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
-        <p>Цвет заднего фона. Поддерживаются два значения: <code>white</code> и <code>grey</code>. <br />
-            Значение по умолчанию: <code>grey</code></p>
-        <Heading size={4} className="blue-text">src <ParameterType value="string" /></Heading>
-        <p>Ссылка на изображение</p>
+        <Heading size={4} className="blue-text">background <ParameterType value="string" /></Heading>
+        <Text>
+            Настройка заднего фона. Принимаются любые значения, валидные для стандартного <code>background</code> в CSS<br />
+            Значение по умолчанию: <code>transparent</code>
+        </Text>
+        <Heading size={4} className="blue-text">autoplay <ParameterType value="boolean" /></Heading>
+        <Text>
+            Автоматическое листание <br />
+            Значение по умолчанию: <code>true</code>
+        </Text>
+        <Heading size={4} className="blue-text">duration <ParameterType value="number" /></Heading>
+        <Text>
+            Длительность одного слайда (в секундах) при включённом <code>autoplay</code> <br />
+            Значение по умолчанию: <code>7</code>
+        </Text>
+        <Heading size={4} className="blue-text">swiping <ParameterType value="boolean" /></Heading>
+        <Text>
+            Возможность листать слайды с помощью касаний (как на сенсорных экранах) <br />
+            Значение по умолчанию: <code>false</code>
+        </Text>
+        <Heading size={4} className="blue-text">arrows <ParameterType value="boolean" /></Heading>
+        <Text>
+            Отображать стандартные кнопки для перелистывания слайдов <br />
+            Значение по умолчанию: <code>false</code>
+        </Text>
+        <Heading size={4} className="blue-text">dots <ParameterType value="boolean" /></Heading>
+        <Text>
+            Отображать точки внизу компонента, отображающие количество слайдов и их состояние <br />
+            Значение по умолчанию: <code>false</code>
+        </Text>
+        <Heading size={4} className="blue-text">progressBar <ParameterType value="boolean" /></Heading>
+        <Text>
+            Отображать прогресс автоматического перелистывания (только при <code>autoplay = true</code>) <br />
+            Значение по умолчанию: <code>true</code>
+        </Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
-        <br />
-        
-        <Heading size={3}>Слоты:</Heading>
-        <Heading size={4} className="blue-text">name</Heading>
-        <p>Имя, отображаемое в заголовке</p>
-        <Heading size={4} className="blue-text">description</Heading>
-        <p>Подпись под именем</p>
-        <Heading size={4} className="blue-text">text</Heading>
-        <p>Основное содержание компонента. Текст, длиной до 400 символов отображется целиком. Длиннее – скрывается при монтировании компонента и раскрывается по нажатию на кнопку "Дальше"</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
     
         <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:click</Heading>
+        <Heading size={4} className="blue-text">on:pageChanged</Heading>
+        <Text>
+            Событие, которое срабатывает при каждой смене страницы <br />
+            Передаваемый в функцию аргумент: <code>page</code> - номер текущей страницы
+        </Text>
     </main>
 </div>

@@ -1,13 +1,17 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Code from '$lib/components/Code.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import Profile from '$lib/components/Profile.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
     import ParameterType from '$lib/components/ParameterType.svelte'
+    import RoundButton from '$lib/components/RoundButton.svelte'
+    import Preloader from '$lib/components/Preloader.svelte'
+    import Heading from '$lib/components/Heading.svelte'
+    import Warning from '$lib/components/Warning.svelte'
+    import Slider from '$lib/components/Slider.svelte'
+    import Slide from '$lib/components/Slide.svelte'
+    import Link from '$lib/components/Link.svelte'
+    import Text from '$lib/components/Text.svelte'
+    import Code from '$lib/components/Code.svelte'
 
-    import ProfileExample from '$lib/../codes/ProfileExample'
-    import Grid from '$lib/components/Grid.svelte'
+    import SliderExample from '$lib/../codes/SliderExample'
 
     let loaded = false
     let showPreloader = true
@@ -29,55 +33,48 @@
 <div class="content">
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
-        <Heading size={1}>Slide <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
-            Компонент для отображения информации про пользователей
-        </p>
+        <Heading size={ 1 }>Slide <a href="#" class="page-link">🔗</a></Heading>
+        <Text className="medium">
+            Отдельный слайд с текстовым блоком и изображением. <br />
+            Используется в компоненте <Link href="/component/display/Slider" borderWidth={ 2 }>Slider</Link>.
+        </Text>
         <br />
-        <Grid m={2} l={3} alignItems="start">
-            <Profile variant="white">
-                <svelte:fragment slot="name">Петров Пётр Петрович</svelte:fragment>
-                <svelte:fragment slot="description">Исполняющий обязанности замещающего заместителя</svelte:fragment>
-                <svelte:fragment slot="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates officiis optio ea, voluptatem eum possimus odio fuga corrupti</svelte:fragment>
-            </Profile>
-            <Profile variant="white">
-                <svelte:fragment slot="name">Иванов Иван Иванович</svelte:fragment>
-                <svelte:fragment slot="description">Заместитель главного заместителя</svelte:fragment>
-                <svelte:fragment slot="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates officiis optio ea, voluptatem eum possimus odio fuga corrupti repudiandae ad pariatur reprehenderit iste, voluptate facilis, ratione deserunt? Dolor, praesentium rem!</svelte:fragment>
-            </Profile>
-            <Profile variant="white">
-                <svelte:fragment slot="name">Николаев Николай Николаевич</svelte:fragment>
-                <svelte:fragment slot="description">Директор директоров</svelte:fragment>
-                <svelte:fragment slot="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates officiis optio ea, voluptatem eum possimus odio fuga corrupti repudiandae ad pariatur reprehenderit iste, voluptate facilis, ratione deserunt? Dolor, praesentium rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates officiis optio ea, voluptatem eum possimus odio fuga corrupti repudiandae ad pariatur reprehenderit iste, voluptate facilis, ratione deserunt? Dolor, praesentium rem!</svelte:fragment>
-            </Profile>
-        </Grid>
-        <br />
-        <br />
-    
+    </main>
+</div>
+
+<Slider let:showPrevPage let:showNextPage background="white">
+    <Slide img="/img/slide1-img.jpg">
+        <Heading size={ 2 } className="blue-text">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
+        <Text className="heading-3">Актуальная информация о поступлении в университет в 2022 году:</Text>
+        <Link href="/bachelor" borderWidth={ 2 }>Бакалавриат и специалитет</Link><br /><br />
+        <Link href="/master" borderWidth={ 2 }>Магистратура</Link><br />
+        <svelte:fragment slot="buttons">
+            <RoundButton size="M" variant="left" on:click={ showPrevPage } />
+            <RoundButton size="M" variant="right" on:click={ showNextPage } />
+        </svelte:fragment>
+    </Slide>
+    <Slide img="/img/slide2-img.jpg">
+        <Heading size={ 2 } className="blue-text">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
+        <Text className="heading-3">Актуальная информация о поступлении в университет в 2022 году:</Text>
+        <Link href="/bachelor" borderWidth={ 2 }>Бакалавриат и специалитет</Link><br /><br />
+        <Link href="/master" borderWidth={ 2 }>Магистратура</Link><br />
+        <svelte:fragment slot="buttons">
+            <RoundButton size="M" variant="left" on:click={ showPrevPage } />
+            <RoundButton size="M" variant="right" on:click={ showNextPage } />
+        </svelte:fragment>
+    </Slide>
+</Slider>
+<br />
+<br />
+
+<div class="content">
+    <main>
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={ProfileExample} />
+        <Code val={SliderExample} />
         <br />
     
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
-        <p>Цвет заднего фона. Поддерживаются два значения: <code>white</code> и <code>grey</code>. <br />
-            Значение по умолчанию: <code>grey</code></p>
-        <Heading size={4} className="blue-text">src <ParameterType value="string" /></Heading>
-        <p>Ссылка на изображение</p>
-        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
-        <br />
-        
-        <Heading size={3}>Слоты:</Heading>
-        <Heading size={4} className="blue-text">name</Heading>
-        <p>Имя, отображаемое в заголовке</p>
-        <Heading size={4} className="blue-text">description</Heading>
-        <p>Подпись под именем</p>
-        <Heading size={4} className="blue-text">text</Heading>
-        <p>Основное содержание компонента. Текст, длиной до 400 символов отображется целиком. Длиннее – скрывается при монтировании компонента и раскрывается по нажатию на кнопку "Дальше"</p>
-        <br />
-    
-        <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:click</Heading>
+        <Heading size={4} className="blue-text">img <ParameterType value="string" /></Heading>
+        <Text>Ссылка на изображение в правой части</Text>
     </main>
 </div>
