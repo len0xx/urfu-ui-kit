@@ -1,5 +1,19 @@
 <script lang="ts">
     export let className = ''
+    export let marginX = 0
+    export let marginY = 1
+    export let marginTop: number = null
+    export let marginBottom: number = null
+    export let marginLeft: number = null
+    export let marginRight: number = null
 </script>
 
-<p class={ className }><slot /></p>
+<p
+    class={ className }
+    style:margin-top={ (marginTop !== null ? marginTop : marginY) + 'em' }
+    style:margin-bottom={ (marginBottom !== null ? marginBottom : marginY) + 'em' }
+    style:margin-left={ (marginLeft !== null ? marginLeft : marginX) + 'em' }
+    style:margin-right={ (marginRight !== null ? marginRight : marginX) + 'em' }
+>
+    <slot />
+</p>
