@@ -1,4 +1,7 @@
 <script lang="ts">
+    import Heading from './Heading.svelte'
+    import Text from './Text.svelte'
+
     export let active = false
     export let className = ''
 </script>
@@ -6,8 +9,8 @@
 <div class="kit-expandable {className}" class:active={active} on:click>
     <div class="block-content">
         <div>
-            <slot name="header"></slot>
-            <slot name="text"></slot>
+            <Heading size={ 3 } className="blue-text"><slot name="header"></slot></Heading>
+            <Text marginY={ 0 }><slot name="text"></slot></Text>
         </div>
         <div class="icon">
             { #if active }

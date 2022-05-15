@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Code from '$lib/components/Code.svelte'
+    import Text from '$lib/components/Text.svelte'
     import Expandable from '$lib/components/Expandable.svelte'
     import Heading from '$lib/components/Heading.svelte'
     import Grid from '$lib/components/Grid.svelte'
@@ -36,20 +37,20 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Expandable <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Компонент с раскрывающимся контентом
-        </p>
+        </Text>
         <br />
         <Grid m={2} ratio="1:2" gap={2}>
             <Heading size={2} marginTop={0}>FAQ</Heading>
             <div>
                 <Expandable bind:active={ expand[0] } on:click={ () => toggleExpandable(0) }>
-                    <Heading size={3} className="blue-text" slot="header">Нажми на меня</Heading>
-                    <p slot="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, in dolore itaque nemo rerum quos numquam nostrum. Dignissimos nihil, eius quibusdam harum, voluptate sed nam, rerum earum aperiam eaque dolorum.</p>
+                    <svelte:fragment slot="header">Нажми на меня</svelte:fragment>
+                    <svelte:fragment slot="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, in dolore itaque nemo rerum quos numquam nostrum. Dignissimos nihil, eius quibusdam harum, voluptate sed nam, rerum earum aperiam eaque dolorum.</svelte:fragment>
                 </Expandable>
                 <Expandable bind:active={ expand[1] } on:click={ () => toggleExpandable(1) }>
-                    <Heading size={3} className="blue-text" slot="header">Нажми на меня</Heading>
-                    <p slot="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, in dolore itaque nemo rerum quos numquam nostrum. Dignissimos nihil, eius quibusdam harum, voluptate sed nam, rerum earum aperiam eaque dolorum.</p>
+                    <svelte:fragment slot="header">Нажми на меня</svelte:fragment>
+                    <svelte:fragment slot="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, in dolore itaque nemo rerum quos numquam nostrum. Dignissimos nihil, eius quibusdam harum, voluptate sed nam, rerum earum aperiam eaque dolorum.</svelte:fragment>
                 </Expandable>
             </div>
         </Grid>
@@ -62,17 +63,17 @@
         
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">active <ParameterType value="boolean" /></Heading>
-        <p><code>true</code> – блок раскрыт, <code>false</code> – закрыт. <br />
-            Значение по умолчанию: <code>false</code></p>
+        <Text><code>true</code> – блок раскрыт, <code>false</code> – закрыт. <br />
+            Значение по умолчанию: <code>false</code></Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
         
         <Heading size={3}>Слоты:</Heading>
         <Heading size={4} className="blue-text">header</Heading>
-        <p>Слот для заголовка (отображается всегда)</p>
+        <Text>Слот для заголовка (отображается всегда)</Text>
         <Heading size={4} className="blue-text">text</Heading>
-        <p>Слот для внутреннего текста (отображается только, когда <code>active = true</code>)</p>
+        <Text>Слот для внутреннего текста (отображается только, когда <code>active = true</code>)</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>
