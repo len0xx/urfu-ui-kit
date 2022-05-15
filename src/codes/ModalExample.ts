@@ -7,7 +7,7 @@ export default `<script>
 
 <Modal bind:visible={ modalVisible } align="center">
 <Heading size={2} className="blue-text">Модальное окно</Heading>
-    <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <Text className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit...</Text>
     <br />
     <Button variant="blue" on:click={ hideModal }>Закрыть</Button>
     <Rainbow size="L" slot="footer" />
