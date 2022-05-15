@@ -1,12 +1,13 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Heading from './Heading.svelte'
+    import Text from './Text.svelte'
 
     export let img = ''
     export let variant: 'white' | 'grey' = 'grey'
     export let className = ''
 
-    let shadowText: HTMLParagraphElement
+    let shadowText: any
     let textExpanded = false
     let text: string
     let shortText: string
@@ -29,11 +30,11 @@
         <Heading size={4} className="kit-profile-title subtitle blue-text" marginY={0}>
             <slot name="name" />
         </Heading>
-        <p class="kit-profile-subheading no-margin">
+        <Text className="kit-profile-subheading" marginY={0}>
             <slot name="description" />
-        </p>
+        </Text>
     </div>
-    <p class="kit-profile-text no-margin">
+    <Text className="kit-profile-text" marginY={ 0 }>
         { #if length > 400 }
             { #if !textExpanded }
                 { shortText }... <span class="semi-bold inline-btn-s" on:click={() => textExpanded = true}>Дальше</span>
@@ -43,7 +44,7 @@
         { :else }
             { text }
         { /if }
-    </p>
+    </Text>
     <p class="hidden shadow-text" bind:this={ shadowText }><slot name="text" /></p>
 </div>
 
@@ -81,21 +82,21 @@
         border-radius: 50%;
     }
 
-    .kit-profile-title {
+    :global(.kit-profile-title) {
         margin-bottom: 0.3em;
     }
 
-    .kit-profile-subheading,
-    .kit-profile-text {
+    :global(.kit-profile-subheading),
+    :global(.kit-profile-text) {
         font-size: calc(var(--text-size) * 0.875);
         line-height: 1.4;
     }
 
-    .kit-profile-subheading {
+    :global(.kit-profile-subheading) {
         opacity: 0.6;
     }
 
-    .kit-profile-text {
+    :global(.kit-profile-text) {
         grid-column: 1/3;
     }
 </style>

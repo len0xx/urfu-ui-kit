@@ -1,10 +1,11 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Code from '$lib/components/Code.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import Button from '$lib/components/Button.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
     import Tag from '$lib/components/Tag.svelte'
+    import Code from '$lib/components/Code.svelte'
+    import Text from '$lib/components/Text.svelte'
+    import Button from '$lib/components/Button.svelte'
+    import Heading from '$lib/components/Heading.svelte'
+    import Preloader from '$lib/components/Preloader.svelte'
 
     import ButtonExample from '$lib/../codes/ButtonExample'
 
@@ -29,9 +30,9 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Другие компоненты <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Кнопки являются неотъемлимой частью современных веб-приложений
-        </p>
+        </Text>
         <br />
         <Button variant="primary">Открыть модальное окно</Button>
         <Button variant="blue" href="/">Вернуться на главную</Button>
@@ -41,12 +42,12 @@
         <Code val={ButtonExample} />
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">variant <Tag>string</Tag></Heading>
-        <p>Вариант отображения кнопки. Поддерживаются два стандартных значения: <code>primary</code> и <code>blue</code></p>
+        <Text>Вариант отображения кнопки. Поддерживаются два стандартных значения: <code>primary</code> и <code>blue</code></Text>
         <Heading size={4} className="blue-text">className <Tag>string</Tag></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <Heading size={4} className="blue-text">actionType <Tag>string</Tag></Heading>
-        <p>Аналог стандартного атрибута type</p>
+        <Text>Аналог стандартного атрибута type</Text>
         <Heading size={4} className="blue-text">href <Tag>string</Tag></Heading>
-        <p>Используется для добавления кнопке функционала ссылки (переход по страницам по нажатию)</p>
+        <Text>Используется для добавления кнопке функционала ссылки (переход по страницам по нажатию)</Text>
     </main>
 </div>

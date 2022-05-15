@@ -1,9 +1,10 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Code from '$lib/components/Code.svelte'
-    import RoundButton from '$lib/components/RoundButton.svelte'
+    import Text from '$lib/components/Text.svelte'
     import Heading from '$lib/components/Heading.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
+    import RoundButton from '$lib/components/RoundButton.svelte'
     import ParameterType from '$lib/components/ParameterType.svelte'
 
     import RoundButtonExample from '$lib/../codes/RoundButtonExample'
@@ -29,9 +30,9 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>RoundButton <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Круглые кнопки с иконкой внутри
-        </p>
+        </Text>
         <br />
         <RoundButton variant="plus" size="L" />
         <RoundButton variant="left" size="L" />
@@ -53,24 +54,24 @@
     
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
-        <p>
+        <Text>
             Иконка, отображаемая внутри кнопки.  <br />
             Поддерживаются три стандартных значения: <code>left</code>, <code>right</code> и <code>plus</code>. <br />
             Значение по умолчанию: <code>plus</code>
-        </p>
+        </Text>
         <Heading size={4} className="blue-text">size <ParameterType value="enum" /></Heading>
-        <p>
+        <Text>
             Аналог стандартного атрибута action.  <br />
             Поддерживаются три стандартных значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
             Значение по умолчанию: <code>M</code>
-        </p>
+        </Text>
         <Heading size={4} className="blue-text">animate <ParameterType value="boolean" /></Heading>
-        <p>
+        <Text>
             Анимация кнопки при нажатии <br />
             Значение по умолчанию: <code>true</code>
-        </p>
+        </Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
     
         <Heading size={3}>Поддерживаемые события:</Heading>

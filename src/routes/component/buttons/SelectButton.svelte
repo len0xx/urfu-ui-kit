@@ -1,9 +1,10 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Code from '$lib/components/Code.svelte'
-    import SelectButton from '$lib/components/SelectButton.svelte'
+    import Text from '$lib/components/Text.svelte'
     import Heading from '$lib/components/Heading.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
+    import SelectButton from '$lib/components/SelectButton.svelte'
     import ParameterType from '$lib/components/ParameterType.svelte'
 
     import SelectButtonExample from '$lib/../codes/SelectButtonExample'
@@ -32,9 +33,9 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>SelectButton <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Альтернативный вариант оформления кнопок
-        </p>
+        </Text>
         <br />
         
         <SelectButton variant={ selected == 0 ? 'active' : 'default' } on:click={() => selected = 0}>Первая кнопка</SelectButton>
@@ -55,13 +56,13 @@
         
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
-        <p>
+        <Text>
             Вариант отображения кнопки.  <br />
             Поддерживаются три значения: <code>default</code>, <code>active</code> и <code>blue</code>. <br />
             Значение по умолчанию: <code>default</code>
-        </p>
+        </Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>

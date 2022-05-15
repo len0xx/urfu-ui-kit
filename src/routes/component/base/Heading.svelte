@@ -1,12 +1,13 @@
 <script lang="ts">
     import { onMount } from 'svelte'
+    import Tag from '$lib/components/Tag.svelte'
     import Code from '$lib/components/Code.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
+    import Text from '$lib/components/Text.svelte'
     import Heading from '$lib/components/Heading.svelte'
+    import Preloader from '$lib/components/Preloader.svelte'
+    import ParameterType from '$lib/components/ParameterType.svelte'
 
     import HeadingExample from '$lib/../codes/HeadingExample'
-    import ParameterType from '$lib/components/ParameterType.svelte'
-import Tag from '$lib/components/Tag.svelte'
 
     let loaded = false
     let showPreloader = true
@@ -29,9 +30,9 @@ import Tag from '$lib/components/Tag.svelte'
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Heading <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Аналог стандратных тегов h1 - h6 в HTML
-        </p>
+        </Text>
         <br />
         <Heading size={1} marginTop={0}>Heading 1</Heading>
         <Heading size={2} marginTop={0}>Heading 2</Heading>
@@ -47,18 +48,18 @@ import Tag from '$lib/components/Tag.svelte'
     
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">size <ParameterType value="enum" /> <Tag title="Обязательное поле">required</Tag></Heading>
-        <p>Размер заголовка. Поддерживаются значения от <code>1</code> до <code>6</code></p>
+        <Text>Размер заголовка. Поддерживаются значения от <code>1</code> до <code>6</code></Text>
         <Heading size={4} className="blue-text">marginX <ParameterType value="number" /></Heading>
-        <p>Отступ по горизонтали. (Устанавливается в <code>em</code>)</p>
+        <Text>Отступ по горизонтали. (Устанавливается в <code>em</code>)</Text>
         <Heading size={4} className="blue-text">marginY <ParameterType value="number" /></Heading>
-        <p>Отступ по вертикали. (Устанавливается в <code>em</code>)</p>
+        <Text>Отступ по вертикали. (Устанавливается в <code>em</code>)</Text>
         <Heading size={4} className="blue-text">marginTop <ParameterType value="number" /></Heading>
-        <p>Отступ сверху. (Устанавливается в <code>em</code>)</p>
+        <Text>Отступ сверху. (Устанавливается в <code>em</code>)</Text>
         <Heading size={4} className="blue-text">marginBottom <ParameterType value="number" /></Heading>
-        <p>Отступ снизу. (Устанавливается в <code>em</code>)</p>
+        <Text>Отступ снизу. (Устанавливается в <code>em</code>)</Text>
         <Heading size={4} className="blue-text">marginLeft <ParameterType value="number" /></Heading>
-        <p>Отступ слева. (Устанавливается в <code>em</code>)</p>
+        <Text>Отступ слева. (Устанавливается в <code>em</code>)</Text>
         <Heading size={4} className="blue-text">marginRight <ParameterType value="number" /></Heading>
-        <p>Отступ справа. (Устанавливается в <code>em</code>)</p>
+        <Text>Отступ справа. (Устанавливается в <code>em</code>)</Text>
     </main>
 </div>

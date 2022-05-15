@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Code from '$lib/components/Code.svelte'
+    import Text from '$lib/components/Text.svelte'
     import Heading from '$lib/components/Heading.svelte'
     import Progress from '$lib/components/Progress.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
@@ -29,9 +30,9 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Progress <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Анимированная иконка, отображающая состояние загрузки
-        </p>
+        </Text>
         <br />
         <Progress size="S" />
         <Progress size="M" />
@@ -45,13 +46,13 @@
     
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">size <ParameterType value="enum" /></Heading>
-        <p>Размер загрузчика. Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
-            Значение по умолчанию: <code>M</code></p>
+        <Text>Размер загрузчика. Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
+            Значение по умолчанию: <code>M</code></Text>
         <Heading size={4} className="blue-text">speed <ParameterType value="enum" /></Heading>
-        <p>Скорость вращения иконки. Поддерживаются три значения: <code>1</code>, <code>2</code> и <code>3</code>. <br />
-            Значение по умолчанию: <code>2</code></p>
+        <Text>Скорость вращения иконки. Поддерживаются три значения: <code>1</code>, <code>2</code> и <code>3</code>. <br />
+            Значение по умолчанию: <code>2</code></Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
     
         <Heading size={3}>Поддерживаемые события:</Heading>

@@ -1,8 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Code from '$lib/components/Code.svelte'
-    import Button from '$lib/components/Button.svelte'
+    import Text from '$lib/components/Text.svelte'
     import Modal from '$lib/components/Modal.svelte'
+    import Button from '$lib/components/Button.svelte'
     import Heading from '$lib/components/Heading.svelte'
     import Rainbow from '$lib/components/Rainbow.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
@@ -34,7 +35,7 @@
 
 <Modal bind:visible={ modalVisible } align="center">
     <Heading size={2} className="blue-text">Модальное окно</Heading>
-    <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae numquam sint nobis labore quibusdam.</p>
+    <Text className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae numquam sint nobis labore quibusdam.</Text>
     <br />
     <Button variant="blue" on:click={ hideModal }>Закрыть</Button>
     <Rainbow size="L" slot="footer" />
@@ -44,9 +45,9 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Modal <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Модальное окно с полностью кастомизируемым контентом и кнопкой закрытия
-        </p>
+        </Text>
         <br />
         <Button variant="primary" on:click={ openModal }>Открыть модальное окно</Button>
         <br />
@@ -58,9 +59,9 @@
     
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">visible <ParameterType value="boolean" /></Heading>
-        <p><code>true</code> – модальное окно отображается, <code>false</code> – не отображается</p>
+        <Text><code>true</code> – модальное окно отображается, <code>false</code> – не отображается</Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
     
         <Heading size={3}>Поддерживаемые события:</Heading>

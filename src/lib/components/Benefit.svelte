@@ -8,8 +8,8 @@
 </script>
 
 <div class="kit-benefit {className}" on:click>
-    <Heading size={3} className="blue-text">{ num }</Heading>
-    <Divider width="100%" color="var(--blue)" height={ 8 } />
+    <Heading size={3} className="blue-text" marginY={ 0.25 }>{ num }</Heading>
+    <Divider width="100%" color="var(--blue)" height={ 8 } marginY={ 1 } />
     { caption }
 </div>
 

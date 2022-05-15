@@ -1,10 +1,11 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Code from '$lib/components/Code.svelte'
-    import Button from '$lib/components/Button.svelte'
-    import Heading from '$lib/components/Heading.svelte'
+    import Text from '$lib/components/Text.svelte'
     import Modal from '$lib/components/Modal.svelte'
+    import Button from '$lib/components/Button.svelte'
     import Rainbow from '$lib/components/Rainbow.svelte'
+    import Heading from '$lib/components/Heading.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
     import ParameterType from '$lib/components/ParameterType.svelte'
 
@@ -34,7 +35,7 @@
 
 <Modal bind:visible={ modalVisible } align="center">
     <Heading size={2} className="blue-text">Модальное окно</Heading>
-    <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae numquam sint nobis labore quibusdam.</p>
+    <Text className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae numquam sint nobis labore quibusdam.</Text>
     <br />
     <Button variant="blue" on:click={ hideModal }>Закрыть</Button>
     <Rainbow size="L" slot="footer" />
@@ -44,9 +45,9 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Button <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Кнопки являются неотъемлимой частью современных веб-приложений
-        </p>
+        </Text>
         <br />
         <Button variant="primary" size="S" on:click={ openModal }>Открыть модальное окно</Button>
         <Button variant="blue" size="S" href="/">Вернуться на главную</Button>
@@ -65,26 +66,26 @@
         
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
-        <p>
+        <Text>
             Вариант отображения кнопки.  <br />
             Поддерживаются два значения: <code>primary</code> и <code>blue</code>.<br />
             Значение по умолчанию: <code>primary</code>
-        </p>
+        </Text>
         <Heading size={4} className="blue-text">size <ParameterType value="enum" /></Heading>
-        <p>
+        <Text>
             Размер кнопки.  <br />
             Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
             Значение по умолчанию: <code>M</code>
-        </p>
+        </Text>
         <Heading size={4} className="blue-text">type <ParameterType value="string" /></Heading>
-        <p>
+        <Text>
             Аналог стандартного атрибута type. <br />
             Значение по умолчанию: <code>submit</code>
-        </p>
+        </Text>
         <Heading size={4} className="blue-text">href <ParameterType value="string" /></Heading>
-        <p>Используется для добавления кнопке функционала ссылки (переход по страницам по нажатию)</p>
+        <Text>Используется для добавления кнопке функционала ссылки (переход по страницам по нажатию)</Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>

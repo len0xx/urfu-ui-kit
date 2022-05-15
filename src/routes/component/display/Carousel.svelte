@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Code from '$lib/components/Code.svelte'
+    import Text from '$lib/components/Text.svelte'
     import Carousel from '$lib/components/Carousel.svelte'
     import Heading from '$lib/components/Heading.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
@@ -29,9 +30,9 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Carousel <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Карусель с бесконечной прокруткой, которая автоматические настраивается под размер экрана и ширину контента (но все потомки должны быть одинаковой ширины)
-        </p>
+        </Text>
         <br />
         <section>
             <Carousel margin={10}>
@@ -47,10 +48,10 @@
     
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">margin <ParameterType value="number" /></Heading>
-        <p>Отступ между потомками (в px). <br />
-            Значение по умолчанию: <code>10</code></p>
+        <Text>Отступ между потомками (в px). <br />
+            Значение по умолчанию: <code>10</code></Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
     </main>
 </div>
 

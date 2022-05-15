@@ -1,9 +1,10 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Code from '$lib/components/Code.svelte'
-    import Document from '$lib/components/Document.svelte'
-    import Heading from '$lib/components/Heading.svelte'
+    import Text from '$lib/components/Text.svelte'
     import Grid from '$lib/components/Grid.svelte'
+    import Heading from '$lib/components/Heading.svelte'
+    import Document from '$lib/components/Document.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
     import ParameterType from '$lib/components/ParameterType.svelte'
     import Tag from '$lib/components/Tag.svelte'
@@ -31,9 +32,9 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Document <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Компонент для удобного отображения списка документов
-        </p>
+        </Text>
         <br />
         <Grid m={2} ratio="1:2" gap={2}>
             <Heading size={2} marginTop={0}>Скачайте документацию по компонентам</Heading>
@@ -52,13 +53,13 @@
         
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">filename <ParameterType value="string" /> <Tag title="Обязательное поле">required</Tag></Heading>
-        <p>Название файла</p>
+        <Text>Название файла</Text>
         <Heading size={4} className="blue-text">link <ParameterType value="string" /> <Tag title="Обязательное поле">required</Tag></Heading>
-        <p>Ссылка для скачивания файла</p>
+        <Text>Ссылка для скачивания файла</Text>
         <Heading size={4} className="blue-text">extension <ParameterType value="string" /></Heading>
-        <p>Расширение файла</p>
+        <Text>Расширение файла</Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>

@@ -2,10 +2,10 @@
     import { onMount } from 'svelte'
     import Code from '$lib/components/Code.svelte'
     import Text from '$lib/components/Text.svelte'
-    import Expandable from '$lib/components/Expandable.svelte'
-    import Heading from '$lib/components/Heading.svelte'
     import Grid from '$lib/components/Grid.svelte'
+    import Heading from '$lib/components/Heading.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
+    import Expandable from '$lib/components/Expandable.svelte'
     import ParameterType from '$lib/components/ParameterType.svelte'
 
     import ExpandableExample from '$lib/../codes/ExpandableExample'
@@ -63,8 +63,10 @@
         
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">active <ParameterType value="boolean" /></Heading>
-        <Text><code>true</code> – блок раскрыт, <code>false</code> – закрыт. <br />
-            Значение по умолчанию: <code>false</code></Text>
+        <Text>
+            <code>true</code> – блок раскрыт, <code>false</code> – закрыт. <br />
+            Значение по умолчанию: <code>false</code>
+        </Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />

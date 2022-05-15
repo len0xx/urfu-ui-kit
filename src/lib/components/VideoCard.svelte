@@ -1,5 +1,6 @@
 <script lang="ts">
     import Heading from './Heading.svelte'
+    import Text from './Text.svelte'
     import playIcon from '../img/play-icon.svg'
 
     export let name = ''
@@ -12,9 +13,9 @@
 <div class="kit-video-card {className}" on:click>
     <div class="img" style="background-image: url({ src })"><img src={playIcon} alt="Play"></div>
     <Heading size={4} className="blue-text">{ name }</Heading>
-    <p class="position">{ @html position }</p>
+    <Text className="position">{ @html position }</Text>
     { #if description }
-        <p class="description">{ @html description }</p>
+        <Text className="description">{ @html description }</Text>
     { /if }
 </div>
 
@@ -36,7 +37,7 @@
         }
     }
 
-    .kit-video-card p.description {
+    :global(.kit-video-card p.description) {
         color: rgba(0, 0, 0, .6);
     }
 </style>

@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Code from '$lib/components/Code.svelte'
+    import Text from '$lib/components/Text.svelte'
     import Heading from '$lib/components/Heading.svelte'
     import VideoCard from '$lib/components/VideoCard.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
@@ -32,9 +33,9 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>VideoCard <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Кнопки являются неотъемлимой частью современных веб-приложений
-        </p>
+        </Text>
         <br />
         <Grid m={4}>
             { #each videos as video }
@@ -50,15 +51,15 @@
     
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">name <ParameterType value="string" /></Heading>
-        <p>Отображаемое имя</p>
+        <Text>Отображаемое имя</Text>
         <Heading size={4} className="blue-text">src <ParameterType value="string" /></Heading>
-        <p>Ссылка на видео</p>
+        <Text>Ссылка на видео</Text>
         <Heading size={4} className="blue-text">position <ParameterType value="string" /></Heading>
-        <p>Подпись первого порядка</p>
+        <Text>Подпись первого порядка</Text>
         <Heading size={4} className="blue-text">description <ParameterType value="string" /></Heading>
-        <p>Подпись второго порядка</p>
+        <Text>Подпись второго порядка</Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
     
         <Heading size={3}>Поддерживаемые события:</Heading>

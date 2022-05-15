@@ -1,15 +1,14 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import ParameterType from '$lib/components/ParameterType.svelte'
-    import RoundButton from '$lib/components/RoundButton.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import Warning from '$lib/components/Warning.svelte'
-    import Slider from '$lib/components/Slider.svelte'
-    import Slide from '$lib/components/Slide.svelte'
     import Link from '$lib/components/Link.svelte'
     import Text from '$lib/components/Text.svelte'
     import Code from '$lib/components/Code.svelte'
+    import Slide from '$lib/components/Slide.svelte'
+    import Slider from '$lib/components/Slider.svelte'
+    import Heading from '$lib/components/Heading.svelte'
+    import Preloader from '$lib/components/Preloader.svelte'
+    import RoundButton from '$lib/components/RoundButton.svelte'
+    import ParameterType from '$lib/components/ParameterType.svelte'
 
     import SliderExample from '$lib/../codes/SliderExample'
 

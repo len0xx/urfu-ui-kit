@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Code from '$lib/components/Code.svelte'
+    import Text from '$lib/components/Text.svelte'
     import Heading from '$lib/components/Heading.svelte'
     import Rainbow from '$lib/components/Rainbow.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
@@ -29,9 +30,9 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Rainbow <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Декоративный компонент, с градиентным задним фоном
-        </p>
+        </Text>
         <br />
         <Rainbow size="S" />
         <br />
@@ -47,13 +48,13 @@
     
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">size <ParameterType value="enum" /></Heading>
-        <p>Размер компонента. Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
-            Значение по умолчанию: <code>M</code></p>
+        <Text>Размер компонента. Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
+            Значение по умолчанию: <code>M</code></Text>
         <Heading size={4} className="blue-text">fixed <ParameterType value="enum" /></Heading>
-        <p>Опциональный атрибут для привязки компонента к верхнему или нижнему краю родительского элемента. Поддерживаются два значения: <code>top</code> и <code>bottom</code>. <br />
-            Значение по умолчанию: <code>null</code></p>
+        <Text>Опциональный атрибут для привязки компонента к верхнему или нижнему краю родительского элемента. Поддерживаются два значения: <code>top</code> и <code>bottom</code>. <br />
+            Значение по умолчанию: <code>null</code></Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
     
         <Heading size={3}>Поддерживаемые события:</Heading>

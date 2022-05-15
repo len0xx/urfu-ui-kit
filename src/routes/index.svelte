@@ -1,12 +1,13 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Grid from '$lib/components/Grid.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
-    import Card from '$lib/components/Card.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import RoundButton from '$lib/components/RoundButton.svelte'
     import Tag from '$lib/components/Tag.svelte'
+    import Text from '$lib/components/Text.svelte'
+    import Grid from '$lib/components/Grid.svelte'
+    import Card from '$lib/components/Card.svelte'
     import Warning from '$lib/components/Warning.svelte'
+    import Heading from '$lib/components/Heading.svelte'
+    import Preloader from '$lib/components/Preloader.svelte'
+    import RoundButton from '$lib/components/RoundButton.svelte'
     import components from '$lib/components'
 
     let expanded = false
@@ -30,9 +31,9 @@
 <div class="content">
     <main>
         <Heading size={1}>УрФУ UI Kit <Tag>beta 0.7.8</Tag></Heading>
-        <p class="medium">
+        <Text className="medium">
             Расширяемая библиотека Svelte компонентов для упрощённого построения современных веб-приложений Уральского федерального университета
-        </p>
+        </Text>
         <a href="https://svelte.dev" target="_BLANK"><img src="/img/svelte.svg" width="48" height="48" alt="Svelte Logo" title="Svelte"></a>
         <a href="https://typescriptlang.org" target="_BLANK"><img style:margin-left="20px" src="/img/typescript.svg" height="48" alt="TypeScript Logo" title="TypeScript"></a>
         <br /><br />

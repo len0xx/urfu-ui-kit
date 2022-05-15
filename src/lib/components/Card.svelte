@@ -3,6 +3,7 @@
     type Gradient = 'blue-1' | 'blue-2' | 'red-1' | 'red-2'
 
     import Heading from './Heading.svelte'
+    import Text from './Text.svelte'
     
     export let color: Gradient = 'red-1'
     export let variant: ColorVariant = 'grey'
@@ -13,9 +14,9 @@
     <div class="radial-icon"></div>
     <div class="top">
         <Heading size={3} marginTop={0}><slot name="title" /></Heading>
-        <p class="description semi-bold">
+        <Text className="description semi-bold">
             <slot name="text" />
-        </p>
+        </Text>
     </div>
     <div class="bottom">
         <div class="left">
@@ -106,7 +107,7 @@
         text-align: right;
     }
 
-    .kit-card .description {
+    :global(.kit-card .description) {
         opacity: 0.4;
         font-size: 0.9em;
         margin-bottom: 1.5em;

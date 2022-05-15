@@ -1,4 +1,5 @@
 <script lang="ts">
+    export let node: HTMLParagraphElement = null
     export let className = ''
     export let marginX = 0
     export let marginY = 1
@@ -9,6 +10,7 @@
 </script>
 
 <p
+    bind:this={ node }
     class={ className }
     style:margin-top={ (marginTop !== null ? marginTop : marginY) + 'em' }
     style:margin-bottom={ (marginBottom !== null ? marginBottom : marginY) + 'em' }

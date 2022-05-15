@@ -11,9 +11,10 @@
 </script>
 
 <script lang="ts">
+    import Text from '$lib/components/Text.svelte'
     import Heading from '$lib/components/Heading.svelte'
-
     import Rainbow from '$lib/components/Rainbow.svelte'
+
     export let message: string
     export let status: number
 </script>
@@ -31,8 +32,8 @@
     <div>
         <div class="white-block">
             <Heading size={1}>Ошибка { status }</Heading>
-            <p><b>{ message }</b></p>
-            <p><a href="/">Перейти на главную</a></p>
+            <Text><b>{ message }</b></Text>
+            <Text><a href="/">Перейти на главную</a></Text>
         </div>
         <Rainbow size="S" />
     </div>

@@ -1,10 +1,11 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Code from '$lib/components/Code.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import ParameterType from '$lib/components/ParameterType.svelte'
     import Tag from '$lib/components/Tag.svelte'
+    import Code from '$lib/components/Code.svelte'
+    import Text from '$lib/components/Text.svelte'
+    import Heading from '$lib/components/Heading.svelte'
+    import Preloader from '$lib/components/Preloader.svelte'
+    import ParameterType from '$lib/components/ParameterType.svelte'
 
     import BenefitExample from '$lib/../codes/BenefitExample'
     import Grid from '$lib/components/Grid.svelte'
@@ -31,11 +32,11 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Benefit <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Выносите значимые числа в привлекательные и информативные блоки Benefit
-        </p>
+        </Text>
         <Grid s={1} m={2} l={3} xl={4} gap={2}>
-            <Benefit num="20" caption="Компонентов" />
+            <Benefit num="28" caption="Компонентов" />
             <Benefit num="2406" caption="Строк кода" />
             <Benefit num="5" caption="Активных веб-сайтов" />
         </Grid>
@@ -47,11 +48,11 @@
         
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">num <ParameterType value="string" /> <Tag title="Обязательное поле">required</Tag></Heading>
-        <p>Числовое значение, отображаемое в верхней части</p>
+        <Text>Числовое значение, отображаемое в верхней части</Text>
         <Heading size={4} className="blue-text">caption <ParameterType value="string" /> <Tag title="Обязательное поле">required</Tag></Heading>
-        <p>Подпись, отображаемая в нижней части</p>
+        <Text>Подпись, отображаемая в нижней части</Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>

@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Code from '$lib/components/Code.svelte'
+    import Text from '$lib/components/Text.svelte'
     import Switch from '$lib/components/Switch.svelte'
     import Heading from '$lib/components/Heading.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
@@ -35,14 +36,14 @@
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Switch <a href="#" class="page-link">🔗</a></Heading>
-        <p class="medium">
+        <Text className="medium">
             Переключатель с двумя состояниями и опциональными подписями с каждой стороны
-        </p>
+        </Text>
         <br />
         
         <Switch on:change={ handleSwitch } left="False" right="True" />
         <br />
-        <p>Текущее состояние: { currentState }</p>
+        <Text>Текущее состояние: { currentState }</Text>
         <br />
         
         <Heading size={3}>Пример использования:</Heading>
@@ -51,16 +52,16 @@
         
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">left <ParameterType value="string" /></Heading>
-        <p>Текст с левой стороны от переключателя</p>
+        <Text>Текст с левой стороны от переключателя</Text>
         <Heading size={4} className="blue-text">right <ParameterType value="string" /></Heading>
-        <p>Текст с правой стороны от переключателя</p>
+        <Text>Текст с правой стороны от переключателя</Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
-        <p>Аналог стандартного атрибута class</p>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>
         <Heading size={4} className="blue-text">on:change</Heading>
-        <p>Передаваемый параметр: <code>&lbrace; state: boolean &rbrace;</code></p>
+        <Text>Передаваемый параметр: <code>&lbrace; state: boolean &rbrace;</code></Text>
         <Heading size={4} className="blue-text">on:focus</Heading>
         <Heading size={4} className="blue-text">on:mouseover</Heading>
         <Heading size={4} className="blue-text">on:mouseleave</Heading>
