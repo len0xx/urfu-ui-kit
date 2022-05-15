@@ -1,11 +1,13 @@
 <script lang="ts">
     export let size: 'S' | 'M' | 'L' = 'S'
     export let fixed: 'top' | 'bottom' | null = null
+    export let width = '100%'
+    export let transition = 'none'
     export let className = ''
     let sizeClass = size == 'S' ? 'small' : size == 'M' ? 'medium' : 'large'
 </script>
 
-<div class="kit-rainbow {sizeClass} {className}" class:fixedTop={ fixed == 'top' } class:fixedBottom={ fixed == 'bottom' } on:click></div>
+<div class="kit-rainbow {sizeClass} {className}" class:fixedTop={ fixed == 'top' } class:fixedBottom={ fixed == 'bottom' } style:width style:transition on:click></div>
 
 <style>
     :root {
