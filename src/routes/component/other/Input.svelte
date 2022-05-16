@@ -1,0 +1,118 @@
+<script lang="ts">
+    import { onMount } from 'svelte'
+    import Code from '$lib/components/Code.svelte'
+    import Text from '$lib/components/Text.svelte'
+    import Grid from '$lib/components/Grid.svelte'
+    import Link from '$lib/components/Link.svelte'
+    import Input from '$lib/components/Input.svelte'
+    import Button from '$lib/components/Button.svelte'
+    import Heading from '$lib/components/Heading.svelte'
+    import Preloader from '$lib/components/Preloader.svelte'
+    import ParameterType from '$lib/components/ParameterType.svelte'
+
+    import InputExample from '$lib/../codes/InputExample'
+
+    let loaded = false
+    let showPreloader = true
+    let phoneMask = {
+        mask: '+{7} (000) 000-00-00'
+    }
+    const pageLoaded = () => {
+        loaded = true
+        setTimeout(() => showPreloader = false, 250)
+    }
+    onMount(pageLoaded)
+</script>
+
+<svelte:head>
+    <title>УрФУ UI Kit – Input</title>
+</svelte:head>
+
+{ #if showPreloader }
+    <Preloader bind:invisible={ loaded } />
+{ /if }
+
+<div class="content">
+    <main>
+        <!-- svelte-ignore a11y-invalid-attribute -->
+        <Heading size={1}>Input <a href="#" class="page-link" title="Ссылка на текущую страницу">🔗</a></Heading>
+        <Text className="medium">
+            Поле для пользовательского ввода
+        </Text>
+        <br />
+        <Heading size={3}>Оставьте свои контактные данные:</Heading>
+        <Grid m={4} s={1}>
+            <Input type="text" placeholder="Имя" />
+            <Input type="email" placeholder="Email" />
+            <Input type="tel" placeholder="Контактный телефон" mask={ phoneMask } />
+        </Grid>
+        <br />
+        <Button variant="blue" size="S">Отправить</Button>
+        <br />
+        <br />
+    
+        <Heading size={3}>Пример использования:</Heading>
+        <Code val={InputExample} />
+        <br />
+    
+        <Heading size={3}>Параметры:</Heading>
+        <Heading size={4} className="blue-text">wide <ParameterType value="boolean" /></Heading>
+        <Text>При значении true компонент будет иметь свойство <code>width: 100%</code></Text>
+        <Heading size={4} className="blue-text">mask <ParameterType value="string" /></Heading>
+        <Text>Маска для поля ввода (Подробнее: <Link href="https://www.npmjs.com/package/svelte-imask" target="_BLANK">svelte-imask</Link>)</Text>
+        <Heading size={4} className="blue-text">id <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута id</Text>
+        <Heading size={4} className="blue-text">min <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута min</Text>
+        <Heading size={4} className="blue-text">max <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута max</Text>
+        <Heading size={4} className="blue-text">name <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута name</Text>
+        <Heading size={4} className="blue-text">step <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута step</Text>
+        <Heading size={4} className="blue-text">list <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута list</Text>
+        <Heading size={4} className="blue-text">value <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута value</Text>
+        <Heading size={4} className="blue-text">pattern <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута pattern</Text>
+        <Heading size={4} className="blue-text">placeholder <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута placeholder</Text>
+        <Heading size={4} className="blue-text">type <ParameterType value="enum" /></Heading>
+        <Text>Аналог стандартного атрибута type</Text>
+        <Heading size={4} className="blue-text">readonly <ParameterType value="boolean" /></Heading>
+        <Text>
+            Аналог стандартного атрибута readonly <br />
+            Значение по умолчанию: <code>false</code>
+        </Text>
+        <Heading size={4} className="blue-text">multiple <ParameterType value="boolean" /></Heading>
+        <Text>
+            Аналог стандартного атрибута multiple <br />
+            Значение по умолчанию: <code>false</code>
+        </Text>
+        <Heading size={4} className="blue-text">disabled <ParameterType value="boolean" /></Heading>
+        <Text>
+            Аналог стандартного атрибута disabled <br />
+            Значение по умолчанию: <code>false</code>
+        </Text>
+        <Heading size={4} className="blue-text">autofocus <ParameterType value="boolean" /></Heading>
+        <Text>
+            Аналог стандартного атрибута autofocus <br />
+            Значение по умолчанию: <code>false</code>
+        </Text>
+        <Heading size={4} className="blue-text">required <ParameterType value="boolean" /></Heading>
+        <Text>Аналог стандартного атрибута required</Text>
+        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута class</Text>
+        <br />
+    
+        <Heading size={3}>Поддерживаемые события:</Heading>
+        <Heading size={4} className="blue-text">on:input</Heading>
+        <Heading size={4} className="blue-text">on:change</Heading>
+        <Heading size={4} className="blue-text">on:click</Heading>
+        <Heading size={4} className="blue-text">on:focus</Heading>
+        <Heading size={4} className="blue-text">on:blur</Heading>
+        <Heading size={4} className="blue-text">on:mouseover</Heading>
+        <Heading size={4} className="blue-text">on:mouseleave</Heading>
+    </main>
+</div>
