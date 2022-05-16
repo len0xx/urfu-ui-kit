@@ -15,8 +15,8 @@
 </Header>
 <section class="main">
     <aside>
+        <Heading size={3}><a href="/">Главная</a></Heading>
         <Heading size={3}><a href="/setup">Установка</a></Heading>
-        <!-- <Heading size={3}><a href="/usage-guide">Использование</a></Heading> -->
         <Heading size={3}><a href="https://github.com/len0xx/urfu-ui-kit">GitHub</a></Heading>
         <br />
         <Heading size={3} marginTop={0}><a href="/component/buttons">Кнопки</a></Heading>
