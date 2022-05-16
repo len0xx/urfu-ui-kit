@@ -36,6 +36,7 @@
     on:mousedown={ handleMouseDown }
     on:mouseup={ handleMouseUp }
     on:focus
+    on:blur
     on:mouseover
     on:mouseleave
 >
