@@ -13,6 +13,9 @@
     import InputExample from '$lib/../codes/InputExample'
 
     let loaded = false
+    let firstname = ''
+    let email = ''
+    let phone = ''
     let showPreloader = true
     let phoneMask = {
         mask: '+{7} (000) 000-00-00'
@@ -42,13 +45,13 @@
         <br />
         <Heading size={3}>Оставьте свои контактные данные:</Heading>
         <Grid m={4} s={1}>
-            <Input type="text" placeholder="Имя" />
-            <Input type="email" placeholder="Email" />
-            <Input type="tel" placeholder="Контактный телефон" mask={ phoneMask } />
+            <Input wide type="text" placeholder="Имя" bind:value={ firstname } />
+            <Input wide type="email" placeholder="Email" bind:value={ email } />
+            <Input wide type="tel" placeholder="Контактный телефон" bind:value={ phone } mask={ phoneMask } />
         </Grid>
-        <br />
-        <Button variant="blue" size="S">Отправить</Button>
-        <br />
+        <Text>Введённое имя: { firstname }</Text>
+        <Text>Введённый email: { email }</Text>
+        <Text>Введённый номер телефона: { phone }</Text>
         <br />
     
         <Heading size={3}>Пример использования:</Heading>
@@ -57,18 +60,18 @@
     
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">wide <ParameterType value="boolean" /></Heading>
-        <Text>При значении true компонент будет иметь свойство <code>width: 100%</code></Text>
-        <Heading size={4} className="blue-text">mask <ParameterType value="string" /></Heading>
+        <Text>Если этот параметр присутствует (без значения), компонент будет иметь свойство <code>width: 100%</code></Text>
+        <Heading size={4} className="blue-text">mask <ParameterType value="object" /></Heading>
         <Text>Маска для поля ввода (Подробнее: <Link href="https://www.npmjs.com/package/svelte-imask" target="_BLANK">svelte-imask</Link>)</Text>
         <Heading size={4} className="blue-text">id <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута id</Text>
-        <Heading size={4} className="blue-text">min <ParameterType value="string" /></Heading>
+        <Heading size={4} className="blue-text">min <ParameterType value="number" /></Heading>
         <Text>Аналог стандартного атрибута min</Text>
-        <Heading size={4} className="blue-text">max <ParameterType value="string" /></Heading>
+        <Heading size={4} className="blue-text">max <ParameterType value="number" /></Heading>
         <Text>Аналог стандартного атрибута max</Text>
         <Heading size={4} className="blue-text">name <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута name</Text>
-        <Heading size={4} className="blue-text">step <ParameterType value="string" /></Heading>
+        <Heading size={4} className="blue-text">step <ParameterType value="number" /></Heading>
         <Text>Аналог стандартного атрибута step</Text>
         <Heading size={4} className="blue-text">list <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута list</Text>
