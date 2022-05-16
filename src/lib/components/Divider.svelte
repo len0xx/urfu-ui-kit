@@ -8,10 +8,16 @@
     export let marginBottom: number = null
     export let marginLeft: number = null
     export let marginRight: number = null
+    export let className = ''
 </script>
 
 <div
-    class="kit-visual-divider"
+    on:click
+    on:focus
+    on:blur
+    on:mouseover
+    on:mouseleave
+    class="kit-visual-divider {className}"
     style:background-color={ color }
     style:width
     style:height={ height + 'px' }

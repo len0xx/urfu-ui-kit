@@ -1,0 +1,99 @@
+<script lang="ts">
+    import { onMount } from 'svelte'
+    import Code from '$lib/components/Code.svelte'
+    import Text from '$lib/components/Text.svelte'
+    import Heading from '$lib/components/Heading.svelte'
+    import Divider from '$lib/components/Divider.svelte'
+    import Preloader from '$lib/components/Preloader.svelte'
+    import ParameterType from '$lib/components/ParameterType.svelte'
+
+    import DividerExample from '$lib/../codes/DividerExample'
+
+    let loaded = false
+    let showPreloader = true
+    const pageLoaded = () => {
+        loaded = true
+        setTimeout(() => showPreloader = false, 250)
+    }
+    onMount(pageLoaded)
+</script>
+
+<svelte:head>
+    <title>УрФУ UI Kit – Divider</title>
+</svelte:head>
+
+{ #if showPreloader }
+    <Preloader bind:invisible={ loaded } />
+{ /if }
+
+<div class="content">
+    <main>
+        <!-- svelte-ignore a11y-invalid-attribute -->
+        <Heading size={1}>Divider <a href="#" class="page-link" title="Ссылка на текущую страницу">🔗</a></Heading>
+        <Text className="medium">
+            Визуальный разделитель текста
+        </Text>
+        <br />
+        <Text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+            <Divider color="black" />
+            Est optio dolore nostrum quo aspernatur. Sunt eligendi dignissimos ullam nisi quisquam perspiciatis optio iste iure fugiat, qui cum reiciendis ipsa consequatur. <br />
+            <Divider color="black" width="60px" height={ 5 }/>
+            <Divider color="black" width="100px" height={ 6 }/>
+            <Divider color="black" width="160px" height={ 7 }/>
+        </Text>
+        <br />
+        <br />
+    
+        <Heading size={3}>Пример использования:</Heading>
+        <Code val={DividerExample} />
+        <br />
+    
+        <Heading size={3}>Параметры:</Heading>
+        <Heading size={4} className="blue-text">color <ParameterType value="string" /></Heading>
+        <Text>
+            Цвет разделителя <br />
+            Поддерживаются любые валидные значения CSS (Пример: <code>red</code>, <code>#fff</code>, <code>rgb(255, 255, 255)</code>, <code>rgba(255, 255, 255, 0.5)</code>) <br />
+            Значение по умолчанию: <code>white</code>
+        </Text>
+        <Heading size={4} className="blue-text">width <ParameterType value="string" /></Heading>
+        <Text>
+            Ширина разделителя <br />
+            Поддерживаются любые валидные значения CSS (Пример: <code>50px</code>, <code>5em</code>, <code>12rem</code>, <code>30%</code>) <br />
+            Значение по умолчанию: <code>50px</code>
+        </Text>
+        <Heading size={4} className="blue-text">height <ParameterType value="number" /></Heading>
+        <Text>
+            Высота разделителя (в <code>px</code>) <br />
+            Значение по умолчанию: <code>4</code>
+        </Text>
+        <Heading size={4} className="blue-text">marginY <ParameterType value="number" /></Heading>
+        <Text>
+            Отступ по вертикали (в <code>em</code>) <br />
+            Значение по умолчанию: <code>1</code>
+        </Text>
+        <Heading size={4} className="blue-text">marginX <ParameterType value="number" /></Heading>
+        <Text>
+            Отступ по горизонтали (в <code>em</code>) <br />
+            Значение по умолчанию: <code>0</code>
+        </Text>
+        <Heading size={4} className="blue-text">marginTop <ParameterType value="number" /></Heading>
+        <Text>Отступ сверху (в <code>em</code>) <br /> </Text>
+        <Heading size={4} className="blue-text">marginBottom <ParameterType value="number" /></Heading>
+        <Text>Отступ снизу (в <code>em</code>) <br /> </Text>
+        <Heading size={4} className="blue-text">marginLeft <ParameterType value="number" /></Heading>
+        <Text>Отступ слева (в <code>em</code>) <br /> </Text>
+        <Heading size={4} className="blue-text">marginRight <ParameterType value="number" /></Heading>
+        <Text>Отступ справа (в <code>em</code>) <br /> </Text>
+        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута class</Text>
+        <br />
+    
+        <Heading size={3}>Поддерживаемые события:</Heading>
+        <Heading size={4} className="blue-text">on:click</Heading>
+        <Heading size={4} className="blue-text">on:focus</Heading>
+        <Heading size={4} className="blue-text">on:blur</Heading>
+        <Heading size={4} className="blue-text">on:mouseover</Heading>
+        <Heading size={4} className="blue-text">on:mouseleave</Heading>
+    </main>
+</div>
