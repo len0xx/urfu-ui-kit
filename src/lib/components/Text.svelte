@@ -1,8 +1,9 @@
 <script lang="ts">
-    export let node: HTMLParagraphElement = null
     export let className = ''
+    export let color = ''
     export let marginX = 0
     export let marginY = 1
+    export let opacity = 1
     export let marginTop: number = null
     export let marginBottom: number = null
     export let marginLeft: number = null
@@ -10,8 +11,9 @@
 </script>
 
 <p
-    bind:this={ node }
     class={ className }
+    style:color
+    style:opacity
     style:margin-top={ (marginTop !== null ? marginTop : marginY) + 'em' }
     style:margin-bottom={ (marginBottom !== null ? marginBottom : marginY) + 'em' }
     style:margin-left={ (marginLeft !== null ? marginLeft : marginX) + 'em' }
