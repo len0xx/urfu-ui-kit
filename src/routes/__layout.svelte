@@ -4,6 +4,8 @@
     import Heading from '$lib/components/Heading.svelte'
     import components from '$lib/components'
     import { page } from '$app/stores'
+
+    const getLink = (component: { type: string, name: string }) => '/component/' + component.type + '/' + component.name
 </script>
 
 <Header hideOnScrollDown={ true } showOnScrollUp={ true } hideAfter={ 90 }>
@@ -22,37 +24,37 @@
         <Heading size={3} marginTop={0}><a href="/component/buttons">Кнопки</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'buttons') as component }
-                <a sveltekit:prefetch href={ '/component/' + component.type + '/' + component.name } class:active-page={ $page.url.pathname == '/component/' + component.type + '/' + component.name }>{ component.name }</a>
+                <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
             { /each }
         </nav>
         <Heading size={3}><a href="/component/layout">Расположение</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'layout') as component }
-                <a sveltekit:prefetch href={ '/component/' + component.type + '/' + component.name } class:active-page={ $page.url.pathname == '/component/' + component.type + '/' + component.name }>{ component.name }</a>
+                <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
             { /each }
         </nav>
         <Heading size={3}><a href="/component/display">Отображение данных</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'display') as component }
-                <a sveltekit:prefetch href={ '/component/' + component.type + '/' + component.name } class:active-page={ $page.url.pathname == '/component/' + component.type + '/' + component.name }>{ component.name }</a>
+                <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
             { /each }
         </nav>
         <Heading size={3}><a href="/component/loading">Загрузка</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'loading') as component }
-                <a sveltekit:prefetch href={ '/component/' + component.type + '/' + component.name } class:active-page={ $page.url.pathname == '/component/' + component.type + '/' + component.name }>{ component.name }</a>
+                <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
             { /each }
         </nav>
         <Heading size={3}><a href="/component/base">Базовые элементы</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'base') as component }
-                <a sveltekit:prefetch href={ '/component/' + component.type + '/' + component.name } class:active-page={ $page.url.pathname == '/component/' + component.type + '/' + component.name }>{ component.name }</a>
+                <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
             { /each }
         </nav>
         <Heading size={3}><a href="/component/other">Другие компоненты</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'other') as component }
-                <a sveltekit:prefetch href={ '/component/' + component.type + '/' + component.name } class:active-page={ $page.url.pathname == '/component/' + component.type + '/' + component.name }>{ component.name }</a>
+                <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
             { /each }
         </nav>
     </aside>
