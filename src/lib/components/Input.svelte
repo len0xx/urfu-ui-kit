@@ -29,13 +29,22 @@
     let internalValue = value
     let input: HTMLInputElement
 
-    const inputHandler = () => {
+    const valueChanged = () => {
         filledIn = input.value != ''
         value = input.value
+    }
+
+    const inputHandler = () => {
+        valueChanged()
         dispatch('input')
     }
 
-    onMount(inputHandler)
+    const changeHandler = () => {
+        valueChanged()
+        dispatch('change')
+    }
+
+    onMount(valueChanged)
 
     if (wide !== null) className = className.length ? [className, 'kit-input-wide'].join(' ') : 'kit-input-wide'
 </script>
@@ -64,6 +73,7 @@
     on:mouseover
     on:mouseleave
     on:input={ inputHandler }
+    on:change={ changeHandler }
     class={ className }
     class:filledIn
     bind:this={ input }
