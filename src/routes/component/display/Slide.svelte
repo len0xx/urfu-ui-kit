@@ -32,10 +32,10 @@
 <div class="content">
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
-        <Heading size={ 1 }>Slide <a href="#" class="page-link">🔗</a></Heading>
+        <Heading size={ 1 }>Slide <a href="#" class="page-link" title="Ссылка на текущую страницу">🔗</a></Heading>
         <Text className="medium">
             Отдельный слайд с текстовым блоком и изображением. <br />
-            Используется в компоненте <Link href="/component/display/Slider" borderWidth={ 2 }>Slider</Link>.
+            Используется в компоненте <Link href="/component/display/Slider">Slider</Link>.
         </Text>
         <br />
     </main>
@@ -45,8 +45,8 @@
     <Slide img="/img/slide1-img.jpg">
         <Heading size={ 2 } className="blue-text">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
         <Text className="heading-3">Актуальная информация о поступлении в университет в 2022 году:</Text>
-        <Link href="/bachelor" borderWidth={ 2 }>Бакалавриат и специалитет</Link><br /><br />
-        <Link href="/master" borderWidth={ 2 }>Магистратура</Link><br />
+        <Link variant="interactive" href="/bachelor" lineWidth={ 2 }>Бакалавриат и специалитет</Link><br /><br />
+        <Link variant="interactive" href="/master" lineWidth={ 2 }>Магистратура</Link><br />
         <svelte:fragment slot="buttons">
             <RoundButton size="M" variant="left" on:click={ showPrevPage } />
             <RoundButton size="M" variant="right" on:click={ showNextPage } />
@@ -55,8 +55,8 @@
     <Slide img="/img/slide2-img.jpg">
         <Heading size={ 2 } className="blue-text">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
         <Text className="heading-3">Актуальная информация о поступлении в университет в 2022 году:</Text>
-        <Link href="/bachelor" borderWidth={ 2 }>Бакалавриат и специалитет</Link><br /><br />
-        <Link href="/master" borderWidth={ 2 }>Магистратура</Link><br />
+        <Link variant="interactive" href="/bachelor" lineWidth={ 2 }>Бакалавриат и специалитет</Link><br /><br />
+        <Link variant="interactive" href="/master" lineWidth={ 2 }>Магистратура</Link><br />
         <svelte:fragment slot="buttons">
             <RoundButton size="M" variant="left" on:click={ showPrevPage } />
             <RoundButton size="M" variant="right" on:click={ showNextPage } />

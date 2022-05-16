@@ -36,7 +36,7 @@
         </Warning>
         <br /><br />
         <Text>
-            <Link href="https://github.com" borderWidth={3} target="_BLANK">GitHub</Link>
+            <Link variant="interactive" href="https://github.com" lineWidth={3} target="_BLANK">GitHub</Link>
         </Text>
         <br />
         <br />

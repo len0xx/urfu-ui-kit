@@ -35,7 +35,7 @@
 <div class="content">
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
-        <Heading size={1}>Switch <a href="#" class="page-link">🔗</a></Heading>
+        <Heading size={1}>Switch <a href="#" class="page-link" title="Ссылка на текущую страницу">🔗</a></Heading>
         <Text className="medium">
             Переключатель с двумя состояниями и опциональными подписями с каждой стороны
         </Text>
@@ -63,6 +63,7 @@
         <Heading size={4} className="blue-text">on:change</Heading>
         <Text>Передаваемый параметр: <code>&lbrace; state: boolean &rbrace;</code></Text>
         <Heading size={4} className="blue-text">on:focus</Heading>
+        <Heading size={4} className="blue-text">on:blur</Heading>
         <Heading size={4} className="blue-text">on:mouseover</Heading>
         <Heading size={4} className="blue-text">on:mouseleave</Heading>
         <Heading size={4} className="blue-text">on:mouseup</Heading>

@@ -32,7 +32,7 @@
 <div class="content">
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
-        <Heading size={1}>SelectButton <a href="#" class="page-link">🔗</a></Heading>
+        <Heading size={1}>SelectButton <a href="#" class="page-link" title="Ссылка на текущую страницу">🔗</a></Heading>
         <Text className="medium">
             Альтернативный вариант оформления кнопок
         </Text>
@@ -68,6 +68,7 @@
         <Heading size={3}>Поддерживаемые события:</Heading>
         <Heading size={4} className="blue-text">on:click</Heading>
         <Heading size={4} className="blue-text">on:focus</Heading>
+        <Heading size={4} className="blue-text">on:blur</Heading>
         <Heading size={4} className="blue-text">on:mouseover</Heading>
         <Heading size={4} className="blue-text">on:mouseleave</Heading>
         <Heading size={4} className="blue-text">on:mouseup</Heading>

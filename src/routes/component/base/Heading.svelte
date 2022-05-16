@@ -29,7 +29,7 @@
 <div class="content">
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
-        <Heading size={1}>Heading <a href="#" class="page-link">🔗</a></Heading>
+        <Heading size={1}>Heading <a href="#" class="page-link" title="Ссылка на текущую страницу">🔗</a></Heading>
         <Text className="medium">
             Аналог стандратных тегов h1 - h6 в HTML
         </Text>

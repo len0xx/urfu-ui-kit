@@ -30,7 +30,7 @@
 <div class="content">
     <main>
         <!-- svelte-ignore a11y-invalid-attribute -->
-        <Heading size={1}>Grid <a href="#" class="page-link">🔗</a></Heading>
+        <Heading size={1}>Grid <a href="#" class="page-link" title="Ссылка на текущую страницу">🔗</a></Heading>
         <Text className="medium">
             Выстраивайте контент в колонках.<br />
             Компонент возьмёт на себя все задачи по адаптированию контента к ширине экрана
