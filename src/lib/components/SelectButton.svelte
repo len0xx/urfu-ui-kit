@@ -7,6 +7,7 @@
     class="kit-select-button variant-{variant} {className}"
     on:click
     on:focus
+    on:blur
     on:mouseover
     on:mouseleave
     on:mouseup
