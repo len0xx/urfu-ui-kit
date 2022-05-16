@@ -4,24 +4,24 @@
 
     type InputType = 'text' | 'email' | 'tel' | 'number' | 'password' | 'search' | 'url' | 'date' | 'time' | 'datetime-local' | 'month' | 'week' | 'color' | 'file' | 'checkbox' | 'radio' | 'submit' | 'hidden' | 'range' | 'button'
 
-    export let id = null
-    export let min = null
-    export let max = null
-    export let mask = null
-    export let wide = null
-    export let name = null
-    export let step = null
-    export let size = null
-    export let list = null
-    export let value = null
+    export let id: string = null
+    export let min: number = null
+    export let max: number = null
+    export let mask: any = null
+    export let wide: boolean = null
+    export let name: string = null
+    export let step: number = null
+    export let size: number = null
+    export let list: string = null
+    export let value: string = null
     export let className = ''
-    export let pattern = null
-    export let readonly = null
-    export let multiple = null
-    export let disabled = null
+    export let pattern: string = null
+    export let readonly: boolean = null
+    export let multiple: boolean = null
+    export let disabled: boolean = null
     export let required = false
-    export let autofocus = null
-    export let placeholder = null
+    export let autofocus: boolean = null
+    export let placeholder: string = null
     export let type: InputType = 'text'
 
     const dispatch = createEventDispatcher()
