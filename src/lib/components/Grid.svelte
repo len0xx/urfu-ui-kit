@@ -23,6 +23,7 @@
 
     const defaultSize = 6
     let smallestSize = null
+    let ratioClasses = ''
     if (xs !== null && smallestSize === null) smallestSize = xs
     if (s !== null && smallestSize === null) smallestSize = s
     if (m !== null && smallestSize === null) smallestSize = m
@@ -44,7 +45,7 @@
     if (xl === null) xl = getClosestSize([xs, s, m, l, xl], 4, smallestSize)
 
     if (ratio !== null) {
-        className = [className, 'grid-ratio-selected', 'grid-' + ratio.replace(':', '-')].join(' ')
+        ratioClasses = ['grid-ratio-selected', 'grid-' + ratio.replace(':', '-')].join(' ')
     }
 </script>
 
@@ -57,7 +58,7 @@
     style:justify-content={ justifyContent }
     style:align-items={ alignItems }
     style:justify-items={ justifyItems }
-    class="grid-container grid-gap-{gap} xsmall-viewport-{xs} small-viewport-{s} medium-viewport-{m} large-viewport-{l} xlarge-viewport-{xl} {className}"
+    class="grid-container grid-gap-{gap} xsmall-viewport-{xs} small-viewport-{s} medium-viewport-{m} large-viewport-{l} xlarge-viewport-{xl} {className} {ratioClasses}"
     on:click
 >
     <slot />
