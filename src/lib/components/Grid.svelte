@@ -2,7 +2,7 @@
     type ItemsAlignment = 'end' | 'center' | 'start' | 'stretch' | 'initial' | 'inherit'
     type ContentAlignment = 'left' | 'center' | 'right' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch' | 'initial' | 'inherit'
     type GridSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-    type TwoColumnsRatio = '2:1' | '1:2' | '3:1' | '1:3' | '3:2' | '2:3' | '4:1' | '1:4' | '4:3' | '3:4' | '5:1' | '5:2' | '5:3' | '5:4' | null
+    type TwoColumnsRatio = '2:1' | '1:2' | '3:1' | '1:3' | '3:2' | '2:3' | '4:1' | '1:4' | '4:3' | '3:4' | '5:1' | '5:2' | '5:3' | '5:4'
 
     export let id = ''
     export let className = ''
