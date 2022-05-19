@@ -14,7 +14,7 @@
     <div class="radial-icon"></div>
     <div class="top">
         <Heading size={3} marginTop={0}><slot name="title" /></Heading>
-        <Text className="description semi-bold">
+        <Text className="description semi-bold" opacity={0.4}>
             <slot name="text" />
         </Text>
     </div>
@@ -108,7 +108,6 @@
     }
 
     :global(.kit-card .description) {
-        opacity: 0.4;
         font-size: 0.9em;
         margin-bottom: 1.5em;
         max-width: 80%;

@@ -30,7 +30,7 @@
         <Heading size={4} className="kit-profile-title subtitle blue-text" marginY={0}>
             <slot name="name" />
         </Heading>
-        <Text className="kit-profile-subheading" marginY={0}>
+        <Text className="kit-profile-subheading" marginY={0} opacity={0.6}>
             <slot name="description" />
         </Text>
     </div>
@@ -90,10 +90,6 @@
     :global(.kit-profile-text) {
         font-size: calc(var(--text-size) * 0.875);
         line-height: 1.4;
-    }
-
-    :global(.kit-profile-subheading) {
-        opacity: 0.6;
     }
 
     :global(.kit-profile-text) {
