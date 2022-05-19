@@ -50,12 +50,12 @@
 
 <div
     { id }
+    style:place-items={ placeItems }
+    style:place-content={ placeContent }
     style:align-content={ alignContent }
     style:justify-content={ justifyContent }
     style:align-items={ alignItems }
     style:justify-items={ justifyItems }
-    style:place-items={ placeItems }
-    style:place-content={ placeContent }
     class="grid-container grid-gap-{gap} xsmall-viewport-{xs} small-viewport-{s} medium-viewport-{m} large-viewport-{l} xlarge-viewport-{xl} {className}"
     on:click
 >
