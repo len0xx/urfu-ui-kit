@@ -1,12 +1,11 @@
 <script lang="ts">
-    type AlignItems = 'end' | 'center' | 'start' | 'stretch'
-    type JustifyItems = 'left' | 'center' | 'right' | 'space-between' | 'space-around' | 'space-evenly'
-    type AlignContent = AlignItems
-    type JustifyContent = JustifyItems
+    type ItemsAlignment = 'end' | 'center' | 'start' | 'stretch' | 'initial' | 'inherit'
+    type ContentAlignment = 'left' | 'center' | 'right' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch' | 'initial' | 'inherit'
     type GridSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
     type GapSize = 0 | 1 | 2 | 3 | 4 | 5 | 6
     type TwoColumnsRatio = '2:1' | '1:2' | '3:1' | '1:3' | '3:2' | '2:3' | '4:1' | '1:4' | '4:3' | '3:4' | '5:1' | '5:2' | '5:3' | '5:4' | null
 
+    export let id = ''
     export let className = ''
     export let xs: GridSize = null
     export let s: GridSize = null
@@ -15,10 +14,12 @@
     export let xl: GridSize = null
     export let ratio: TwoColumnsRatio = null
     export let gap: GapSize = 1
-    export let alignItems: AlignItems = 'stretch'
-    export let justifyItems: JustifyItems = 'space-between'
-    export let alignContent: AlignContent = 'stretch'
-    export let justifyContent: JustifyContent = 'space-between'
+    export let alignItems: ItemsAlignment = 'initial'
+    export let justifyItems: ItemsAlignment = 'initial'
+    export let alignContent: ContentAlignment = 'initial'
+    export let justifyContent: ContentAlignment = 'initial'
+    export let placeItems: ItemsAlignment = 'initial'
+    export let placeContent: ContentAlignment = 'initial'
 
     const defaultSize = 6
     let smallestSize = null
@@ -48,10 +49,13 @@
 </script>
 
 <div
+    { id }
     style:align-content={ alignContent }
     style:justify-content={ justifyContent }
     style:align-items={ alignItems }
     style:justify-items={ justifyItems }
+    style:place-items={ placeItems }
+    style:place-content={ placeContent }
     class="grid-container grid-gap-{gap} xsmall-viewport-{xs} small-viewport-{s} medium-viewport-{m} large-viewport-{l} xlarge-viewport-{xl} {className}"
     on:click
 >
