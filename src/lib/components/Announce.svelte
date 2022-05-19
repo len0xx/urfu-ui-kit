@@ -33,7 +33,7 @@
         </Grid>
     </div>
 </section>
-<section class="kit-announce pc-hide">
+<section class="kit-announce pc-hide" style:background-color={ color } style:color={ textColor }>
     <Grid className="background" m={1}>
         <div class="img-block" style:background-image="url({ image })"></div>
         <div class="content" style:padding-bottom="0px">
@@ -53,7 +53,8 @@
         color: white;
         display: grid;
         position: relative;
-        place-content: center;
+        align-content: center;
+        justify-content: stretch;
         place-items: center;
         padding: 0 !important;
     }
@@ -61,6 +62,12 @@
     @media screen and (max-width: 768px) {
         .kit-announce {
             background-image: unset;
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        .kit-announce .content {
+            min-height: 600px;
         }
     }
 
@@ -89,6 +96,6 @@
     }
 
     .kit-announce .content {
-        padding: 3em var(--content-padding-x);
+        padding: 3em 0;
     }
 </style>
