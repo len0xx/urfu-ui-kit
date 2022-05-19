@@ -1,6 +1,7 @@
 <script lang="ts">
     export let className = ''
     export let color = ''
+    export let id = null
     export let marginX = 0
     export let marginY = 1
     export let opacity = 1
@@ -11,6 +12,7 @@
 </script>
 
 <p
+    { id }
     class={ className }
     style:color
     style:opacity
