@@ -50,6 +50,7 @@
 
 <div
     { id }
+    style:gap={ gap + "em" }
     style:place-items={ placeItems }
     style:place-content={ placeContent }
     style:align-content={ alignContent }
@@ -66,101 +67,6 @@
     .grid-container {
         display: grid;
         position: relative;
-    }
-
-    .grid-gap-0 {
-        gap: 0em;
-    }
-    .grid-gap-1 {
-        gap: 1em;
-    }
-    .grid-gap-2 {
-        gap: 2em;
-    }
-    .grid-gap-3 {
-        gap: 3em;
-    }
-    .grid-gap-4 {
-        gap: 4em;
-    }
-    .grid-gap-5 {
-        gap: 5em;
-    }
-    .grid-gap-6 {
-        gap: 6em;
-    }
-
-    .grid-align-items-center {
-        align-items: center;
-    }
-    .grid-align-items-end {
-        align-items: end;
-    }
-    .grid-align-items-start {
-        align-items: start;
-    }
-    .grid-align-items-stretch {
-        align-items: stretch;
-    }
-    .grid-justify-items-left {
-        justify-items: left;
-    }
-    .grid-justify-items-center {
-        justify-items: center;
-    }
-    .grid-justify-items-right {
-        justify-items: right;
-    }
-    .grid-justify-items-end {
-        justify-items: end;
-    }
-    .grid-justify-items-start {
-        justify-items: start;
-    }
-    .grid-justify-items-space-evenly {
-        justify-items: space-evenly;
-    }
-    .grid-justify-items-space-between {
-        justify-items: space-between;
-    }
-    .grid-justify-items-space-around {
-        justify-items: space-around;
-    }
-    .grid-align-content-center {
-        align-content: center;
-    }
-    .grid-align-content-end {
-        align-content: end;
-    }
-    .grid-align-content-start {
-        align-content: start;
-    }
-    .grid-align-content-stretch {
-        align-content: stretch;
-    }
-    .grid-justify-content-left {
-        justify-content: left;
-    }
-    .grid-justify-content-center {
-        justify-content: center;
-    }
-    .grid-justify-content-right {
-        justify-content: right;
-    }
-    .grid-justify-content-end {
-        justify-content: end;
-    }
-    .grid-justify-content-start {
-        justify-content: start;
-    }
-    .grid-justify-content-space-evenly {
-        justify-content: space-evenly;
-    }
-    .grid-justify-content-space-between {
-        justify-content: space-between;
-    }
-    .grid-justify-content-space-around {
-        justify-content: space-around;
     }
 
     @media screen and (min-width: 1441px) {
