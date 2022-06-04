@@ -140,6 +140,6 @@
 
     .buttons {
         text-align: center;
-        padding: 2em 0;
+        padding: 2em 0 1em 0;
     }
 </style>
