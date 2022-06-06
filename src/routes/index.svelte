@@ -23,7 +23,7 @@
 
 <div class="content">
     <main>
-        <Heading size={1}>УрФУ UI Kit <Tag>beta 0.7.8</Tag></Heading>
+        <Heading size={1}>УрФУ UI Kit <Tag>beta 0.7.9</Tag></Heading>
         <Text className="medium">
             Расширяемая библиотека Svelte компонентов для упрощённого построения современных веб-приложений Уральского федерального университета
         </Text>
@@ -31,7 +31,7 @@
         <a href="https://typescriptlang.org" target="_BLANK"><img style:margin-left="20px" src="/img/typescript.svg" height="48" alt="TypeScript Logo" title="TypeScript"></a>
         <br /><br />
         <Warning>
-            Библиотека находится в стадии beta и может иметь некоторые проблемы с отображением компонентов или страниц
+            <b>Библиотека находится в стадии beta</b>. <br /><br /> В связи с этим, возможны некоторые ошибки в отображении компонентов. А также, в финальной версии библиотеки некоторые компоненты могут иметь отличное название самого компонента и/или его параметров от тех, что имеются на данный момент. 
         </Warning>
         <br /><br />
         <div>

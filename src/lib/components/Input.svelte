@@ -4,7 +4,7 @@
 
     type InputType = 'text' | 'email' | 'tel' | 'number' | 'password' | 'search' | 'url' | 'date' | 'time' | 'datetime-local' | 'month' | 'week' | 'color' | 'file' | 'checkbox' | 'radio' | 'submit' | 'hidden' | 'range' | 'button'
 
-    export let id: string = null
+    export let id: string = undefined
     export let min: number = null
     export let max: number = null
     export let mask: any = null
