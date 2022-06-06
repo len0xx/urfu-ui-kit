@@ -115,6 +115,7 @@
         -ms-overflow-style: none;
         scrollbar-height: none;
         overflow-x: unset;
+        position: relative;
     }
     
     :global(.kit-carousel.shifting) {
@@ -134,6 +135,7 @@
 
     :global(.kit-carousel > div > img) {
         display: block;
+        position: relative;
         max-width: min(90vw, 750px);
         height: auto;
     }

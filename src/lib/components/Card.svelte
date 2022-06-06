@@ -30,6 +30,7 @@
 <style>
     .kit-card {
         display: grid;
+        position: relative;
         grid-template-columns: 1fr;
         padding: 1em;
         border: 1px solid rgba(0, 0, 0, 0.1);

@@ -6,7 +6,7 @@
     export let variant: 'white' | 'grey' = 'grey'
     export let className = ''
 
-    let shadowText: any
+    let shadowText: HTMLParagraphElement
     let textExpanded = false
     let text: string
     let shortText: string
