@@ -1,13 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Code from '$lib/components/Code.svelte'
-    import Text from '$lib/components/Text.svelte'
-    import Modal from '$lib/components/Modal.svelte'
-    import Button from '$lib/components/Button.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import Rainbow from '$lib/components/Rainbow.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
-    import ParameterType from '$lib/components/ParameterType.svelte'
+    import { Code, Heading, Modal, Button, Rainbow, Text, Preloader, ParameterType } from '$lib/components'
 
     import ModalExample from '$lib/../codes/ModalExample'
 

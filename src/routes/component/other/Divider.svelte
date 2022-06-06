@@ -1,11 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Code from '$lib/components/Code.svelte'
-    import Text from '$lib/components/Text.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import Divider from '$lib/components/Divider.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
-    import ParameterType from '$lib/components/ParameterType.svelte'
+    import { Code, Heading, Divider, Text, Preloader, ParameterType } from '$lib/components'
 
     import DividerExample from '$lib/../codes/DividerExample'
 

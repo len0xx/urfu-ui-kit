@@ -1,7 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Heading from './Heading.svelte'
-    import Text from './Text.svelte'
+    import { Text, Heading } from '$lib/components'
 
     export let img = ''
     export let variant: 'white' | 'grey' = 'grey'

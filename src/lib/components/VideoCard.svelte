@@ -1,6 +1,5 @@
 <script lang="ts">
-    import Heading from './Heading.svelte'
-    import Text from './Text.svelte'
+    import { Text, Heading } from '$lib/components'
     import playIcon from '../img/play-icon.svg'
 
     export let name = ''

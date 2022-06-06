@@ -11,14 +11,15 @@
     "scripts": {
         "dev": "svelte-kit dev -p 3000",
         "preview": "svelte-kit preview",
-        "build:frontend": "svelte-kit build",
+        "build:frontend": "npm run reexport && svelte-kit build",
         "build:backend": "echo '🔨 TypeScript build in progress' && tsc --project server && echo '📦 TypeScript build complete'",
         "build:prod": "bash prepare-prod.sh",
         "build": "npm run build:frontend && npm run build:backend",
         "bundle": "npm run lint:fix && npm run build:prod",
         "start": "echo '🖥  Starting the server' && node server/build/server",
         "lint": "eslint src/**/*.{ts,svelte}; eslint server/**/*.ts",
-        "lint:fix": "eslint src/**/*.{ts,svelte} --fix && eslint server/**/*.ts --fix"
+        "lint:fix": "eslint src/**/*.{ts,svelte} --fix && eslint server/**/*.ts --fix",
+        "reexport": "./export-components.sh"
     },
     "dependencies": {
         "@lukeed/uuid": "^2.0.0",

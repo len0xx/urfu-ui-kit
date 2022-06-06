@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Heading from './Heading.svelte'
+    import { Heading } from '$lib/components'
 
     export let extension: string
     export let filename: string

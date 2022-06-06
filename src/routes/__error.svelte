@@ -11,9 +11,7 @@
 </script>
 
 <script lang="ts">
-    import Text from '$lib/components/Text.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import Rainbow from '$lib/components/Rainbow.svelte'
+    import { Text, Heading, Rainbow } from '$lib/components'
 
     export let message: string
     export let status: number

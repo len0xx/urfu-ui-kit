@@ -1,13 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Code from '$lib/components/Code.svelte'
-    import Text from '$lib/components/Text.svelte'
-    import Divider from '$lib/components/Divider.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import Button from '$lib/components/Button.svelte'
-    import Announce from '$lib/components/Announce.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
-    import ParameterType from '$lib/components/ParameterType.svelte'
+    import { Code, Heading, Announce, Divider, Button, Text, Preloader, ParameterType } from '$lib/components'
 
     import AnnounceExample from '$lib/../codes/AnnounceExample'
 

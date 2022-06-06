@@ -1,8 +1,6 @@
 <script lang="ts">
-    import Header from '$lib/components/Header.svelte'
-    import Rainbow from '$lib/components/Rainbow.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import components from '$lib/components'
+    import { Header, Heading, Rainbow } from '$lib/components'
+    import components from '$lib/components-list'
     import { page } from '$app/stores'
 
     const getLink = (component: { type: string, name: string }) => '/component/' + component.type + '/' + component.name

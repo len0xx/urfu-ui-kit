@@ -1,11 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Code from '$lib/components/Code.svelte'
-    import Text from '$lib/components/Text.svelte'
-    import Carousel from '$lib/components/Carousel.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
-    import ParameterType from '$lib/components/ParameterType.svelte'
+    import { Code, Heading, Carousel, Text, Preloader, ParameterType } from '$lib/components'
 
     import CarouselExample from '$lib/../codes/CarouselExample'
 

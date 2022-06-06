@@ -1,12 +1,11 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Code from '$lib/components/Code.svelte'
     import Text from '$lib/components/Text.svelte'
     import Link from '$lib/components/Link.svelte'
     import Heading from '$lib/components/Heading.svelte'
     import Warning from '$lib/components/Warning.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
-    import components from '$lib/components'
+    import components from '$lib/components-list'
 
     let loaded = false
     let showPreloader = true

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Progress from '$lib/components/Progress.svelte'
+    import { Progress } from '$lib/components'
     export let invisible: boolean
     export let className = ''
 </script>

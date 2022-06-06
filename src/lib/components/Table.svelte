@@ -7,5 +7,6 @@
 </script>
 
 <Grid m={ columns }>
+    Unimplemented component
     <slot />
 </Grid>

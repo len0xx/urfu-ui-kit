@@ -1,14 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Tag from '$lib/components/Tag.svelte'
-    import Text from '$lib/components/Text.svelte'
-    import Grid from '$lib/components/Grid.svelte'
-    import Card from '$lib/components/Card.svelte'
-    import Warning from '$lib/components/Warning.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
-    import RoundButton from '$lib/components/RoundButton.svelte'
-    import components from '$lib/components'
+    import { Text, Heading, Tag, Grid, Card, Warning, Preloader, RoundButton } from '$lib/components'
+    import components from '$lib/components-list'
 
     let expanded = false
     let loaded = false

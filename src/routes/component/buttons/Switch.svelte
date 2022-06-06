@@ -1,11 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import Code from '$lib/components/Code.svelte'
-    import Text from '$lib/components/Text.svelte'
-    import Switch from '$lib/components/Switch.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
-    import ParameterType from '$lib/components/ParameterType.svelte'
+    import { Code, Heading, Switch, Text, Preloader, ParameterType } from '$lib/components'
 
     import SwitchExample from '$lib/../codes/SwitchExample'
 
