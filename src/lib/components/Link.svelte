@@ -6,7 +6,7 @@
 
     type LinkVariant = 'regular' | 'underlined' | 'interactive' | 'hover'
 
-    export let href = '#'
+    export let href: string = undefined
     export let title = ''
     export let target = '_SELF'
     export let color = 'var(--blue)'
@@ -33,6 +33,7 @@
         position: relative;
         color: var(--blue);
         padding-bottom: 0;
+        cursor: pointer;
     }
 
     a.kit-link:not(.regular-variant) {
