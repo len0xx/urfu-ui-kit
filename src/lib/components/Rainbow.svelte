@@ -37,13 +37,13 @@
         bottom: 0;
         left: 0;
     }
-    .kit-rainbow.small {
+    .kit-rainbow.size-small {
         height: 7px;
     }
-    .kit-rainbow.medium {
+    .kit-rainbow.size-medium {
         height: 14px;
     }
-    .kit-rainbow.large {
+    .kit-rainbow.size-large {
         height: 20px;
     }
 </style>

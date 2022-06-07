@@ -57,7 +57,7 @@
         <Heading size={4} className="blue-text">size <ParameterType value="enum" /></Heading>
         <Text>
             Аналог стандартного атрибута action.  <br />
-            Поддерживаются три стандартных значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
+            Поддерживаются четыре стандартных значения: <code>S</code>, <code>M</code>, <code>L</code> и <code>XL</code>. <br />
             Значение по умолчанию: <code>M</code>
         </Text>
         <Heading size={4} className="blue-text">animate <ParameterType value="boolean" /></Heading>
