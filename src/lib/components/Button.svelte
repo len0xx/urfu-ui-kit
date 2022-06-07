@@ -60,15 +60,15 @@
         border: none;
         transition: 0.2s ease-in-out;
     }
-    button.small {
+    button.size-small {
         border-radius: 1em;
         padding: 0.8em 2.1em;
     }
-    button.medium {
+    button.size-medium {
         border-radius: 1.2em;
         padding: 1.2em 3.5em;
     }
-    button.large {
+    button.size-large {
         border-radius: 1.5em;
         padding: 1.5em 5.5em;
     }
