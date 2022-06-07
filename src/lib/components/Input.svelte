@@ -46,7 +46,8 @@
 
     onMount(valueChanged)
 
-    if (wide !== null) className = className.length ? [className, 'kit-input-wide'].join(' ') : 'kit-input-wide'
+    let wideClass = ''
+    if (wide !== null) wideClass = 'kit-input-wide'
 </script>
 
 <!-- svelte-ignore a11y-autofocus -->
@@ -74,7 +75,7 @@
     on:mouseleave
     on:input={ inputHandler }
     on:change={ changeHandler }
-    class={ className }
+    class={ wideClass ? className + ' ' + wideClass : className }
     class:filledIn
     bind:this={ input }
     use:imask={ mask || undefined }

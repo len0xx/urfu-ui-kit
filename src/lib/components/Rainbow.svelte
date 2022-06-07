@@ -1,10 +1,15 @@
 <script lang="ts">
-    export let size: 'S' | 'M' | 'L' = 'S'
+    const sizes = ['S', 'M', 'L'] as const
+    const sizeNames = ['small', 'medium', 'large'] as const
+    type Size = typeof sizes[number]
+
+    export let size: Size = 'S'
     export let fixed: 'top' | 'bottom' | null = null
     export let width = '100%'
     export let transition = 'none'
     export let className = ''
-    let sizeClass = size == 'S' ? 'small' : size == 'M' ? 'medium' : 'large'
+
+    let sizeClass = 'size-' + sizeNames[sizes.indexOf(size)]
 </script>
 
 <div class="kit-rainbow {sizeClass} {className}" class:fixedTop={ fixed == 'top' } class:fixedBottom={ fixed == 'bottom' } style:width style:transition on:click></div>

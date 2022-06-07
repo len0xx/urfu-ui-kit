@@ -8,9 +8,18 @@
     export let marginLeft: number = null
     export let marginRight: number = null
     let tag = 'h' + size
+
+    // Extract attributes from props object
+    $: ({ ...attrs } = $$props)
+
+    // Get rid of the className prop since we've added that manually
+    $: if (attrs.className) {
+        delete attrs.className
+    }
 </script>
 
 <svelte:element
+    { ...attrs }
     this={tag}
     class="kit-heading {className}"
     style:margin-top={ (marginTop !== null ? marginTop : marginY) + 'em' }

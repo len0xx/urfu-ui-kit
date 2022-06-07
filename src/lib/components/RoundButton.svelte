@@ -6,8 +6,12 @@
     import upIcon from '$lib/img/up-arrow.svg'
     import downIcon from '$lib/img/down-arrow.svg'
 
+    const sizes = ['S', 'M', 'L'] as const
+    const sizeNames = ['small', 'medium', 'large'] as const
+    type Size = typeof sizes[number]
+    
     export let variant = 'plus'
-    export let size: 'S' | 'M' | 'L' = 'M'
+    export let size: Size = 'M'
     export let className = ''
     export let transparent = true
     export let animate = true
@@ -16,7 +20,7 @@
     if (transparent) className += ' transparent-bg'
     const dispatch = createEventDispatcher()
     
-    let sizeClass = size === 'S' ? 'small' : size === 'L' ? 'large' : 'medium'
+    let sizeClass = 'size-' + sizeNames[sizes.indexOf(size)]
 
     let icon = plusIcon
     if (variant === 'left') {

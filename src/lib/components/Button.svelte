@@ -1,9 +1,13 @@
 <script lang="ts">
+    const sizes = ['S', 'M', 'L'] as const
+    const sizeNames = ['small', 'medium', 'large'] as const
+    type Size = typeof sizes[number]
+
     export let type = 'submit'
     export let variant = 'primary'
     export let href = ''
     export let className = ''
-    export let size: 'S' | 'M' | 'L' = 'M'
+    export let size: Size = 'M'
 
     import { createEventDispatcher } from 'svelte'
 
@@ -25,7 +29,8 @@
         if (href) window.location.href = href
         dispatch('click')
     }
-    let sizeClass = size === 'S' ? 'small' : size === 'L' ? 'large' : 'medium'
+
+    let sizeClass = 'size-' + sizeNames[sizes.indexOf(size)]
 </script>
 
 <button

@@ -1,9 +1,14 @@
 <script lang="ts">
+    const sizes = ['S', 'M', 'L'] as const
+    const sizeNames = ['small', 'medium', 'large'] as const
+    type Size = typeof sizes[number]
+    
     import progress from '$lib/img/progress.svg'
     export let className = ''
-    export let size: 'S' | 'M' | 'L' = 'M'
+    export let size: Size = 'M'
     export let speed: 1 | 2 | 3 = 2
-    let sizeClass = size === 'S' ? 'small' : size === 'L' ? 'large' : 'medium'
+
+    let sizeClass = 'size-' + sizeNames[sizes.indexOf(size)]
 </script>
 
 <img class="kit-progress {className} size-{sizeClass} speed-{speed}" src={progress} alt="Progress" on:click>
