@@ -40,7 +40,7 @@
             <SelectButton variant={ selected == 3 ? 'active' : 'default' } on:click={() => selected = 3}>Четвёртая кнопка</SelectButton>
             <SelectButton variant={ selected == 4 ? 'active' : 'default' } on:click={() => selected = 4}>Пятая кнопка</SelectButton>
         { /if }
-        <SelectButton variant="blue" on:click={() => expanded = !expanded}>{ expanded ? 'Меньше' : 'Больше' }</SelectButton>
+        <SelectButton variant="fill" color={ expanded ? 'blue' : 'red' } on:click={() => expanded = !expanded}>{ expanded ? 'Меньше' : 'Больше' }</SelectButton>
         
         <br />
         <br />
@@ -52,9 +52,21 @@
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
         <Text>
-            Вариант отображения кнопки.  <br />
-            Поддерживаются три значения: <code>default</code>, <code>active</code> и <code>blue</code>. <br />
+            Вариант отображения кнопки.<br />
+            Поддерживаются три значения: <code>default</code>, <code>active</code> и <code>fill</code>. <br />
             Значение по умолчанию: <code>default</code>
+        </Text>
+        <Heading size={4} className="blue-text">color <ParameterType value="enum" /></Heading>
+        <Text>
+            Основной цвет кнопки.<br />
+            Поддерживаются два значения: <code>blue</code> и <code>red</code>. <br />
+            Значение по умолчанию: <code>blue</code>
+        </Text>
+        <Heading size={4} className="blue-text">size <ParameterType value="enum" /></Heading>
+        <Text>
+            Размер кнопки.<br />
+            Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
+            Значение по умолчанию: <code>M</code>
         </Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
