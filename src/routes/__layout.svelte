@@ -71,6 +71,8 @@
     }
 
     .main-block {
+        display: block;
+        position: relative;
         padding-bottom: 7em;
 	    max-width: calc(100vw - var(--sidebar-width));
     }
