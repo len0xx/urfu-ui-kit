@@ -6,10 +6,10 @@
     import upIcon from '$lib/img/up-arrow.svg'
     import downIcon from '$lib/img/down-arrow.svg'
 
-    const sizes = ['S', 'M', 'L'] as const
-    const sizeNames = ['small', 'medium', 'large'] as const
+    const sizes = ['S', 'M', 'L', 'XL'] as const
+    const sizeNames = ['small', 'medium', 'large', 'xlarge'] as const
     type Size = typeof sizes[number]
-    
+
     export let variant = 'plus'
     export let size: Size = 'M'
     export let className = ''
@@ -77,19 +77,24 @@
         background-color: #1E43910A;
     }
 
-    button.kit-round-button.small {
+    button.kit-round-button.size-small {
         width: 42px;
         height: 42px;
     }
 
-    button.kit-round-button.medium {
+    button.kit-round-button.size-medium {
         width: 64px;
         height: 64px;
     }
 
-    button.kit-round-button.large {
+    button.kit-round-button.size-large {
         width: 80px;
         height: 80px;
+    }
+
+    button.kit-round-button.size-xlarge {
+        width: 100px;
+        height: 100px;
     }
 
     button.kit-round-button > img {
