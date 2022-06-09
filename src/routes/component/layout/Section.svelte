@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { Code, Heading, Button, Text, Preloader, Tag, ParameterType } from '$lib/components'
+    import { Code, Heading, Section, Text, Preloader, Tag, ParameterType } from '$lib/components'
 
     import ButtonExample from '$lib/../codes/ButtonExample'
 
@@ -29,8 +29,15 @@
             Кнопки являются неотъемлимой частью современных веб-приложений
         </Text>
         <br />
-        <Button variant="primary">Открыть модальное окно</Button>
-        <Button variant="blue" href="/">Вернуться на главную</Button>
+        <Section align="left" contentWidth="800px">
+            <Heading size={2}>Пример слева</Heading>
+        </Section>
+        <Section align="center">
+            <Heading size={2}>Пример посередине</Heading>
+        </Section>
+        <Section align="right">
+            <Heading size={2}>Пример справа</Heading>
+        </Section>
         <br />
         <br />
     

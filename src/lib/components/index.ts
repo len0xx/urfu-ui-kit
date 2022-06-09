@@ -20,6 +20,7 @@ import Profile from './Profile.svelte'
 import Progress from './Progress.svelte'
 import Rainbow from './Rainbow.svelte'
 import RoundButton from './RoundButton.svelte'
+import Section from './Section.svelte'
 import SelectButton from './SelectButton.svelte'
 import Slide from './Slide.svelte'
 import Slider from './Slider.svelte'
@@ -53,6 +54,7 @@ export {
     Progress,
     Rainbow,
     RoundButton,
+    Section,
     SelectButton,
     Slide,
     Slider,
