@@ -1,8 +1,14 @@
 <script lang="ts">
     import { Text, Heading } from '$lib/components'
 
-    export let active = false
     export let className = ''
+    let active = false
+
+    export const toggle = () => active = !active
+
+    export const open = () => active = true
+
+    export const close = () => active = false
 </script>
 
 <div class="kit-expandable {className}" class:active={active} on:click>

@@ -12,10 +12,14 @@
     }
     onMount(pageLoaded)
 
-    let expand = [false, false, false]
+    let expandables: {
+        open: () => void,
+        close: () => void,
+        toggle: () => void
+    }[] = []
 
     const toggleExpandable = (index: number) => {
-        expand[index] = !expand[index]
+        expandables[index].toggle()
     }
 </script>
 
@@ -38,11 +42,11 @@
         <Grid m={2} ratio="1:2" gap={2}>
             <Heading size={2} marginTop={0}>FAQ</Heading>
             <div>
-                <Expandable bind:active={ expand[0] } on:click={ () => toggleExpandable(0) }>
+                <Expandable bind:this={ expandables[0] } on:click={ () => toggleExpandable(0) }>
                     <svelte:fragment slot="header">Нажми на меня</svelte:fragment>
                     <svelte:fragment slot="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, in dolore itaque nemo rerum quos numquam nostrum. Dignissimos nihil, eius quibusdam harum, voluptate sed nam, rerum earum aperiam eaque dolorum.</svelte:fragment>
                 </Expandable>
-                <Expandable bind:active={ expand[1] } on:click={ () => toggleExpandable(1) }>
+                <Expandable bind:this={ expandables[1] } on:click={ () => toggleExpandable(1) }>
                     <svelte:fragment slot="header">Нажми на меня</svelte:fragment>
                     <svelte:fragment slot="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, in dolore itaque nemo rerum quos numquam nostrum. Dignissimos nihil, eius quibusdam harum, voluptate sed nam, rerum earum aperiam eaque dolorum.</svelte:fragment>
                 </Expandable>
