@@ -4,10 +4,10 @@
 
     import ButtonExample from '$lib/../codes/ButtonExample'
 
-    let modalVisible = false
-
-    const openModal = () => modalVisible = true
-    const hideModal = () => modalVisible = false
+    let modal: {
+        open: () => void,
+        close: () => void
+    }
 
     let loaded = false
     let showPreloader = true
@@ -26,11 +26,11 @@
     <Preloader bind:invisible={ loaded } />
 { /if }
 
-<Modal bind:visible={ modalVisible } align="center">
+<Modal bind:this={ modal } align="center">
     <Heading size={2} className="blue-text">Модальное окно</Heading>
     <Text className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae numquam sint nobis labore quibusdam.</Text>
     <br />
-    <Button variant="blue" on:click={ hideModal }>Закрыть</Button>
+    <Button variant="blue" on:click={ () => modal.close() }>Закрыть</Button>
     <Rainbow size="L" slot="footer" />
 </Modal>
 
@@ -42,13 +42,13 @@
             Кнопки являются неотъемлимой частью современных веб-приложений
         </Text>
         <br />
-        <Button variant="primary" size="S" on:click={ openModal }>Открыть модальное окно</Button>
+        <Button variant="primary" size="S" on:click={ () => modal.open() }>Открыть модальное окно</Button>
         <Button variant="blue" size="S" href="/">Вернуться на главную</Button>
         <br />    <br />
-        <Button variant="primary" size="M" on:click={ openModal }>Открыть модальное окно</Button>
+        <Button variant="primary" size="M" on:click={ () => modal.open() }>Открыть модальное окно</Button>
         <Button variant="blue" size="M" href="/">Вернуться на главную</Button>
         <br />    <br />
-        <Button variant="primary" size="L" on:click={ openModal }>Открыть модальное окно</Button>
+        <Button variant="primary" size="L" on:click={ () => modal.open() }>Открыть модальное окно</Button>
         <Button variant="blue" size="L" href="/">Вернуться на главную</Button>
         <br />
         <br />
