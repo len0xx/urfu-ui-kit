@@ -1,13 +1,10 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
+    import { onMount, SvelteComponent } from 'svelte'
     import { Code, Heading, Modal, Button, Rainbow, Text, Preloader, ParameterType } from '$lib/components'
 
     import ModalExample from '$lib/../codes/ModalExample'
 
-    let modalVisible = false
-
-    const openModal = () => modalVisible = true
-    const hideModal = () => modalVisible = false
+    let modal: SvelteComponent
     
     let loaded = false
     let showPreloader = true
@@ -26,11 +23,11 @@
     <Preloader bind:invisible={ loaded } />
 { /if }
 
-<Modal bind:visible={ modalVisible } align="center">
+<Modal bind:this={ modal } align="center">
     <Heading size={2} className="blue-text">Модальное окно</Heading>
     <Text className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae numquam sint nobis labore quibusdam.</Text>
     <br />
-    <Button variant="blue" on:click={ hideModal }>Закрыть</Button>
+    <Button variant="blue" on:click={ () => modal.close() }>Закрыть</Button>
     <Rainbow size="L" slot="footer" />
 </Modal>
 
@@ -42,7 +39,7 @@
             Модальное окно с полностью кастомизируемым контентом и кнопкой закрытия
         </Text>
         <br />
-        <Button variant="primary" on:click={ openModal }>Открыть модальное окно</Button>
+        <Button variant="primary" on:click={ () => modal.open() }>Открыть модальное окно</Button>
         <br />
         <br />
     

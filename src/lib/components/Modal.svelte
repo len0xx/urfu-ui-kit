@@ -1,27 +1,30 @@
 <script lang="ts">
     import { onMount } from 'svelte'
 
-    export let visible = false
     export let align = 'left'
     export let closable = true
     export let className = ''
 
-    const closeModal = () => visible = !(closable && true)
+    let visible = false
+
+    export const open = () => visible = true
+
+    export const close = () => visible = !(closable && true)
 
     onMount(() => {
         document.addEventListener('keyup', event => {
             if (event.key == 'Escape' && visible) {
-                closeModal()
+                close()
             }
         })
     })
 </script>
 
 <div class="kit-modal-wrapper {className}" class:visible>
-    <div class="shadow" on:click={ closeModal }></div>
+    <div class="shadow" on:click={ close }></div>
     <div class="kit-modal align-{align}" on:click>
         { #if closable }
-            <div class="close" on:click={ closeModal }>
+            <div class="close" on:click={ close }>
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M1.12756 1.09638C1.54164 0.699558 2.19901 0.713545 2.59584 1.12762L5.92734 4.60397L9.41947 1.11184C9.82501 0.706294 10.4825 0.706294 10.8881 1.11184C11.2936 1.51738 11.2936 2.1749 10.8881 2.58044L7.3647 6.10382L10.5574 9.43532C10.9542 9.8494 10.9402 10.5068 10.5261 10.9036C10.1121 11.3004 9.45469 11.2864 9.05786 10.8723L5.89576 7.57276L2.58038 10.8881C2.17484 11.2937 1.51732 11.2937 1.11178 10.8881C0.706233 10.4826 0.706233 9.82507 1.11178 9.41953L4.4584 6.07291L1.09632 2.56466C0.699497 2.15058 0.713484 1.49321 1.12756 1.09638Z" fill="#222222"/>
                 </svg>
