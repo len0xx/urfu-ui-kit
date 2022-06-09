@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { Text, Heading, Tag, Grid, Card, Warning, Preloader, RoundButton } from '$lib/components'
+    import { Text, Link, Heading, Tag, Grid, Card, Warning, Preloader, RoundButton } from '$lib/components'
     import components from '$lib/components-list'
 
     let expanded = false
@@ -33,11 +33,18 @@
         <Warning>
             <b>Библиотека находится в стадии beta</b>. <br /><br /> В связи с этим, возможны некоторые ошибки в отображении компонентов. А также, в финальной версии библиотеки некоторые компоненты могут иметь отличное название самого компонента и/или его параметров от тех, что имеются на данный момент. 
         </Warning>
-        <br /><br />
+        <br />
+        <Heading size={3}>Примеры веб-сайтов, построенных с помощью данной библиотеки:</Heading>
+        <ul>
+            <li><Link variant="hover" lineWidth={ 2 } href="https://inmt-priem.urfu.ru">Приёмная кампания Института новых материалов и технологий</Link></li>
+            <li><Link variant="hover" lineWidth={ 2 } href="https://masters-hti.urfu.ru">Магистратура Химико-технологического института</Link></li>
+            <li><Link variant="hover" lineWidth={ 2 } href="https://masters-enin.urfu.ru">Магистратура Уральского энергетического института</Link></li>
+        </ul>
+        <br />
         <div>
             <Grid m={1} l={2} xl={3}>
                 { #each components as component, i }
-                    { #if expanded || i < 6 }
+                    { #if expanded || i < 9 }
                         <a href={ '/component/' + component.type + '/' + component.name }>
                             <Card variant="white" color={ (i % 3 == 0) ? 'red-2' : ((i % 3 == 1) ? 'red-1' : 'blue-2') }>
                                 <svelte:fragment slot="title">{ component.name }</svelte:fragment>
