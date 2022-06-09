@@ -9,7 +9,15 @@
     export let className = ''
 </script>
 
-<div class="kit-card variant-{variant} gradient-{color} {className}" on:click>
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+<div
+    on:click
+    on:mousedown
+    on:mouseup
+    on:mouseover
+    on:mouseleave
+    class="kit-card variant-{variant} gradient-{color} {className}"
+>
     <div class="radial-icon"></div>
     <div class="top">
         <Heading size={3} marginTop={0}><slot name="title" /></Heading>

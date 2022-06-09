@@ -11,7 +11,17 @@
     let sizeClass = 'size-' + sizeNames[sizes.indexOf(size)]
 </script>
 
-<img class="kit-progress {className} {sizeClass} speed-{speed}" src={progress} alt="Progress" on:click>
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+<img
+    src={progress}
+    alt="Progress animation"
+    on:click
+    on:mouseleave
+    on:mousedown
+    on:mouseup
+    on:mouseover
+    class="kit-progress {className} {sizeClass} speed-{speed}"
+>
 
 <style>
     @keyframes rotation {

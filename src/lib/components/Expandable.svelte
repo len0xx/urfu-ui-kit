@@ -11,7 +11,15 @@
     export const close = () => active = false
 </script>
 
-<div class="kit-expandable {className}" class:active={active} on:click>
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+<div
+    on:click
+    on:mousedown
+    on:mouseup
+    on:mouseover
+    on:mouseleave
+    class="kit-expandable {className}" class:active={active}
+>
     <div class="block-content">
         <div>
             <Heading size={ 3 } className="blue-text"><slot name="header"></slot></Heading>

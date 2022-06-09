@@ -18,6 +18,7 @@
     }
 </script>
 
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <p
     { ...attrs }
     class={ className }
@@ -27,6 +28,11 @@
     style:margin-bottom={ (marginBottom !== null ? marginBottom : marginY) + 'em' }
     style:margin-left={ (marginLeft !== null ? marginLeft : marginX) + 'em' }
     style:margin-right={ (marginRight !== null ? marginRight : marginX) + 'em' }
+    on:click
+    on:mousedown
+    on:mouseup
+    on:mouseover
+    on:mouseleave
 >
     <slot />
 </p>

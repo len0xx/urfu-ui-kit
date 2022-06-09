@@ -27,6 +27,12 @@
     style:margin-left={ (marginLeft !== null ? marginLeft : marginX) + 'em' }
     style:margin-right={ (marginRight !== null ? marginRight : marginX) + 'em' }
     on:click
+    on:mousedown
+    on:mouseup
+    on:focus
+    on:blur
+    on:mouseover
+    on:mouseleave
 >
     <slot />
 </svelte:element>

@@ -37,7 +37,18 @@
 
 <svelte:window on:scroll={ scrollHandler }></svelte:window>
 
-<header class="kit-header {className}" class:kit-hidden={ hide } class:transparent-bg={ transparent } class:scrolled on:click>
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+<header
+    on:click
+    on:mousedown
+    on:mouseup
+    on:mouseover
+    on:mouseleave
+    class:scrolled
+    class="kit-header {className}"
+    class:kit-hidden={ hide }
+    class:transparent-bg={ transparent }
+>
     <slot />
 </header>
 

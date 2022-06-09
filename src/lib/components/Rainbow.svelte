@@ -12,7 +12,20 @@
     let sizeClass = 'size-' + sizeNames[sizes.indexOf(size)]
 </script>
 
-<div class="kit-rainbow {sizeClass} {className}" class:fixedTop={ fixed == 'top' } class:fixedBottom={ fixed == 'bottom' } style:width style:transition on:click></div>
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+<div
+    on:click
+    on:mouseleave
+    on:mousedown
+    on:mouseup
+    on:mouseover
+    style:width
+    style:transition
+    class="kit-rainbow {sizeClass} {className}"
+    class:fixedTop={ fixed == 'top' }
+    class:fixedBottom={ fixed == 'bottom' }
+>
+</div>
 
 <style>
     :root {

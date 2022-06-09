@@ -20,7 +20,13 @@
     })
 </script>
 
-<div class="kit-modal-wrapper {className}" class:visible>
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+<div
+    on:mouseleave
+    on:mouseover
+    class:visible
+    class="kit-modal-wrapper {className}"
+>
     <div class="shadow" on:click={ close }></div>
     <div class="kit-modal align-{align}" on:click>
         { #if closable }

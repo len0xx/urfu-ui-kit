@@ -7,7 +7,15 @@
     export let className = ''
 </script>
 
-<div class="kit-document {className}" on:click>
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+<div
+    class="kit-document {className}"
+    on:click
+    on:mousedown
+    on:mouseup
+    on:mouseover
+    on:mouseleave
+>
     <div class="extension { extension }">.{ extension }</div>
     <Heading size={4} marginY={0}>
         { #if link }

@@ -23,7 +23,15 @@
     })
 </script>
 
-<div class="kit-profile grid grid-2 variant-{variant} {className}" on:click>
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+<div
+    on:click
+    on:mouseleave
+    on:mousedown
+    on:mouseup
+    on:mouseover
+    class="kit-profile grid grid-2 variant-{variant} {className}"
+>
     <img class="kit-profile-image" src={ img || '/img/gradient-red-1.png' } alt="Profile">
     <div class="kit-profile-heading">
         <Heading size={4} className="kit-profile-title subtitle blue-text" marginY={0}>

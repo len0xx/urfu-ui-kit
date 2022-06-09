@@ -73,6 +73,8 @@
     on:change
     on:mouseover
     on:mouseleave
+    on:mouseup
+    on:mousedown
     on:input={ inputHandler }
     on:change={ changeHandler }
     class={ wideClass ? className + ' ' + wideClass : className }

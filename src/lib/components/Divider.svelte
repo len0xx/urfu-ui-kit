@@ -11,12 +11,13 @@
     export let className = ''
 </script>
 
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div
     on:click
-    on:focus
-    on:blur
     on:mouseover
     on:mouseleave
+    on:mousedown
+    on:mouseup
     class="kit-visual-divider {className}"
     style:background-color={ color }
     style:width

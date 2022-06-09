@@ -1,8 +1,8 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { Code, Heading, Button, Text, Preloader, ParameterType } from '$lib/components'
+    import { Code, Heading, Link, Text, Tag, Preloader, ParameterType } from '$lib/components'
 
-    import ButtonExample from '$lib/../codes/ButtonExample'
+    import LinkExample from '$lib/../codes/LinkExample'
 
     let loaded = false
     let showPreloader = true
@@ -26,21 +26,40 @@
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Link <a href="#" class="page-link" title="Ссылка на текущую страницу">🔗</a></Heading>
         <Text className="medium">
-            Кнопки являются неотъемлимой частью современных веб-приложений
+            Обёртка над стандартным тегом <code>a</code> 
         </Text>
         <br />
-        <Button variant="primary" size="S">Открыть модальное окно</Button>
-        <Button variant="blue" size="S" href="/">Вернуться на главную</Button>
-        <br /><br />
-        <Button variant="primary" size="M">Открыть модальное окно</Button>
-        <Button variant="blue" size="M" href="/">Вернуться на главную</Button>
-        <br /><br />
-        <Button variant="primary" size="L">Открыть модальное окно</Button>
-        <Button variant="blue" size="L" href="/">Вернуться на главную</Button>
+        <Link href="#" lineWidth={ 2 } variant="regular">Стандартная ссылка</Link><br />
+        <Link href="#" lineWidth={ 2 } variant="hover">Подчёркивание при наведении</Link><br />
+        <Link href="#" lineWidth={ 2 } variant="underlined">Статичное подчёркивание</Link><br />
+        <Link href="#" lineWidth={ 2 } variant="interactive">Анимация при наведении</Link><br />
         <br />
         <br />
         
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={ButtonExample} />
+        <Code val={LinkExample} />
+        <br />
+    
+        <Heading size={3}>Параметры:</Heading>
+        <Heading size={4} className="blue-text">href <ParameterType value="string" /></Heading>
+        <Text>Ссылка для перехода по нажатию</Text>
+        <Heading size={4} className="blue-text">variant <ParameterType value="number" /></Heading>
+        <Text>Вариант отображения</Text>
+        <Heading size={4} className="blue-text">lineWidth <ParameterType value="number" /></Heading>
+        <Text>Отступ по вертикали. (Устанавливается в <code>em</code>)</Text>
+        <Heading size={4} className="blue-text">color <ParameterType value="number" /></Heading>
+        <Text>Отступ сверху. (Устанавливается в <code>em</code>)</Text>
+        <Heading size={4} className="blue-text">className <ParameterType value="number" /></Heading>
+        <Text>Отступ снизу. (Устанавливается в <code>em</code>)</Text>
+        <br />
+        
+        <Heading size={3}>Поддерживаемые события:</Heading>
+        <Heading size={4} className="blue-text">on:click</Heading>
+        <Heading size={4} className="blue-text">on:focus</Heading>
+        <Heading size={4} className="blue-text">on:blur</Heading>
+        <Heading size={4} className="blue-text">on:mouseover</Heading>
+        <Heading size={4} className="blue-text">on:mouseleave</Heading>
+        <Heading size={4} className="blue-text">on:mouseup</Heading>
+        <Heading size={4} className="blue-text">on:mousedown</Heading>
     </main>
 </div>

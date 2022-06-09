@@ -22,7 +22,20 @@
     }
 </script>
 
-<a {href} {title} {target} class="kit-link {className} {variantClass}" style:color on:click on:mouseover={ mouseOverHandler } on:focus on:mouseleave>
+<a
+    {href}
+    {title}
+    {target}
+    style:color
+    on:click
+    on:focus
+    on:blur
+    on:mouseleave
+    on:mousedown
+    on:mouseup
+    on:mouseover={ mouseOverHandler }
+    class="kit-link {className} {variantClass}"
+>
     <slot />
     <span class="kit-link-underline" style:background-color={ color } style:height={ lineWidth + 'px' }></span>
 </a>

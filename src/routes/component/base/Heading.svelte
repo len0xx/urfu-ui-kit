@@ -56,5 +56,17 @@
         <Text>Отступ слева. (Устанавливается в <code>em</code>)</Text>
         <Heading size={4} className="blue-text">marginRight <ParameterType value="number" /></Heading>
         <Text>Отступ справа. (Устанавливается в <code>em</code>)</Text>
+        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута <code>class</code></Text>
+        <br />
+        
+        <Heading size={3}>Поддерживаемые события:</Heading>
+        <Heading size={4} className="blue-text">on:click</Heading>
+        <Heading size={4} className="blue-text">on:focus</Heading>
+        <Heading size={4} className="blue-text">on:blur</Heading>
+        <Heading size={4} className="blue-text">on:mouseover</Heading>
+        <Heading size={4} className="blue-text">on:mouseleave</Heading>
+        <Heading size={4} className="blue-text">on:mouseup</Heading>
+        <Heading size={4} className="blue-text">on:mousedown</Heading>
     </main>
 </div>

@@ -6,7 +6,15 @@
     export let className = ''
 </script>
 
-<div class="kit-benefit {className}" on:click>
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+<div
+    class="kit-benefit {className}"
+    on:click
+    on:mousedown
+    on:mouseup
+    on:mouseover
+    on:mouseleave
+>
     <Heading size={3} className="blue-text" marginY={ 0.25 }>{ num }</Heading>
     <Divider width="100%" color="var(--blue)" height={ 8 } marginY={ 1 } />
     { caption }

@@ -4,7 +4,15 @@
     export let className = ''
 </script>
 
-<div class="kit-partner {className}" on:click>
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+<div
+    on:click
+    on:mouseleave
+    on:mousedown
+    on:mouseup
+    on:mouseover
+    class="kit-partner {className}"
+>
     <div class="image" style={ `background-image: url(${ src })` }></div>
     { #if caption }
         <div class="caption align-center">{ caption }</div>
