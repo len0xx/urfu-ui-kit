@@ -29,9 +29,19 @@
             Выносите значимые числа в привлекательные и информативные блоки Benefit
         </Text>
         <Grid s={1} m={2} l={3} xl={4} gap={2}>
-            <Benefit num="28" caption="Компонентов" />
-            <Benefit num="2406" caption="Строк кода" />
-            <Benefit num="5" caption="Активных веб-сайтов" />
+            <Benefit size="S" num="28" caption="Компонентов" />
+            <Benefit size="S" num="2406" caption="Строк кода" />
+            <Benefit size="S" num="5" caption="Активных веб-сайтов" />
+        </Grid>
+        <Grid s={1} m={2} l={3} xl={4} gap={2}>
+            <Benefit size="M" num="28" caption="Компонентов" />
+            <Benefit size="M" num="2406" caption="Строк кода" />
+            <Benefit size="M" num="5" caption="Активных веб-сайтов" />
+        </Grid>
+        <Grid s={1} m={2} l={3} xl={4} gap={2}>
+            <Benefit size="L" num="28" caption="Компонентов" />
+            <Benefit size="L" num="2406" caption="Строк кода" />
+            <Benefit size="L" num="5" caption="Активных веб-сайтов" />
         </Grid>
         <br />
         
