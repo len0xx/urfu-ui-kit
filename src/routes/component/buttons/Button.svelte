@@ -42,13 +42,13 @@
             Кнопки являются неотъемлимой частью современных веб-приложений
         </Text>
         <br />
-        <Button variant="primary" size="S" on:click={ () => modal.open() }>Открыть модальное окно</Button>
+        <Button variant="primary" size="S" on:click={ modal.open }>Открыть модальное окно</Button>
         <Button variant="blue" size="S" href="/">Вернуться на главную</Button>
         <br />    <br />
-        <Button variant="primary" size="M" on:click={ () => modal.open() }>Открыть модальное окно</Button>
+        <Button variant="primary" size="M" on:click={ modal.open }>Открыть модальное окно</Button>
         <Button variant="blue" size="M" href="/">Вернуться на главную</Button>
         <br />    <br />
-        <Button variant="primary" size="L" on:click={ () => modal.open() }>Открыть модальное окно</Button>
+        <Button variant="primary" size="L" on:click={ modal.open }>Открыть модальное окно</Button>
         <Button variant="blue" size="L" href="/">Вернуться на главную</Button>
         <br />
         <br />

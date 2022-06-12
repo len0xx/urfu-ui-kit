@@ -5,7 +5,7 @@ export default `<script>
     }
 </script>
 
-<Button on:click={ () => modal.open() }>Открыть модальное окно</Button>
+<Button on:click={ modal.open }>Открыть модальное окно</Button>
 
 <Modal bind:this={ modal } align="center">
     <Heading size={2} className="blue-text">Модальное окно</Heading>

@@ -39,7 +39,7 @@
             Модальное окно с полностью кастомизируемым контентом и кнопкой закрытия
         </Text>
         <br />
-        <Button variant="primary" on:click={ () => modal.open() }>Открыть модальное окно</Button>
+        <Button variant="primary" on:click={ modal.open }>Открыть модальное окно</Button>
         <br />
         <br />
     
