@@ -3,17 +3,21 @@
     const sizeNames = ['small', 'medium', 'large'] as const
     type Size = typeof sizes[number]
 
+    export let id: string = undefined
     export let type = 'submit'
+    export let value: string = undefined
     export let variant = 'primary'
     export let href = ''
     export let className = ''
     export let size: Size = 'M'
+    let pressed = false
 
     import { createEventDispatcher } from 'svelte'
-
     const dispatch = createEventDispatcher()
-
-    let pressed = false
+    
+    // Only include value attribute if it's defined
+    $: attrs = { value }
+    if (attrs && Object.keys(attrs).includes('value') && !value) delete attrs.value
 
     const handleMouseDown = () => {
         pressed = true
@@ -34,7 +38,9 @@
 </script>
 
 <button
+    {id}
     {type}
+    {...attrs}
     class="kit-button variant-{variant} {className} {sizeClass}"
     class:pressed
     on:click={ handleClick }
