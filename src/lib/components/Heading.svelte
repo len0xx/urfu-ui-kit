@@ -47,3 +47,38 @@
 >
     <slot />
 </svelte:element>
+
+<style>
+    :global(h1, h2, h3, h4, h5, h6,
+    .heading-1, .heading-2,
+    .heading-3, .heading-4,
+    .heading-5, .heading-6) {
+        margin: 1em 0;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+    
+    :global(h1, .heading-1) {
+        font-size: var(--header-1);
+    }
+    
+    :global(h2, .heading-2) {
+        font-size: var(--header-2);
+    }
+    
+    :global(h3, .heading-3) {
+        font-size: var(--header-3);
+    }
+    
+    :global(h4, .heading-4) {
+        font-size: var(--header-4);
+    }
+    
+    :global(h5, .heading-5) {
+        font-size: var(--header-5);
+    }
+    
+    :global(h6, .heading-6) {
+        font-size: var(--header-6);
+    }    
+</style>
