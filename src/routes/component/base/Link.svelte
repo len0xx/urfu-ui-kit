@@ -43,8 +43,12 @@
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} className="blue-text">href <ParameterType value="string" /></Heading>
         <Text>Ссылка для перехода по нажатию</Text>
-        <Heading size={4} className="blue-text">variant <ParameterType value="number" /></Heading>
-        <Text>Вариант отображения</Text>
+        <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
+        <Text>
+            Вариант отображения <br />
+            Поддерживаемые значения: <code>regular</code>, <code>hover</code>, <code>underlined</code> и <code>interactive</code> <br />
+            Значение по умолчанию: <code>regular</code>
+        </Text>
         <Heading size={4} className="blue-text">lineWidth <ParameterType value="number" /></Heading>
         <Text>Отступ по вертикали. (Устанавливается в <code>em</code>)</Text>
         <Heading size={4} className="blue-text">color <ParameterType value="number" /></Heading>

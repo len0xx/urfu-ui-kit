@@ -32,7 +32,7 @@
     on:mousedown
     on:mouseup
     on:mouseover
-    class="kit-profile grid grid-2 variant-{variant} {className}"
+    class="kit-profile variant-{variant} {className}"
 >
     <img class="kit-profile-image" src={ img || '/img/gradient-red-1.png' } alt="Profile">
     <div class="kit-profile-heading">
@@ -71,6 +71,9 @@
     }
 
     .kit-profile {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
         border: 1px solid rgba(34, 34, 34, 0.05);
         border-radius: 2px;
         padding: 1.25em;

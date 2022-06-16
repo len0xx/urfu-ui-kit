@@ -1,9 +1,10 @@
 <script lang="ts">
+    export let id: string = undefined
     export let className = ''
     export let color = ''
+    export let opacity = 1
     export let marginX = 0
     export let marginY = 1
-    export let opacity = 1
     export let marginTop: number = null
     export let marginBottom: number = null
     export let marginLeft: number = null
@@ -12,18 +13,23 @@
     // Extract attributes from props object
     $: ({ ...attrs } = $$props)
 
-    // Get rid of the class and className props since we've added that manually
-    $: if (attrs.class) {
-        delete attrs.class
+    function filterPropsOut(props: Record<string, any>, filter: string[]) {
+        const result: Record<string, any> = {}
+        for (const key in props) {
+            if (!filter.includes(key)) {
+                result[key] = props[key]
+            }
+        }
+        return result
     }
-    $: if (attrs.className) {
-        delete attrs.className
-    }
+
+    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'id'])
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <p
-    { ...attrs }
+    {id}
+    { ...finalAttrs }
     class={ className }
     style:color
     style:opacity

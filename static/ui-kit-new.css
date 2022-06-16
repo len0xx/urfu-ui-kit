@@ -48,7 +48,7 @@ html {
 
 body {
 	margin: 0;
-	font-size: 14px;
+	font-size: var(--text-size);
 	color: #000000;
 	background-color: #F6F6F6;
 	overflow-x: hidden;
@@ -64,99 +64,6 @@ a {
 	text-decoration: none;
 }
 
-.grid {
-	display: grid;
-	gap: 1em;
-}
-
-.gap-2 {
-	gap: 2em !important;
-}
-
-.gap-3 {
-	gap: 3em !important;
-}
-
-.grid-1 {
-	grid-template-columns: repeat(1, 1fr);
-}
-
-.grid-1-2 {
-	grid-template-columns: 1fr 2fr;
-}
-
-.grid-1-3 {
-	grid-template-columns: 1fr 3fr;
-}
-
-.grid-1-4 {
-	grid-template-columns: 1fr 4fr;
-}
-
-.grid-2 {
-	grid-template-columns: repeat(2, 1fr);
-}
-
-.grid-2-1 {
-	grid-template-columns: 2fr 1fr;
-}
-
-.grid-2-3 {
-	grid-template-columns: 2fr 3fr;
-}
-
-.grid-3 {
-	grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-3-1 {
-	grid-template-columns: 3fr 1fr;
-}
-
-.grid-3-2 {
-	grid-template-columns: 3fr 2fr;
-}
-
-.grid-3-4 {
-	grid-template-columns: 3fr 4fr;
-}
-
-.grid-4-1 {
-	grid-template-columns: 4fr 1fr;
-}
-
-.grid-4-3 {
-	grid-template-columns: 4fr 3fr;
-}
-
-.grid-4 {
-	grid-template-columns: repeat(4, 1fr);
-}
-
-.grid-5 {
-	grid-template-columns: repeat(5, 1fr);
-}
-
-.grid-5-1 {
-	grid-template-columns: 5fr 1fr;
-}
-
-.grid-5-2 {
-	grid-template-columns: 5fr 2fr;
-}
-
-.grid-5-3 {
-	grid-template-columns: 5fr 3fr;
-}
-
-.grid-5-4 {
-	grid-template-columns: 5fr 4fr;
-}
-
-.grid-6 {
-	grid-template-columns: repeat(6, 1fr);
-}
-
 @media screen and (min-width: 769px) {
 	.pc-hide {
 	  	display: none !important;
@@ -164,36 +71,8 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-	.m-justify-items-center {
-	  	justify-items: center;
-	}
-  
 	.mobile-hide {
 	  	display: none !important;
-	}
-  
-	.m-grid-1 {
-	  	grid-template-columns: 1fr;
-	}
-  
-	.m-grid-2 {
-	  	grid-template-columns: repeat(2, 1fr);
-	}
-  
-	.m-grid-2-1 {
-	  	grid-template-columns: 2fr 1fr;
-	}
-  
-	.m-grid-3 {
-	  	grid-template-columns: repeat(3, 1fr);
-	}
-  
-	.m-grid-4 {
-	  	grid-template-columns: repeat(4, 1fr);
-	}
-  
-	.m-grid-5 {
-	  	grid-template-columns: repeat(5, 1fr);
 	}
 }
 
@@ -207,22 +86,6 @@ a {
 
 .align-right {
 	text-align: right;
-}
-
-.grid-justify-left {
-	justify-items: start;
-}
-
-.grid-justify-center {
-	justify-items: center;
-}
-
-.grid-justify-right {
-	justify-items: end;
-}
-
-.no-margin {
-	margin: 0;
 }
 
 ul {
