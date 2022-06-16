@@ -127,3 +127,13 @@ export function encodeQuery(data: Record<string, string>): string {
     }
     return ret.join('&')
 }
+
+export function filterPropsOut(props: Record<string, any>, filter: string[]): Record<string, any> {
+    const result: Record<string, any> = {}
+    for (const key in props) {
+        if (!filter.includes(key)) {
+            result[key] = props[key]
+        }
+    }
+    return result
+}
