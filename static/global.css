@@ -41,19 +41,11 @@ body textarea {
 	color: var(--red);
 }
 
-.fourty-text {
-	color: var(--fourty-percent);
-}
-
 div.content {
 	display: block;
 	position: relative;
 	max-width: 100%;
 	padding: var(--content-padding);
-}
-
-.no-top-margin {
-	margin-top: 0 !important;
 }
 
 code {
@@ -107,10 +99,6 @@ textarea {
 
 a:hover {
 	color: inherit;
-}
-
-.semi-transparent {
-	opacity: 0.6;
 }
 
 label.checkbox-wrapper {

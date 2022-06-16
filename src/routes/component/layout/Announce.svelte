@@ -38,11 +38,11 @@
         <br />
         <Divider />
         <br />
-        <Text className="fourty-text">Повышает шансы на трудоустройство и увеличение заработной платы</Text>
-        <Text className="fourty-text">Получать образование, совмещая с работой или стажировкой</Text>
-        <Text className="fourty-text">Построить индивидуальную траекторию обучения</Text>
-        <Text className="fourty-text">Получать повышенные стипендии</Text>
-        <Text className="fourty-text">Заниматься наукой</Text>
+        <Text opacity={0.4}>Повышает шансы на трудоустройство и увеличение заработной платы</Text>
+        <Text opacity={0.4}>Получать образование, совмещая с работой или стажировкой</Text>
+        <Text opacity={0.4}>Построить индивидуальную траекторию обучения</Text>
+        <Text opacity={0.4}>Получать повышенные стипендии</Text>
+        <Text opacity={0.4}>Заниматься наукой</Text>
         <br />
         <Button>Поступить</Button>
     </svelte:fragment>
