@@ -3,6 +3,7 @@
 
     type Align = 'left' | 'center' | 'right'
 
+    export let id: string = undefined
     export let className = ''
     export let align: Align = 'center'
     export let paddingX = 0
@@ -15,11 +16,12 @@
 
     $: ({...attrs} = $$props)
 
-    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'align'])
+    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'align', 'id'])
     let alignClass = 'section-align-' + align
 </script>
 
 <section 
+    {id}
     {...finalAttrs}
     class={['kit-section', className, alignClass].join(' ')}
     style:padding-top={ (paddingTop !== null ? paddingTop : paddingY) + 'em' }
