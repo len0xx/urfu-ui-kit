@@ -24,7 +24,7 @@
     }
 
     $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'align'])
-    let alignClass = 'align-' + align
+    let alignClass = 'section-align-' + align
 </script>
 
 <section 
@@ -43,21 +43,22 @@
 <style>
     section > .content-wrapper {
         max-width: var(--content-width);
+	    overflow: auto;
     }
 
-    section.align-left > .content-wrapper {
+    section.section-align-left > .content-wrapper {
         margin-top: 0;
         margin-bottom: 0;
         margin-right: auto;
     }
 
-    section.align-center > .content-wrapper {
+    section.section-align-center > .content-wrapper {
         margin-top: 0;
         margin-bottom: 0;
         margin: 0 auto;
     }
 
-    section.align-right > .content-wrapper {
+    section.section-align-right > .content-wrapper {
         margin-top: 0;
         margin-bottom: 0;
         margin-left: auto;
