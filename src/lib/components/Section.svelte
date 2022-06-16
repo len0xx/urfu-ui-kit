@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { filterPropsOut } from '../utilities'
+
     type Align = 'left' | 'center' | 'right'
 
     export let className = ''
@@ -12,16 +14,6 @@
     export let contentWidth: string = null
 
     $: ({...attrs} = $$props)
-
-    function filterPropsOut(props: Record<string, any>, filter: string[]) {
-        const result: Record<string, any> = {}
-        for (const key in props) {
-            if (!filter.includes(key)) {
-                result[key] = props[key]
-            }
-        }
-        return result
-    }
 
     $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'align'])
     let alignClass = 'section-align-' + align
