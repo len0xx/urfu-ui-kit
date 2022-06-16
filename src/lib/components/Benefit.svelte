@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Divider, Heading, Text } from '$lib/components'
+    import { Divider, Text } from '$lib/components'
 
     const sizes = ['S', 'M', 'L'] as const
     const sizeNames = ['small', 'medium', 'large'] as const
