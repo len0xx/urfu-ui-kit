@@ -60,11 +60,6 @@
         <br />
         
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">active <ParameterType value="boolean" /></Heading>
-        <Text>
-            <code>true</code> – блок раскрыт, <code>false</code> – закрыт. <br />
-            Значение по умолчанию: <code>false</code>
-        </Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />
@@ -74,6 +69,15 @@
         <Text>Слот для заголовка (отображается всегда)</Text>
         <Heading size={4} className="blue-text">text</Heading>
         <Text>Слот для внутреннего текста (отображается только, когда <code>active = true</code>)</Text>
+        <br />
+    
+        <Heading size={3}>Методы:</Heading>
+        <Heading size={4} className="blue-text">open</Heading>
+        <Text>Метод для открытия компонента</Text>
+        <Heading size={4} className="blue-text">close</Heading>
+        <Text>Метод для закрытия компонента</Text>
+        <Heading size={4} className="blue-text">toggle</Heading>
+        <Text>Метод для открытия/закрытия компонента</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>

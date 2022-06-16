@@ -1,10 +1,14 @@
 <script lang="ts">
-    import { onMount, SvelteComponent } from 'svelte'
+    import { onMount } from 'svelte'
     import { Code, Heading, Modal, Button, Rainbow, Text, Preloader, ParameterType } from '$lib/components'
 
     import ModalExample from '$lib/../codes/ModalExample'
 
-    let modal: SvelteComponent
+    let modal: {
+        open: () => void,
+        close: () => void,
+        toggle: () => void
+    }
     
     let loaded = false
     let showPreloader = true
@@ -48,14 +52,34 @@
         <br />
     
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">visible <ParameterType value="boolean" /></Heading>
-        <Text><code>true</code> – модальное окно отображается, <code>false</code> – не отображается</Text>
+        <Heading size={4} className="blue-text">closable <ParameterType value="boolean" /></Heading>
+        <Text>
+            Можно ли закрывать открытое модальное окно или нет <br />
+            Значение по умолчанию: <code>true</code>
+        </Text>
+        <Heading size={4} className="blue-text">align <ParameterType value="enum" /></Heading>
+        <Text>
+            Выравнивание контента внутри модельного окна <br />
+            Поддерживаемые значения: <code>left</code>, <code>center</code> и <code>right</code> <br />
+            Значение по умолчанию: <code>left</code>
+        </Text>
         <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
+        <br />
+    
+        <Heading size={3}>Методы:</Heading>
+        <Heading size={4} className="blue-text">open</Heading>
+        <Text>Метод для открытия модального окна</Text>
+        <Heading size={4} className="blue-text">close</Heading>
+        <Text>Метод для закрытия модального окна</Text>
+        <Heading size={4} className="blue-text">toggle</Heading>
+        <Text>Метод для открытия/закрытия модального окна</Text>
         <br />
     
         <Heading size={3}>Поддерживаемые события:</Heading>
         <Heading size={4} className="blue-text">on:mouseover</Heading>
         <Heading size={4} className="blue-text">on:mouseleave</Heading>
+        <Heading size={4} className="blue-text">on:open</Heading>
+        <Heading size={4} className="blue-text">on:close</Heading>
     </main>
 </div>
