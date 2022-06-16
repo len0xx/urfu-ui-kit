@@ -11,6 +11,6 @@ export default `<script>
     <Heading size={2} className="blue-text">Модальное окно</Heading>
     <Text className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit...</Text>
     <br />
-    <Button variant="blue" on:click={ () => modal.close() }>Закрыть</Button>
+    <Button variant="blue" on:click={ modal.close }>Закрыть</Button>
     <Rainbow size="L" slot="footer" />
 </Modal>`

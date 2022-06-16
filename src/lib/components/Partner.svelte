@@ -43,16 +43,7 @@
         background-size: 80%;
     }
 
-    /* .image > img {
-        display: block;
-        position: relative;
-        max-height: 85%;
-    } */
-
     @media screen and (max-width: 568px) {
-        /* .image > img {
-            max-width: 110px;
-        } */
         .image {
             min-height: 80px;
         }

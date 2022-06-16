@@ -10,14 +10,16 @@
     let textExpanded = false
     let text: string
     let shortText: string
-    let length = 0
+    let textTooLong = false
+
+    const MAX_WORDS = 80
 
     onMount(() => {
         text = shortText = shadowText.textContent
-        length = text.length
+        textTooLong = text.split(' ').length > MAX_WORDS
 
-        if (length > 400) {
-            shortText = text.slice(0, 400);
+        if (textTooLong) {
+            shortText = text.split(' ').slice(0, MAX_WORDS).join(' ')
         }
         shadowText.parentNode.removeChild(shadowText)
     })
@@ -42,14 +44,14 @@
         </Text>
     </div>
     <Text className="kit-profile-text" marginY={ 0 }>
-        { #if length > 400 }
+        { #if textTooLong }
             { #if !textExpanded }
-                { shortText }... <span class="semi-bold inline-btn-s" on:click={() => textExpanded = true}>Дальше</span>
+                { @html shortText }... <span class="semi-bold inline-btn-s" on:click={() => textExpanded = true}>Дальше</span>
             { :else }
-                { text }
+                { @html text }
             { /if }
         { :else }
-            { text }
+            { @html text }
         { /if }
     </Text>
     <p class="hidden shadow-text" bind:this={ shadowText }><slot name="text" /></p>

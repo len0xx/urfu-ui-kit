@@ -1,5 +1,6 @@
 <script lang="ts">
     import { Progress } from '$lib/components'
+
     export let invisible: boolean
     export let className = ''
 </script>
@@ -15,7 +16,7 @@
         top: 0;
         left: 0;
         width: 100vw;
-        min-height: 100vh;
+        height: 100vh;
         background-color: white;
         z-index: 999;
         place-items: center;
