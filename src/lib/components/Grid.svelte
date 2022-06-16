@@ -1,6 +1,6 @@
 <script lang="ts">
-    type ItemsAlignment = 'end' | 'center' | 'start' | 'stretch' | 'initial' | 'inherit'
-    type ContentAlignment = 'left' | 'center' | 'right' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch' | 'initial' | 'inherit'
+    type ItemsAlignment = 'normal' | 'flex-start' | 'flex-end' | 'center' | 'start' | 'end' | 'self-start' | 'self-end' | 'baseline' | 'stretch' | 'safe' | 'unsafe' | 'inherit' | 'initial' | 'unset' | 'revert' | 'revert-layer'
+    type ContentAlignment = ItemsAlignment | 'space-between' | 'space-around' | 'space-evenly'
     type GridSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
     type TwoColumnsRatio = '2:1' | '1:2' | '3:1' | '1:3' | '3:2' | '2:3' | '4:1' | '1:4' | '4:3' | '3:4' | '5:1' | '5:2' | '5:3' | '5:4'
 
@@ -13,12 +13,12 @@
     export let xl: GridSize = null
     export let ratio: TwoColumnsRatio = null
     export let gap = 1
-    export let alignItems: ItemsAlignment = 'initial'
-    export let justifyItems: ItemsAlignment = 'initial'
-    export let alignContent: ContentAlignment = 'initial'
-    export let justifyContent: ContentAlignment = 'initial'
-    export let placeItems: ItemsAlignment = 'initial'
-    export let placeContent: ContentAlignment = 'initial'
+    export let alignItems: ItemsAlignment = 'normal'
+    export let justifyItems: ItemsAlignment = 'normal'
+    export let alignContent: ContentAlignment = 'normal'
+    export let justifyContent: ContentAlignment = 'normal'
+    export let placeItems: ItemsAlignment = 'normal'
+    export let placeContent: ContentAlignment = 'normal'
 
     const defaultSize = 6
     let smallestSize = null
