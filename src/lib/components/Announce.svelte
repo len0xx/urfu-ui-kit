@@ -8,6 +8,7 @@
     export let imagePosition: 'left' | 'right' = 'right'
 </script>
 
+<!-- Desktop version -->
 <section class="kit-announce mobile-hide" style:background-color={ color } style:background-image="url({ vector })" style:color={ textColor }>
     <Grid className="background" m={3} alignItems="stretch" gap={2}>
         { #if imagePosition == 'left' }
@@ -33,6 +34,7 @@
         </Grid>
     </div>
 </section>
+<!-- Mobile version -->
 <section class="kit-announce pc-hide" style:background-color={ color } style:color={ textColor }>
     <Grid className="background" m={1}>
         <div class="img-block" style:background-image="url({ image })"></div>
@@ -96,6 +98,7 @@
     }
 
     .kit-announce .content {
-        padding: 3em 0;
+        padding-top: 3em;
+        padding-bottom: 3em;
     }
 </style>
