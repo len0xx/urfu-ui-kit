@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
+    import { onMount, createEventDispatcher } from 'svelte'
+    const dispatch = createEventDispatcher()
 
     export let align = 'left'
     export let closable = true
@@ -7,9 +8,21 @@
 
     let visible = false
 
-    export const open = () => visible = true
+    export const open = () => {
+        if (visible) return
+        visible = true
+        dispatch('open')
+    }
 
-    export const close = () => visible = !(closable && true)
+    export const close = () => {
+        if (!visible) return
+        if (closable) {
+            visible = false
+            dispatch('close')
+        }
+    }
+
+    export const toggle = () => visible ? close() : open()
 
     onMount(() => {
         document.addEventListener('keyup', event => {
