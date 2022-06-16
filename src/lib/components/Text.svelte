@@ -12,7 +12,10 @@
     // Extract attributes from props object
     $: ({ ...attrs } = $$props)
 
-    // Get rid of the className prop since we've added that manually
+    // Get rid of the class and className props since we've added that manually
+    $: if (attrs.class) {
+        delete attrs.class
+    }
     $: if (attrs.className) {
         delete attrs.className
     }
