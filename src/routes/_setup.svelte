@@ -5,7 +5,6 @@
     import Heading from '$lib/components/Heading.svelte'
     import Warning from '$lib/components/Warning.svelte'
     import Preloader from '$lib/components/Preloader.svelte'
-    import components from '$lib/components-list'
 
     let loaded = false
     let showPreloader = true

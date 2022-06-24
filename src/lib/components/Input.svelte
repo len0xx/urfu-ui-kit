@@ -7,7 +7,7 @@
     export let id: string = undefined
     export let min: number = null
     export let max: number = null
-    export let mask: any = null
+    export let mask: Record<string, unknown> = null
     export let wide: boolean = null
     export let name: string = null
     export let step: number = null

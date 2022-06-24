@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Tag } from "$lib/components/"
+    import { Tag } from '$lib/components/'
 
     export let value: 'enum' | 'string' | 'number' | 'object' | 'boolean' | 'function' = 'string'
     const types = ['enum', 'string', 'number', 'object', 'boolean', 'function']

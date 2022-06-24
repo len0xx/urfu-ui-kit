@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Highlight } from 'svelte-highlight'
-    import github from "svelte-highlight/styles/github-dark";
+    import github from 'svelte-highlight/styles/github-dark'
     import language from 'svelte-highlight/languages/xml'
 
     export let val = ''

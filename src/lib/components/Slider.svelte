@@ -13,7 +13,7 @@
     const dispatch = createEventDispatcher()
 
     let Slider // for saving Carousel component class
-    let slider: HTMLElement & { goToPrev: ({}) => void, goToNext: ({}) => void } // for calling methods of the slider instance
+    let slider: HTMLElement & { goToPrev: (a: { animate?: boolean }) => void, goToNext: (a: { animate?: boolean }) => void } // for calling methods of the slider instance
     let sliderDuration = duration * 1000
     let sliderShifting = true
     let sliderProgress = '0%'
