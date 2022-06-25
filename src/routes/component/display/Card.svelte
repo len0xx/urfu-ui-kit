@@ -1,26 +1,12 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import { Code, Heading, Card, Text, Preloader, ParameterType } from '$lib/components'
-
+    import { Code, Heading, Card, Text, ParameterType } from '$lib/components'
     import CardExample from '$lib/../codes/CardExample'
     import Grid from '$lib/components/Grid.svelte'
-
-    let loaded = false
-    let showPreloader = true
-    const pageLoaded = () => {
-        loaded = true
-        setTimeout(() => showPreloader = false, 250)
-    }
-    onMount(pageLoaded)
 </script>
 
 <svelte:head>
     <title>УрФУ UI Kit – Card</title>
 </svelte:head>
-
-{ #if showPreloader }
-    <Preloader bind:invisible={ loaded } />
-{ /if }
 
 <div class="content">
     <main>

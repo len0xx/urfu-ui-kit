@@ -1,31 +1,18 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import { Code, Heading, Grid, Input, Link, Text, Preloader, ParameterType } from '$lib/components'
-
+    import { Code, Heading, Grid, Input, Link, Text, ParameterType } from '$lib/components'
     import InputExample from '$lib/../codes/InputExample'
 
-    let loaded = false
     let firstname = ''
     let email = ''
     let phone = ''
-    let showPreloader = true
     let phoneMask = {
         mask: '+{7} (000) 000-00-00'
     }
-    const pageLoaded = () => {
-        loaded = true
-        setTimeout(() => showPreloader = false, 250)
-    }
-    onMount(pageLoaded)
 </script>
 
 <svelte:head>
     <title>УрФУ UI Kit – Input</title>
 </svelte:head>
-
-{ #if showPreloader }
-    <Preloader bind:invisible={ loaded } />
-{ /if }
 
 <div class="content">
     <main>

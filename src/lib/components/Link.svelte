@@ -26,7 +26,6 @@
     {href}
     {title}
     {target}
-    style:color
     on:click
     on:focus
     on:blur
@@ -35,16 +34,17 @@
     on:mouseup
     on:mouseover={ mouseOverHandler }
     class="kit-link {className} {variantClass}"
+    style="--link-color: {color};"
 >
     <slot />
-    <span class="kit-link-underline" style:background-color={ color } style:height={ lineWidth + 'px' }></span>
+    <span class="kit-link-underline" style:height={ lineWidth + 'px' }></span>
 </a>
 
 <style>
     a.kit-link {
         display: inline-block;
         position: relative;
-        color: var(--blue);
+        color: var(--link-color);
         padding-bottom: 0;
         cursor: pointer;
     }
@@ -70,7 +70,7 @@
         height: 4px;
         content: '';
         transition: 0.1s ease-in-out;
-        background-color: var(--blue);
+        background-color: var(--link-color);
     }
 
     a.kit-link.regular-variant > .kit-link-underline {

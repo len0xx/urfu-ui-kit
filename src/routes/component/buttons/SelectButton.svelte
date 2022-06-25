@@ -1,16 +1,6 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import { Code, Heading, SelectButton, Text, Preloader, ParameterType } from '$lib/components'
-
+    import { Code, Heading, SelectButton, Text, ParameterType } from '$lib/components'
     import SelectButtonExample from '$lib/../codes/SelectButtonExample'
-
-    let loaded = false
-    let showPreloader = true
-    const pageLoaded = () => {
-        loaded = true
-        setTimeout(() => showPreloader = false, 250)
-    }
-    onMount(pageLoaded)
 
     let selected = 0
     let expanded = false
@@ -19,10 +9,6 @@
 <svelte:head>
     <title>УрФУ UI Kit – SelectButton</title>
 </svelte:head>
-
-{ #if showPreloader }
-    <Preloader bind:invisible={ loaded } />
-{ /if }
 
 <div class="content">
     <main>

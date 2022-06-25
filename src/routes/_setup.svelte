@@ -1,27 +1,10 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import Text from '$lib/components/Text.svelte'
-    import Link from '$lib/components/Link.svelte'
-    import Heading from '$lib/components/Heading.svelte'
-    import Warning from '$lib/components/Warning.svelte'
-    import Preloader from '$lib/components/Preloader.svelte'
-
-    let loaded = false
-    let showPreloader = true
-    const pageLoaded = () => {
-        loaded = true
-        setTimeout(() => showPreloader = false, 250)
-    }
-    onMount(pageLoaded)
+    import { Text, Link, Heading, Warning } from '$lib/components'
 </script>
 
 <svelte:head>
     <title>УрФУ UI Kit – Установка</title>
 </svelte:head>
-
-{ #if showPreloader }
-    <Preloader bind:invisible={ loaded } />
-{ /if }
 
 <div class="content">
     <main>

@@ -1,29 +1,17 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import { Text, Link, Heading, Tag, Grid, Card, Warning, Preloader, RoundButton } from '$lib/components'
+    import { Text, Link, Heading, Tag, Grid, Card, Warning, RoundButton } from '$lib/components'
     import components from '$lib/components-list'
 
     let expanded = false
-    let loaded = false
-    let showPreloader = true
-    const pageLoaded = () => {
-        loaded = true
-        setTimeout(() => showPreloader = false, 250)
-    }
-    onMount(pageLoaded)
 </script>
 
 <svelte:head>
     <title>УрФУ UI Kit</title>
 </svelte:head>
 
-{ #if showPreloader }
-    <Preloader bind:invisible={ loaded } />
-{ /if }
-
 <div class="content">
     <main>
-        <Heading size={1}>УрФУ UI Kit <Tag>beta 0.7.10</Tag></Heading>
+        <Heading size={1}>УрФУ UI Kit <Tag>beta 0.8.0</Tag></Heading>
         <Text className="medium">
             Расширяемая библиотека Svelte компонентов для упрощённого построения современных веб-приложений Уральского федерального университета
         </Text>

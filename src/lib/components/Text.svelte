@@ -12,7 +12,7 @@
     export let marginLeft: number = null
     export let marginRight: number = null
 
-    // Extract attributes from props object
+    // Extract all the attributes from props object
     $: ({ ...attrs } = $$props)
 
     $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'id'])

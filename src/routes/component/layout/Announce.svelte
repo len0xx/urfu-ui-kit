@@ -1,25 +1,11 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import { Code, Heading, Announce, Divider, Button, Text, Preloader, ParameterType } from '$lib/components'
-
+    import { Code, Heading, Announce, Divider, Button, Text, ParameterType } from '$lib/components'
     import AnnounceExample from '$lib/../codes/AnnounceExample'
-
-    let loaded = false
-    let showPreloader = true
-    const pageLoaded = () => {
-        loaded = true
-        setTimeout(() => showPreloader = false, 250)
-    }
-    onMount(pageLoaded)
 </script>
 
 <svelte:head>
     <title>УрФУ UI Kit – Announce</title>
 </svelte:head>
-
-{ #if showPreloader }
-    <Preloader bind:invisible={ loaded } />
-{ /if }
 
 <div class="content">
     <main>

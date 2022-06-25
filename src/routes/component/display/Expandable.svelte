@@ -1,16 +1,6 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import { Code, Heading, Grid, Expandable, Text, Preloader, ParameterType } from '$lib/components'
-
+    import { Code, Heading, Grid, Expandable, Text, ParameterType } from '$lib/components'
     import ExpandableExample from '$lib/../codes/ExpandableExample'
-
-    let loaded = false
-    let showPreloader = true
-    const pageLoaded = () => {
-        loaded = true
-        setTimeout(() => showPreloader = false, 250)
-    }
-    onMount(pageLoaded)
 
     let expandables: {
         open: () => void,
@@ -26,10 +16,6 @@
 <svelte:head>
     <title>УрФУ UI Kit – Expandable</title>
 </svelte:head>
-
-{ #if showPreloader }
-    <Preloader bind:invisible={ loaded } />
-{ /if }
 
 <div class="content">
     <main>

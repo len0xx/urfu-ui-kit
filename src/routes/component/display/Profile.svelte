@@ -1,25 +1,11 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import { Code, Heading, Profile, Grid, Text, Preloader, ParameterType } from '$lib/components'
-
+    import { Code, Heading, Profile, Grid, Text, ParameterType } from '$lib/components'
     import ProfileExample from '$lib/../codes/ProfileExample'
-
-    let loaded = false
-    let showPreloader = true
-    const pageLoaded = () => {
-        loaded = true
-        setTimeout(() => showPreloader = false, 250)
-    }
-    onMount(pageLoaded)
 </script>
 
 <svelte:head>
     <title>УрФУ UI Kit – Profile</title>
 </svelte:head>
-
-{ #if showPreloader }
-    <Preloader bind:invisible={ loaded } />
-{ /if }
 
 <div class="content">
     <main>

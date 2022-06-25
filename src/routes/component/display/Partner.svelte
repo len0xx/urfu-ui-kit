@@ -1,26 +1,13 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import { Code, Heading, Tag, Grid, Partner, Text, Preloader, ParameterType } from '$lib/components'
-
+    import { Code, Heading, Tag, Grid, Partner, Text, ParameterType } from '$lib/components'
     import PartnerExample from '$lib/../codes/PartnerExample'
 
     let partners = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-    let loaded = false
-    let showPreloader = true
-    const pageLoaded = () => {
-        loaded = true
-        setTimeout(() => showPreloader = false, 250)
-    }
-    onMount(pageLoaded)
 </script>
 
 <svelte:head>
     <title>УрФУ UI Kit – Partner</title>
 </svelte:head>
-
-{ #if showPreloader }
-    <Preloader bind:invisible={ loaded } />
-{ /if }
 
 <div class="content">
     <main>

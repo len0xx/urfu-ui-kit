@@ -1,10 +1,12 @@
 <script lang="ts">
-    import { Header, Heading, Rainbow } from '$lib/components'
+    import { Header, Heading, Preloader, Rainbow } from '$lib/components'
     import components from '$lib/components-list'
     import { page } from '$app/stores'
 
     const getLink = (component: { type: string, name: string }) => '/component/' + component.type + '/' + component.name
 </script>
+
+<Preloader delay={400} />
 
 <Header hideOnScrollDown={ true } showOnScrollUp={ true } hideAfter={ 90 }>
     <div class="content">

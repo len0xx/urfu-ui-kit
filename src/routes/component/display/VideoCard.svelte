@@ -1,28 +1,14 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import { Code, Heading, VideoCard, Text, Preloader, ParameterType } from '$lib/components'
-
+    import { Code, Heading, VideoCard, Text, ParameterType } from '$lib/components'
     import VideoCardExample from '$lib/../codes/VideoCardExample'
     import Grid from '$lib/components/Grid.svelte'
 
     let videos = [0, 1, 2, 3]
-
-    let loaded = false
-    let showPreloader = true
-    const pageLoaded = () => {
-        loaded = true
-        setTimeout(() => showPreloader = false, 250)
-    }
-    onMount(pageLoaded)
 </script>
 
 <svelte:head>
     <title>УрФУ UI Kit – VideoCard</title>
 </svelte:head>
-
-{ #if showPreloader }
-    <Preloader bind:invisible={ loaded } />
-{ /if }
 
 <div class="content">
     <main>

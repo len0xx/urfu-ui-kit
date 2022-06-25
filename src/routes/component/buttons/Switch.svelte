@@ -1,18 +1,9 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import { Code, Heading, Switch, Text, Preloader, ParameterType } from '$lib/components'
-
+    import { Code, Heading, Switch, Text, ParameterType } from '$lib/components'
     import SwitchExample from '$lib/../codes/SwitchExample'
 
-    let loaded = false
-    let showPreloader = true
     let currentState = false
-    const pageLoaded = () => {
-        loaded = true
-        setTimeout(() => showPreloader = false, 250)
-    }
-    onMount(pageLoaded)
-
+    
     const handleSwitch = (e: CustomEvent) => {
         const { state } = e.detail
         currentState = state
@@ -22,10 +13,6 @@
 <svelte:head>
     <title>УрФУ UI Kit – Switch</title>
 </svelte:head>
-
-{ #if showPreloader }
-    <Preloader bind:invisible={ loaded } />
-{ /if }
 
 <div class="content">
     <main>

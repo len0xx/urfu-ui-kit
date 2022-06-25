@@ -1,7 +1,5 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import { Code, Heading, Modal, Button, Rainbow, Text, Preloader, ParameterType } from '$lib/components'
-
+    import { Code, Heading, Modal, Button, Rainbow, Text, ParameterType } from '$lib/components'
     import ModalExample from '$lib/../codes/ModalExample'
 
     let modal: {
@@ -9,23 +7,11 @@
         close: () => void,
         toggle: () => void
     }
-    
-    let loaded = false
-    let showPreloader = true
-    const pageLoaded = () => {
-        loaded = true
-        setTimeout(() => showPreloader = false, 250)
-    }
-    onMount(pageLoaded)
 </script>
 
 <svelte:head>
     <title>УрФУ UI Kit – Modal</title>
 </svelte:head>
-
-{ #if showPreloader }
-    <Preloader bind:invisible={ loaded } />
-{ /if }
 
 <Modal bind:this={ modal } align="center">
     <Heading size={2} className="blue-text">Модальное окно</Heading>

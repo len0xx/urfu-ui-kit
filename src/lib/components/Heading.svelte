@@ -13,7 +13,7 @@
     export let marginRight: number = null
     let tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = `h${size}`
 
-    // Extract attributes from props object
+    // Extract all the attributes from props object
     $: ({ ...attrs } = $$props)
 
     $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'id'])

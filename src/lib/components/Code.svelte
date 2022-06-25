@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-  {@html github}
+    { @html github }
 </svelte:head>
 
-<Highlight {language} code={val} />
+<Highlight { language } code={ val } />
