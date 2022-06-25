@@ -1,11 +1,34 @@
 <script lang="ts">
     import { Progress } from '$lib/components'
+    import { pageLoaded } from '$lib/stores'
 
-    export let invisible: boolean
+    let transparent = false
+    let hidden = false
+    export let delay = 0
+    export let hideOnLoad = true
     export let className = ''
+
+    export const hide = () => {
+        setTimeout(() => transparent = true, delay)
+        setTimeout(() => hidden = true, delay + 110)
+    }
+
+    export const show = () => {
+        setTimeout(() => hidden = false, delay)
+        setTimeout(() => transparent = false, delay + 10)
+    }
+
+    const handleLoad = () => {
+        if (hideOnLoad && !$pageLoaded) {
+            hide()
+            $pageLoaded = true
+        }
+    }
 </script>
 
-<section class="kit-preloader {className}" class:x-invisible={invisible}>
+<svelte:window on:load={ handleLoad }></svelte:window>
+
+<section class="kit-preloader {className}" class:transparent class:hidden on:click>
     <Progress />
 </section>
 
@@ -23,7 +46,10 @@
         place-content: center;
         transition: 0.1s ease-in-out;
     }
-    .kit-preloader.x-invisible {
+    .kit-preloader.transparent {
         opacity: 0;
+    }
+    .kit-preloader.hidden {
+        display: none;
     }
 </style>
