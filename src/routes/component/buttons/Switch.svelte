@@ -33,22 +33,22 @@
         <br />
         
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">left <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">left <ParameterType value="string" /></Heading>
         <Text>Текст с левой стороны от переключателя</Text>
-        <Heading size={4} className="blue-text">right <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">right <ParameterType value="string" /></Heading>
         <Text>Текст с правой стороны от переключателя</Text>
-        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:change</Heading>
+        <Heading size={4} color="var(--blue)">on:change</Heading>
         <Text>Передаваемый параметр: <code>&lbrace; state: boolean &rbrace;</code></Text>
-        <Heading size={4} className="blue-text">on:focus</Heading>
-        <Heading size={4} className="blue-text">on:blur</Heading>
-        <Heading size={4} className="blue-text">on:mouseover</Heading>
-        <Heading size={4} className="blue-text">on:mouseleave</Heading>
-        <Heading size={4} className="blue-text">on:mouseup</Heading>
-        <Heading size={4} className="blue-text">on:mousedown</Heading>
+        <Heading size={4} color="var(--blue)">on:focus</Heading>
+        <Heading size={4} color="var(--blue)">on:blur</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseover</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseup</Heading>
+        <Heading size={4} color="var(--blue)">on:mousedown</Heading>
     </main>
 </div>

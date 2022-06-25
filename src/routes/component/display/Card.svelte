@@ -47,30 +47,30 @@
         <br />
         
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
+        <Heading size={4} color="var(--blue)">variant <ParameterType value="enum" /></Heading>
         <Text>Вариант заднего фона карточки (белый или серый). Поддерживаются два значения: <code>white</code> и <code>grey</code>. <br />
             Значение по умолчанию: <code>grey</code></Text>
-        <Heading size={4} className="blue-text">color <ParameterType value="enum" /></Heading>
+        <Heading size={4} color="var(--blue)">color <ParameterType value="enum" /></Heading>
         <Text>Изображение градиента (в правом углу карточки). Поддерживаются четыре значения: <code>red-1</code>, <code>red-2</code>, <code>blue-1</code> и <code>blue-2</code>. <br />
             Значение по умолчанию: <code>red-1</code></Text>
-        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />
         
         <Heading size={3}>Слоты:</Heading>
-        <Heading size={4} className="blue-text">text</Heading>
+        <Heading size={4} color="var(--blue)">text</Heading>
         <Text>Текст внутри карточки</Text>
-        <Heading size={4} className="blue-text">left</Heading>
+        <Heading size={4} color="var(--blue)">left</Heading>
         <Text>Текст, располагающийся в левой половине подвала карточки</Text>
-        <Heading size={4} className="blue-text">right</Heading>
+        <Heading size={4} color="var(--blue)">right</Heading>
         <Text>Текст, располагающийся в правой половине подвала карточки (по умолчанию синего цвета)</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:click</Heading>
-        <Heading size={4} className="blue-text">on:mouseover</Heading>
-        <Heading size={4} className="blue-text">on:mouseleave</Heading>
-        <Heading size={4} className="blue-text">on:mouseup</Heading>
-        <Heading size={4} className="blue-text">on:mousedown</Heading>
+        <Heading size={4} color="var(--blue)">on:click</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseover</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseup</Heading>
+        <Heading size={4} color="var(--blue)">on:mousedown</Heading>
     </main>
 </div>

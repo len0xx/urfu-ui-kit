@@ -40,29 +40,29 @@
         <br />
     
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
+        <Heading size={4} color="var(--blue)">variant <ParameterType value="enum" /></Heading>
         <Text>Цвет заднего фона. Поддерживаются два значения: <code>white</code> и <code>grey</code>. <br />
             Значение по умолчанию: <code>grey</code></Text>
-        <Heading size={4} className="blue-text">src <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">src <ParameterType value="string" /></Heading>
         <Text>Ссылка на изображение</Text>
-        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />
         
         <Heading size={3}>Слоты:</Heading>
-        <Heading size={4} className="blue-text">name</Heading>
+        <Heading size={4} color="var(--blue)">name</Heading>
         <Text>Имя, отображаемое в заголовке</Text>
-        <Heading size={4} className="blue-text">description</Heading>
+        <Heading size={4} color="var(--blue)">description</Heading>
         <Text>Подпись под именем</Text>
-        <Heading size={4} className="blue-text">text</Heading>
+        <Heading size={4} color="var(--blue)">text</Heading>
         <Text>Основное содержание компонента. Текст, длиной до 400 символов отображется целиком. Длиннее – скрывается при монтировании компонента и раскрывается по нажатию на кнопку "Дальше"</Text>
         <br />
     
         <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:click</Heading>
-        <Heading size={4} className="blue-text">on:mouseover</Heading>
-        <Heading size={4} className="blue-text">on:mouseleave</Heading>
-        <Heading size={4} className="blue-text">on:mouseup</Heading>
-        <Heading size={4} className="blue-text">on:mousedown</Heading>
+        <Heading size={4} color="var(--blue)">on:click</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseover</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseup</Heading>
+        <Heading size={4} color="var(--blue)">on:mousedown</Heading>
     </main>
 </div>

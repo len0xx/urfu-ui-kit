@@ -25,15 +25,15 @@
         <br />
     
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">variant</Heading>
+        <Heading size={4} color="var(--blue)">variant</Heading>
         <Text>Вариант отображения кнопки (вставляется в атрибут class). Поддерживаются два стандартных значения: <code>primary</code> и <code>blue</code></Text>
-        <Heading size={4} className="blue-text">className</Heading>
+        <Heading size={4} color="var(--blue)">className</Heading>
         <Text>Аналог стандартного атрибута class</Text>
-        <Heading size={4} className="blue-text">actionType</Heading>
+        <Heading size={4} color="var(--blue)">actionType</Heading>
         <Text>Аналог стандартного атрибута action</Text>
         <br />
     
         <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:click</Heading>
+        <Heading size={4} color="var(--blue)">on:click</Heading>
     </main>
 </div>

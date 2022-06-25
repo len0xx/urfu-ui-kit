@@ -11,7 +11,7 @@
 
 <div class="kit-video-card {className}" on:click>
     <div class="img" style="background-image: url({ src })"><img src={playIcon} alt="Play"></div>
-    <Heading size={4} className="blue-text">{ name }</Heading>
+    <Heading size={4} color="var(--blue)">{ name }</Heading>
     <Text className="position">{ @html position }</Text>
     { #if description }
         <Text className="description">{ @html description }</Text>

@@ -14,7 +14,7 @@
 </svelte:head>
 
 <Modal bind:this={ modal } align="center">
-    <Heading size={2} className="blue-text">Модальное окно</Heading>
+    <Heading size={2} color="var(--blue)">Модальное окно</Heading>
     <Text className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae numquam sint nobis labore quibusdam.</Text>
     <br />
     <Button variant="blue" on:click={ () => modal.close() }>Закрыть</Button>
@@ -38,34 +38,34 @@
         <br />
     
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">closable <ParameterType value="boolean" /></Heading>
+        <Heading size={4} color="var(--blue)">closable <ParameterType value="boolean" /></Heading>
         <Text>
             Можно ли закрывать открытое модальное окно или нет <br />
             Значение по умолчанию: <code>true</code>
         </Text>
-        <Heading size={4} className="blue-text">align <ParameterType value="enum" /></Heading>
+        <Heading size={4} color="var(--blue)">align <ParameterType value="enum" /></Heading>
         <Text>
             Выравнивание контента внутри модельного окна <br />
             Поддерживаемые значения: <code>left</code>, <code>center</code> и <code>right</code> <br />
             Значение по умолчанию: <code>left</code>
         </Text>
-        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />
     
         <Heading size={3}>Методы:</Heading>
-        <Heading size={4} className="blue-text">open</Heading>
+        <Heading size={4} color="var(--blue)">open</Heading>
         <Text>Метод для открытия модального окна</Text>
-        <Heading size={4} className="blue-text">close</Heading>
+        <Heading size={4} color="var(--blue)">close</Heading>
         <Text>Метод для закрытия модального окна</Text>
-        <Heading size={4} className="blue-text">toggle</Heading>
+        <Heading size={4} color="var(--blue)">toggle</Heading>
         <Text>Метод для открытия/закрытия модального окна</Text>
         <br />
     
         <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:mouseover</Heading>
-        <Heading size={4} className="blue-text">on:mouseleave</Heading>
-        <Heading size={4} className="blue-text">on:open</Heading>
-        <Heading size={4} className="blue-text">on:close</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseover</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:open</Heading>
+        <Heading size={4} color="var(--blue)">on:close</Heading>
     </main>
 </div>

@@ -31,19 +31,19 @@
         <br />
     
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">name <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">name <ParameterType value="string" /></Heading>
         <Text>Отображаемое имя</Text>
-        <Heading size={4} className="blue-text">src <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">src <ParameterType value="string" /></Heading>
         <Text>Ссылка на видео</Text>
-        <Heading size={4} className="blue-text">position <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">position <ParameterType value="string" /></Heading>
         <Text>Подпись первого порядка</Text>
-        <Heading size={4} className="blue-text">description <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">description <ParameterType value="string" /></Heading>
         <Text>Подпись второго порядка</Text>
-        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />
     
         <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:click</Heading>
+        <Heading size={4} color="var(--blue)">on:click</Heading>
     </main>
 </div>

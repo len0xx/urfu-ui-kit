@@ -43,22 +43,22 @@
         <br />
 
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">imagePosition <ParameterType value="enum" /></Heading>
+        <Heading size={4} color="var(--blue)">imagePosition <ParameterType value="enum" /></Heading>
         <Text>
             Положение изображения (которое задаётся через параметр <code>image</code>) в контейнере <br />
             Поддерживаемые значения: <code>left</code>, <code>right</code> <br />
             Значение по умолчанию: <code>right</code>
         </Text>
-        <Heading size={4} className="blue-text">image <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">image <ParameterType value="string" /></Heading>
         <Text>Ссылка на изображение (обычно растровое), отображаемое в левой или правой колонке (в зависимости от значения параметра <code>imagePosition</code>)</Text>
-        <Heading size={4} className="blue-text">vector <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">vector <ParameterType value="string" /></Heading>
         <Text>Ссылка на изображение (обычно векторное), отображаемое в левом нижнем углу компонента (если <code>imagePosition = right</code>)</Text>
-        <Heading size={4} className="blue-text">color <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">color <ParameterType value="string" /></Heading>
         <Text>
             Цвет заднего фона <br />
             Значение по умолчанию: <code>var(--blue)</code>
         </Text>
-        <Heading size={4} className="blue-text">textColor <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">textColor <ParameterType value="string" /></Heading>
         <Text>
             Цвет текста <br />
             Значение по умолчанию: <code>white</code>
@@ -66,9 +66,9 @@
         <br />
 
         <Heading size={3}>Слоты:</Heading>
-        <Heading size={4} className="blue-text">first</Heading>
+        <Heading size={4} color="var(--blue)">first</Heading>
         <Text>Контент первой текстовой колонки</Text>
-        <Heading size={4} className="blue-text">second</Heading>
+        <Heading size={4} color="var(--blue)">second</Heading>
         <Text>Контент второй текстовой колонки</Text>
     </main>
 </div>

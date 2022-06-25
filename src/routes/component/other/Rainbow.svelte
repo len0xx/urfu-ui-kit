@@ -28,21 +28,21 @@
         <br />
     
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">size <ParameterType value="enum" /></Heading>
+        <Heading size={4} color="var(--blue)">size <ParameterType value="enum" /></Heading>
         <Text>Размер компонента. Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
             Значение по умолчанию: <code>M</code></Text>
-        <Heading size={4} className="blue-text">fixed <ParameterType value="enum" /></Heading>
+        <Heading size={4} color="var(--blue)">fixed <ParameterType value="enum" /></Heading>
         <Text>Опциональный атрибут для привязки компонента к верхнему или нижнему краю родительского элемента. Поддерживаются два значения: <code>top</code> и <code>bottom</code>. <br />
             Значение по умолчанию: <code>null</code></Text>
-        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />
     
         <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:click</Heading>
-        <Heading size={4} className="blue-text">on:mouseover</Heading>
-        <Heading size={4} className="blue-text">on:mouseleave</Heading>
-        <Heading size={4} className="blue-text">on:mouseup</Heading>
-        <Heading size={4} className="blue-text">on:mousedown</Heading>
+        <Heading size={4} color="var(--blue)">on:click</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseover</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseup</Heading>
+        <Heading size={4} color="var(--blue)">on:mousedown</Heading>
     </main>
 </div>

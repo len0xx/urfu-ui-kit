@@ -36,19 +36,19 @@
         <br />
         
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">num <ParameterType value="string" /> <Tag title="Обязательное поле">required</Tag></Heading>
+        <Heading size={4} color="var(--blue)">num <ParameterType value="string" /> <Tag title="Обязательное поле">required</Tag></Heading>
         <Text>Числовое значение, отображаемое в верхней части</Text>
-        <Heading size={4} className="blue-text">caption <ParameterType value="string" /> <Tag title="Обязательное поле">required</Tag></Heading>
+        <Heading size={4} color="var(--blue)">caption <ParameterType value="string" /> <Tag title="Обязательное поле">required</Tag></Heading>
         <Text>Подпись, отображаемая в нижней части</Text>
-        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:click</Heading>
-        <Heading size={4} className="blue-text">on:mouseover</Heading>
-        <Heading size={4} className="blue-text">on:mouseleave</Heading>
-        <Heading size={4} className="blue-text">on:mouseup</Heading>
-        <Heading size={4} className="blue-text">on:mousedown</Heading>
+        <Heading size={4} color="var(--blue)">on:click</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseover</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseup</Heading>
+        <Heading size={4} color="var(--blue)">on:mousedown</Heading>
     </main>
 </div>

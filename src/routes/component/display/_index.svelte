@@ -22,13 +22,13 @@
         <Heading size={3}>Пример использования:</Heading>
         <Code val={ButtonExample} />
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">variant <Tag>string</Tag></Heading>
+        <Heading size={4} color="var(--blue)">variant <Tag>string</Tag></Heading>
         <Text>Вариант отображения кнопки. Поддерживаются два стандартных значения: <code>primary</code> и <code>blue</code></Text>
-        <Heading size={4} className="blue-text">className <Tag>string</Tag></Heading>
+        <Heading size={4} color="var(--blue)">className <Tag>string</Tag></Heading>
         <Text>Аналог стандартного атрибута class</Text>
-        <Heading size={4} className="blue-text">actionType <Tag>string</Tag></Heading>
+        <Heading size={4} color="var(--blue)">actionType <Tag>string</Tag></Heading>
         <Text>Аналог стандартного атрибута type</Text>
-        <Heading size={4} className="blue-text">href <Tag>string</Tag></Heading>
+        <Heading size={4} color="var(--blue)">href <Tag>string</Tag></Heading>
         <Text>Используется для добавления кнопке функционала ссылки (переход по страницам по нажатию)</Text>
     </main>
 </div>

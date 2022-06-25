@@ -27,29 +27,29 @@
         <br />
     
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">href <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">href <ParameterType value="string" /></Heading>
         <Text>Ссылка для перехода по нажатию</Text>
-        <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
+        <Heading size={4} color="var(--blue)">variant <ParameterType value="enum" /></Heading>
         <Text>
             Вариант отображения <br />
             Поддерживаемые значения: <code>regular</code>, <code>hover</code>, <code>underlined</code> и <code>interactive</code> <br />
             Значение по умолчанию: <code>regular</code>
         </Text>
-        <Heading size={4} className="blue-text">lineWidth <ParameterType value="number" /></Heading>
+        <Heading size={4} color="var(--blue)">lineWidth <ParameterType value="number" /></Heading>
         <Text>Отступ по вертикали. (Устанавливается в <code>em</code>)</Text>
-        <Heading size={4} className="blue-text">color <ParameterType value="number" /></Heading>
+        <Heading size={4} color="var(--blue)">color <ParameterType value="number" /></Heading>
         <Text>Отступ сверху. (Устанавливается в <code>em</code>)</Text>
-        <Heading size={4} className="blue-text">className <ParameterType value="number" /></Heading>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="number" /></Heading>
         <Text>Отступ снизу. (Устанавливается в <code>em</code>)</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:click</Heading>
-        <Heading size={4} className="blue-text">on:focus</Heading>
-        <Heading size={4} className="blue-text">on:blur</Heading>
-        <Heading size={4} className="blue-text">on:mouseover</Heading>
-        <Heading size={4} className="blue-text">on:mouseleave</Heading>
-        <Heading size={4} className="blue-text">on:mouseup</Heading>
-        <Heading size={4} className="blue-text">on:mousedown</Heading>
+        <Heading size={4} color="var(--blue)">on:click</Heading>
+        <Heading size={4} color="var(--blue)">on:focus</Heading>
+        <Heading size={4} color="var(--blue)">on:blur</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseover</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseup</Heading>
+        <Heading size={4} color="var(--blue)">on:mousedown</Heading>
     </main>
 </div>

@@ -13,7 +13,7 @@
 </svelte:head>
 
 <Modal bind:this={ modal } align="center">
-    <Heading size={2} className="blue-text">Модальное окно</Heading>
+    <Heading size={2} color="var(--blue)">Модальное окно</Heading>
     <Text className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae numquam sint nobis labore quibusdam.</Text>
     <br />
     <Button variant="blue" on:click={ () => modal.close() }>Закрыть</Button>
@@ -44,36 +44,36 @@
         <br />
         
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">variant <ParameterType value="enum" /></Heading>
+        <Heading size={4} color="var(--blue)">variant <ParameterType value="enum" /></Heading>
         <Text>
             Вариант отображения кнопки.  <br />
             Поддерживаются два значения: <code>primary</code> и <code>blue</code>.<br />
             Значение по умолчанию: <code>primary</code>
         </Text>
-        <Heading size={4} className="blue-text">size <ParameterType value="enum" /></Heading>
+        <Heading size={4} color="var(--blue)">size <ParameterType value="enum" /></Heading>
         <Text>
             Размер кнопки.  <br />
             Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
             Значение по умолчанию: <code>M</code>
         </Text>
-        <Heading size={4} className="blue-text">type <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">type <ParameterType value="string" /></Heading>
         <Text>
             Аналог стандартного атрибута type. <br />
             Значение по умолчанию: <code>submit</code>
         </Text>
-        <Heading size={4} className="blue-text">href <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">href <ParameterType value="string" /></Heading>
         <Text>Используется для добавления кнопке функционала ссылки (переход по страницам по нажатию)</Text>
-        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:click</Heading>
-        <Heading size={4} className="blue-text">on:focus</Heading>
-        <Heading size={4} className="blue-text">on:blur</Heading>
-        <Heading size={4} className="blue-text">on:mouseover</Heading>
-        <Heading size={4} className="blue-text">on:mouseleave</Heading>
-        <Heading size={4} className="blue-text">on:mouseup</Heading>
-        <Heading size={4} className="blue-text">on:mousedown</Heading>
+        <Heading size={4} color="var(--blue)">on:click</Heading>
+        <Heading size={4} color="var(--blue)">on:focus</Heading>
+        <Heading size={4} color="var(--blue)">on:blur</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseover</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseup</Heading>
+        <Heading size={4} color="var(--blue)">on:mousedown</Heading>
     </main>
 </div>

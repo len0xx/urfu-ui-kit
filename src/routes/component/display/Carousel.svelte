@@ -28,10 +28,10 @@
         <br />
     
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">margin <ParameterType value="number" /></Heading>
+        <Heading size={4} color="var(--blue)">margin <ParameterType value="number" /></Heading>
         <Text>Отступ между потомками (в px). <br />
             Значение по умолчанию: <code>10</code></Text>
-        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
     </main>
 </div>

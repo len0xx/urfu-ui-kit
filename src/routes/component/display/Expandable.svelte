@@ -46,31 +46,31 @@
         <br />
         
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">className <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />
         
         <Heading size={3}>Слоты:</Heading>
-        <Heading size={4} className="blue-text">header</Heading>
+        <Heading size={4} color="var(--blue)">header</Heading>
         <Text>Слот для заголовка (отображается всегда)</Text>
-        <Heading size={4} className="blue-text">text</Heading>
+        <Heading size={4} color="var(--blue)">text</Heading>
         <Text>Слот для внутреннего текста (отображается только, когда <code>active = true</code>)</Text>
         <br />
     
         <Heading size={3}>Методы:</Heading>
-        <Heading size={4} className="blue-text">open</Heading>
+        <Heading size={4} color="var(--blue)">open</Heading>
         <Text>Метод для открытия компонента</Text>
-        <Heading size={4} className="blue-text">close</Heading>
+        <Heading size={4} color="var(--blue)">close</Heading>
         <Text>Метод для закрытия компонента</Text>
-        <Heading size={4} className="blue-text">toggle</Heading>
+        <Heading size={4} color="var(--blue)">toggle</Heading>
         <Text>Метод для открытия/закрытия компонента</Text>
         <br />
         
         <Heading size={3}>Поддерживаемые события:</Heading>
-        <Heading size={4} className="blue-text">on:click</Heading>
-        <Heading size={4} className="blue-text">on:mouseover</Heading>
-        <Heading size={4} className="blue-text">on:mouseleave</Heading>
-        <Heading size={4} className="blue-text">on:mouseup</Heading>
-        <Heading size={4} className="blue-text">on:mousedown</Heading>
+        <Heading size={4} color="var(--blue)">on:click</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseover</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseup</Heading>
+        <Heading size={4} color="var(--blue)">on:mousedown</Heading>
     </main>
 </div>

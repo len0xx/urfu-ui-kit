@@ -21,7 +21,7 @@
 
 <Slider let:showPrevPage let:showNextPage background="white">
     <Slide img="/img/slide1-img.jpg">
-        <Heading size={ 2 } className="blue-text">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
+        <Heading size={ 2 } color="var(--blue)">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
         <Text className="heading-3">Актуальная информация о поступлении в университет в 2022 году:</Text>
         <Link variant="interactive" href="/bachelor" lineWidth={ 2 }>Бакалавриат и специалитет</Link><br /><br />
         <Link variant="interactive" href="/master" lineWidth={ 2 }>Магистратура</Link><br />
@@ -31,7 +31,7 @@
         </svelte:fragment>
     </Slide>
     <Slide img="/img/slide2-img.jpg">
-        <Heading size={ 2 } className="blue-text">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
+        <Heading size={ 2 } color="var(--blue)">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
         <Text className="heading-3">Актуальная информация о поступлении в университет в 2022 году:</Text>
         <Link variant="interactive" href="/bachelor" lineWidth={ 2 }>Бакалавриат и специалитет</Link><br /><br />
         <Link variant="interactive" href="/master" lineWidth={ 2 }>Магистратура</Link><br />
@@ -51,7 +51,7 @@
         <br />
     
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} className="blue-text">img <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">img <ParameterType value="string" /></Heading>
         <Text>Ссылка на изображение в правой части</Text>
     </main>
 </div>
