@@ -16,15 +16,16 @@
     // Extract all the attributes from props object
     $: ({ ...attrs } = $$props)
 
-    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'id'])
+    // Get rid of the attributes that will be added in a component explicitly
+    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'id', 'color', 'size', 'marginTop', 'marginBottom', 'marginRight', 'marginLeft', 'marginX', 'marginY'])
 </script>
 
 <svelte:element
     {id}
     this={tag}
-    style:color
     { ...finalAttrs }
     class="kit-heading {className}"
+    style={ color ? `--heading-color: ${color};` : "" }
     style:margin-top={ (marginTop !== null ? marginTop : marginY) + 'em' }
     style:margin-bottom={ (marginBottom !== null ? marginBottom : marginY) + 'em' }
     style:margin-left={ (marginLeft !== null ? marginLeft : marginX) + 'em' }
@@ -41,6 +42,10 @@
 </svelte:element>
 
 <style>
+    .kit-heading {
+        color: var(--heading-color);
+    }
+
     :global(h1, h2, h3, h4, h5, h6,
     .heading-1, .heading-2,
     .heading-3, .heading-4,

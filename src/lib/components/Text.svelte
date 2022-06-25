@@ -15,16 +15,17 @@
     // Extract all the attributes from props object
     $: ({ ...attrs } = $$props)
 
-    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'id'])
+    // Get rid of the attributes that will be added in a component explicitly
+    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'id', 'color', 'opacity', 'marginTop', 'marginBottom', 'marginRight', 'marginLeft', 'marginX', 'marginY'])
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <p
     {id}
     { ...finalAttrs }
-    class={ className }
-    style:color
+    class="kit-text-component { className }"
     style:opacity
+    style={ color ? `--text-component-color: ${color};` : "" }
     style:margin-top={ (marginTop !== null ? marginTop : marginY) + 'em' }
     style:margin-bottom={ (marginBottom !== null ? marginBottom : marginY) + 'em' }
     style:margin-left={ (marginLeft !== null ? marginLeft : marginX) + 'em' }
@@ -37,3 +38,9 @@
 >
     <slot />
 </p>
+
+<style>
+    .kit-text-component {
+        color: var(--text-component-color);
+    }
+</style>

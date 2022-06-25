@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount, createEventDispatcher } from 'svelte'
+import Document from './Document.svelte';
     const dispatch = createEventDispatcher()
 
     export let align = 'left'
@@ -25,7 +26,7 @@
     export const toggle = () => visible ? close() : open()
 
     onMount(() => {
-        document.addEventListener('keyup', event => {
+        document.addEventListener('keyup', (event: KeyboardEvent) => {
             if (event.key == 'Escape' && visible) {
                 close()
             }
