@@ -1,20 +1,18 @@
 <script lang="ts">
     import { Divider, Text } from '$lib/components'
+    import { getSizeIndex, getSizeName, type DefaultSizes } from '$lib/types'
 
-    const sizes = ['S', 'M', 'L'] as const
-    const sizeNames = ['small', 'medium', 'large'] as const
     const heights = [6, 8, 10] as const
     const margins = [0.5, 0.6, 0.7] as const
-    type Size = typeof sizes[number]
 
     export let num = '0'
-    export let size: Size = 'M'
+    export let size: DefaultSizes = 'M'
     export let caption = ''
     export let className = ''
 
-    let sizeClass = 'size-' + sizeNames[sizes.indexOf(size)]
-    let dividerSize = heights[sizes.indexOf(size)]
-    let margin = margins[sizes.indexOf(size)]
+    let sizeClass = 'size-' + getSizeName(size)
+    let dividerSize = heights[getSizeIndex(size)]
+    let margin = margins[getSizeIndex(size)]
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->

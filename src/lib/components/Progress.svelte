@@ -1,14 +1,12 @@
 <script lang="ts">
-    const sizes = ['S', 'M', 'L'] as const
-    const sizeNames = ['small', 'medium', 'large'] as const
-    type Size = typeof sizes[number]
+    import { getSizeName, type DefaultSizes } from '$lib/types'
 
     import progress from '$lib/img/progress.svg'
     export let className = ''
-    export let size: Size = 'M'
+    export let size: DefaultSizes = 'M'
     export let speed: 1 | 2 | 3 = 2
 
-    let sizeClass = 'size-' + sizeNames[sizes.indexOf(size)]
+    let sizeClass = 'size-' + getSizeName(size)
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->

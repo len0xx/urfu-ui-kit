@@ -1,0 +1,1 @@
+export default `<Preloader size="L" />`

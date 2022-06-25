@@ -1,7 +1,5 @@
 <script lang="ts">
-    const sizes = ['S', 'M', 'L'] as const
-    const sizeNames = ['small', 'medium', 'large'] as const
-    type Size = typeof sizes[number]
+    import { getSizeName, type DefaultSizes } from '$lib/types'
 
     export let id: string = undefined
     export let type = 'submit'
@@ -9,7 +7,7 @@
     export let variant = 'primary'
     export let href = ''
     export let className = ''
-    export let size: Size = 'M'
+    export let size: DefaultSizes = 'M'
     let pressed = false
 
     import { createEventDispatcher } from 'svelte'
@@ -34,7 +32,7 @@
         dispatch('click')
     }
 
-    let sizeClass = 'size-' + sizeNames[sizes.indexOf(size)]
+    let sizeClass = 'size-' + getSizeName(size)
 </script>
 
 <button

@@ -1,13 +1,12 @@
 <script lang="ts">
+    import { getSizeName, type DefaultSizes } from '$lib/types'
+
     export let variant: 'default' | 'active' | 'fill' = 'default'
     export let className = ''
-    export let size: Size = 'M'
+    export let size: DefaultSizes = 'M'
     export let color: 'red' | 'blue' = 'red'
 
-    const sizes = ['S', 'M', 'L'] as const
-    const sizeNames = ['small', 'medium', 'large'] as const
-    type Size = typeof sizes[number]
-    let sizeClass = 'size-' + sizeNames[sizes.indexOf(size)]
+    let sizeClass = 'size-' + getSizeName(size)
 </script>
 
 <div

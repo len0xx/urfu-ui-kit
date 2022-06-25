@@ -1,26 +1,24 @@
 <script lang="ts">
     import { createEventDispatcher } from 'svelte'
+    import { getSizeName, type DefaultSizes } from '$lib/types'
     import plusIcon from '$lib/img/plus-icon.svg'
     import leftIcon from '$lib/img/left-arrow.svg'
     import rightIcon from '$lib/img/right-arrow.svg'
     import upIcon from '$lib/img/up-arrow.svg'
     import downIcon from '$lib/img/down-arrow.svg'
 
-    const sizes = ['S', 'M', 'L', 'XL'] as const
-    const sizeNames = ['small', 'medium', 'large', 'xlarge'] as const
-    type Size = typeof sizes[number]
-
     export let variant = 'plus'
-    export let size: Size = 'M'
+    export let size: DefaultSizes = 'M'
     export let className = ''
     export let transparent = true
     export let animate = true
 
+    let transparencyClass = ''
     let pressed = false
-    if (transparent) className += ' transparent-bg'
+    if (transparent) transparencyClass = ' transparent-bg'
     const dispatch = createEventDispatcher()
     
-    let sizeClass = 'size-' + sizeNames[sizes.indexOf(size)]
+    let sizeClass = 'size-' + getSizeName(size)
 
     let icon = plusIcon
     if (variant === 'left') {
@@ -45,7 +43,7 @@
 </script>
 
 <button
-    class="kit-round-button {sizeClass} {className}"
+    class="kit-round-button {sizeClass} {transparencyClass} {className}"
     class:pressed
     on:click
     on:mousedown={handleMouseDown}

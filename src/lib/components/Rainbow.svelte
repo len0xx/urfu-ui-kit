@@ -1,15 +1,13 @@
 <script lang="ts">
-    const sizes = ['S', 'M', 'L'] as const
-    const sizeNames = ['small', 'medium', 'large'] as const
-    type Size = typeof sizes[number]
+    import { getSizeName, type DefaultSizes } from '$lib/types'
 
-    export let size: Size = 'S'
+    export let size: DefaultSizes = 'S'
     export let fixed: 'top' | 'bottom' | null = null
     export let width = '100%'
     export let transition = 'none'
     export let className = ''
 
-    let sizeClass = 'size-' + sizeNames[sizes.indexOf(size)]
+    let sizeClass = 'size-' + getSizeName(size)
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
