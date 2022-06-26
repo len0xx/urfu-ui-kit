@@ -16,6 +16,9 @@
         </Text>
         <br />
         <div class="preloader-win">
+            <div class="close-btn ui-btn"></div>
+            <div class="hide-btn ui-btn"></div>
+            <div class="expand-btn ui-btn"></div>
             <Progress />
         </div>
         <br />
@@ -51,6 +54,36 @@
         min-height: 500px;
         background-color: white;
         border: 1px solid rgba(0, 0, 0, 0.2);
-        border-radius: 16px;
+        border-radius: 12px;
+    }
+
+    .preloader-win .ui-btn {
+        --btn-size: 16px;
+        --btn-padding: calc(var(--btn-size) / 2);
+        --window-padding: 16px;
+        
+        display: block;
+        position: absolute;
+        width: var(--btn-size);
+        height: var(--btn-size);
+        border-radius: 100%;
+    }
+
+    .preloader-win .ui-btn.close-btn {
+        top: var(--window-padding);
+        left: var(--window-padding);
+        background-color: rgb(237, 106, 93);
+    }
+
+    .preloader-win .ui-btn.hide-btn {
+        top: var(--window-padding);
+        left: calc(var(--window-padding) + calc(var(--btn-size) * 1) + calc(var(--btn-padding) * 1));
+        background-color: rgb(245, 191, 79);
+    }
+
+    .preloader-win .ui-btn.expand-btn {
+        top: var(--window-padding);
+        left: calc(var(--window-padding) + calc(var(--btn-size) * 2) + calc(var(--btn-padding) * 2));
+        background-color: rgb(98, 197, 84);
     }
 </style>
