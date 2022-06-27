@@ -29,11 +29,17 @@
     
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} color="var(--blue)">size <ParameterType value="enum" /></Heading>
-        <Text>Размер компонента. Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
-            Значение по умолчанию: <code>M</code></Text>
+        <Text>
+            Размер компонента. <br />
+            Поддерживаются три значения: <code>S</code>, <code>M</code> и <code>L</code>. <br />
+            Значение по умолчанию: <code>M</code>
+        </Text>
         <Heading size={4} color="var(--blue)">fixed <ParameterType value="enum" /></Heading>
-        <Text>Опциональный атрибут для привязки компонента к верхнему или нижнему краю родительского элемента. Поддерживаются два значения: <code>top</code> и <code>bottom</code>. <br />
-            Значение по умолчанию: <code>null</code></Text>
+        <Text>
+            Опциональный атрибут для привязки компонента к верхнему или нижнему краю родительского элемента. <br /> 
+            Поддерживаются два значения: <code>top</code> и <code>bottom</code>. <br />
+            Значение по умолчанию: <code>null</code>
+        </Text>
         <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />

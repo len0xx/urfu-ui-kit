@@ -31,7 +31,7 @@ import Text from './Text.svelte'
 import VideoCard from './VideoCard.svelte'
 import Warning from './Warning.svelte'
 
-export {
+export { 
     Announce,
     Benefit,
     Button,

@@ -29,9 +29,15 @@
     
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} color="var(--blue)">size <ParameterType value="enum" /> <Tag title="Обязательное поле">required</Tag></Heading>
-        <Text>Размер заголовка. Поддерживаются значения от <code>1</code> до <code>6</code></Text>
+        <Text>
+            Размер заголовка. <br />
+            Поддерживаются значения от <code>1</code> до <code>6</code>
+        </Text>
         <Heading size={4} color="var(--blue)">color <ParameterType value="string" /></Heading>
-        <Text>Цвет текста в компоненте. <br /> Поддерживаются любые валидные значения CSS (Например: <code>#0000FF</code>, <code>var(--blue)</code> или <code>magenta</code>) <br /> Значение по умолчанию: <code>black</code></Text>
+        <Text>
+            Цвет текста в компоненте. <br />
+            Поддерживаются любые валидные значения CSS (Например: <code>#0000FF</code>, <code>var(--blue)</code> или <code>magenta</code>) <br /> Значение по умолчанию: <code>black</code>
+        </Text>
         <Heading size={4} color="var(--blue)">marginX <ParameterType value="number" /></Heading>
         <Text>Отступ по горизонтали. (Устанавливается в <code>em</code>)</Text>
         <Heading size={4} color="var(--blue)">marginY <ParameterType value="number" /></Heading>

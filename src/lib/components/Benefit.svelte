@@ -24,7 +24,7 @@
     on:mouseover
     on:mouseleave
 >
-    <Text className="kit-benefit-num blue-text semi-bold" marginY={0}>{ num }</Text>
+    <Text className="kit-benefit-num semi-bold" color="var(--blue)" marginY={0}>{ num }</Text>
     <Divider width="100%" color="var(--blue)" height={ dividerSize } marginY={ margin } />
     <Text className="kit-benefit-caption" marginTop={0.9}>{ caption }</Text>
 </div>

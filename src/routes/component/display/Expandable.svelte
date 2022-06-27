@@ -54,7 +54,7 @@
         <Heading size={4} color="var(--blue)">header</Heading>
         <Text>Слот для заголовка (отображается всегда)</Text>
         <Heading size={4} color="var(--blue)">text</Heading>
-        <Text>Слот для внутреннего текста (отображается только, когда <code>active = true</code>)</Text>
+        <Text>Слот для внутреннего текста (отображается только когда <code>active = true</code>)</Text>
         <br />
     
         <Heading size={3}>Методы:</Heading>
