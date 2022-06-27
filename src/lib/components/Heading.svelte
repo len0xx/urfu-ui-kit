@@ -25,7 +25,7 @@
     this={tag}
     { ...finalAttrs }
     class="kit-heading {className}"
-    style={ color ? `--heading-color: ${color};` : "" }
+    style={ color ? `--heading-color: ${color};` : '' }
     style:margin-top={ (marginTop !== null ? marginTop : marginY) + 'em' }
     style:margin-bottom={ (marginBottom !== null ? marginBottom : marginY) + 'em' }
     style:margin-left={ (marginLeft !== null ? marginLeft : marginX) + 'em' }

@@ -25,7 +25,7 @@
     { ...finalAttrs }
     class="kit-text-component { className }"
     style:opacity
-    style={ color ? `--text-component-color: ${color};` : "" }
+    style={ color ? `--text-component-color: ${color};` : '' }
     style:margin-top={ (marginTop !== null ? marginTop : marginY) + 'em' }
     style:margin-bottom={ (marginBottom !== null ? marginBottom : marginY) + 'em' }
     style:margin-left={ (marginLeft !== null ? marginLeft : marginX) + 'em' }

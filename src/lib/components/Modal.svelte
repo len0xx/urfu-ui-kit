@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount, createEventDispatcher } from 'svelte'
-import Document from './Document.svelte';
+    
     const dispatch = createEventDispatcher()
 
     export let align = 'left'
