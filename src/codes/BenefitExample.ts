@@ -1,3 +1,3 @@
-export default `<Benefit num="20" caption="Компонентов" />
-<Benefit num="2406" caption="Строк кода" />
-<Benefit num="5" caption="Активных веб-сайтов" />`
+export default `<Benefit size="M" num="27" caption="Компонентов" />
+<Benefit size="M" num="2816" caption="Строк кода" />
+<Benefit size="M" num="4" caption="Активных веб-сайта" />`

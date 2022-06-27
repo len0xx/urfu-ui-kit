@@ -27,6 +27,7 @@
             <li><Link variant="hover" target="_BLANK" lineWidth={ 2 } href="https://inmt-priem.urfu.ru">Приёмная кампания Института новых материалов и технологий</Link></li>
             <li><Link variant="hover" target="_BLANK" lineWidth={ 2 } href="https://masters-hti.urfu.ru">Магистратура Химико-технологического института</Link></li>
             <li><Link variant="hover" target="_BLANK" lineWidth={ 2 } href="https://masters-enin.urfu.ru">Магистратура Уральского энергетического института</Link></li>
+            <li><Link variant="hover" target="_BLANK" lineWidth={ 2 } href="https://diplom.urfu.ru">Выпускной 2022: ВСЕМДИПЛОМЫ</Link></li>
         </ul>
         <br />
         <div>

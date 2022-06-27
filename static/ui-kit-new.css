@@ -30,7 +30,7 @@
 :root {
 	--content-width: min(1520px, 90vw);
 	--content-mobile-width: min(1520px, 84vw);
-	--content-padding-x: min(4em, 4vw);
+	--content-padding-x: min(5em, 6vw);
 	--content-padding: 0 var(--content-padding-x);
 }
 
