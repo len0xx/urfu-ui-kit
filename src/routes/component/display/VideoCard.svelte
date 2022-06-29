@@ -19,7 +19,7 @@
         </Text>
         <br />
         <Grid m={4}>
-            { #each videos as video }
+            { #each videos as _ }
                 <VideoCard name="Иванов Иван" position="Студент 3 курса" description="Учится в ИРИТ-РтФ" />
             { /each }
         </Grid>

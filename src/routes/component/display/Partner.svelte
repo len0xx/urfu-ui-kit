@@ -18,7 +18,7 @@
         </Text>
         <br />
         <Grid m={3} l={4} xl={6} gap={2}>
-            { #each partners as partner }
+            { #each partners as _ }
                 <Partner src="/img/urfu-blue.svg" caption="УрФУ" />
             { /each }
         </Grid>
