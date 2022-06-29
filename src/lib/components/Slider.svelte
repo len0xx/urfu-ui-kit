@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount, createEventDispatcher } from 'svelte'
+    import type SvelteCarousel from 'svelte-carousel'
     import { Rainbow } from '$lib/components'
 
     export let duration = 7
@@ -12,7 +13,7 @@
 
     const dispatch = createEventDispatcher()
 
-    let Slider // for saving Carousel component class
+    let Slider: SvelteCarousel // for saving Carousel component class
     let slider: HTMLElement & { goToPrev: (a: { animate?: boolean }) => void, goToNext: (a: { animate?: boolean }) => void } // for calling methods of the slider instance
     let sliderDuration = duration * 1000
     let sliderShifting = true

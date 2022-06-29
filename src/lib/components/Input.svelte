@@ -1,5 +1,6 @@
 <script lang="ts">
     import { imask } from 'svelte-imask'
+    import type { AnyMaskedOptions } from 'imask'
     import { createEventDispatcher, onMount } from 'svelte'
 
     type InputType = 'text' | 'email' | 'tel' | 'number' | 'password' | 'search' | 'url' | 'date' | 'time' | 'datetime-local' | 'month' | 'week' | 'color' | 'file' | 'checkbox' | 'radio' | 'submit' | 'hidden' | 'range' | 'button'
@@ -7,7 +8,7 @@
     export let id: string = undefined
     export let min: number = null
     export let max: number = null
-    export let mask: Record<string, unknown> = null
+    export let mask: AnyMaskedOptions = undefined
     export let wide: boolean = null
     export let name: string = null
     export let step: number = null
