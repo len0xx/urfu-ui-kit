@@ -36,7 +36,8 @@
         <Heading size={4} color="var(--blue)">color <ParameterType value="string" /></Heading>
         <Text>
             Цвет текста в компоненте. <br />
-            Поддерживаются любые валидные значения CSS (Например: <code>#0000FF</code>, <code>var(--blue)</code> или <code>magenta</code>) <br /> Значение по умолчанию: <code>black</code>
+            Поддерживаются любые валидные значения CSS (Например: <code>#0000FF</code>, <code>var(--blue)</code> или <code>magenta</code>) <br />
+            Значение по умолчанию: <code>black</code>
         </Text>
         <Heading size={4} color="var(--blue)">marginX <ParameterType value="number" /></Heading>
         <Text>Отступ по горизонтали. (Устанавливается в <code>em</code>)</Text>
@@ -50,6 +51,10 @@
         <Text>Отступ слева. (Устанавливается в <code>em</code>)</Text>
         <Heading size={4} color="var(--blue)">marginRight <ParameterType value="number" /></Heading>
         <Text>Отступ справа. (Устанавливается в <code>em</code>)</Text>
+        <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
+        <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
+        <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута <code>id</code></Text>
         <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута <code>class</code></Text>
         <br />

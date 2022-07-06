@@ -2,6 +2,7 @@
     import { filterPropsOut } from '../utilities'
 
     export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let size: 1 | 2 | 3 | 4 | 5 | 6
     export let color: string = undefined
     export let className = ''
@@ -22,6 +23,7 @@
 
 <svelte:element
     {id}
+    bind:this={ node }
     this={tag}
     { ...finalAttrs }
     class="kit-heading {className}"

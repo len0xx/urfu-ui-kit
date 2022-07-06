@@ -5,6 +5,7 @@
     type TwoColumnsRatio = '2:1' | '1:2' | '3:1' | '1:3' | '3:2' | '2:3' | '4:1' | '1:4' | '4:3' | '3:4' | '5:1' | '5:2' | '5:3' | '5:4'
 
     export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let className = ''
     export let xs: GridSize = null
     export let s: GridSize = null
@@ -50,6 +51,7 @@
 
 <div
     { id }
+    bind:this={ node }
     style:gap={ gap + 'em' }
     style:place-items={ placeItems }
     style:place-content={ placeContent }

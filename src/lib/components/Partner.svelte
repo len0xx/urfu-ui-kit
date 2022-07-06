@@ -1,4 +1,6 @@
 <script lang="ts">
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let src: string
     export let caption = ''
     export let className = ''
@@ -6,6 +8,8 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div
+    {id}
+    bind:this={ node }
     on:click
     on:mouseleave
     on:mousedown

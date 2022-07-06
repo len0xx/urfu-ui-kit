@@ -7,15 +7,17 @@
     import upIcon from '$lib/img/up-arrow.svg'
     import downIcon from '$lib/img/down-arrow.svg'
 
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let variant = 'plus'
     export let size: DefaultSizes = 'M'
     export let className = ''
     export let transparent = true
     export let animate = true
 
-    let transparencyClass = ''
+    let transparencyClass = transparent ? 'transparent-bg' : ''
     let pressed = false
-    if (transparent) transparencyClass = ' transparent-bg'
+
     const dispatch = createEventDispatcher()
     
     let sizeClass = 'size-' + getSizeName(size)
@@ -43,6 +45,8 @@
 </script>
 
 <button
+    {id}
+    bind:this={ node }
     class="kit-round-button {sizeClass} {transparencyClass} {className}"
     class:pressed
     on:click

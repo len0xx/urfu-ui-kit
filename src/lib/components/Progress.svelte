@@ -2,6 +2,8 @@
     import { getSizeName, type DefaultSizes } from '$lib/types'
 
     import progress from '$lib/img/progress.svg'
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let className = ''
     export let size: DefaultSizes = 'M'
     export let speed: 1 | 2 | 3 = 2
@@ -11,6 +13,8 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <img
+    {id}
+    bind:this={ node }
     src={progress}
     alt="Progress animation"
     on:click
@@ -19,7 +23,7 @@
     on:mouseup
     on:mouseover
     class="kit-progress {className} {sizeClass} speed-{speed}"
->
+/>
 
 <style>
     @keyframes rotation {

@@ -13,7 +13,7 @@ do
 done
 
 echo "" >> $index
-echo "export { " >> $index
+echo "export {" >> $index
 for file in $files;
 do
     xbase=${file##*/}

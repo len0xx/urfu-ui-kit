@@ -4,6 +4,7 @@ import Button from './Button.svelte'
 import Card from './Card.svelte'
 import Carousel from './Carousel.svelte'
 import Code from './Code.svelte'
+import DemoHeader from './DemoHeader.svelte'
 import Divider from './Divider.svelte'
 import Document from './Document.svelte'
 import Expandable from './Expandable.svelte'
@@ -30,14 +31,16 @@ import Tag from './Tag.svelte'
 import Text from './Text.svelte'
 import VideoCard from './VideoCard.svelte'
 import Warning from './Warning.svelte'
+import Window from './Window.svelte'
 
-export { 
+export {
     Announce,
     Benefit,
     Button,
     Card,
     Carousel,
     Code,
+    DemoHeader,
     Divider,
     Document,
     Expandable,
@@ -64,4 +67,5 @@ export {
     Text,
     VideoCard,
     Warning,
+    Window,
 }

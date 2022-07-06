@@ -48,11 +48,21 @@
         
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} color="var(--blue)">variant <ParameterType value="enum" /></Heading>
-        <Text>Вариант заднего фона карточки (белый или серый). Поддерживаются два значения: <code>white</code> и <code>grey</code>. <br />
-            Значение по умолчанию: <code>grey</code></Text>
+        <Text>
+            Вариант заднего фона карточки (белый или серый). <br />
+            Поддерживаются два значения: <code>white</code> и <code>grey</code>. <br />
+            Значение по умолчанию: <code>grey</code>
+        </Text>
         <Heading size={4} color="var(--blue)">color <ParameterType value="enum" /></Heading>
-        <Text>Изображение градиента (в правом углу карточки). Поддерживаются четыре значения: <code>red-1</code>, <code>red-2</code>, <code>blue-1</code> и <code>blue-2</code>. <br />
-            Значение по умолчанию: <code>red-1</code></Text>
+        <Text>
+            Изображение градиента (в правом углу карточки). <br />
+            Поддерживаются четыре значения: <code>red-1</code>, <code>red-2</code>, <code>blue-1</code> и <code>blue-2</code>. <br />
+            Значение по умолчанию: <code>red-1</code>
+        </Text>
+        <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
+        <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
+        <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута <code>id</code></Text>
         <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />

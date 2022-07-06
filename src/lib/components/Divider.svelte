@@ -1,4 +1,6 @@
 <script lang="ts">
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let color = 'white'
     export let width = '50px'
     export let height = 4
@@ -13,6 +15,8 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div
+    {id}
+    bind:this={ node }
     on:click
     on:mouseover
     on:mouseleave

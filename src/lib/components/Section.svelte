@@ -4,6 +4,7 @@
     type Align = 'left' | 'center' | 'right'
 
     export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let className = ''
     export let align: Align = 'center'
     export let paddingX = 0
@@ -16,12 +17,13 @@
 
     $: ({...attrs} = $$props)
 
-    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'align', 'id'])
+    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'align', 'id', 'paddingX', 'paddingY', 'paddingRight', 'paddingTop', 'paddingLeft', 'paddingBottom', 'contentWidth'])
     let alignClass = 'section-align-' + align
 </script>
 
 <section 
     {id}
+    bind:this={ node }
     {...finalAttrs}
     class={['kit-section', className, alignClass].join(' ')}
     style:padding-top={ (paddingTop !== null ? paddingTop : paddingY) + 'em' }

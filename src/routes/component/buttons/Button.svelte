@@ -63,6 +63,15 @@
         </Text>
         <Heading size={4} color="var(--blue)">href <ParameterType value="string" /></Heading>
         <Text>Используется для добавления кнопке функционала ссылки (переход по страницам по нажатию)</Text>
+        <Heading size={4} color="var(--blue)">target <ParameterType value="string" /></Heading>
+        <Text>
+            Определяет, где откроется ссылка из параметра <code>href</code> (в этом же окне, в новом и т.д.) <br />
+            Значение по умолчанию: <code>_SELF</code>
+        </Text>
+        <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
+        <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
+        <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута <code>id</code></Text>
         <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
         <br />

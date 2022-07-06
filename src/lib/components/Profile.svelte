@@ -2,6 +2,8 @@
     import { onMount } from 'svelte'
     import { Text, Heading } from '$lib/components'
 
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let img = ''
     export let variant: 'white' | 'grey' = 'grey'
     export let className = ''
@@ -27,6 +29,8 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div
+    {id}
+    bind:this={ node }
     on:click
     on:mouseleave
     on:mousedown
@@ -36,7 +40,7 @@
 >
     <img class="kit-profile-image" src={ img || '/img/gradient-red-1.png' } alt="Profile">
     <div class="kit-profile-heading">
-        <Heading size={4} className="kit-profile-title subtitle blue-text" marginY={0}>
+        <Heading size={4} className="kit-profile-title subtitle" color="var(--blue)" marginY={0}>
             <slot name="name" />
         </Heading>
         <Text className="kit-profile-subheading" marginY={0} opacity={0.6}>

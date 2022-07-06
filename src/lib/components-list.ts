@@ -62,7 +62,7 @@ export default [
     {
         name: 'Input',
         text: 'Поле для ввода',
-        type: 'other'
+        type: 'base'
     },
     {
         name: 'Modal',

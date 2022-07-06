@@ -6,6 +6,8 @@
 
     type LinkVariant = 'regular' | 'underlined' | 'interactive' | 'hover'
 
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let href: string = undefined
     export let title = ''
     export let target = '_SELF'
@@ -23,9 +25,11 @@
 </script>
 
 <a
+    {id}
     {href}
     {title}
     {target}
+    bind:this={ node }
     on:click
     on:focus
     on:blur
@@ -34,7 +38,7 @@
     on:mouseup
     on:mouseover={ mouseOverHandler }
     class="kit-link {className} {variantClass}"
-    style="--link-color: {color};"
+    style:--link-color={color}
 >
     <slot />
     <span class="kit-link-underline" style:height={ lineWidth + 'px' }></span>

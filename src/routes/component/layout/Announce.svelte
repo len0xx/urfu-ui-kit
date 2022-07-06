@@ -18,7 +18,10 @@
     </main>
 </div>
 <Announce image="/img/graduates.jpg" vector="/img/text-vector.svg">
-    <Heading size={1} slot="first" marginTop={0}>Магистратура предоставляет возможности</Heading>
+    <svelte:fragment slot="first">
+        <Heading className="mobile-hide" size={1} marginTop={0}>Магистратура предоставляет возможности</Heading>
+        <Heading className="pc-hide" size={1} marginY={0}>Магистратура предоставляет возможности</Heading>
+    </svelte:fragment>
     <svelte:fragment slot="second">
         <Text>В рейтинге «100 лучших российских вузов» по версии Forbes УрФУ занял 4-ое место, обогнав многие столичные вузы — это лучший результат среди нестоличных вузов России.</Text>
         <br />
@@ -30,7 +33,8 @@
         <Text opacity={0.4}>Получать повышенные стипендии</Text>
         <Text opacity={0.4}>Заниматься наукой</Text>
         <br />
-        <Button>Поступить</Button>
+        <Button className="mobile-hide">Поступить</Button>
+        <Button className="pc-hide wide">Поступить</Button>
     </svelte:fragment>
 </Announce>
 <div class="content">
@@ -63,6 +67,12 @@
             Цвет текста <br />
             Значение по умолчанию: <code>white</code>
         </Text>
+        <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
+        <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
+        <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута <code>id</code></Text>
+        <Heading size={4} color="var(--blue)">className</Heading>
+        <Text>Аналог стандартного атрибута class</Text>
         <br />
 
         <Heading size={3}>Слоты:</Heading>

@@ -6,6 +6,7 @@
     type InputType = 'text' | 'email' | 'tel' | 'number' | 'password' | 'search' | 'url' | 'date' | 'time' | 'datetime-local' | 'month' | 'week' | 'color' | 'file' | 'checkbox' | 'radio' | 'submit' | 'hidden' | 'range' | 'button'
 
     export let id: string = undefined
+    export let node: HTMLInputElement = undefined
     export let min: number = null
     export let max: number = null
     export let mask: AnyMaskedOptions = undefined
@@ -28,11 +29,10 @@
     const dispatch = createEventDispatcher()
     let filledIn = false
     let internalValue = value
-    let input: HTMLInputElement
 
     const valueChanged = () => {
-        filledIn = input.value != ''
-        value = input.value
+        filledIn = node.value != ''
+        value = node.value
     }
 
     const inputHandler = () => {
@@ -67,6 +67,7 @@
     { required }
     { disabled }
     { autofocus }
+    bind:this={ node }
     value={ internalValue }
     on:click
     on:focus
@@ -80,7 +81,6 @@
     on:change={ changeHandler }
     class={ wideClass ? className + ' ' + wideClass : className }
     class:filledIn
-    bind:this={ input }
     use:imask={ mask || undefined }
     placeholder={ placeholder || undefined }
 />

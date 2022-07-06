@@ -62,6 +62,10 @@
         <Text>Выравнивание колонок по горизонтали. Поддерживаются значения <code>start</code>, <code>center</code>, <code>end</code>, <code>stretch</code></Text>
         <Heading size={4} color="var(--blue)">justifyContent <ParameterType value="enum" /></Heading>
         <Text>Выравнивание потомков в строке. Поддерживаются значения <code>left</code>, <code>center</code>, <code>right</code>, <code>space-between</code>, <code>space-evenly</code>, <code>space-around</code></Text>
+        <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
+        <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
+        <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута <code>id</code></Text>
         <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
     </main>

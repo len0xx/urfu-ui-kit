@@ -5,6 +5,7 @@
 
     let transparent = false
     let hidden = false
+    export let node: HTMLElement = undefined
     export let delay = 0
     export let size: DefaultSizes = 'M'
     export let hideOnLoad = true
@@ -30,7 +31,7 @@
 
 <svelte:window on:load={ handleLoad }></svelte:window>
 
-<section class="kit-preloader {className}" class:transparent class:hidden on:click>
+<section class="kit-preloader {className}" class:transparent class:hidden bind:this={ node } on:click>
     <Progress {size} />
 </section>
 

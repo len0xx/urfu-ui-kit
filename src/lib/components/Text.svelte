@@ -2,6 +2,7 @@
     import { filterPropsOut } from '../utilities'
 
     export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let className = ''
     export let color = ''
     export let opacity = 1
@@ -23,9 +24,10 @@
 <p
     {id}
     { ...finalAttrs }
+    bind:this={ node }
     class="kit-text-component { className }"
     style:opacity
-    style={ color ? `--text-component-color: ${color};` : '' }
+    style:--text-component-color={color}
     style:margin-top={ (marginTop !== null ? marginTop : marginY) + 'em' }
     style:margin-bottom={ (marginBottom !== null ? marginBottom : marginY) + 'em' }
     style:margin-left={ (marginLeft !== null ? marginLeft : marginX) + 'em' }

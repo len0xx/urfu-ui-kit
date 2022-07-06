@@ -1,4 +1,6 @@
 <script lang="ts">
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let className = ''
     export let left = ''
     export let right = ''
@@ -18,7 +20,17 @@
     const toggleState = () => setState(!state)
 </script>
 
-<div class="kit-switch {className}" on:focus on:blur on:mouseover on:mouseleave on:mouseup on:mousedown>
+<div
+    {id}
+    bind:this={ node }
+    on:focus
+    on:blur
+    on:mouseover
+    on:mouseleave
+    on:mouseup
+    on:mousedown
+    class="kit-switch {className}"
+>
     { #if left }
         <span class="heading-3" class:blue-text={!state} class:grey-text={state} on:click={() => setState(false)}>{ left }</span>
     { /if }

@@ -3,6 +3,8 @@
     import type SvelteCarousel from 'svelte-carousel'
     import { Rainbow } from '$lib/components'
 
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let duration = 7
     export let swiping = false
     export let dots = false
@@ -41,7 +43,7 @@
     })
 </script>
 
-<div class="kit-slider-wrapper { className }" style:background={ background }>
+<div class="kit-slider-wrapper { className }" style:background={ background } {id} bind:this={ node }>
     <svelte:component 
         this={ Slider }
         arrows={ false }

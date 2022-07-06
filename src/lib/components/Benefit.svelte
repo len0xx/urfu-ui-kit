@@ -5,6 +5,8 @@
     const heights = [6, 8, 10] as const
     const margins = [0.5, 0.6, 0.7] as const
 
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let num = '0'
     export let size: DefaultSizes = 'M'
     export let caption = ''
@@ -17,6 +19,8 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div
+    {id}
+    bind:this={ node }
     class="kit-benefit {className} {sizeClass}"
     on:click
     on:mousedown

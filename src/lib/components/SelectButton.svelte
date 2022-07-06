@@ -1,6 +1,8 @@
 <script lang="ts">
     import { getSizeName, type DefaultSizes } from '$lib/types'
 
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let variant: 'default' | 'active' | 'fill' = 'default'
     export let className = ''
     export let size: DefaultSizes = 'M'
@@ -10,7 +12,8 @@
 </script>
 
 <div
-    class="kit-select-button variant-{variant} {className} {sizeClass} btn-color-{color}"
+    {id}
+    bind:this={ node }
     on:click|stopPropagation
     on:focus
     on:blur
@@ -18,6 +21,7 @@
     on:mouseleave
     on:mouseup
     on:mousedown
+    class="kit-select-button variant-{variant} {className} {sizeClass} btn-color-{color}"
 >
     <slot />
 </div>

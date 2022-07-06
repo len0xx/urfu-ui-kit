@@ -2,6 +2,8 @@
     import { Text, Heading } from '$lib/components'
     import playIcon from '../img/play-icon.svg'
 
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let name = ''
     export let position = ''
     export let description = ''
@@ -9,7 +11,7 @@
     export let className = ''
 </script>
 
-<div class="kit-video-card {className}" on:click>
+<div class="kit-video-card {className}" {id} bind:this={ node } on:click>
     <div class="img" style="background-image: url({ src })"><img src={playIcon} alt="Play"></div>
     <Heading size={4} color="var(--blue)">{ name }</Heading>
     <Text className="position">{ @html position }</Text>

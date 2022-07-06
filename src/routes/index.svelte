@@ -11,7 +11,7 @@
 
 <div class="content">
     <main>
-        <Heading size={1}>УрФУ UI Kit <Tag>beta 0.8.1</Tag></Heading>
+        <Heading size={1}>УрФУ UI Kit <Tag>beta 0.9.0</Tag></Heading>
         <Text className="medium">
             Расширяемая библиотека Svelte компонентов для упрощённого построения современных веб-приложений Уральского федерального университета
         </Text>

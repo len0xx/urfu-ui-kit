@@ -1,10 +1,12 @@
 <script lang="ts">
     import { Grid } from '$lib/components'
 
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let img = ''
 </script>
 
-<Grid s={1} m={2} className="kit-slide" justifyItems="start">
+<Grid s={1} m={2} className="kit-slide" justifyItems="start" {id} bind:node>
     <Grid m={1}>
         <div class="kit-slide-content">
             <slot />

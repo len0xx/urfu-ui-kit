@@ -3,6 +3,8 @@
     
     const dispatch = createEventDispatcher()
 
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let align = 'left'
     export let closable = true
     export let className = ''
@@ -36,6 +38,8 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div
+    {id}
+    bind:this={ node }
     on:mouseleave
     on:mouseover
     class:visible

@@ -4,6 +4,8 @@
 
     import { Text, Heading } from '$lib/components'
     
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let color: Gradient = 'red-1'
     export let variant: ColorVariant = 'grey'
     export let className = ''
@@ -11,6 +13,8 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div
+    {id}
+    bind:this={ node }
     on:click
     on:mousedown
     on:mouseup

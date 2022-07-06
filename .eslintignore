@@ -1,5 +1,6 @@
 src/codes/*
 .svelte-kit/*
+server/build/*
 build/*
 build-prod/*
 src/lib/img/*

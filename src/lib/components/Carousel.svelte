@@ -2,6 +2,8 @@
     import { onMount } from 'svelte'
     import { RoundButton } from '$lib/components'
 
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let margin = 10 // Margin between the children
     export let className = ''
 
@@ -99,7 +101,7 @@
 
 <svelte:window on:resize={resizeHandler} />
 
-<div class="kit-carousel-wrapper {className}">
+<div class="kit-carousel-wrapper {className}" {id} bind:this={ node }>
     <div class="kit-carousel" bind:this={carousel}>
         <slot />
     </div>

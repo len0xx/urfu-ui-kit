@@ -1,6 +1,8 @@
 <script lang="ts">
     import { Heading } from '$lib/components'
 
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let extension: string
     export let filename: string
     export let link = ''
@@ -9,6 +11,8 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div
+    {id}
+    bind:this={ node }
     class="kit-document {className}"
     on:click
     on:mousedown

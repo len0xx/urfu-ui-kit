@@ -2,10 +2,12 @@
     import { getSizeName, type DefaultSizes } from '$lib/types'
 
     export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let type = 'submit'
     export let value: string = undefined
     export let variant = 'primary'
     export let href = ''
+    export let target = '_SELF'
     export let className = ''
     export let size: DefaultSizes = 'M'
     let pressed = false
@@ -28,7 +30,7 @@
     }
 
     const handleClick = () => {
-        if (href) window.location.href = href
+        if (href) window.open(href, target)
         dispatch('click')
     }
 
@@ -39,6 +41,7 @@
     {id}
     {type}
     {...attrs}
+    bind:this={ node }
     class="kit-button variant-{variant} {className} {sizeClass}"
     class:pressed
     on:click={ handleClick }

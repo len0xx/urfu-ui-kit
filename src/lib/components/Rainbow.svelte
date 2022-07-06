@@ -1,6 +1,8 @@
 <script lang="ts">
     import { getSizeName, type DefaultSizes } from '$lib/types'
 
+    export let id: string = undefined
+    export let node: HTMLElement = undefined
     export let size: DefaultSizes = 'S'
     export let fixed: 'top' | 'bottom' | null = null
     export let width = '100%'
@@ -12,6 +14,8 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div
+    {id}
+    bind:this={ node }
     on:click
     on:mouseleave
     on:mousedown
