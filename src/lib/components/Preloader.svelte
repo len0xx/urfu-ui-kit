@@ -1,6 +1,8 @@
 <script lang="ts">
     import { Progress } from '$lib/components'
     import { pageLoaded } from '$lib/stores'
+    import { page } from '$app/stores'
+    import { onMount } from 'svelte'
     import type { DefaultSizes } from '$lib/types'
 
     let transparent = false
@@ -27,6 +29,10 @@
             $pageLoaded = true
         }
     }
+    
+    onMount(() => {
+        if ($page.status > 399) hide()
+    })
 </script>
 
 <svelte:window on:load={ handleLoad }></svelte:window>
