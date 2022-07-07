@@ -5,13 +5,14 @@
     import { onMount } from 'svelte'
     import type { DefaultSizes } from '$lib/types'
 
-    let transparent = false
-    let hidden = false
     export let node: HTMLElement = undefined
     export let delay = 0
     export let size: DefaultSizes = 'M'
     export let hideOnLoad = true
     export let className = ''
+
+    let transparent = false
+    let hidden = false
 
     export const hide = () => {
         setTimeout(() => transparent = true, delay)

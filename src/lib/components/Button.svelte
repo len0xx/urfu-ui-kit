@@ -1,18 +1,19 @@
 <script lang="ts">
     import { getSizeName, type DefaultSizes } from '$lib/types'
-
+    import { createEventDispatcher } from 'svelte'
+    
+    type Variant = 'primary' | 'blue'
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let type = 'submit'
     export let value: string = undefined
-    export let variant = 'primary'
+    export let variant: Variant = 'primary'
     export let href = ''
     export let target = '_SELF'
     export let className = ''
     export let size: DefaultSizes = 'M'
-    let pressed = false
 
-    import { createEventDispatcher } from 'svelte'
+    let pressed = false
     const dispatch = createEventDispatcher()
     
     // Only include value attribute if it's defined

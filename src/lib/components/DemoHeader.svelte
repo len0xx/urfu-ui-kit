@@ -8,10 +8,10 @@
     export let hideAfter = 10
     export let showOnScrollUp = false
     export let transparent = false
+
     let hide = false
     let scrolled = false
     let prevScroll = 0
-
     const dispatch = createEventDispatcher()
 
     const scrollHandler = () => {

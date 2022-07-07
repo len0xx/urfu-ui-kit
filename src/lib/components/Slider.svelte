@@ -14,7 +14,6 @@
     export let className = ''
 
     const dispatch = createEventDispatcher()
-
     let Slider: SvelteCarousel // for saving Carousel component class
     let slider: HTMLElement & { goToPrev: (a: { animate?: boolean }) => void, goToNext: (a: { animate?: boolean }) => void } // for calling methods of the slider instance
     let sliderDuration = duration * 1000

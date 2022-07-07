@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Window, Section, DemoHeader, Text, ParameterType } from '$lib/components'
-    import ButtonExample from '$lib/../codes/ButtonExample'
+    import HeaderExample from '$lib/../codes/HeaderExample'
 </script>
 
 <svelte:head>
@@ -15,7 +15,7 @@
             Кнопки являются неотъемлимой частью современных веб-приложений
         </Text>
         <br />
-        <Window placeholder>
+        <Window placeholder paddingTop={7} contentAmount={5}>
             <DemoHeader>
                 <Section paddingX={1}>
                     <Heading size={3} marginY={0.25}>This is a Header</Heading>
@@ -26,7 +26,7 @@
         <br />
     
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={ButtonExample} />
+        <Code val={HeaderExample} />
         <br />
     
         <Heading size={3}>Параметры:</Heading>

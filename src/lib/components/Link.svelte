@@ -2,8 +2,6 @@
     import { createEventDispatcher } from 'svelte'
     import { prefetch as execPrefetch } from '$app/navigation'
 
-    const dispatch = createEventDispatcher()
-
     type LinkVariant = 'regular' | 'underlined' | 'interactive' | 'hover'
 
     export let id: string = undefined
@@ -16,7 +14,9 @@
     export let prefetch = false
     export let variant: LinkVariant = 'regular'
     export let className = ''
+
     let variantClass = variant + '-variant'
+    const dispatch = createEventDispatcher()
 
     const mouseOverHandler = () => {
         if (prefetch && href && !href.startsWith('#')) execPrefetch(href)

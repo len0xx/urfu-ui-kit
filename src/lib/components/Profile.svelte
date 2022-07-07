@@ -13,7 +13,6 @@
     let text: string
     let shortText: string
     let textTooLong = false
-
     const MAX_WORDS = 80
 
     onMount(() => {

@@ -1,15 +1,15 @@
 <script lang="ts">
+    import type { Align } from '$lib/types'
     import { onMount, createEventDispatcher } from 'svelte'
     
-    const dispatch = createEventDispatcher()
-
     export let id: string = undefined
     export let node: HTMLElement = undefined
-    export let align = 'left'
+    export let align: Align = 'left'
     export let closable = true
     export let className = ''
 
     let visible = false
+    const dispatch = createEventDispatcher()
 
     export const open = () => {
         if (visible) return

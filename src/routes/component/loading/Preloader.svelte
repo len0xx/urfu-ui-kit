@@ -2,6 +2,7 @@
     import { Code, Heading, Progress, Text, ParameterType, Window, Link } from '$lib/components'
     import PreloaderExample from '$lib/../codes/PreloaderExample'
     import { onMount } from 'svelte'
+    import { slide } from 'svelte/transition'
 
     let loaderVisible = true
 
@@ -36,7 +37,7 @@
             </div>
         </Window>
         { #if !loaderVisible }
-            <div class="align-center" style:margin-top="2em">
+            <div transition:slide="{{ duration: 200 }}" class="align-center" style:margin-top="2em">
                 <Link variant="interactive" on:click={ replay } lineWidth={ 3 }>Воспроизвести сначала</Link>
             </div>
         { /if }

@@ -11,3 +11,5 @@ const extendedSizeNames = [...sizeNames, 'xlarge']
 export const getSizeIndex = (size: ExtendedSizes) => extendedSizes.indexOf(size)
 
 export const getSizeName = (size: ExtendedSizes) => extendedSizeNames[getSizeIndex(size)]
+
+export type Align = 'left' | 'center' | 'right'

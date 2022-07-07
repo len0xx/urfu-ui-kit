@@ -1,7 +1,7 @@
 <script lang="ts">
     import { getSizeName, type DefaultSizes } from '$lib/types'
-
     import progress from '$lib/img/progress.svg'
+    
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let className = ''

@@ -1,8 +1,8 @@
 <script lang="ts">
+    import { Text, Heading } from '$lib/components'
+
     type ColorVariant = 'white' | 'grey'
     type Gradient = 'blue-1' | 'blue-2' | 'red-1' | 'red-2'
-
-    import { Text, Heading } from '$lib/components'
     
     export let id: string = undefined
     export let node: HTMLElement = undefined

@@ -1,8 +1,10 @@
 <script lang="ts">
     import { filterPropsOut } from '../utilities'
+    import type { Align } from '$lib/types'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined
+    export let align: Align = 'left'
     export let size: 1 | 2 | 3 | 4 | 5 | 6
     export let color: string = undefined
     export let className = ''
@@ -12,7 +14,9 @@
     export let marginBottom: number = null
     export let marginLeft: number = null
     export let marginRight: number = null
+
     let tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = `h${size}`
+    let alignClass = 'align-' + align
 
     // Extract all the attributes from props object
     $: ({ ...attrs } = $$props)
@@ -24,9 +28,9 @@
 <svelte:element
     {id}
     bind:this={ node }
-    this={tag}
+    this={ tag }
     { ...finalAttrs }
-    class="kit-heading {className}"
+    class="kit-heading { className } { alignClass }"
     style={ color ? `--heading-color: ${color};` : '' }
     style:margin-top={ (marginTop !== null ? marginTop : marginY) + 'em' }
     style:margin-bottom={ (marginBottom !== null ? marginBottom : marginY) + 'em' }

@@ -5,6 +5,7 @@ import Card from './Card.svelte'
 import Carousel from './Carousel.svelte'
 import Code from './Code.svelte'
 import DemoHeader from './DemoHeader.svelte'
+import Div from './Div.svelte'
 import Divider from './Divider.svelte'
 import Document from './Document.svelte'
 import Expandable from './Expandable.svelte'
@@ -26,7 +27,6 @@ import SelectButton from './SelectButton.svelte'
 import Slide from './Slide.svelte'
 import Slider from './Slider.svelte'
 import Switch from './Switch.svelte'
-import Table from './Table.svelte'
 import Tag from './Tag.svelte'
 import Text from './Text.svelte'
 import VideoCard from './VideoCard.svelte'
@@ -41,6 +41,7 @@ export {
     Carousel,
     Code,
     DemoHeader,
+    Div,
     Divider,
     Document,
     Expandable,
@@ -62,7 +63,6 @@ export {
     Slide,
     Slider,
     Switch,
-    Table,
     Tag,
     Text,
     VideoCard,

@@ -1,7 +1,6 @@
 <script lang="ts">
     import { filterPropsOut } from '../utilities'
-
-    type Align = 'left' | 'center' | 'right'
+    import type { Align } from '$lib/types'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined

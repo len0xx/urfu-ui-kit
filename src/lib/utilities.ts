@@ -1,6 +1,6 @@
 import { ajax } from 'jquery'
 import axios from 'axios'
-import type { RESTMethod, DefaultAJAXResponse } from './types'
+import type { RESTMethod } from './types'
 
 
 // Create slug from the title
@@ -55,7 +55,7 @@ type AJAXOptions = {
 export function sendWindowAJAX(
     url: string,
     options: AJAXOptions = { method: 'GET' },
-    callbackSuccess?: (res: DefaultAJAXResponse) => void,
+    callbackSuccess?: (res: Record<string, unknown>) => void,
     callbackError?: (res: string) => void
 ): void {
     let finalData: Record<string, unknown> = {}
@@ -137,3 +137,16 @@ export function filterPropsOut(props: Record<string, unknown>, filter: string[])
     }
     return result
 }
+
+export type RangeGenerator = {
+    (to: number, step?: number): number[]
+    (from: number, to: number, step?: number): number[]
+}
+
+export const range: RangeGenerator = (to: number, step = 1) => {
+    const result = []
+    for (let i = 0; i < to; i += step) result.push(i)
+    return result
+}
+
+export const random = (min = 0, max = 1) => Math.floor(Math.random() * (max - min) + min)

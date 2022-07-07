@@ -79,7 +79,7 @@
     on:mousedown
     on:input={ inputHandler }
     on:change={ changeHandler }
-    class={ wideClass ? className + ' ' + wideClass : className }
+    class="{ wideClass } { className }"
     class:filledIn
     use:imask={ mask || undefined }
     placeholder={ placeholder || undefined }

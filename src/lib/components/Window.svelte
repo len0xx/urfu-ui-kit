@@ -1,10 +1,29 @@
 <script lang="ts">
+    import { range, random } from '$lib/utilities'
+    import { beforeUpdate } from 'svelte'
+
     export let node: HTMLElement = undefined
     export let placeholder = false
+    export let contentAmount = 8
+    export let paddingX = 1
+    export let paddingY = 2
+    export let paddingTop: number = null
+    export let paddingBottom: number = null
+    export let paddingLeft: number = null
+    export let paddingRight: number = null
+
     $: placeholderVisible = placeholder
+
+    beforeUpdate(() => {
+        if (contentAmount < 1)
+            throw new Error('contentAmount can not be 0 or a negative number')
+    })
 </script>
 
-<div class="win-emulator" bind:this={ node }>
+<div
+    class="win-emulator"
+    bind:this={ node }
+>
     <div class="win-header">
         <div class="close-btn ui-btn"></div>
         <div class="hide-btn ui-btn"></div>
@@ -12,15 +31,16 @@
     </div>
     <div class="win-container" class:placeholderVisible>
         { #if placeholder }
-            <div class="container-bg">
-                <div class="text-holder" style:width="85%"></div>
-                <div class="text-holder" style:width="60%"></div>
-                <div class="text-holder" style:width="75%"></div>
-                <div class="text-holder" style:width="40%"></div>
-                <div class="text-holder" style:width="60%"></div>
-                <div class="text-holder" style:width="80%"></div>
-                <div class="text-holder" style:width="45%"></div>
-                <div class="text-holder" style:width="55%"></div>
+            <div
+                class="container-bg"
+                style:padding-top={ (paddingTop !== null ? paddingTop : paddingY) + 'em' }
+                style:padding-bottom={ (paddingBottom !== null ? paddingBottom : paddingY) + 'em' }
+                style:padding-left={ (paddingLeft !== null ? paddingLeft : paddingX) + 'em' }
+                style:padding-right={ (paddingRight !== null ? paddingRight : paddingX) + 'em' }
+            >
+                { #each range(contentAmount) as _ }
+                    <div class="text-holder" style:width="{ random(25, 85) }%"></div>
+                { /each }
             </div>
         { /if }
         <div class="container-fg">

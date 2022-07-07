@@ -5,6 +5,7 @@
     type Parameter = typeof types[number]
 
     export let value: Parameter = 'string'
+    
     const descriptions = [
         'Перечисляемое поле, которое может принимать одно из значений из списка',
         'Строковое значение',

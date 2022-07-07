@@ -1,11 +1,11 @@
 <script lang="ts">
+    import { createEventDispatcher } from 'svelte'
+
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let className = ''
     export let left = ''
     export let right = ''
-
-    import { createEventDispatcher } from 'svelte'
 
     let state = false
     const dispatch = createEventDispatcher()

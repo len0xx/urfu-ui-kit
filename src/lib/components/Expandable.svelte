@@ -4,6 +4,7 @@
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let className = ''
+    
     let active = false
 
     export const toggle = () => active = !active

@@ -15,12 +15,10 @@
     export let transparent = true
     export let animate = true
 
-    let transparencyClass = transparent ? 'transparent-bg' : ''
     let pressed = false
-
     const dispatch = createEventDispatcher()
-    
     let sizeClass = 'size-' + getSizeName(size)
+    let transparencyClass = transparent ? 'transparent-bg' : ''
 
     let icon = plusIcon
     if (variant === 'left') {
