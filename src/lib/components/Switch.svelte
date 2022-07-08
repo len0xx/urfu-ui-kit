@@ -54,6 +54,7 @@
         cursor: pointer;
         padding: 4px;
         transition: 0.1s ease-in-out;
+        text-align: left !important;
     }
 
     span.heading-3 {

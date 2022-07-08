@@ -76,6 +76,18 @@ a {
 	}
 }
 
+.align-initial {
+	text-align: initial;
+}
+
+.align-inherit {
+	text-align: inherit;
+}
+
+.align-unset {
+	text-align: unset;
+}
+
 .align-left {
 	text-align: left;
 }

@@ -21,7 +21,7 @@
     on:mouseleave
 >
     <div class="extension { extension }">.{ extension }</div>
-    <Heading size={4} marginY={0}>
+    <Heading size={4} margin={{ y: 0 }}>
         { #if link }
             <a target="_BLANK" href={ link }>
                 { filename }.{ extension }

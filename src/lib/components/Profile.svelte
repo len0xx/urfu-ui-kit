@@ -39,14 +39,14 @@
 >
     <img class="kit-profile-image" src={ img || '/img/gradient-red-1.png' } alt="Profile">
     <div class="kit-profile-heading">
-        <Heading size={4} className="kit-profile-title subtitle" color="var(--blue)" marginY={0}>
+        <Heading size={4} className="kit-profile-title subtitle" color="var(--blue)" margin={{ y: 0 }}>
             <slot name="name" />
         </Heading>
-        <Text className="kit-profile-subheading" marginY={0} opacity={0.6}>
+        <Text className="kit-profile-subheading" margin={{ y: 0 }} opacity={0.6}>
             <slot name="description" />
         </Text>
     </div>
-    <Text className="kit-profile-text" marginY={ 0 }>
+    <Text className="kit-profile-text" margin={{ y: 0 }}>
         { #if textTooLong }
             { #if !textExpanded }
                 { @html shortText }... <span class="semi-bold inline-btn-s" on:click={() => textExpanded = true}>Дальше</span>

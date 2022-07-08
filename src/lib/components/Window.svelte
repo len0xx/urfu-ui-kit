@@ -1,16 +1,13 @@
 <script lang="ts">
-    import { range, random } from '$lib/utilities'
+    import { range, random, computePadding } from '$lib/utilities'
     import { beforeUpdate } from 'svelte'
+    import type { Padding } from '$lib/types'
+    const defaultPadding = { x: 1, y: 2 }
 
     export let node: HTMLElement = undefined
     export let placeholder = false
     export let contentAmount = 8
-    export let paddingX = 1
-    export let paddingY = 2
-    export let paddingTop: number = null
-    export let paddingBottom: number = null
-    export let paddingLeft: number = null
-    export let paddingRight: number = null
+    export let padding: Padding = defaultPadding
 
     $: placeholderVisible = placeholder
 
@@ -33,15 +30,13 @@
         { #if placeholder }
             <div
                 class="container-bg"
-                style:padding-top={ (paddingTop !== null ? paddingTop : paddingY) + 'em' }
-                style:padding-bottom={ (paddingBottom !== null ? paddingBottom : paddingY) + 'em' }
-                style:padding-left={ (paddingLeft !== null ? paddingLeft : paddingX) + 'em' }
-                style:padding-right={ (paddingRight !== null ? paddingRight : paddingX) + 'em' }
+                style:padding={ computePadding({ ...defaultPadding, ...padding }) }
             >
                 { #each range(contentAmount) as _ }
                     <div class="text-holder" style:width="{ random(25, 85) }%"></div>
                 { /each }
             </div>
+            <slot name="footer" />
         { /if }
         <div class="container-fg">
             <slot />
@@ -57,6 +52,7 @@
         background-color: white;
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 12px;
+        overflow: hidden;
     }
 
     .win-emulator .win-container.placeholderVisible {
@@ -84,8 +80,11 @@
         display: block;
         background-color: rgb(226, 226, 226);
         height: 1.5em;
-        margin-bottom: 1.5em;
         border-radius: 4px;
+    }
+
+    .win-emulator .win-container > .container-bg > .text-holder:not(:last-child) {
+        margin-bottom: 1.5em;
     }
 
     .win-emulator .win-container {

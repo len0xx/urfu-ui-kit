@@ -9,6 +9,7 @@ import Div from './Div.svelte'
 import Divider from './Divider.svelte'
 import Document from './Document.svelte'
 import Expandable from './Expandable.svelte'
+import Footer from './Footer.svelte'
 import Grid from './Grid.svelte'
 import Header from './Header.svelte'
 import Heading from './Heading.svelte'
@@ -45,6 +46,7 @@ export {
     Divider,
     Document,
     Expandable,
+    Footer,
     Grid,
     Header,
     Heading,

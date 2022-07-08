@@ -25,6 +25,11 @@ export default [
         type: 'display'
     },
     {
+        name: 'Div',
+        text: 'Стандартный блок для упрощения процесса вёрстки',
+        type: 'other'
+    },
+    {
         name: 'Divider',
         text: 'Визуальный разделитель контента',
         type: 'other'

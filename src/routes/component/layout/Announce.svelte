@@ -19,19 +19,17 @@
 </div>
 <Announce image="/img/graduates.jpg" vector="/img/text-vector.svg">
     <svelte:fragment slot="first">
-        <Heading className="mobile-hide" size={1} marginTop={0}>Магистратура предоставляет возможности</Heading>
-        <Heading className="pc-hide" size={1} marginY={0}>Магистратура предоставляет возможности</Heading>
+        <Heading className="mobile-hide" size={1} margin={{ top: 0 }}>Магистратура предоставляет возможности</Heading>
+        <Heading className="pc-hide" size={1} margin={{ y: 0 }}>Магистратура предоставляет возможности</Heading>
     </svelte:fragment>
     <svelte:fragment slot="second">
-        <Text>В рейтинге «100 лучших российских вузов» по версии Forbes УрФУ занял 4-ое место, обогнав многие столичные вузы — это лучший результат среди нестоличных вузов России.</Text>
-        <br />
-        <Divider />
-        <br />
-        <Text opacity={0.4}>Повышает шансы на трудоустройство и увеличение заработной платы</Text>
-        <Text opacity={0.4}>Получать образование, совмещая с работой или стажировкой</Text>
-        <Text opacity={0.4}>Построить индивидуальную траекторию обучения</Text>
-        <Text opacity={0.4}>Получать повышенные стипендии</Text>
-        <Text opacity={0.4}>Заниматься наукой</Text>
+        <Text margin={{ top: 0 }}>В рейтинге «100 лучших российских вузов» по версии Forbes УрФУ занял 4-ое место, обогнав многие столичные вузы — это лучший результат среди нестоличных вузов России.</Text>
+        <Divider margin={{ y: 2 }} />
+        <Text opacity={ 0.4 }>Повышает шансы на трудоустройство и увеличение заработной платы</Text>
+        <Text opacity={ 0.4 }>Получать образование, совмещая с работой или стажировкой</Text>
+        <Text opacity={ 0.4 }>Построить индивидуальную траекторию обучения</Text>
+        <Text opacity={ 0.4 }>Получать повышенные стипендии</Text>
+        <Text opacity={ 0.4 }>Заниматься наукой</Text>
         <br />
         <Button className="mobile-hide">Поступить</Button>
         <Button className="pc-hide wide">Поступить</Button>

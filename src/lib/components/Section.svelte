@@ -1,34 +1,26 @@
 <script lang="ts">
-    import { filterPropsOut } from '../utilities'
-    import type { Align } from '$lib/types'
+    import { filterPropsOut, computePadding } from '$lib/utilities'
+    import type { Align, Padding } from '$lib/types'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let className = ''
     export let align: Align = 'center'
-    export let paddingX = 0
-    export let paddingY = 0
-    export let paddingTop: number = null
-    export let paddingBottom: number = null
-    export let paddingLeft: number = null
-    export let paddingRight: number = null
+    export let padding: Padding = { x: 0, y: 0 }
     export let contentWidth: string = null
 
     $: ({...attrs} = $$props)
 
-    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'align', 'id', 'paddingX', 'paddingY', 'paddingRight', 'paddingTop', 'paddingLeft', 'paddingBottom', 'contentWidth'])
+    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'align', 'id', 'padding', 'contentWidth'])
     let alignClass = 'section-align-' + align
 </script>
 
-<section 
+<section
     {id}
     bind:this={ node }
     {...finalAttrs}
     class={['kit-section', className, alignClass].join(' ')}
-    style:padding-top={ (paddingTop !== null ? paddingTop : paddingY) + 'em' }
-    style:padding-bottom={ (paddingBottom !== null ? paddingBottom : paddingY) + 'em' }
-    style:padding-left={ (paddingLeft !== null ? paddingLeft : paddingX) + 'em' }
-    style:padding-right={ (paddingRight !== null ? paddingRight : paddingX) + 'em' }
+    style:padding={ computePadding(padding) }
 >
     <div class="content-wrapper" style:width={ contentWidth }>
         <slot />
@@ -48,8 +40,6 @@
     }
 
     section.section-align-center > .content-wrapper {
-        margin-top: 0;
-        margin-bottom: 0;
         margin: 0 auto;
     }
 

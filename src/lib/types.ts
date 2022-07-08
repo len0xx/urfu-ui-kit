@@ -12,4 +12,15 @@ export const getSizeIndex = (size: ExtendedSizes) => extendedSizes.indexOf(size)
 
 export const getSizeName = (size: ExtendedSizes) => extendedSizeNames[getSizeIndex(size)]
 
-export type Align = 'left' | 'center' | 'right'
+export type Align = 'left' | 'center' | 'right' | 'unset' | 'initial' | 'inherit'
+
+export type PaddingValue = string | number
+
+export type Padding = {
+    x?: PaddingValue,
+    y?: PaddingValue,
+    top?: PaddingValue,
+    bottom?: PaddingValue,
+    left?: PaddingValue,
+    right?: PaddingValue
+}

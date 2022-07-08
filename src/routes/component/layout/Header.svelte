@@ -15,10 +15,10 @@
             Кнопки являются неотъемлимой частью современных веб-приложений
         </Text>
         <br />
-        <Window placeholder paddingTop={7} contentAmount={5}>
+        <Window placeholder padding={{ top: 7 }} contentAmount={5}>
             <DemoHeader>
-                <Section paddingX={1}>
-                    <Heading size={3} marginY={0.25}>This is a Header</Heading>
+                <Section padding={{ x: 1 }}>
+                    <Heading size={3} margin={{ y: 0.25 }}>This is a Header</Heading>
                 </Section>
             </DemoHeader>
         </Window>

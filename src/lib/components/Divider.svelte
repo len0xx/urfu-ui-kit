@@ -1,15 +1,14 @@
 <script lang="ts">
+    import { computePadding } from '$lib/utilities'
+    import type { Padding } from '$lib/types'
+    const defaultMargin = { x: 0, y: 1 }
+    
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let color = 'white'
     export let width = '50px'
     export let height = 4
-    export let marginX = 0
-    export let marginY = 1
-    export let marginTop: number = null
-    export let marginBottom: number = null
-    export let marginLeft: number = null
-    export let marginRight: number = null
+    export let margin: Padding = defaultMargin
     export let className = ''
 </script>
 
@@ -26,9 +25,6 @@
     style:background-color={ color }
     style:width
     style:height={ height + 'px' }
-    style:margin-top={ (marginTop !== null ? marginTop : marginY) + 'em' }
-    style:margin-bottom={ (marginBottom !== null ? marginBottom : marginY) + 'em' }
-    style:margin-left={ (marginLeft !== null ? marginLeft : marginX) + 'em' }
-    style:margin-right={ (marginRight !== null ? marginRight : marginX) + 'em' }
+    style:margin={ computePadding({ ...defaultMargin, ...margin }) }
 >
 </div>

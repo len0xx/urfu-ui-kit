@@ -19,40 +19,40 @@
     <aside>
         <Heading size={3}><a href="/">Главная</a></Heading>
         <Heading size={3}><a href="/setup">Установка</a></Heading>
-        <Heading size={3}><a href="/setup">О проекте</a></Heading>
+        <Heading size={3}><a href="/about">О проекте</a></Heading>
         <Heading size={3}><a href="https://github.com/len0xx/urfu-ui-kit">GitHub</a></Heading>
         <br />
-        <Heading size={3} marginBottom={0.5} marginTop={0}><a href="/component/buttons">Кнопки</a></Heading>
+        <Heading size={3} margin={{ top: 0, bottom: 0.5 }}><a href="/component/buttons">Кнопки</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'buttons') as component }
                 <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
             { /each }
         </nav>
-        <Heading size={3} marginTop={1.5} marginBottom={0.5}><a href="/component/layout">Расположение</a></Heading>
+        <Heading size={3} margin={{ top: 1.5, bottom: 0.5 }}><a href="/component/layout">Расположение</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'layout') as component }
                 <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
             { /each }
         </nav>
-        <Heading size={3} marginTop={1.5} marginBottom={0.5}><a href="/component/display">Отображение данных</a></Heading>
+        <Heading size={3} margin={{ top: 1.5, bottom: 0.5 }}><a href="/component/display">Отображение данных</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'display') as component }
                 <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
             { /each }
         </nav>
-        <Heading size={3} marginTop={1.5} marginBottom={0.5}><a href="/component/loading">Загрузка</a></Heading>
+        <Heading size={3} margin={{ top: 1.5, bottom: 0.5 }}><a href="/component/loading">Загрузка</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'loading') as component }
                 <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
             { /each }
         </nav>
-        <Heading size={3} marginTop={1.5} marginBottom={0.5}><a href="/component/base">Базовые элементы</a></Heading>
+        <Heading size={3} margin={{ top: 1.5, bottom: 0.5 }}><a href="/component/base">Базовые элементы</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'base') as component }
                 <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
             { /each }
         </nav>
-        <Heading size={3} marginTop={1.5} marginBottom={0.5}><a href="/component/other">Декор</a></Heading>
+        <Heading size={3} margin={{ top: 1.5, bottom: 0.5 }}><a href="/component/other">Декор</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'other') as component }
                 <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
@@ -87,5 +87,10 @@
         left: 0;
         width: 100%;
         padding: 3em 0;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    footer a:hover {
+        color: rgba(0, 0, 0, 1);
     }
 </style>

@@ -53,7 +53,10 @@
         <Heading size={4} color="var(--blue)">xl <ParameterType value="number" /></Heading>
         <Text>Количество колонок на самых широких экранах (от 1440 пикселей в ширину). Поддерживаются значения от <code>1</code> до <code>12</code></Text>
         <Heading size={4} color="var(--blue)">gap <ParameterType value="number" /></Heading>
-        <Text>Расстояние между колонками и строчками. Поддерживаются значения от <code>1</code> до <code>6</code></Text>
+        <Text>
+            Расстояние между колонками и строчками. <br />
+            Поддерживаются любые целочисленные значения
+        </Text>
         <Heading size={4} color="var(--blue)">alignItems <ParameterType value="enum" /></Heading>
         <Text>Выравнивание потомков в строке по вертикали. Поддерживаются значения <code>start</code>, <code>center</code>, <code>end</code>, <code>stretch</code></Text>
         <Heading size={4} color="var(--blue)">justifyItems <ParameterType value="enum" /></Heading>

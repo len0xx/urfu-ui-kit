@@ -59,7 +59,7 @@
     style:justify-content={ justifyContent }
     style:align-items={ alignItems }
     style:justify-items={ justifyItems }
-    class="grid-container grid-gap-{gap} xsmall-viewport-{xs} small-viewport-{s} medium-viewport-{m} large-viewport-{l} xlarge-viewport-{xl} {className} {ratioClasses}"
+    class="grid-container xsmall-viewport-{xs} small-viewport-{s} medium-viewport-{m} large-viewport-{l} xlarge-viewport-{xl} {className} {ratioClasses}"
     on:click
 >
     <slot />

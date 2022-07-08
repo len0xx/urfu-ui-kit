@@ -24,7 +24,7 @@
 >
     <div class="radial-icon"></div>
     <div class="top">
-        <Heading size={3} marginTop={0}><slot name="title" /></Heading>
+        <Heading size={3} margin={{ top: 0 }}><slot name="title" /></Heading>
         <Text className="description semi-bold" opacity={0.4}>
             <slot name="text" />
         </Text>

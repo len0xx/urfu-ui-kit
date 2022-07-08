@@ -28,9 +28,9 @@
     on:mouseover
     on:mouseleave
 >
-    <Text className="kit-benefit-num semi-bold" color="var(--blue)" marginY={0}>{ num }</Text>
-    <Divider width="100%" color="var(--blue)" height={ dividerSize } marginY={ margin } />
-    <Text className="kit-benefit-caption" marginTop={0.9}>{ caption }</Text>
+    <Text className="kit-benefit-num semi-bold" color="var(--blue)" margin={{ y: 0 }}>{ num }</Text>
+    <Divider width="100%" color="var(--blue)" height={ dividerSize } margin={{ y: margin }} />
+    <Text className="kit-benefit-caption" margin={{ top: 0.9 }}>{ caption }</Text>
 </div>
 
 <style>

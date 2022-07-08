@@ -4,7 +4,7 @@
     
     export let id: string = undefined
     export let node: HTMLElement = undefined
-    export let align: Align = 'left'
+    export let align: Align = 'initial'
     export let closable = true
     export let className = ''
 
@@ -29,7 +29,7 @@
 
     onMount(() => {
         document.addEventListener('keyup', (event: KeyboardEvent) => {
-            if (event.key == 'Escape' && visible) {
+            if (event.key == 'Escape') {
                 close()
             }
         })
@@ -37,16 +37,16 @@
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<div
-    {id}
-    bind:this={ node }
-    on:mouseleave
-    on:mouseover
-    class:visible
-    class="kit-modal-wrapper {className}"
->
+<div class="kit-modal-wrapper" class:visible>
     <div class="shadow" on:click={ close }></div>
-    <div class="kit-modal align-{align}" on:click>
+    <div
+        {id}
+        bind:this={ node }
+        class="kit-modal align-{align} {className}"
+        on:click
+        on:mouseleave
+        on:mouseover
+    >
         { #if closable }
             <div class="close" on:click={ close }>
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">

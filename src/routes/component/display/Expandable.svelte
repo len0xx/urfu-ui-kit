@@ -26,7 +26,7 @@
         </Text>
         <br />
         <Grid m={2} ratio="1:2" gap={2}>
-            <Heading size={2} marginTop={0}>FAQ</Heading>
+            <Heading size={2} margin={{ top: 0 }}>FAQ</Heading>
             <div>
                 <Expandable bind:this={ expandables[0] } on:click={ () => toggleExpandable(0) }>
                     <svelte:fragment slot="header">Нажми на меня</svelte:fragment>

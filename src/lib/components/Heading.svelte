@@ -1,19 +1,15 @@
 <script lang="ts">
-    import { filterPropsOut } from '../utilities'
-    import type { Align } from '$lib/types'
+    import { filterPropsOut, computePadding } from '$lib/utilities'
+    import type { Align, Padding } from '$lib/types'
+    const defaultMargin = { x: 0, y: 1 }
 
     export let id: string = undefined
     export let node: HTMLElement = undefined
-    export let align: Align = 'left'
+    export let align: Align = 'initial'
     export let size: 1 | 2 | 3 | 4 | 5 | 6
     export let color: string = undefined
     export let className = ''
-    export let marginX = 0
-    export let marginY = 1
-    export let marginTop: number = null
-    export let marginBottom: number = null
-    export let marginLeft: number = null
-    export let marginRight: number = null
+    export let margin: Padding = defaultMargin
 
     let tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = `h${size}`
     let alignClass = 'align-' + align
@@ -22,7 +18,7 @@
     $: ({ ...attrs } = $$props)
 
     // Get rid of the attributes that will be added in a component explicitly
-    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'id', 'color', 'size', 'marginTop', 'marginBottom', 'marginRight', 'marginLeft', 'marginX', 'marginY'])
+    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'id', 'color', 'size', 'margin'])
 </script>
 
 <svelte:element
@@ -32,10 +28,7 @@
     { ...finalAttrs }
     class="kit-heading { className } { alignClass }"
     style={ color ? `--heading-color: ${color};` : '' }
-    style:margin-top={ (marginTop !== null ? marginTop : marginY) + 'em' }
-    style:margin-bottom={ (marginBottom !== null ? marginBottom : marginY) + 'em' }
-    style:margin-left={ (marginLeft !== null ? marginLeft : marginX) + 'em' }
-    style:margin-right={ (marginRight !== null ? marginRight : marginX) + 'em' }
+    style:margin={ computePadding({ ...defaultMargin, ...margin }) }
     on:click
     on:mousedown
     on:mouseup

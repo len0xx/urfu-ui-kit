@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Section, Text, Tag, ParameterType } from '$lib/components'
-    import ButtonExample from '$lib/../codes/ButtonExample'
+    import SectionExample from '$lib/../codes/SectionExample'
 </script>
 
 <svelte:head>
@@ -16,24 +16,35 @@
         </Text>
         <br />
         <Section align="left" contentWidth="800px">
-            <Heading size={2}>Пример слева</Heading>
+            <Heading align="left" size={2}>Пример слева</Heading>
         </Section>
-        <Section align="center">
-            <Heading size={2}>Пример посередине</Heading>
+        <Section align="center" contentWidth="800px">
+            <Heading align="center" size={2}>Пример посередине</Heading>
         </Section>
-        <Section align="right">
-            <Heading size={2}>Пример справа</Heading>
+        <Section align="right" contentWidth="800px">
+            <Heading align="right" size={2}>Пример справа</Heading>
         </Section>
         <br />
         <br />
     
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={ButtonExample} />
+        <Code val={SectionExample} />
         <br />
         
         <Heading size={3}>Параметры:</Heading>
-        <Heading size={4} color="var(--blue)">variant <Tag>string</Tag></Heading>
-        <Text>Вариант отображения кнопки. Поддерживаются два стандартных значения: <code>primary</code> и <code>blue</code></Text>
+        <Heading size={4} color="var(--blue)">padding <ParameterType value="object" /></Heading>
+        <Text>
+            Объект, описывающий отступы компонента. Имеет следующие свойства: <br />
+            <code>x</code> – отступ по горизонтали <br />
+            <code>y</code> – отступ по вертикали <br />
+            <code>top</code> – отступ сверху <br />
+            <code>bottom</code> – отступ снизу <br />
+            <code>left</code> – отступ слева <br />
+            <code>right</code> – отступ справа <br />
+            Все значения могут иметь один из двух типов: <code>string</code> или <code>number</code> <br />
+            В случае, если значение одного из свойств имеет тип <code>number</code>, ему будет добавлена единица измерения <code>em</code> <br />
+            Пример: <code>padding={ '{{ top: 1, x: \'auto\' }}' }</code> будет преобразовано в <code>padding: 1em auto 0</code>
+        </Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>

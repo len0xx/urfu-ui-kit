@@ -167,16 +167,6 @@ code.hljs {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-footer {
-	margin-top: 2em;
-	padding: 2em 0;
-	color: rgba(0, 0, 0, 0.5);
-}
-
-footer a:hover {
-	color: rgba(0, 0, 0, 1);
-}
-
 main {
 	max-width: calc(100vw - var(--sidebar-width) - 2 * var(--content-padding-x));
 }

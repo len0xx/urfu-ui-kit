@@ -28,7 +28,7 @@
     <div class="block-content">
         <div>
             <Heading size={ 3 } color="var(--blue)"><slot name="header"></slot></Heading>
-            <Text marginY={ 0 }><slot name="text"></slot></Text>
+            <Text margin={{ y: 0 }}><slot name="text"></slot></Text>
         </div>
         <div class="icon">
             { #if active }

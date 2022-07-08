@@ -16,7 +16,7 @@
         </Text>
         <br />
         <Grid m={2} ratio="1:2" gap={2}>
-            <Heading size={2} marginTop={0}>Скачайте документацию по компонентам</Heading>
+            <Heading size={2} margin={{ top: 0 }}>Скачайте документацию по компонентам</Heading>
             <div>
                 <Document filename="UrFU UI Kit Svelte" extension="pdf" />
                 <Document filename="SvelteKit Manual" extension="docx" />

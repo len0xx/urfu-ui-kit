@@ -1,6 +1,7 @@
 import { ajax } from 'jquery'
 import axios from 'axios'
-import type { RESTMethod } from './types'
+import type { AxiosResponse } from 'axios'
+import type { RESTMethod, Padding, PaddingValue } from './types'
 
 
 // Create slug from the title
@@ -93,7 +94,7 @@ export function sendWindowAJAX(
         }
     })
 
-    request.fail((jqXHR, res) => {
+    request.fail((_, res) => {
         if (callbackError) callbackError(res)
         console.error(res)
     })
@@ -107,7 +108,8 @@ export async function sendNodeAJAX(
     headers?: Record<string, string>
 ): Promise<Record<string, string>> {
     if (!headers) headers = {}
-    const response = await axios({ method, url, headers, data })
+    type Response = AxiosResponse<string, unknown> & { data: Record<string, string> }
+    const response: Response = await axios({ method, url, headers, data })
     return response.data
 }
 
@@ -149,4 +151,19 @@ export const range: RangeGenerator = (to: number, step = 1) => {
     return result
 }
 
+// Just the basic random generator
 export const random = (min = 0, max = 1) => Math.floor(Math.random() * (max - min) + min)
+
+// Transform the padding value from PaddingValue type to actual CSS
+export const applyPadding = (value: PaddingValue): string => (typeof value == 'number') ? value + 'em' : value || '0'
+
+// Transform padding values from JS style to CSS (eg. "2em 4em 2em 4em")
+// where the order is from top to left clockwise
+export const computePadding = (padding: Padding): string => {
+    return [
+        applyPadding(padding.top !== undefined ? padding.top : padding.y),
+        applyPadding(padding.right !== undefined ? padding.right : padding.x),
+        applyPadding(padding.bottom !== undefined ? padding.bottom : padding.y),
+        applyPadding(padding.left !== undefined ? padding.left : padding.x)
+    ].join(' ')
+}
