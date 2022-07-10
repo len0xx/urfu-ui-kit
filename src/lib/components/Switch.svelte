@@ -6,18 +6,18 @@
     export let className = ''
     export let left = ''
     export let right = ''
+    export let value = false
 
-    let state = false
     const dispatch = createEventDispatcher()
 
-    function setState(s: boolean) {
-        if (state != s) {
-            state = s
-            dispatch('change', { state })
+    function setValue(s: boolean) {
+        if (value != s) {
+            value = s
+            dispatch('change', { value })
         }
     }
 
-    const toggleState = () => setState(!state)
+    const toggleValue = () => setValue(!value)
 </script>
 
 <div
@@ -32,13 +32,13 @@
     class="kit-switch {className}"
 >
     { #if left }
-        <span class="heading-3" class:blue-text={!state} class:grey-text={state} on:click={() => setState(false)}>{ left }</span>
+        <span class="heading-3" class:blue-text={!value} class:grey-text={value} on:click={() => setValue(false)}>{ left }</span>
     { /if }
-    <div class="toggler" class:toggled={state} on:click={toggleState}>
+    <div class="toggler" class:toggled={value} on:click={toggleValue}>
         <span class="switch"></span>
     </div>
     { #if right }
-        <span class="heading-3" class:blue-text={state} class:grey-text={!state} on:click={() => setState(true)}>{ right }</span>
+        <span class="heading-3" class:blue-text={value} class:grey-text={!value} on:click={() => setValue(true)}>{ right }</span>
     { /if }
 </div>
 

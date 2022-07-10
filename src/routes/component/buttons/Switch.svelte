@@ -2,12 +2,7 @@
     import { Code, Heading, Switch, Text, ParameterType } from '$lib/components'
     import SwitchExample from '$lib/../codes/SwitchExample'
 
-    let currentState = false
-    
-    const handleSwitch = (e: CustomEvent) => {
-        const { state } = e.detail
-        currentState = state
-    }
+    let currentValue = false
 </script>
 
 <svelte:head>
@@ -23,9 +18,9 @@
         </Text>
         <br />
         
-        <Switch on:change={ handleSwitch } left="False" right="True" />
+        <Switch bind:value={ currentValue } left="False" right="True" />
         <br />
-        <Text>Текущее состояние: { currentState }</Text>
+        <Text>Текущее состояние: { currentValue }</Text>
         <br />
         
         <Heading size={3}>Пример использования:</Heading>
@@ -37,6 +32,8 @@
         <Text>Текст с левой стороны от переключателя</Text>
         <Heading size={4} color="var(--blue)">right <ParameterType value="string" /></Heading>
         <Text>Текст с правой стороны от переключателя</Text>
+        <Heading size={4} color="var(--blue)">value <ParameterType value="boolean" /></Heading>
+        <Text>Состояние переключателя</Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
@@ -47,7 +44,7 @@
         
         <Heading size={3}>Поддерживаемые события:</Heading>
         <Heading size={4} color="var(--blue)">on:change</Heading>
-        <Text>Передаваемый параметр: <code>&lbrace; state: boolean &rbrace;</code></Text>
+        <Text>Передаваемый параметр: <code>&lbrace; value: boolean &rbrace;</code></Text>
         <Heading size={4} color="var(--blue)">on:focus</Heading>
         <Heading size={4} color="var(--blue)">on:blur</Heading>
         <Heading size={4} color="var(--blue)">on:mouseover</Heading>

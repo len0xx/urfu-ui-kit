@@ -1,1 +1,1 @@
-export default `<Switch on:change={ handleSwitch } left="False" right="True" />`
+export default `<Switch bind:value={ currentState } left="False" right="True" />`
