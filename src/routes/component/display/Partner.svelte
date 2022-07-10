@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Tag, Grid, Partner, Text, ParameterType } from '$lib/components'
-    import PartnerExample from '$lib/../codes/PartnerExample'
+    import CodeExample from '$lib/../codes/PartnerExample'
 
     let partners = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 </script>
@@ -26,7 +26,7 @@
         <br />
     
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={PartnerExample} />
+        <Code val={CodeExample} />
         <br />
     
         <Heading size={3}>Параметры:</Heading>

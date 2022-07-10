@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Progress, Text, ParameterType } from '$lib/components'
-    import ProgressExample from '$lib/../codes/ProgressExample'
+    import CodeExample from '$lib/../codes/ProgressExample'
 </script>
 
 <svelte:head>
@@ -22,7 +22,7 @@
         <br />
     
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={ProgressExample} />
+        <Code val={CodeExample} />
         <br />
     
         <Heading size={3}>Параметры:</Heading>

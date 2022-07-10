@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, SelectButton, Text, ParameterType } from '$lib/components'
-    import SelectButtonExample from '$lib/../codes/SelectButtonExample'
+    import CodeExample from '$lib/../codes/SelectButtonExample'
 
     let selected = 0
     let expanded = false
@@ -32,7 +32,7 @@
         <br />
         
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={SelectButtonExample} />
+        <Code val={CodeExample} />
         <br />
         
         <Heading size={3}>Параметры:</Heading>

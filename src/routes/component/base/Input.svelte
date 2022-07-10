@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Grid, Input, Link, Text, ParameterType } from '$lib/components'
-    import InputExample from '$lib/../codes/InputExample'
+    import CodeExample from '$lib/../codes/InputExample'
 
     let firstname = ''
     let email = ''
@@ -34,7 +34,7 @@
         <br />
     
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={InputExample} />
+        <Code val={CodeExample} />
         <br />
     
         <Heading size={3}>Параметры:</Heading>

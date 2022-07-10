@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Card, Grid, Text, ParameterType } from '$lib/components'
-    import GridExample from '$lib/../codes/GridExample'
+    import CodeExample from '$lib/../codes/GridExample'
 </script>
 
 <svelte:head>
@@ -38,7 +38,7 @@
         <br />
     
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={GridExample} />
+        <Code val={CodeExample} />
         <br />
     
         <Heading size={3}>Параметры:</Heading>

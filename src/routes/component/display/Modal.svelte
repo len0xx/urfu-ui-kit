@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Modal, Button, Rainbow, Text, ParameterType } from '$lib/components'
-    import ModalExample from '$lib/../codes/ModalExample'
+    import CodeExample from '$lib/../codes/ModalExample'
 
     let modal: {
         open: () => void,
@@ -34,7 +34,7 @@
         <br />
     
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={ModalExample} />
+        <Code val={CodeExample} />
         <br />
     
         <Heading size={3}>Параметры:</Heading>

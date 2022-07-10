@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Switch, Text, ParameterType } from '$lib/components'
-    import SwitchExample from '$lib/../codes/SwitchExample'
+    import CodeExample from '$lib/../codes/SwitchExample'
 
     let currentValue = false
 </script>
@@ -24,7 +24,7 @@
         <br />
         
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={SwitchExample} />
+        <Code val={CodeExample} />
         <br />
         
         <Heading size={3}>Параметры:</Heading>

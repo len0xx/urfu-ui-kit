@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Progress, Text, ParameterType, Window, Link } from '$lib/components'
-    import PreloaderExample from '$lib/../codes/PreloaderExample'
+    import CodeExample from '$lib/../codes/PreloaderExample'
     import { onMount } from 'svelte'
     import { slide } from 'svelte/transition'
 
@@ -45,7 +45,7 @@
         <br />
     
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={PreloaderExample} />
+        <Code val={CodeExample} />
         <br />
     
         <Heading size={3}>Параметры:</Heading>

@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Announce, Divider, Button, Text, ParameterType } from '$lib/components'
-    import AnnounceExample from '$lib/../codes/AnnounceExample'
+    import CodeExample from '$lib/../codes/AnnounceExample'
 </script>
 
 <svelte:head>
@@ -41,7 +41,7 @@
         <br />
 
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={AnnounceExample} />
+        <Code val={CodeExample} />
         <br />
 
         <Heading size={3}>Параметры:</Heading>

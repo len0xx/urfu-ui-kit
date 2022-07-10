@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Link, Text, ParameterType } from '$lib/components'
-    import LinkExample from '$lib/../codes/LinkExample'
+    import CodeExample from '$lib/../codes/LinkExample'
 </script>
 
 <svelte:head>
@@ -23,7 +23,7 @@
         <br />
         
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={LinkExample} />
+        <Code val={CodeExample} />
         <br />
     
         <Heading size={3}>Параметры:</Heading>

@@ -1,7 +1,6 @@
 <script lang="ts">
-    import { Code, Heading, VideoCard, Text, ParameterType } from '$lib/components'
-    import VideoCardExample from '$lib/../codes/VideoCardExample'
-    import Grid from '$lib/components/Grid.svelte'
+    import { Code, Heading, VideoCard, Text, ParameterType, Grid } from '$lib/components'
+    import CodeExample from '$lib/../codes/VideoCardExample'
 
     let videos = [0, 1, 2, 3]
 </script>
@@ -27,7 +26,7 @@
         <br />
     
         <Heading size={3}>Пример использования:</Heading>
-        <Code val={VideoCardExample} />
+        <Code val={CodeExample} />
         <br />
     
         <Heading size={3}>Параметры:</Heading>
