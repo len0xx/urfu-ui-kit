@@ -31,10 +31,11 @@
             <li><Link variant="hover" target="_BLANK" lineWidth={ 2 } href="https://diplom.urfu.ru">Выпускной 2022: ВСЕМДИПЛОМЫ</Link></li>
         </ul>
         <br />
+        <Heading size={3}>Компоненты:</Heading>
         <div>
             <Grid m={1} l={2} xl={3}>
                 { #each components.filter((_, i) => expanded || i < 9) as component, i }
-                    <a href={ '/component/' + component.type + '/' + component.name } transition:blur="{{ duration: 200 }}">
+                    <a href={ '/component/' + component.type + '/' + component.name } in:blur="{{ duration: 200 }}">
                         <Card variant="white" color={ (i % 3 == 0) ? 'red-2' : ((i % 3 == 1) ? 'red-1' : 'blue-2') }>
                             <svelte:fragment slot="title">{ component.name }</svelte:fragment>
                             <svelte:fragment slot="text">{ component.text }</svelte:fragment>
