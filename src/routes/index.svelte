@@ -1,6 +1,7 @@
 <script lang="ts">
     import { Text, Link, Heading, Tag, Grid, Card, Warning, RoundButton } from '$lib/components'
     import components from '$lib/components-list'
+    import { blur } from 'svelte/transition'
 
     let expanded = false
 </script>
@@ -32,16 +33,14 @@
         <br />
         <div>
             <Grid m={1} l={2} xl={3}>
-                { #each components as component, i }
-                    { #if expanded || i < 9 }
-                        <a href={ '/component/' + component.type + '/' + component.name }>
-                            <Card variant="white" color={ (i % 3 == 0) ? 'red-2' : ((i % 3 == 1) ? 'red-1' : 'blue-2') }>
-                                <svelte:fragment slot="title">{ component.name }</svelte:fragment>
-                                <svelte:fragment slot="text">{ component.text }</svelte:fragment>
-                                <svelte:fragment slot="right">Открыть</svelte:fragment>
-                            </Card>
-                        </a>
-                    { /if }
+                { #each components.filter((_, i) => expanded || i < 9) as component, i }
+                    <a href={ '/component/' + component.type + '/' + component.name } transition:blur="{{ duration: 200 }}">
+                        <Card variant="white" color={ (i % 3 == 0) ? 'red-2' : ((i % 3 == 1) ? 'red-1' : 'blue-2') }>
+                            <svelte:fragment slot="title">{ component.name }</svelte:fragment>
+                            <svelte:fragment slot="text">{ component.text }</svelte:fragment>
+                            <svelte:fragment slot="right">Открыть</svelte:fragment>
+                        </Card>
+                    </a>
                 { /each }
             </Grid>
             { #if !expanded }
