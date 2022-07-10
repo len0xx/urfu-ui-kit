@@ -1,9 +1,5 @@
-export default `<script>
-    let videos = [0, 1, 2, 3]
-</script>
-
-<Grid m={4}>
-    { #each videos as video }
-        <VideoCard name="Иванов Иван" position="Студент 3 курса" description="Учится в ИРИТ-РтФ" />
+export default `<Grid m={4}>
+    { #each [0, 1, 2, 3] as _ }
+        <VideoCard src="/video/first.mp4" />
     { /each }
 </Grid>`

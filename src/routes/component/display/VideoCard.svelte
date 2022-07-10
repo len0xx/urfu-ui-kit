@@ -1,8 +1,6 @@
 <script lang="ts">
     import { Code, Heading, VideoCard, Text, ParameterType, Grid } from '$lib/components'
     import CodeExample from '$lib/../codes/VideoCardExample'
-
-    let videos = [0, 1, 2, 3]
 </script>
 
 <svelte:head>
@@ -14,12 +12,12 @@
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>VideoCard <a href="#" class="page-link" title="Ссылка на текущую страницу">🔗</a></Heading>
         <Text className="medium">
-            Кнопки являются неотъемлимой частью современных веб-приложений
+            Карточка с видео, которое воспроизводится по нажатию на него
         </Text>
         <br />
         <Grid m={4}>
-            { #each videos as _ }
-                <VideoCard name="Иванов Иван" position="Студент 3 курса" description="Учится в ИРИТ-РтФ" />
+            { #each [0, 1, 2, 3] as _ }
+                <VideoCard src="/video/first.mp4" />
             { /each }
         </Grid>
         <br />
