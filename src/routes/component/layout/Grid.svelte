@@ -74,23 +74,39 @@
         </Text>
         <Heading size={4} color="var(--blue)">alignItems <ParameterType value="enum" /></Heading>
         <Text>
-            Выравнивание потомков в строке по вертикали. <br />
-            Поддерживаются значения <code>start</code>, <code>center</code>, <code>end</code>, <code>stretch</code>
+            Устанавливает значение <code>align-self</code> для всех прямых дочерних элементов как группы. В макете сетки он управляет выравниванием элементов по оси блока в пределах их области сетки. <br />
+            Список поддерживаемых значений: <br />
+            <code>normal</code>, <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>start</code>, <code>end</code>, <code>self-start</code>, <code>self-end</code>, <code>baseline</code>, <code>stretch</code>, <code>safe</code>, <code>unsafe</code>, <code>inherit</code>, <code>initial</code>, <code>unset</code>, <code>revert</code>, <code>revert-layer</code>
         </Text>
         <Heading size={4} color="var(--blue)">justifyItems <ParameterType value="enum" /></Heading>
         <Text>
-            Выравнивание колонок по горизонтали. <br />
-            Поддерживаются значения <code>left</code>, <code>center</code>, <code>right</code>, <code>space-between</code>, <code>space-evenly</code>, <code>space-around</code>
+            Определяет значение <code>justify-self</code> по умолчанию для всех элементов блока, предоставляя им всем способ выравнивания каждого блока по соответствующей оси по умолчанию. <br />
+            Список поддерживаемых значений: <br />
+            <code>normal</code>, <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>start</code>, <code>end</code>, <code>self-start</code>, <code>self-end</code>, <code>baseline</code>, <code>stretch</code>, <code>safe</code>, <code>unsafe</code>, <code>inherit</code>, <code>initial</code>, <code>unset</code>, <code>revert</code>, <code>revert-layer</code>
+        </Text>
+        <Heading size={4} color="var(--blue)">placeItems <ParameterType value="enum" /></Heading>
+        <Text>
+            Устанавливает значение для обоих свойств <code>alignItems</code> и <code>justifyItems</code> <br />
+            Список поддерживаемых значений: <br />
+            <code>normal</code>, <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>start</code>, <code>end</code>, <code>self-start</code>, <code>self-end</code>, <code>baseline</code>, <code>stretch</code>, <code>safe</code>, <code>unsafe</code>, <code>inherit</code>, <code>initial</code>, <code>unset</code>, <code>revert</code>, <code>revert-layer</code>
         </Text>
         <Heading size={4} color="var(--blue)">alignContent <ParameterType value="enum" /></Heading>
         <Text>
-            Выравнивание колонок по горизонтали. <br />
-            Поддерживаются значения <code>start</code>, <code>center</code>, <code>end</code>, <code>stretch</code>
+            Задает распределение пространства между элементами содержимого и вокруг них вдоль поперечной оси сетки. <br />
+            Список поддерживаемых значений: <br />
+            <code>normal</code>, <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>start</code>, <code>end</code>, <code>self-start</code>, <code>self-end</code>, <code>baseline</code>, <code>stretch</code>, <code>safe</code>, <code>unsafe</code>, <code>inherit</code>, <code>initial</code>, <code>unset</code>, <code>revert</code>, <code>revert-layer</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>
         </Text>
         <Heading size={4} color="var(--blue)">justifyContent <ParameterType value="enum" /></Heading>
         <Text>
-            Выравнивание потомков в строке. <br />
-            Поддерживаются значения <code>left</code>, <code>center</code>, <code>right</code>, <code>space-between</code>, <code>space-evenly</code>, <code>space-around</code>
+            Определяет, как браузер распределяет пространство между элементами содержимого и вокруг них вдоль встроенной оси контейнера. <br />
+            Список поддерживаемых значений: <br />
+            <code>normal</code>, <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>start</code>, <code>end</code>, <code>self-start</code>, <code>self-end</code>, <code>baseline</code>, <code>stretch</code>, <code>safe</code>, <code>unsafe</code>, <code>inherit</code>, <code>initial</code>, <code>unset</code>, <code>revert</code>, <code>revert-layer</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>
+        </Text>
+        <Heading size={4} color="var(--blue)">placeContent <ParameterType value="enum" /></Heading>
+        <Text>
+            Устанавливает значение для обоих свойств <code>alignContent</code> и <code>justifyContent</code> <br />
+            Список поддерживаемых значений: <br />
+            <code>normal</code>, <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>start</code>, <code>end</code>, <code>self-start</code>, <code>self-end</code>, <code>baseline</code>, <code>stretch</code>, <code>safe</code>, <code>unsafe</code>, <code>inherit</code>, <code>initial</code>, <code>unset</code>, <code>revert</code>, <code>revert-layer</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>
         </Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>

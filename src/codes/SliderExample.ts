@@ -1,4 +1,4 @@
-export default `<Slider let:showPrevPage let:showNextPage background="white">
+export default `<Slider let:showPrevPage let:showNextPage background="white" duration={5} autoplay={true} dots={false}>
     <Slide img="/img/slide1-img.jpg">
         <Heading size={ 2 } className="blue-text">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
         <Text className="heading-3">Актуальная информация о поступлении в университет в 2022 году:</Text>
