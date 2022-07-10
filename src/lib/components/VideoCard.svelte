@@ -1,5 +1,6 @@
 <script lang="ts">
     import playIcon from '$lib/img/play-icon.svg'
+    import { createEventDispatcher } from 'svelte'
     import { fade } from 'svelte/transition'
 
     export let name = ''
@@ -8,6 +9,7 @@
     export let src = ''
 
     let video: HTMLVideoElement
+    const dispatch = createEventDispatcher()
 
     let videoPlaying = false
     const toggleVideo = () => {
@@ -21,6 +23,7 @@
                 videoPlaying = false
             }
         }
+        dispatch('click')
     }
 </script>
 
