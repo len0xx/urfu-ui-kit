@@ -42,7 +42,7 @@
         </Text>
         <Heading size={4} color="var(--blue)">size <ParameterType value="enum" /></Heading>
         <Text>
-            Аналог стандартного атрибута action.  <br />
+            Размер кнопки <br />
             Поддерживаются четыре стандартных значения: <code>S</code>, <code>M</code>, <code>L</code> и <code>XL</code>. <br />
             Значение по умолчанию: <code>M</code>
         </Text>

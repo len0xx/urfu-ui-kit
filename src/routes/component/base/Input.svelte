@@ -39,7 +39,7 @@
     
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} color="var(--blue)">wide <ParameterType value="boolean" /></Heading>
-        <Text>Если этот параметр присутствует (без значения), компонент будет иметь свойство <code>width: 100%</code></Text>
+        <Text>Если параметр указан (имеет значение <code>true</code>), компонент будет иметь свойство <code>width: 100%</code></Text>
         <Heading size={4} color="var(--blue)">mask <ParameterType value="object" /></Heading>
         <Text>Маска для поля ввода (Подробнее: <Link href="https://www.npmjs.com/package/svelte-imask" target="_BLANK">svelte-imask</Link>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
