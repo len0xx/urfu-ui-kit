@@ -43,28 +43,55 @@
     
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} color="var(--blue)">xs <ParameterType value="number" /></Heading>
-        <Text>Количество колонок на мобильных экранах (до 400 пикселей в ширину). Поддерживаются значения от <code>1</code> до <code>12</code></Text>
+        <Text>
+            Количество колонок на мобильных экранах (до 400 пикселей в ширину). <br />
+            Поддерживаются значения от <code>1</code> до <code>12</code>
+        </Text>
         <Heading size={4} color="var(--blue)">s <ParameterType value="number" /></Heading>
-        <Text>Количество колонок на маленьких экранах (от 400 до 768 пикселей в ширину). Поддерживаются значения от <code>1</code> до <code>12</code></Text>
+        <Text>
+            Количество колонок на маленьких экранах (от 400 до 768 пикселей в ширину). <br />
+            Поддерживаются значения от <code>1</code> до <code>12</code>
+        </Text>
         <Heading size={4} color="var(--blue)">m <ParameterType value="number" /></Heading>
-        <Text>Количество колонок на средних экранах (от 768 до 1000 пикселей в ширину). Поддерживаются значения от <code>1</code> до <code>12</code></Text>
+        <Text>
+            Количество колонок на средних экранах (от 768 до 1000 пикселей в ширину). <br />
+            Поддерживаются значения от <code>1</code> до <code>12</code>
+        </Text>
         <Heading size={4} color="var(--blue)">l <ParameterType value="number" /></Heading>
-        <Text>Количество колонок на широких экранах (от 1000 до 1440 пикселей в ширину). Поддерживаются значения от <code>1</code> до <code>12</code></Text>
+        <Text>
+            Количество колонок на широких экранах (от 1000 до 1440 пикселей в ширину). <br />
+            Поддерживаются значения от <code>1</code> до <code>12</code>
+        </Text>
         <Heading size={4} color="var(--blue)">xl <ParameterType value="number" /></Heading>
-        <Text>Количество колонок на самых широких экранах (от 1440 пикселей в ширину). Поддерживаются значения от <code>1</code> до <code>12</code></Text>
+        <Text>
+            Количество колонок на самых широких экранах (от 1440 пикселей в ширину). <br />
+            Поддерживаются значения от <code>1</code> до <code>12</code>
+        </Text>
         <Heading size={4} color="var(--blue)">gap <ParameterType value="number" /></Heading>
         <Text>
             Расстояние между колонками и строчками. <br />
             Поддерживаются любые целочисленные значения
         </Text>
         <Heading size={4} color="var(--blue)">alignItems <ParameterType value="enum" /></Heading>
-        <Text>Выравнивание потомков в строке по вертикали. Поддерживаются значения <code>start</code>, <code>center</code>, <code>end</code>, <code>stretch</code></Text>
+        <Text>
+            Выравнивание потомков в строке по вертикали. <br />
+            Поддерживаются значения <code>start</code>, <code>center</code>, <code>end</code>, <code>stretch</code>
+        </Text>
         <Heading size={4} color="var(--blue)">justifyItems <ParameterType value="enum" /></Heading>
-        <Text>Выравнивание колонок по горизонтали. Поддерживаются значения <code>left</code>, <code>center</code>, <code>right</code>, <code>space-between</code>, <code>space-evenly</code>, <code>space-around</code></Text>
+        <Text>
+            Выравнивание колонок по горизонтали. <br />
+            Поддерживаются значения <code>left</code>, <code>center</code>, <code>right</code>, <code>space-between</code>, <code>space-evenly</code>, <code>space-around</code>
+        </Text>
         <Heading size={4} color="var(--blue)">alignContent <ParameterType value="enum" /></Heading>
-        <Text>Выравнивание колонок по горизонтали. Поддерживаются значения <code>start</code>, <code>center</code>, <code>end</code>, <code>stretch</code></Text>
+        <Text>
+            Выравнивание колонок по горизонтали. <br />
+            Поддерживаются значения <code>start</code>, <code>center</code>, <code>end</code>, <code>stretch</code>
+        </Text>
         <Heading size={4} color="var(--blue)">justifyContent <ParameterType value="enum" /></Heading>
-        <Text>Выравнивание потомков в строке. Поддерживаются значения <code>left</code>, <code>center</code>, <code>right</code>, <code>space-between</code>, <code>space-evenly</code>, <code>space-around</code></Text>
+        <Text>
+            Выравнивание потомков в строке. <br />
+            Поддерживаются значения <code>left</code>, <code>center</code>, <code>right</code>, <code>space-between</code>, <code>space-evenly</code>, <code>space-around</code>
+        </Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>

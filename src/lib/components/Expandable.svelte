@@ -1,24 +1,33 @@
 <script lang="ts">
-    import { Text, Heading } from '$lib/components'
+    import { Heading } from '$lib/components'
+    import { createEventDispatcher } from 'svelte'
+    import { slide } from 'svelte/transition'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let className = ''
+    export let interactive = false
     
     let active = false
+    const dispatch = createEventDispatcher()
 
     export const toggle = () => active = !active
 
     export const open = () => active = true
 
     export const close = () => active = false
+
+    const handleClick = () => {
+        if (interactive) toggle()
+        dispatch('click')
+    }
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div
     {id}
     bind:this={ node }
-    on:click
+    on:click={ handleClick }
     on:mousedown
     on:mouseup
     on:mouseover
@@ -27,8 +36,12 @@
 >
     <div class="block-content">
         <div>
-            <Heading size={ 3 } color="var(--blue)"><slot name="header"></slot></Heading>
-            <Text margin={{ y: 0 }}><slot name="text"></slot></Text>
+            <Heading size={ 3 } color="var(--blue)"><slot name="header" /></Heading>
+            { #if active }
+                <p transition:slide="{{ duration: 200 }}">
+                    <slot name="text" />
+                </p>
+            { /if }
         </div>
         <div class="icon">
             { #if active }
@@ -85,14 +98,5 @@
     .kit-expandable.active {
         border-top-color: var(--blue);
         border-bottom-color: var(--blue);
-    }
-
-    :global(.kit-expandable:not(.active) p) {
-        transform: rotateX(90deg);
-        height: 0px;
-    }
-    :global(.kit-expandable.active p) {
-        transform: rotateX(0);
-        height: auto;
     }
 </style>

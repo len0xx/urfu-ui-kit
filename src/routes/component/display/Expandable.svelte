@@ -1,16 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Grid, Expandable, Text, ParameterType } from '$lib/components'
     import ExpandableExample from '$lib/../codes/ExpandableExample'
-
-    let expandables: {
-        open: () => void,
-        close: () => void,
-        toggle: () => void
-    }[] = []
-
-    const toggleExpandable = (index: number) => {
-        expandables[index].toggle()
-    }
 </script>
 
 <svelte:head>
@@ -28,11 +18,11 @@
         <Grid m={2} ratio="1:2" gap={2}>
             <Heading size={2} margin={{ top: 0 }}>FAQ</Heading>
             <div>
-                <Expandable bind:this={ expandables[0] } on:click={ () => toggleExpandable(0) }>
+                <Expandable interactive>
                     <svelte:fragment slot="header">Нажми на меня</svelte:fragment>
                     <svelte:fragment slot="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, in dolore itaque nemo rerum quos numquam nostrum. Dignissimos nihil, eius quibusdam harum, voluptate sed nam, rerum earum aperiam eaque dolorum.</svelte:fragment>
                 </Expandable>
-                <Expandable bind:this={ expandables[1] } on:click={ () => toggleExpandable(1) }>
+                <Expandable interactive>
                     <svelte:fragment slot="header">Нажми на меня</svelte:fragment>
                     <svelte:fragment slot="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, in dolore itaque nemo rerum quos numquam nostrum. Dignissimos nihil, eius quibusdam harum, voluptate sed nam, rerum earum aperiam eaque dolorum.</svelte:fragment>
                 </Expandable>
