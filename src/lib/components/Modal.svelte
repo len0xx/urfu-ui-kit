@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { Align } from '$lib/types'
     import { onMount, createEventDispatcher } from 'svelte'
-    import { fade } from 'svelte/transition'
+    import { fade, blur } from 'svelte/transition'
     
     export let id: string = undefined
     export let node: HTMLElement = undefined
@@ -39,7 +39,7 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 { #if visible }
-    <div class="kit-modal-wrapper" transition:fade="{{ duration: 150 }}">
+    <div class="kit-modal-wrapper" in:fade="{{ duration: 200 }}" out:fade="{{ delay: 100, duration: 200 }}">
         <div class="shadow" on:click={ close }></div>
         <div
             {id}
@@ -48,6 +48,7 @@
             on:click
             on:mouseleave
             on:mouseover
+            in:blur="{{ delay: 100, duration: 200 }}" out:blur="{{ duration: 200 }}"
         >
             { #if closable }
                 <div class="close" on:click={ close }>
