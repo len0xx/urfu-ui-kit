@@ -34,6 +34,11 @@
         <Text>Текст с правой стороны от переключателя</Text>
         <Heading size={4} color="var(--blue)">value <ParameterType value="boolean" /></Heading>
         <Text>Состояние переключателя</Text>
+        <Heading size={4} color="var(--blue)">name <ParameterType value="string" /></Heading>
+        <Text>
+            Аналог стандартного атрибута <code>name</code> для элемента <code>input</code> <br />
+            (Внутри данного компонента кроется <code>input</code>, который меняет своё состояние вместе с <code>value</code>)
+        </Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>

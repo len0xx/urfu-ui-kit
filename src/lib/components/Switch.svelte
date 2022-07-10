@@ -4,15 +4,16 @@
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let className = ''
+    export let name = ''
     export let left = ''
     export let right = ''
     export let value = false
 
     const dispatch = createEventDispatcher()
 
-    function setValue(s: boolean) {
-        if (value != s) {
-            value = s
+    const setValue = (v: boolean) => {
+        if (value != v) {
+            value = v
             dispatch('change', { value })
         }
     }
@@ -32,13 +33,14 @@
     class="kit-switch {className}"
 >
     { #if left }
-        <span class="heading-3" class:blue-text={!value} class:grey-text={value} on:click={() => setValue(false)}>{ left }</span>
+        <span class="heading-3" class:blue-text={ !value } class:grey-text={ value } on:click={ () => setValue(false) }>{ left }</span>
     { /if }
-    <div class="toggler" class:toggled={value} on:click={toggleValue}>
+    <input type="checkbox" bind:checked={ value } { name } style:display="none">
+    <div class="toggler" class:toggled={ value } on:click={ toggleValue }>
         <span class="switch"></span>
     </div>
     { #if right }
-        <span class="heading-3" class:blue-text={value} class:grey-text={!value} on:click={() => setValue(true)}>{ right }</span>
+        <span class="heading-3" class:blue-text={ value } class:grey-text={ !value } on:click={ () => setValue(true) }>{ right }</span>
     { /if }
 </div>
 
