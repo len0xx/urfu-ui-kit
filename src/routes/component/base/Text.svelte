@@ -50,6 +50,12 @@
             В случае, если значение одного из свойств имеет тип <code>number</code>, ему будет добавлена единица измерения <code>em</code> <br />
             Пример: <code>margin={ '{{ top: 1, x: \'auto\' }}' }</code> будет преобразовано в <code>margin: 1em auto 0</code>
         </Text>
+        <Heading size={4} color="var(--blue)">inline <ParameterType value="boolean" /></Heading>
+        <Text>
+            Если значение <code>true</code>, то элемент будет иметь стиль <code>display: inline-block</code> <br />
+            Иначе – <code>display: block</code> <br />
+            Значение по умолчанию: <code>false</code>
+        </Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>

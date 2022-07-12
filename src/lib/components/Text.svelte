@@ -9,15 +9,17 @@
     export let className = ''
     export let color = ''
     export let opacity = 1
+    export let inline = false
     export let margin: Padding = defaultMargin
 
     let alignClass = 'align-' + align
+    let inlineClass = inline ? 'inline-paragraph' : ''
 
     // Extract all the attributes from props object
     $: ({ ...attrs } = $$props)
 
     // Get rid of the attributes that will be added in a component explicitly
-    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'id', 'color', 'opacity', 'margin'])
+    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'id', 'color', 'opacity', 'margin', 'inline'])
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -25,7 +27,7 @@
     {id}
     { ...finalAttrs }
     bind:this={ node }
-    class="kit-text-component { className } { alignClass }"
+    class="kit-text-component { className } { alignClass } { inlineClass }"
     style:opacity
     style:--text-component-color={color}
     style:margin={ computePadding({ ...defaultMargin, ...margin }) }
@@ -41,5 +43,9 @@
 <style>
     .kit-text-component {
         color: var(--text-component-color);
+    }
+
+    p.inline-paragraph {
+        display: inline-block;
     }
 </style>
