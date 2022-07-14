@@ -1,4 +1,4 @@
-export default `<script>
+export default `<script lang="ts">
     let modal: {
         open: () => void,
         close: () => void
