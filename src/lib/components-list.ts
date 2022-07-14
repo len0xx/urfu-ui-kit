@@ -65,6 +65,11 @@ export default [
         type: 'base'
     },
     {
+        name: 'Icon',
+        text: 'Иконка с настраиваемыми размерами и отступами',
+        type: 'other'
+    },
+    {
         name: 'Input',
         text: 'Поле для ввода',
         type: 'base'

@@ -5,7 +5,7 @@
         "name": "Prokhor Minin",
         "email": "prokhor@len0xx.space"
     },
-    "version": "0.9.3",
+    "version": "0.9.4",
     "esModuleInterop": true,
     "type": "module",
     "scripts": {
