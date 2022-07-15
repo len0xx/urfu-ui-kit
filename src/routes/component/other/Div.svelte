@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Div, Text, ParameterType } from '$lib/components'
-    import CodeExample from '$lib/../codes/DividerExample'
+    import CodeExample from '$lib/../codes/DivExample'
 </script>
 
 <svelte:head>
@@ -12,13 +12,12 @@
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Div <a href="#" class="page-link" title="Ссылка на текущую страницу">🔗</a></Heading>
         <Text className="medium">
-            Визуальный разделитель текста
+            Универсальный блок для упрощения вёрстки
         </Text>
         <br />
-        <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-            <Div>hello</Div>
-        </Text>
+        <Div align="center" margin={{ y: 1 }} padding={{ y: 1, x: 1 }} className="bordered-div">
+            Текст внутри <code>Div</code>
+        </Div>
         <br />
         <br />
     
@@ -29,52 +28,62 @@
         <Heading size={3}>Параметры:</Heading>
         <Heading size={4} color="var(--blue)">color <ParameterType value="string" /></Heading>
         <Text>
-            Цвет разделителя <br />
-            Поддерживаются любые валидные значения CSS (Пример: <code>red</code>, <code>#fff</code>, <code>rgb(255, 255, 255)</code>, <code>rgba(255, 255, 255, 0.5)</code>) <br />
-            Значение по умолчанию: <code>white</code>
+            Цвет текста в компоненте. <br />
+            Поддерживаются любые валидные значения CSS (Например: <code>#0000FF</code>, <code>var(--blue)</code> или <code>magenta</code>) <br />
+            Значение по умолчанию: <code>black</code>
         </Text>
-        <Heading size={4} color="var(--blue)">width <ParameterType value="string" /></Heading>
+        <Heading size={4} color="var(--blue)">margin <ParameterType value="object" /></Heading>
         <Text>
-            Ширина разделителя <br />
-            Поддерживаются любые валидные значения CSS (Пример: <code>50px</code>, <code>5em</code>, <code>12rem</code>, <code>30%</code>) <br />
-            Значение по умолчанию: <code>50px</code>
+            Объект, описывающий внешние отступы компонента. Имеет следующие свойства: <br />
+            <code>x</code> – отступ по горизонтали <br />
+            <code>y</code> – отступ по вертикали <br />
+            <code>top</code> – отступ сверху <br />
+            <code>bottom</code> – отступ снизу <br />
+            <code>left</code> – отступ слева <br />
+            <code>right</code> – отступ справа <br />
+            Все значения могут иметь один из двух типов: <code>string</code> или <code>number</code> <br />
+            В случае, если значение одного из свойств имеет тип <code>number</code>, ему будет добавлена единица измерения <code>em</code> <br />
+            Пример: <code>margin={ '{{ top: 1, x: \'auto\' }}' }</code> будет преобразовано в <code>margin: 1em auto 0</code>
         </Text>
-        <Heading size={4} color="var(--blue)">height <ParameterType value="number" /></Heading>
+        <Heading size={4} color="var(--blue)">padding <ParameterType value="object" /></Heading>
         <Text>
-            Высота разделителя (в <code>px</code>) <br />
-            Значение по умолчанию: <code>4</code>
+            Объект, описывающий внутренние отступы компонента. Имеет следующие свойства: <br />
+            <code>x</code> – отступ по горизонтали <br />
+            <code>y</code> – отступ по вертикали <br />
+            <code>top</code> – отступ сверху <br />
+            <code>bottom</code> – отступ снизу <br />
+            <code>left</code> – отступ слева <br />
+            <code>right</code> – отступ справа <br />
+            Все значения могут иметь один из двух типов: <code>string</code> или <code>number</code> <br />
+            В случае, если значение одного из свойств имеет тип <code>number</code>, ему будет добавлена единица измерения <code>em</code> <br />
+            Пример: <code>padding={ '{{ top: 1, x: \'auto\' }}' }</code> будет преобразовано в <code>padding: 1em auto 0</code>
         </Text>
-        <Heading size={4} color="var(--blue)">marginY <ParameterType value="number" /></Heading>
+        <Heading size={4} color="var(--blue)">align <ParameterType value="enum" /></Heading>
         <Text>
-            Отступ по вертикали (в <code>em</code>) <br />
-            Значение по умолчанию: <code>1</code>
+            Выравнивание текста внутри компонента <br />
+            Поддерживаются 5 значений: <code>unset</code>, <code>initial</code>, <code>left</code>, <code>center</code> и <code>right</code> <br />
+            Значение по умолчанию: <code>unset</code>
         </Text>
-        <Heading size={4} color="var(--blue)">marginX <ParameterType value="number" /></Heading>
-        <Text>
-            Отступ по горизонтали (в <code>em</code>) <br />
-            Значение по умолчанию: <code>0</code>
-        </Text>
-        <Heading size={4} color="var(--blue)">marginTop <ParameterType value="number" /></Heading>
-        <Text>Отступ сверху (в <code>em</code>) <br /> </Text>
-        <Heading size={4} color="var(--blue)">marginBottom <ParameterType value="number" /></Heading>
-        <Text>Отступ снизу (в <code>em</code>) <br /> </Text>
-        <Heading size={4} color="var(--blue)">marginLeft <ParameterType value="number" /></Heading>
-        <Text>Отступ слева (в <code>em</code>) <br /> </Text>
-        <Heading size={4} color="var(--blue)">marginRight <ParameterType value="number" /></Heading>
-        <Text>Отступ справа (в <code>em</code>) <br /> </Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута <code>id</code></Text>
         <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
-        <Text>Аналог стандартного атрибута class</Text>
+        <Text>Аналог стандартного атрибута <code>class</code></Text>
         <br />
-    
+        
         <Heading size={3}>Поддерживаемые события:</Heading>
         <Heading size={4} color="var(--blue)">on:click</Heading>
-        <Heading size={4} color="var(--blue)">on:focus</Heading>
-        <Heading size={4} color="var(--blue)">on:blur</Heading>
         <Heading size={4} color="var(--blue)">on:mouseover</Heading>
         <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseup</Heading>
+        <Heading size={4} color="var(--blue)">on:mousedown</Heading>
     </main>
 </div>
+
+<style>
+    :global(.bordered-div) {
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+</style>

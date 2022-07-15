@@ -1,10 +1,10 @@
 <script lang="ts">
-    import { filterPropsOut, computePadding } from '$lib/utilities'
+    import { computePadding } from '$lib/utilities'
     const defaultMargin = { x: 0, y: 1 }
 
     export let id: string = undefined
     export let node: HTMLElement = undefined
-    export let align: Align = 'initial'
+    export let align: Align = 'unset'
     export let size: 1 | 2 | 3 | 4 | 5 | 6
     export let color: string = undefined
     export let className = ''
@@ -12,19 +12,12 @@
 
     let tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = `h${size}`
     let alignClass = 'align-' + align
-
-    // Extract all the attributes from props object
-    $: ({ ...attrs } = $$props)
-
-    // Get rid of the attributes that will be added in a component explicitly
-    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'id', 'color', 'size', 'margin'])
 </script>
 
 <svelte:element
     {id}
     bind:this={ node }
     this={ tag }
-    { ...finalAttrs }
     class="kit-heading { className } { alignClass }"
     style={ color ? `--heading-color: ${color};` : '' }
     style:margin={ computePadding({ ...defaultMargin, ...margin }) }

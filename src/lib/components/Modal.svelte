@@ -4,7 +4,7 @@
     
     export let id: string = undefined
     export let node: HTMLElement = undefined
-    export let align: Align = 'initial'
+    export let align: Align = 'unset'
     export let closable = true
     export let className = ''
 

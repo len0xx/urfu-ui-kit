@@ -56,6 +56,12 @@
             Иначе – <code>display: block</code> <br />
             Значение по умолчанию: <code>false</code>
         </Text>
+        <Heading size={4} color="var(--blue)">align <ParameterType value="enum" /></Heading>
+        <Text>
+            Выравнивание текста внутри компонента <br />
+            Поддерживаются 5 значений: <code>unset</code>, <code>initial</code>, <code>left</code>, <code>center</code> и <code>right</code> <br />
+            Значение по умолчанию: <code>unset</code>
+        </Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>

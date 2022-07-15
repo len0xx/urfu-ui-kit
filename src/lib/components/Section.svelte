@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { filterPropsOut, computePadding } from '$lib/utilities'
+    import { computePadding } from '$lib/utilities'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined
@@ -8,16 +8,12 @@
     export let padding: Padding = { x: 0, y: 0 }
     export let contentWidth: string = null
 
-    $: ({...attrs} = $$props)
-
-    $: finalAttrs = filterPropsOut(attrs, ['className', 'class', 'align', 'id', 'padding', 'contentWidth'])
     let alignClass = 'section-align-' + align
 </script>
 
 <section
     {id}
     bind:this={ node }
-    {...finalAttrs}
     class={['kit-section', className, alignClass].join(' ')}
     style:padding={ computePadding(padding) }
 >
