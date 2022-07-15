@@ -1,6 +1,5 @@
 <script lang="ts">
     import { computePadding } from '$lib/utilities'
-    import type { Padding } from '$lib/types'
 
     type ImageExtension = 'svg' | 'png' | 'jpg' | 'jpeg' | 'webp'
 

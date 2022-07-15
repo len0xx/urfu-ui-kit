@@ -1,6 +1,5 @@
 <script lang="ts">
     import { Rainbow, Section } from '.'
-    import type { Align, Padding } from '$lib/types'
     const defaultPadding = { x: 0, y: 1 }
 
     export let id: string = undefined

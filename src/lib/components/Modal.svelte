@@ -1,5 +1,4 @@
 <script lang="ts">
-    import type { Align } from '$lib/types'
     import { onMount, createEventDispatcher } from 'svelte'
     import { fade, blur } from 'svelte/transition'
     

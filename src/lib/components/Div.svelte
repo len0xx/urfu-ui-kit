@@ -1,6 +1,5 @@
 <script lang="ts">
     import { filterPropsOut, computePadding } from '$lib/utilities'
-    import type { Align, Padding } from '$lib/types'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined

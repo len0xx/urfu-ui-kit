@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Divider, Text } from '$lib/components'
-    import { getSizeIndex, getSizeName, type DefaultSizes } from '$lib/types'
+    import { getSizeName, getSizeIndex } from '$lib/utilities'
 
     const heights = [6, 8, 10] as const
     const margins = [0.5, 0.6, 0.7] as const

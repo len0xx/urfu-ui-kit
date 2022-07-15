@@ -3,7 +3,6 @@
     import { pageLoaded } from '$lib/stores'
     import { page } from '$app/stores'
     import { onMount } from 'svelte'
-    import type { DefaultSizes } from '$lib/types'
 
     export let node: HTMLElement = undefined
     export let delay = 0

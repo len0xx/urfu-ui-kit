@@ -1,6 +1,5 @@
 <script lang="ts">
     import { computePadding } from '$lib/utilities'
-    import type { Padding } from '$lib/types'
     const defaultMargin = { x: 0, y: 1 }
     
     export let id: string = undefined

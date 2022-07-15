@@ -1,6 +1,6 @@
 <script lang="ts">
     import { createEventDispatcher } from 'svelte'
-    import { getSizeName, type DefaultSizes } from '$lib/types'
+    import { getSizeName } from '$lib/utilities'
     import plusIcon from '$lib/img/plus-icon.svg'
     import leftIcon from '$lib/img/left-arrow.svg'
     import rightIcon from '$lib/img/right-arrow.svg'

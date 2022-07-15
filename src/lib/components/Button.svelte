@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { getSizeName, type DefaultSizes } from '$lib/types'
     import { createEventDispatcher } from 'svelte'
+    import { getSizeName } from '$lib/utilities'
     
     type Variant = 'primary' | 'blue'
     export let id: string = undefined

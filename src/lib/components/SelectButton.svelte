@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { getSizeName, type DefaultSizes } from '$lib/types'
+    import { getSizeName } from '$lib/utilities'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined

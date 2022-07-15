@@ -1,7 +1,6 @@
 import { ajax } from 'jquery'
 import axios from 'axios'
 import type { AxiosResponse } from 'axios'
-import type { RESTMethod, Padding, PaddingValue } from './types'
 
 
 // Create slug from the title
@@ -140,16 +139,13 @@ export function filterPropsOut(props: Record<string, unknown>, filter: string[])
     return result
 }
 
-export type RangeGenerator = {
-    (to: number, step?: number): number[]
-    (from: number, to: number, step?: number): number[]
-}
-
-export const range: RangeGenerator = (to: number, step = 1) => {
+export const rangeFrom: RangeGenerator = (from: number, to: number, step = 1) => {
     const result = []
-    for (let i = 0; i < to; i += step) result.push(i)
+    for (let i = from; i < to; i += step) result.push(i)
     return result
 }
+
+export const range: RangeGenerator = (to: number, step = 1) => rangeFrom(0, to, step)
 
 // Just the basic random generator
 export const random = (min = 0, max = 1) => Math.floor(Math.random() * (max - min) + min)
@@ -167,3 +163,10 @@ export const computePadding = (padding: Padding): string => {
         applyPadding(padding.left !== undefined ? padding.left : padding.x)
     ].join(' ')
 }
+
+const extendedSizes = ['S', 'M', 'L', 'XL'] as const
+const extendedSizeNames = ['small', 'medium', 'large', 'xlarge'] as const
+
+export const getSizeIndex = (size: ExtendedSizes) => extendedSizes.indexOf(size)
+
+export const getSizeName = (size: ExtendedSizes) => extendedSizeNames[getSizeIndex(size)]
