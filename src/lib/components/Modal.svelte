@@ -44,7 +44,8 @@
         <div
             {id}
             bind:this={ node }
-            class="kit-modal align-{align} {className}"
+            class="kit-modal {className}"
+            style:--local-align={ align }
             on:click
             on:mouseleave
             on:mouseover
@@ -99,6 +100,7 @@
         background-color: white;
         color: black;
         width: 750px;
+        text-align: var(--local-align);
     }
 
     :global(.kit-modal-wrapper .kit-modal > .close) {

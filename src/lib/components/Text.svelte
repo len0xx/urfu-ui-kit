@@ -13,7 +13,6 @@
     export let inline = false
     export let margin: Padding = defaultMargin
 
-    let alignClass = 'align-' + align
     let inlineClass = inline ? 'inline-paragraph' : ''
 </script>
 
@@ -21,9 +20,10 @@
 <p
     {id}
     bind:this={ node }
-    class="kit-text-component { className } { alignClass } { inlineClass }"
+    class="kit-text-component { className } { inlineClass }"
     style:opacity
     style:--text-component-color={color}
+    style:--local-align={ align }
     style:margin={ computePadding({ ...defaultMargin, ...margin }) }
     on:click
     on:mousedown
@@ -37,6 +37,7 @@
 <style>
     .kit-text-component {
         color: var(--text-component-color);
+        text-align: var(--local-align);
     }
 
     p.inline-paragraph {

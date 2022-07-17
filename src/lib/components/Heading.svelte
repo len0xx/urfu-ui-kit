@@ -13,16 +13,16 @@
     export let margin: Padding = defaultMargin
 
     let tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = `h${size}`
-    let alignClass = 'align-' + align
 </script>
 
 <svelte:element
     {id}
     bind:this={ node }
     this={ tag }
-    class="kit-heading { className } { alignClass }"
-    style={ color ? `--heading-color: ${color};` : '' }
+    class="kit-heading { className }"
     style:margin={ computePadding({ ...defaultMargin, ...margin }) }
+    style:--heading-color={ color }
+    style:--local-align={ align }
     on:click
     on:mousedown
     on:mouseup
@@ -37,6 +37,7 @@
 <style>
     .kit-heading {
         color: var(--heading-color);
+        text-align: var(--local-align);
     }
 
     :global(h1, h2, h3, h4, h5, h6,
