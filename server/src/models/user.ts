@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose, { ObjectId } from 'mongoose'
 
 export enum UserRole {
     USER = 'user',
@@ -48,7 +48,7 @@ export const UserModel = mongoose.model('User', userSchema)
 
 // Backend model
 export interface UserObject {
-    _id: string,
+    _id: ObjectId,
     firstname: string,
     lastname: string,
     email: string,
