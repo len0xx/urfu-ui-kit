@@ -1,7 +1,7 @@
 import { ajax } from 'jquery'
 import axios from 'axios'
 import type { AxiosResponse } from 'axios'
-import type { RESTMethod, ExtendedSizes, RangeGenerator, Padding, PaddingValue } from 'urfu-ui-kit'
+import type { RESTMethod, ExtendedSizes, RangeGenerator, Padding, PaddingValue, TransitionDescriber, TransitionReceiver } from 'urfu-ui-kit'
 
 
 // Create slug from the title
@@ -171,3 +171,12 @@ const extendedSizeNames = ['small', 'medium', 'large', 'xlarge'] as const
 export const getSizeIndex = (size: ExtendedSizes) => extendedSizes.indexOf(size)
 
 export const getSizeName = (size: ExtendedSizes) => extendedSizeNames[getSizeIndex(size)]
+
+export const applyTransitions = (transitions: TransitionReceiver): TransitionDescriber => {
+    return {
+        inFunc: transitions.in ? transitions.in.func : () => ({} as SvelteTransitionConfig),
+        inOptions: transitions.in ? transitions.in.options : undefined,
+        outFunc: transitions.out ? transitions.out.func : () => ({} as SvelteTransitionConfig),
+        outOptions: transitions.out ? transitions.out.options : undefined,
+    }
+}

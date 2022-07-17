@@ -1,4 +1,6 @@
 declare module 'urfu-ui-kit' {
+    import type { EasingFunction } from 'svelte/transition'
+    
     export type Padding = {
         x?: PaddingValue,
         y?: PaddingValue,
@@ -19,7 +21,32 @@ declare module 'urfu-ui-kit' {
     
     export type ExtendedSizes = DefaultSizes | 'XL'
     
-    export type Align = 'left' | 'center' | 'right' | 'unset' | 'initial' | 'inherit'
+    export type Align = 'left' | 'center' | 'right' | 'unset' | 'initial' | 'inherit' | 'start' | 'end' | 'justify' | 'match-parent' | 'revert' | 'revert-layer'
     
     export type PaddingValue = string | number
+
+    export type TransitionOptions = {
+        delay?: number,
+        duration?: number,
+        easing?: EasingFunction
+    }
+
+    export type TransitionFunction = (node: HTMLElement, options: TransitionOptions) => SvelteTransitionReturnType
+
+    export type Transition = {
+        func: TransitionFunction,
+        options: TransitionOptions
+    }
+
+    export type TransitionReceiver = {
+        in?: Transition,
+        out?: Transition
+    }
+
+    export type TransitionDescriber = {
+        inFunc: TransitionFunction,
+        inOptions: TransitionOptions,
+        outFunc: TransitionFunction,
+        outOptions: TransitionOptions
+    }
 }

@@ -67,6 +67,8 @@
         <br />
         
         <Heading size={3}>Слоты:</Heading>
+        <Heading size={4} color="var(--blue)">title</Heading>
+        <Text>Заголовок карточки</Text>
         <Heading size={4} color="var(--blue)">text</Heading>
         <Text>Текст внутри карточки</Text>
         <Heading size={4} color="var(--blue)">left</Heading>

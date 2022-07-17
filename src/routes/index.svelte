@@ -35,8 +35,12 @@
         <div>
             <Grid m={1} l={2} xl={3}>
                 { #each components.filter((_, i) => expanded || i < 9) as component, i }
-                    <a href={ '/component/' + component.type + '/' + component.name } in:blur="{{ duration: 200 }}">
-                        <Card variant="white" color={ (i % 3 == 0) ? 'red-2' : ((i % 3 == 1) ? 'red-1' : 'blue-2') }>
+                    <a href={ '/component/' + component.type + '/' + component.name }>
+                        <Card
+                            variant="white"
+                            color={ (i % 3 == 0) ? 'red-2' : ((i % 3 == 1) ? 'red-1' : 'blue-2') }
+                            transition={{ in: { func: blur, options: { duration: 200 } } }}
+                        >
                             <svelte:fragment slot="title">{ component.name }</svelte:fragment>
                             <svelte:fragment slot="text">{ component.text }</svelte:fragment>
                             <svelte:fragment slot="right">Открыть</svelte:fragment>
