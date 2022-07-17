@@ -8,17 +8,7 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		vite: {
-			optimizeDeps: {
-				include: ["highlight.js", "highlight.js/lib/core"],
-			},
-		},
-		adapter: adapter(),
-
-		// Override http methods
-		methodOverride: {
-			allowed: ['PATCH', 'DELETE']
-		}
+		adapter: adapter()
 	}
 };
 
