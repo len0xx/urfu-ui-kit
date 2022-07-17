@@ -9,7 +9,7 @@
     "esModuleInterop": true,
     "type": "module",
     "scripts": {
-        "dev": "vite build && vite preview --port 3000",
+        "dev": "vite dev --port 3000",
         "preview": "vite preview --port 3000",
         "build:frontend": "npm run reexport && vite build",
         "build:backend": "echo '🔨 TypeScript build in progress' && tsc --project server && echo '📦 TypeScript build complete'",
