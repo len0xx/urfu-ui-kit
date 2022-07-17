@@ -1,6 +1,7 @@
 <script lang="ts">
     import { createEventDispatcher } from 'svelte'
     import { fade } from 'svelte/transition'
+    import { Heading } from '.'
 
     export let name = ''
     export let position = ''
@@ -36,7 +37,7 @@
             <img src="/img/icons/play-icon.svg" alt="Play" transition:fade="{{ duration: 100 }}">
         { /if }
     </div>
-    <h4 class="blue-text">{ name }</h4>
+    <Heading size={4} color="var(--blue)">{ name }</Heading>
     <p class="position">{ @html position }</p>
     { #if description }
         <p class="description">{ @html description }</p>

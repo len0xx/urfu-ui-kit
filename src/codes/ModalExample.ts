@@ -8,7 +8,7 @@ export default `<script lang="ts">
 <Button on:click={ modal.open }>Открыть модальное окно</Button>
 
 <Modal bind:this={ modal } align="center">
-    <Heading size={2} className="blue-text">Модальное окно</Heading>
+    <Heading size={2} color="var(--blue)">Модальное окно</Heading>
     <Text className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit...</Text>
     <br />
     <Button variant="blue" on:click={ modal.close }>Закрыть</Button>

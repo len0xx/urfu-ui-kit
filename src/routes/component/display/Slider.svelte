@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Code, Heading, Link, Slider, RoundButton, Warning, Slide, Text, ParameterType } from '$lib/components'
+    import { Code, Heading, Link, Slider, RoundButton, Slide, Text, ParameterType } from '$lib/components'
     import CodeExample from '$lib/../codes/SliderExample'
 </script>
 
@@ -14,11 +14,6 @@
         <Text className="medium">
             Слайдер новостей, разделённый на две половины – текстовая часть слева и изображение справа
         </Text>
-        <Warning>
-            Внимание: На данный момент из-за сторонних зависимостей данный компонент не поддерживает работу при запуске приложения через <code>npx svelte-kit dev</code> или <code>npm run dev</code> <br /><br />
-            Чтобы запустить приложение в режиме разработки, <br />
-            необходимо использовать команду <code>npx svelte-kit build && npx svelte-kit preview</code>
-        </Warning>
         <br />
     </main>
 </div>

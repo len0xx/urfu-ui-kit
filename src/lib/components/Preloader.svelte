@@ -33,6 +33,9 @@
     
     onMount(() => {
         if ($page.status > 399) hide()
+
+        // Development feature. Delete it when using in production
+        if ($page.url.port == '3000') hide()
     })
 </script>
 
