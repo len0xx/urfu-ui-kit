@@ -1,6 +1,7 @@
 <script lang="ts">
     import { Divider, Text } from '$lib/components'
     import { getSizeName, getSizeIndex } from '$lib/utilities'
+    import type { DefaultSizes } from 'urfu-ui-kit'
 
     const heights = [6, 8, 10] as const
     const margins = [0.5, 0.6, 0.7] as const

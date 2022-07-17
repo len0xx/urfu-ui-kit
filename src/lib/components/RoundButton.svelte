@@ -1,15 +1,14 @@
 <script lang="ts">
     import { createEventDispatcher } from 'svelte'
     import { getSizeName } from '$lib/utilities'
-    import plusIcon from '$lib/img/plus-icon.svg'
-    import leftIcon from '$lib/img/left-arrow.svg'
-    import rightIcon from '$lib/img/right-arrow.svg'
-    import upIcon from '$lib/img/up-arrow.svg'
-    import downIcon from '$lib/img/down-arrow.svg'
+    import { Icon } from '.'
+    import type { DefaultSizes } from 'urfu-ui-kit'
+
+    type IconName = 'left' | 'right' | 'up' | 'down' | 'plus'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined
-    export let variant = 'plus'
+    export let variant: IconName = 'plus'
     export let size: DefaultSizes = 'M'
     export let className = ''
     export let transparent = true
@@ -19,17 +18,7 @@
     const dispatch = createEventDispatcher()
     let sizeClass = 'size-' + getSizeName(size)
     let transparencyClass = transparent ? 'transparent-bg' : ''
-
-    let icon = plusIcon
-    if (variant === 'left') {
-        icon = leftIcon
-    } else if (variant === 'right') {
-        icon = rightIcon
-    } else if (variant === 'up') {
-        icon = upIcon
-    } else if (variant === 'down') {
-        icon = downIcon
-    }
+    let iconSize = variant == 'plus' ? 24 : 16
 
     const handleMouseDown = () => {
         pressed = animate && true
@@ -55,7 +44,7 @@
     on:mouseover
     on:mouseleave
 >
-    <img src={icon} alt="icon">           
+    <Icon name={ variant } width={ iconSize } height={ iconSize } />         
 </button>
 
 <style>
@@ -95,11 +84,6 @@
     button.kit-round-button.size-xlarge {
         width: 100px;
         height: 100px;
-    }
-
-    button.kit-round-button > img {
-        max-width: 32px;
-        max-height: 32px;
     }
 
     button.kit-round-button:hover {

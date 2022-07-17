@@ -1,5 +1,7 @@
 <script lang="ts">
     import { computePadding } from '$lib/utilities'
+    import type { Padding } from 'urfu-ui-kit'
+
     const defaultMargin = { x: 0, y: 1 }
     
     export let id: string = undefined

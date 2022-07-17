@@ -1,9 +1,9 @@
 <script lang="ts">
-    import warningIcon from '../img/shield-exclamation.svg'
+    import { Icon } from '.'
 </script>
 
 <div class="kit-warning">
-    <img src={ warningIcon } alt="Warning" width="24" height="24">
+    <Icon name="shield-exclamation" width={ 24 } height={ 24 } margin={{ right: 1, bottom: 0.45 }} />
     <slot />
 </div>
 
@@ -18,12 +18,5 @@
         border-radius: 1em;
         background-color: rgba(188, 163, 0, 0.1);
         color: black;
-    }
-    
-    .kit-warning img {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 16px;
-        margin-bottom: 6px;
     }
 </style>

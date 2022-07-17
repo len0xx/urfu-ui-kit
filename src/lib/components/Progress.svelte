@@ -1,32 +1,38 @@
 <script lang="ts">
-    import progress from '$lib/img/progress.svg'
-    import { getSizeName } from '$lib/utilities'
+    import { Icon } from '.'
+    import { getSizeIndex, getSizeName } from '$lib/utilities'
+    import type { DefaultSizes } from 'urfu-ui-kit'
     
+    type RotationSpeed = 1 | 2 | 3
+
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let className = ''
     export let size: DefaultSizes = 'M'
-    export let speed: 1 | 2 | 3 = 2
-
+    export let speed: RotationSpeed = 2
+    
+    let iconSize = [40, 60, 80][getSizeIndex(size)]
     let sizeClass = 'size-' + getSizeName(size)
+    let speedClass = 'speed-' + speed
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<img
+<Icon
     {id}
-    bind:this={ node }
-    src={progress}
-    alt="Progress animation"
+    bind:node
+    name="progress"
+    className="kit-progress {className} {sizeClass} {speedClass}"
+    width={ iconSize }
+    height={ iconSize }
     on:click
     on:mouseleave
     on:mousedown
     on:mouseup
     on:mouseover
-    class="kit-progress {className} {sizeClass} speed-{speed}"
 />
 
 <style>
-    @keyframes rotation {
+    @keyframes -global-rotation {
         from {
             transform: rotate(0deg)
         }
@@ -35,7 +41,7 @@
         }
     }
     
-    .kit-progress {
+    :global(.kit-progress) {
         display: inline-block;
         vertical-align: middle;
         animation-name: rotation;
@@ -44,25 +50,13 @@
         animation-direction: normal;
         animation-iteration-count: infinite;
     }
-    .kit-progress.size-small {
-        height: 40px;
-        width: 40px;
-    }
-    .kit-progress.size-medium {
-        height: 60px;
-        width: 60px;
-    }
-    .kit-progress.size-large {
-        height: 80px;
-        width: 80px;
-    }
-    .kit-progress.speed-1 {
+    :global(.kit-progress.speed-1) {
         animation-duration: 2s;
     }
-    .kit-progress.speed-2 {
+    :global(.kit-progress.speed-2) {
         animation-duration: 1s;
     }
-    .kit-progress.speed-3 {
+    :global(.kit-progress.speed-3) {
         animation-duration: 0.5s;
     }
 </style>

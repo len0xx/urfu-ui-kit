@@ -1,6 +1,7 @@
 <script lang="ts">
     import { createEventDispatcher } from 'svelte'
     import { getSizeName } from '$lib/utilities'
+    import type { DefaultSizes } from 'urfu-ui-kit'
     
     type Variant = 'primary' | 'blue'
     export let id: string = undefined

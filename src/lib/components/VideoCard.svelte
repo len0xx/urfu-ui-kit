@@ -1,5 +1,4 @@
 <script lang="ts">
-    import playIcon from '$lib/img/play-icon.svg'
     import { createEventDispatcher } from 'svelte'
     import { fade } from 'svelte/transition'
 
@@ -34,7 +33,7 @@
             <source {src} data-src={ src } type="video/mp4">
         </video>
         { #if !videoPlaying }
-            <img src={ playIcon } alt="Play" transition:fade="{{ duration: 100 }}">
+            <img src="/img/icons/play-icon.svg" alt="Play" transition:fade="{{ duration: 100 }}">
         { /if }
     </div>
     <h4 class="blue-text">{ name }</h4>

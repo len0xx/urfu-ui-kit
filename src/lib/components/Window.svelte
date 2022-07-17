@@ -1,6 +1,8 @@
 <script lang="ts">
     import { range, random, computePadding } from '$lib/utilities'
     import { beforeUpdate } from 'svelte'
+    import type { Padding } from 'urfu-ui-kit'
+
     const defaultPadding = { x: 1, y: 2 }
 
     export let node: HTMLElement = undefined

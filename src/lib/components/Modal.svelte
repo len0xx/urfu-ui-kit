@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount, createEventDispatcher } from 'svelte'
     import { fade, blur } from 'svelte/transition'
+    import type { Align } from 'urfu-ui-kit'
     
     export let id: string = undefined
     export let node: HTMLElement = undefined

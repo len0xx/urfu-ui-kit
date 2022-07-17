@@ -1,5 +1,6 @@
 <script lang="ts">
     import { computePadding } from '$lib/utilities'
+    import type { Padding } from 'urfu-ui-kit'
 
     type ImageExtension = 'svg' | 'png' | 'jpg' | 'jpeg' | 'webp'
 
@@ -37,6 +38,7 @@
     .kit-icon {
         display: inline-block;
         position: relative;
+        vertical-align: middle;
         width: var(--icon-width);
         height: var(--icon-height);
     }

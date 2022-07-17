@@ -3,6 +3,7 @@
     import { pageLoaded } from '$lib/stores'
     import { page } from '$app/stores'
     import { onMount } from 'svelte'
+    import type { DefaultSizes } from 'urfu-ui-kit'
 
     export let node: HTMLElement = undefined
     export let delay = 0

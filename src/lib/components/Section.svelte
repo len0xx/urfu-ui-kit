@@ -1,5 +1,6 @@
 <script lang="ts">
     import { computePadding } from '$lib/utilities'
+    import type { Align, Padding } from 'urfu-ui-kit'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined

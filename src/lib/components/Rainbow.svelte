@@ -1,5 +1,6 @@
 <script lang="ts">
     import { getSizeName } from '$lib/utilities'
+    import type { DefaultSizes } from 'urfu-ui-kit'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined

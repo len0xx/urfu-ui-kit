@@ -1,6 +1,7 @@
 import { ajax } from 'jquery'
 import axios from 'axios'
 import type { AxiosResponse } from 'axios'
+import type { RESTMethod, ExtendedSizes, RangeGenerator, Padding, PaddingValue } from 'urfu-ui-kit'
 
 
 // Create slug from the title
