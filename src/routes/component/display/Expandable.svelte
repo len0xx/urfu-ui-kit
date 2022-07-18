@@ -56,7 +56,7 @@
         <Text>Слот для внутреннего текста (отображается только когда <code>active = true</code>)</Text>
         <br />
     
-        <Heading size={3}>Методы:</Heading>
+        <Heading size={3} className="underlined-text">Методы:</Heading>
         <Heading size={4} color="var(--blue)">open</Heading>
         <Text>Метод для открытия компонента</Text>
         <Heading size={4} color="var(--blue)">close</Heading>

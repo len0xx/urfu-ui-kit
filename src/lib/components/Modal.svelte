@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount, createEventDispatcher } from 'svelte'
     import { fade, blur } from 'svelte/transition'
+    import clickOutside from '$lib/actions/clickOutside'
     import type { Align } from 'urfu-ui-kit'
     
     export let id: string = undefined
@@ -9,19 +10,24 @@
     export let closable = true
     export let className = ''
 
+    let ready = false
     let visible = false
+    const TRANSITION_DELAY = 100
+    const TRANSITION_DURATION = 200
     const dispatch = createEventDispatcher()
 
     export const open = () => {
         if (visible) return
         visible = true
+        setTimeout(() => ready = true, (TRANSITION_DELAY + TRANSITION_DURATION))
         dispatch('open')
     }
 
     export const close = () => {
         if (!visible) return
-        if (closable) {
+        if (closable && ready) {
             visible = false
+            setTimeout(() => ready = false, (TRANSITION_DELAY + TRANSITION_DURATION))
             dispatch('close')
         }
     }
@@ -39,8 +45,8 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 { #if visible }
-    <div class="kit-modal-wrapper" in:fade="{{ duration: 200 }}" out:fade="{{ delay: 100, duration: 200 }}">
-        <div class="shadow" on:click={ close }></div>
+    <div class="kit-modal-wrapper" in:fade="{{ duration: TRANSITION_DURATION }}" out:fade="{{ delay: TRANSITION_DELAY, duration: TRANSITION_DURATION }}">
+        <div class="shadow"></div>
         <div
             {id}
             bind:this={ node }
@@ -49,7 +55,8 @@
             on:click
             on:mouseleave
             on:mouseover
-            in:blur="{{ delay: 100, duration: 200 }}" out:blur="{{ duration: 200 }}"
+            in:blur="{{ delay: TRANSITION_DELAY, duration: TRANSITION_DURATION }}" out:blur="{{ duration: TRANSITION_DURATION }}"
+            use:clickOutside={ close }
         >
             { #if closable }
                 <div class="close" on:click={ close }>

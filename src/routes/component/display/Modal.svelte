@@ -17,7 +17,7 @@
     <Heading size={2} color="var(--blue)">Модальное окно</Heading>
     <Text className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae numquam sint nobis labore quibusdam.</Text>
     <br />
-    <Button variant="blue" on:click={ () => modal.close() }>Закрыть</Button>
+    <Button variant="blue" on:click={ modal.close }>Закрыть</Button>
     <Rainbow size="L" slot="footer" />
 </Modal>
 
@@ -57,7 +57,7 @@
         <Text>Аналог стандартного атрибута class</Text>
         <br />
     
-        <Heading size={3}>Методы:</Heading>
+        <Heading size={3} className="underlined-text">Методы:</Heading>
         <Heading size={4} color="var(--blue)">open</Heading>
         <Text>Метод для открытия модального окна</Text>
         <Heading size={4} color="var(--blue)">close</Heading>
