@@ -23,11 +23,11 @@
         <Text>Текущее состояние: { currentValue }</Text>
         <br />
         
-        <Heading size={3}>Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Пример использования:</Heading>
         <Code val={CodeExample} />
         <br />
         
-        <Heading size={3}>Параметры:</Heading>
+        <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">left <ParameterType value="string" /></Heading>
         <Text>Текст с левой стороны от переключателя</Text>
         <Heading size={4} color="var(--blue)">right <ParameterType value="string" /></Heading>
@@ -47,7 +47,7 @@
         <Text>Аналог стандартного атрибута class</Text>
         <br />
         
-        <Heading size={3}>Поддерживаемые события:</Heading>
+        <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>
         <Heading size={4} color="var(--blue)">on:change</Heading>
         <Text>Передаваемый параметр: <code>&lbrace; value: boolean &rbrace;</code></Text>
         <Heading size={4} color="var(--blue)">on:focus</Heading>

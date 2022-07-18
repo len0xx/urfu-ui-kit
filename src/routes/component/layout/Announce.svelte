@@ -40,11 +40,11 @@
         <br />
         <br />
 
-        <Heading size={3}>Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Пример использования:</Heading>
         <Code val={CodeExample} />
         <br />
 
-        <Heading size={3}>Параметры:</Heading>
+        <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">imagePosition <ParameterType value="enum" /></Heading>
         <Text>
             Положение изображения (которое задаётся через параметр <code>image</code>) в контейнере <br />

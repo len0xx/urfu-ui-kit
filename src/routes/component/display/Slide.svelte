@@ -46,11 +46,11 @@
 
 <div class="content">
     <main>
-        <Heading size={3}>Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Пример использования:</Heading>
         <Code val={CodeExample} />
         <br />
     
-        <Heading size={3}>Параметры:</Heading>
+        <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">img <ParameterType value="string" /></Heading>
         <Text>Ссылка на изображение в правой части</Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>

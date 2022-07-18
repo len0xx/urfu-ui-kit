@@ -19,9 +19,9 @@
         <Button variant="blue" href="/">Вернуться на главную</Button>
         <br />
         <br />
-        <Heading size={3}>Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Пример использования:</Heading>
         <Code val={ButtonExample} />
-        <Heading size={3}>Параметры:</Heading>
+        <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">variant <Tag>string</Tag></Heading>
         <Text>Вариант отображения кнопки. Поддерживаются два стандартных значения: <code>primary</code> и <code>blue</code></Text>
         <Heading size={4} color="var(--blue)">className <Tag>string</Tag></Heading>

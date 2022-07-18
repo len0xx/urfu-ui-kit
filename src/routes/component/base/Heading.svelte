@@ -14,8 +14,8 @@
         <Text className="medium">
             Аналог стандратных тегов h1 - h6 в HTML
         </Text>
-        <br />
-        <Heading size={1} margin={{ top: 0 }}>Heading 1</Heading>
+        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={1} margin={{ top: 0.75 }}>Heading 1</Heading>
         <Heading size={2} margin={{ top: 0 }}>Heading 2</Heading>
         <Heading size={3} margin={{ top: 0 }}>Heading 3</Heading>
         <Heading size={4} margin={{ top: 0 }}>Heading 4</Heading>
@@ -23,11 +23,10 @@
         <Heading size={6} margin={{ top: 0 }}>Heading 6</Heading>
         <br />
         
-        <Heading size={3}>Пример использования:</Heading>
         <Code val={CodeExample} />
         <br />
     
-        <Heading size={3}>Параметры:</Heading>
+        <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">size <ParameterType value="enum" /> <Tag title="Обязательное поле">required</Tag></Heading>
         <Text>
             Размер заголовка. <br />
@@ -66,7 +65,7 @@
         <Text>Аналог стандартного атрибута <code>class</code></Text>
         <br />
         
-        <Heading size={3}>Поддерживаемые события:</Heading>
+        <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>
         <Heading size={4} color="var(--blue)">on:click</Heading>
         <Heading size={4} color="var(--blue)">on:focus</Heading>
         <Heading size={4} color="var(--blue)">on:blur</Heading>

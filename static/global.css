@@ -182,3 +182,7 @@ h1:hover > a.page-link {
 	transition-delay: 0.1s;
 	opacity: 1;
 }
+
+.underlined-text {
+	text-decoration: underline;
+}

@@ -22,11 +22,11 @@
         <br />
         <br />
         
-        <Heading size={3}>Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Пример использования:</Heading>
         <Code val={CodeExample} />
         <br />
     
-        <Heading size={3}>Параметры:</Heading>
+        <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">href <ParameterType value="string" /></Heading>
         <Text>Ссылка для перехода по нажатию</Text>
         <Heading size={4} color="var(--blue)">variant <ParameterType value="enum" /></Heading>
@@ -47,7 +47,7 @@
         <Text>Отступ снизу. (Устанавливается в <code>em</code>)</Text>
         <br />
         
-        <Heading size={3}>Поддерживаемые события:</Heading>
+        <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>
         <Heading size={4} color="var(--blue)">on:click</Heading>
         <Heading size={4} color="var(--blue)">on:focus</Heading>
         <Heading size={4} color="var(--blue)">on:blur</Heading>

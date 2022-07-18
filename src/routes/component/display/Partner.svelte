@@ -25,11 +25,11 @@
         <br />
         <br />
     
-        <Heading size={3}>Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Пример использования:</Heading>
         <Code val={CodeExample} />
         <br />
     
-        <Heading size={3}>Параметры:</Heading>
+        <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">src <ParameterType value="string" /> <Tag title="Обязательное поле">required</Tag></Heading>
         <Text>Ссылка на изображение</Text>
         <Heading size={4} color="var(--blue)">caption <ParameterType value="string" /></Heading>
@@ -42,7 +42,7 @@
         <Text>Аналог стандартного атрибута class</Text>
         <br />
     
-        <Heading size={3}>Поддерживаемые события:</Heading>
+        <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>
         <Heading size={4} color="var(--blue)">on:click</Heading>
         <Heading size={4} color="var(--blue)">on:mouseover</Heading>
         <Heading size={4} color="var(--blue)">on:mouseleave</Heading>

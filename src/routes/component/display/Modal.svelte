@@ -33,11 +33,11 @@
         <br />
         <br />
     
-        <Heading size={3}>Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Пример использования:</Heading>
         <Code val={CodeExample} />
         <br />
     
-        <Heading size={3}>Параметры:</Heading>
+        <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">closable <ParameterType value="boolean" /></Heading>
         <Text>
             Можно ли закрывать открытое модальное окно или нет <br />
@@ -66,7 +66,7 @@
         <Text>Метод для открытия/закрытия модального окна</Text>
         <br />
     
-        <Heading size={3}>Поддерживаемые события:</Heading>
+        <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>
         <Heading size={4} color="var(--blue)">on:mouseover</Heading>
         <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
         <Heading size={4} color="var(--blue)">on:open</Heading>

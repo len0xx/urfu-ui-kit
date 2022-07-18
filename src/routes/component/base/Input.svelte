@@ -21,7 +21,7 @@
         <Text className="medium">
             Поле для пользовательского ввода
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text">Пример использования:</Heading>
         <Heading size={3}>Оставьте свои контактные данные:</Heading>
         <Grid m={4} s={1}>
             <Input wide type="text" placeholder="Имя" bind:value={ firstname } />
@@ -33,11 +33,10 @@
         <Text>Введённый номер телефона: { phone }</Text>
         <br />
     
-        <Heading size={3}>Пример использования:</Heading>
         <Code val={CodeExample} />
         <br />
     
-        <Heading size={3}>Параметры:</Heading>
+        <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">wide <ParameterType value="boolean" /></Heading>
         <Text>Если параметр указан (имеет значение <code>true</code>), компонент будет иметь свойство <code>width: 100%</code></Text>
         <Heading size={4} color="var(--blue)">mask <ParameterType value="object" /></Heading>
@@ -92,7 +91,7 @@
         <Text>Аналог стандартного атрибута class</Text>
         <br />
     
-        <Heading size={3}>Поддерживаемые события:</Heading>
+        <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>
         <Heading size={4} color="var(--blue)">on:input</Heading>
         <Heading size={4} color="var(--blue)">on:change</Heading>
         <Heading size={4} color="var(--blue)">on:click</Heading>

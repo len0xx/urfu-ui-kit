@@ -37,11 +37,11 @@
         <br />
         <br />
     
-        <Heading size={3}>Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Пример использования:</Heading>
         <Code val={CodeExample} />
         <br />
     
-        <Heading size={3}>Параметры:</Heading>
+        <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">xs <ParameterType value="number" /></Heading>
         <Text>
             Количество колонок на мобильных экранах (до 400 пикселей в ширину). <br />
