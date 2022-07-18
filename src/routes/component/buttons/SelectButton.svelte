@@ -17,7 +17,7 @@
         <Text className="medium">
             Альтернативный вариант оформления кнопок
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         
         <SelectButton variant={ selected == 0 ? 'active' : 'default' } on:click={() => selected = 0}>Первая кнопка</SelectButton>
         <SelectButton variant={ selected == 1 ? 'active' : 'default' } on:click={() => selected = 1}>Вторая кнопка</SelectButton>
@@ -31,7 +31,7 @@
         <br />
         <br />
         
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
         

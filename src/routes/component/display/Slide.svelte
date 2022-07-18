@@ -15,7 +15,7 @@
             Отдельный слайд с текстовым блоком и изображением. <br />
             Используется в компоненте <Link href="/component/display/Slider">Slider</Link>.
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
     </main>
 </div>
 
@@ -46,7 +46,7 @@
 
 <div class="content">
     <main>
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

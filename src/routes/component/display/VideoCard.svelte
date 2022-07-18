@@ -14,16 +14,15 @@
         <Text className="medium">
             Карточка с видео, которое воспроизводится по нажатию на него
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Grid m={4}>
             { #each [0, 1, 2, 3] as _ }
                 <VideoCard src="/video/first.mp4" />
             { /each }
         </Grid>
         <br />
-        <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

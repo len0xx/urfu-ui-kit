@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Header, Heading, Preloader, Rainbow } from '$lib/components'
-    import components from '$lib/components-list'
+    import components from '$lib/components/list'
     import { page } from '$app/stores'
 
     const getLink = (component: { type: string, name: string }) => '/component/' + component.type + '/' + component.name

@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Text, Link, Heading, Tag, Grid, Card, Warning, RoundButton } from '$lib/components'
-    import components from '$lib/components-list'
+    import components from '$lib/components/list'
     import { blur } from 'svelte/transition'
 
     let expanded = false

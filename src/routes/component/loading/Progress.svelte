@@ -14,14 +14,14 @@
         <Text className="medium">
             Анимированная иконка, отображающая состояние загрузки
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Progress size="S" />
         <Progress size="M" />
         <Progress size="L" />
         <br />
         <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

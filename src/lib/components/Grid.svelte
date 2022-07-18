@@ -1,4 +1,7 @@
 <script lang="ts">
+    import { computePadding } from '$lib/utilities'
+    import type { Padding } from 'urfu-ui-kit'
+
     type ItemsAlignment = 'normal' | 'flex-start' | 'flex-end' | 'center' | 'start' | 'end' | 'self-start' | 'self-end' | 'baseline' | 'stretch' | 'safe' | 'unsafe' | 'inherit' | 'initial' | 'unset' | 'revert' | 'revert-layer'
     type ContentAlignment = ItemsAlignment | 'space-between' | 'space-around' | 'space-evenly'
     type GridSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
@@ -20,6 +23,7 @@
     export let justifyContent: ContentAlignment = 'normal'
     export let placeItems: ItemsAlignment = 'normal'
     export let placeContent: ContentAlignment = 'normal'
+    export let margin: Padding = { }
 
     const defaultSize = 6
     let smallestSize = null
@@ -53,6 +57,7 @@
     { id }
     bind:this={ node }
     style:gap={ gap + 'em' }
+    style:margin={ computePadding(margin) }
     style:place-items={ placeItems }
     style:place-content={ placeContent }
     style:align-content={ alignContent }

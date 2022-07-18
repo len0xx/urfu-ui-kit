@@ -14,13 +14,11 @@
         <Text className="medium">
             Текстовый блок
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Text className="subtitle" color="#444444">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae numquam sint nobis labore quibusdam.</Text>
         <Text color="#888888">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae numquam sint nobis labore quibusdam.</Text>
-        <br />
-        <br />
         
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text" margin={{ top: 1.75 }}>Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

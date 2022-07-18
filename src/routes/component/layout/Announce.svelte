@@ -14,7 +14,7 @@
         <Text className="medium">
             Имиджевый блок с двумя колонками текста и картинкой
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
     </main>
 </div>
 <Announce image="/img/graduates.jpg" vector="/img/text-vector.svg">
@@ -40,7 +40,7 @@
         <br />
         <br />
 
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
 

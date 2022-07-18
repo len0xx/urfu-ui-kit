@@ -14,7 +14,7 @@
         <Text className="medium">
             Компонент для удобного отображения списка документов
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Grid m={2} ratio="1:2" gap={2}>
             <Heading size={2} margin={{ top: 0 }}>Скачайте документацию по компонентам</Heading>
             <div>
@@ -26,7 +26,7 @@
         <br />
         <br />
         
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
         

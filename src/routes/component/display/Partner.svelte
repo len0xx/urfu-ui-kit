@@ -16,16 +16,15 @@
         <Text className="medium">
             Компонент для отображения логотипов партнеров с опциональной подписью
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ top: 1.5, bottom: 1 }}>Пример использования:</Heading>
         <Grid m={3} l={4} xl={6} gap={2}>
             { #each partners as _ }
                 <Partner src="/img/urfu-blue.svg" caption="УрФУ" />
             { /each }
         </Grid>
         <br />
-        <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

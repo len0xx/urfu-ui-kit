@@ -14,14 +14,13 @@
         <Text className="medium">
             Универсальный блок для упрощения вёрстки
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Div align="center" margin={{ y: 1 }} padding={{ y: 1, x: 1 }} className="bordered-div">
             Текст внутри <code>Div</code>
         </Div>
         <br />
-        <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

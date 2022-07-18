@@ -30,7 +30,7 @@
         <Text className="medium">
             Экран с анимацией загрузки, который пропадает после того, как страница полностью загружена
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Window placeholder>
             <div class="loader-holder" class:loaderVisible>
                 <Progress />
@@ -42,9 +42,8 @@
             </div>
         { /if }
         <br />
-        <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

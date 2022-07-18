@@ -14,15 +14,14 @@
         <Text className="medium">
             Обёртка над стандартным тегом <code>a</code> 
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Link href="#" lineWidth={ 2 } variant="regular">Стандартная ссылка</Link><br />
         <Link href="#" lineWidth={ 2 } variant="hover">Подчёркивание при наведении</Link><br />
         <Link href="#" lineWidth={ 2 } variant="underlined">Статичное подчёркивание</Link><br />
         <Link href="#" lineWidth={ 2 } variant="interactive">Анимация при наведении</Link><br />
         <br />
-        <br />
         
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

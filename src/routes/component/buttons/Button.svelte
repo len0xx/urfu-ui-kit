@@ -27,19 +27,19 @@
         <Text className="medium">
             Кнопки являются неотъемлимой частью современных веб-приложений
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Button variant="primary" size="S" value="hello" on:click={ modal.open }>Открыть модальное окно</Button>
         <Button variant="blue" size="S" href="/">Вернуться на главную</Button>
-        <br />    <br />
+        <br /><br />
         <Button variant="primary" size="M" on:click={ modal.open }>Открыть модальное окно</Button>
         <Button variant="blue" size="M" href="/">Вернуться на главную</Button>
-        <br />    <br />
+        <br /><br />
         <Button variant="primary" size="L" on:click={ modal.open }>Открыть модальное окно</Button>
         <Button variant="blue" size="L" href="/">Вернуться на главную</Button>
         <br />
         <br />
         
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
         

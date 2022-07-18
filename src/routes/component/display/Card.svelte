@@ -14,7 +14,7 @@
         <Text className="medium">
             Карточки – один из самых популярных способов представления контента в интерфейсах
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Grid m={2} l={3}>
             <a target="_BLANK" href="https://svelte.dev">
                 <Card variant="white" color="red-1">
@@ -39,9 +39,8 @@
             </a>
         </Grid>
         <br />
-        <br />
         
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
         

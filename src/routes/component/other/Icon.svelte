@@ -14,16 +14,14 @@
         <Text className="medium">
             Компонент для отображения иконок с возможностью конфигурирования размера и отступов
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Div margin={{ y: 1 }}>
             <Icon name="Coins" width={64} height={64} margin={{ right: 1 }} />
             <Icon name="Bank" width={64} height={64} margin={{ right: 1 }} />
             <Icon name="ChartLineUp" width={64} height={64} margin={{ right: 1 }} />
         </Div>
-        <br />
-        <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

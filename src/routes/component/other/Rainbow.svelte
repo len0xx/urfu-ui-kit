@@ -14,16 +14,15 @@
         <Text className="medium">
             Декоративный компонент, с градиентным задним фоном
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Rainbow size="S" />
         <br />
         <Rainbow size="M" />
         <br />
         <Rainbow size="L" />
         <br />
-        <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

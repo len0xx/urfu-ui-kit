@@ -15,7 +15,7 @@
             Выстраивайте контент в колонках.<br />
             Компонент возьмёт на себя все задачи по адаптированию контента к ширине экрана
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Grid s={1} m={2} l={3} xl={4} gap={2}>
             <Card variant="white" color="blue-2">
                 <svelte:fragment slot="title">Swift</svelte:fragment>
@@ -37,7 +37,7 @@
         <br />
         <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     
@@ -71,6 +71,19 @@
         <Text>
             Расстояние между колонками и строчками. <br />
             Поддерживаются любые целочисленные значения
+        </Text>
+        <Heading size={4} color="var(--blue)">margin <ParameterType value="object" /></Heading>
+        <Text>
+            Объект, описывающий внешние отступы компонента. Имеет следующие свойства: <br />
+            <code>x</code> – отступ по горизонтали <br />
+            <code>y</code> – отступ по вертикали <br />
+            <code>top</code> – отступ сверху <br />
+            <code>bottom</code> – отступ снизу <br />
+            <code>left</code> – отступ слева <br />
+            <code>right</code> – отступ справа <br />
+            Все значения могут иметь один из двух типов: <code>string</code> или <code>number</code> <br />
+            В случае, если значение одного из свойств имеет тип <code>number</code>, ему будет добавлена единица измерения <code>em</code> <br />
+            Пример: <code>margin={ '{{ top: 1, x: \'auto\' }}' }</code> будет преобразовано в <code>margin: 1em auto 0</code>
         </Text>
         <Heading size={4} color="var(--blue)">alignItems <ParameterType value="enum" /></Heading>
         <Text>

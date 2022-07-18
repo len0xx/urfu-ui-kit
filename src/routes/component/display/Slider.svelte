@@ -14,7 +14,7 @@
         <Text className="medium">
             Слайдер новостей, разделённый на две половины – текстовая часть слева и изображение справа
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
     </main>
 </div>
 
@@ -45,7 +45,7 @@
 
 <div class="content">
     <main>
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

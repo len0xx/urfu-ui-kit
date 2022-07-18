@@ -14,7 +14,7 @@
         <Text className="medium">
             Аналог стандратных тегов h1 - h6 в HTML
         </Text>
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Heading size={1} margin={{ top: 0.75 }}>Heading 1</Heading>
         <Heading size={2} margin={{ top: 0 }}>Heading 2</Heading>
         <Heading size={3} margin={{ top: 0 }}>Heading 3</Heading>
@@ -23,6 +23,7 @@
         <Heading size={6} margin={{ top: 0 }}>Heading 6</Heading>
         <br />
         
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

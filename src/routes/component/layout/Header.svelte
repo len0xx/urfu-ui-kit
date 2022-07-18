@@ -14,7 +14,7 @@
         <Text className="medium">
             Кнопки являются неотъемлимой частью современных веб-приложений
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Window placeholder padding={{ top: 7 }} contentAmount={5}>
             <DemoHeader>
                 <Section padding={{ x: 1 }}>
@@ -25,7 +25,7 @@
         <br />
         <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

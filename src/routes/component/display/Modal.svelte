@@ -28,12 +28,12 @@
         <Text className="medium">
             Модальное окно с полностью кастомизируемым контентом и кнопкой закрытия
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text">Пример использования:</Heading>
         <Button variant="primary" on:click={ modal.open }>Открыть модальное окно</Button>
         <br />
         <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

@@ -16,14 +16,14 @@
         <Text className="medium">
             Переключатель с двумя состояниями и опциональными подписями с каждой стороны
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         
         <Switch bind:value={ currentValue } left="False" right="True" />
         <br />
         <Text>Текущее состояние: { currentValue }</Text>
         <br />
         
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
         

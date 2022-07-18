@@ -14,7 +14,7 @@
         <Text className="medium">
             Компонент для отображения информации про пользователей
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Grid m={2} l={3} alignItems="start">
             <Profile variant="white">
                 <svelte:fragment slot="name">Петров Пётр Петрович</svelte:fragment>
@@ -33,9 +33,8 @@
             </Profile>
         </Grid>
         <br />
-        <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

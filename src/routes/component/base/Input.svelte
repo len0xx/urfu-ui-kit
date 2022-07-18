@@ -21,7 +21,7 @@
         <Text className="medium">
             Поле для пользовательского ввода
         </Text>
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Heading size={3}>Оставьте свои контактные данные:</Heading>
         <Grid m={4} s={1}>
             <Input wide type="text" placeholder="Имя" bind:value={ firstname } />
@@ -30,9 +30,9 @@
         </Grid>
         <Text>Введённое имя: { firstname }</Text>
         <Text>Введённый email: { email }</Text>
-        <Text>Введённый номер телефона: { phone }</Text>
-        <br />
+        <Text margin={{ bottom: 1.75 }}>Введённый номер телефона: { phone }</Text>
     
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

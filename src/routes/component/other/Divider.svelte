@@ -14,7 +14,7 @@
         <Text className="medium">
             Визуальный разделитель текста
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Text>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
             <Divider color="black" />
@@ -24,9 +24,8 @@
             <Divider color="black" width="160px" height={ 7 }/>
         </Text>
         <br />
-        <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

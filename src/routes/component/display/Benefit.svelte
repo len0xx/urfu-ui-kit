@@ -14,6 +14,7 @@
         <Text className="medium">
             Выносите значимые числа в привлекательные и информативные блоки Benefit
         </Text>
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Grid s={1} m={2} l={3} xl={4} gap={2}>
             <Benefit size="S" num="27" caption="Компонентов" />
             <Benefit size="S" num="2816" caption="Строк кода" />
@@ -29,9 +30,8 @@
             <Benefit size="L" num="2816" caption="Строк кода" />
             <Benefit size="L" num="4" caption="Активных веб-сайта" />
         </Grid>
-        <br />
         
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
         

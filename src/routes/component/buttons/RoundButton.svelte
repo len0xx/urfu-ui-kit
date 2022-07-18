@@ -14,7 +14,7 @@
         <Text className="medium">
             Круглые кнопки с иконкой внутри
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <RoundButton variant="plus" size="L" />
         <RoundButton variant="left" size="L" />
         <RoundButton variant="right" size="L" />
@@ -29,7 +29,7 @@
         <br />
         <br />
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     

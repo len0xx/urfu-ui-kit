@@ -14,7 +14,7 @@
         <Text className="medium">
             Карусель с бесконечной прокруткой, которая автоматические настраивается под размер экрана и ширину контента (но все потомки должны быть одинаковой ширины)
         </Text>
-        <br />
+        <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <section>
             <Carousel margin={10}>
                 <img class="carousel-img" src="/img/image1.jpg" alt="image1">
@@ -23,7 +23,7 @@
             </Carousel>
         </section>
     
-        <Heading size={3} className="underlined-text">Пример использования:</Heading>
+        <Heading size={3} className="underlined-text">Исходный код для примера выше:</Heading>
         <Code val={CodeExample} />
         <br />
     
