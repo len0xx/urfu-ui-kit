@@ -22,13 +22,13 @@
         <Heading size={3}><a href="/about">О проекте</a></Heading>
         <Heading size={3}><a href="https://github.com/len0xx/urfu-ui-kit">GitHub</a></Heading>
         <br />
-        <Heading size={3} margin={{ top: 1.5, bottom: 0.5 }}><a href="/component/base">Базовые элементы</a></Heading>
+        <Heading size={3} margin={{ top: 0, bottom: 0.5 }}><a href="/component/base">Базовые элементы</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'base') as component }
                 <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>
             { /each }
         </nav>
-        <Heading size={3} margin={{ top: 0, bottom: 0.5 }}><a href="/component/buttons">Кнопки</a></Heading>
+        <Heading size={3} margin={{ top: 1.5, bottom: 0.5 }}><a href="/component/buttons">Кнопки</a></Heading>
         <nav>
             { #each components.filter(c => c.type === 'buttons') as component }
                 <a sveltekit:prefetch href={ getLink(component) } class:active-page={ $page.url.pathname == getLink(component) }>{ component.name }</a>

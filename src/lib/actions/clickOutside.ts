@@ -4,9 +4,9 @@ export default (element: Element, callbackFunction: () => void) => {
             callbackFunction()
         }
     }
-    
+
     document.body.addEventListener('click', onClick)
-    
+
     return {
         update(newCallbackFunction: () => void) {
             callbackFunction = newCallbackFunction
