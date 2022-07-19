@@ -142,6 +142,65 @@ aside {
 	z-index: 10;
 }
 
+.main-block {
+	display: block;
+	position: relative;
+	padding-bottom: 7em;
+	max-width: calc(100vw - var(--sidebar-width));
+}
+
+@media screen and (max-width: 768px) {
+	section.main {
+		display: block;
+		grid-template-columns: unset;
+	}
+
+	aside:not(.f) {
+		display: block;
+		position: fixed;
+		overflow-y: scroll;
+		top: 0;
+		padding-top: 90px !important;
+		max-height: 100%;
+		left: -100%;
+		padding: 1em;
+		transition: 0.2s ease-in-out;
+	}
+
+	aside.open {
+		left: 0;
+	}
+
+	main:not(.s),
+    .main-block:not(.s) {
+		max-width: 100%;
+	}
+
+	header .open-side-menu {
+		display: inline-block;
+		position: relative;
+		width: 40px;
+		height: auto;
+		margin-right: 2em;
+		cursor: pointer;
+		vertical-align: middle;
+	}
+	
+	header .open-side-menu > .hamburger-line {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 4px;
+		margin-bottom: 6px;
+		border-radius: 2px;
+		background-color: #000;
+	}
+	
+	header .open-side-menu > .hamburger-line:last-child {
+		margin-bottom: 0;
+	}
+}
+
 nav > a {
 	display: block;
 	text-decoration: none;

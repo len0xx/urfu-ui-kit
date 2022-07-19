@@ -5,7 +5,7 @@
         "name": "Prokhor Minin",
         "email": "prokhor@len0xx.space"
     },
-    "version": "0.9.6",
+    "version": "0.9.7",
     "esModuleInterop": true,
     "type": "module",
     "scripts": {
@@ -42,7 +42,6 @@
         "@sveltejs/adapter-node": "1.0.0-next.78",
         "@sveltejs/kit": "^1.0.0-next.375",
         "@tsconfig/svelte": "^1.0.10",
-        "@types/axios": "^0.14.0",
         "@types/bcrypt": "^5.0.0",
         "@types/cookie-parser": "^1.4.2",
         "@types/express": "^4.17.13",

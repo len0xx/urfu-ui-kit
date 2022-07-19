@@ -52,7 +52,7 @@
         <Text>Аналог стандартного атрибута class</Text>
         <br />
         
-        <Heading size={3}>Слоты:</Heading>
+        <Heading size={3} className="underlined-text">Слоты:</Heading>
         <Heading size={4} color="var(--blue)">name</Heading>
         <Text>Имя, отображаемое в заголовке</Text>
         <Heading size={4} color="var(--blue)">description</Heading>

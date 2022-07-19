@@ -13,7 +13,7 @@ const ensureIntersectionObserver = () => {
     )
 }
 
-export default function viewport(element: HTMLElement) {
+export default function viewport(element: Element) {
     ensureIntersectionObserver()
 
     intersectionObserver.observe(element)

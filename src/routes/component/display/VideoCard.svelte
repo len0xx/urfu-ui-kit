@@ -15,7 +15,7 @@
             Карточка с видео, которое воспроизводится по нажатию на него
         </Text>
         <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
-        <Grid m={4}>
+        <Grid m={4} className="mobile-horizontal-scroll">
             { #each [0, 1, 2, 3] as _ }
                 <VideoCard src="/video/first.mp4" />
             { /each }

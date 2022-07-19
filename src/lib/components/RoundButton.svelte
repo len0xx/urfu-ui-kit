@@ -29,6 +29,16 @@
         pressed = animate && false
         dispatch('mouseup')
     }
+
+    const handleBlur = () => {
+        pressed = animate && false
+        dispatch('blur')
+    }
+
+    const handleFocus = () => {
+        pressed = animate && true
+        dispatch('focus')
+    }
 </script>
 
 <button
@@ -39,8 +49,8 @@
     on:click
     on:mousedown={handleMouseDown}
     on:mouseup={handleMouseUp}
-    on:focus
-    on:blur
+    on:focus={handleFocus}
+    on:blur={handleBlur}
     on:mouseover
     on:mouseleave
 >

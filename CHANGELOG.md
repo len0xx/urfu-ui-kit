@@ -13,6 +13,7 @@
 - Изменён порядок групп в боковом меню
 - Созданы два файла: `$lib/actions/viewport` и `$lib/actions/clickOutside`
 - Применён action `clickOutside` в компоненте `Modal`
+- Адаптация документации к мобильным устройствам
 
 ### 0.9.6 (16.07.2022)
 - Все локальные декларации типов перемещены из `$lib/types.ts` в `types/urfu-ui-kit/index.d.ts`
