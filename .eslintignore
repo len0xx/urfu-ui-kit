@@ -5,6 +5,7 @@ build/*
 build-prod/*
 src/lib/img/*
 static/*
-svelte.config.js
+*.config.js
+*.config.js
 node_modules/*
 types/*

@@ -1,9 +1,10 @@
 <script lang="ts">
     import { Text, Link, Heading, Tag, Grid, Card, Warning, RoundButton } from '$lib/components'
     import components from '$lib/components/list'
-    import { blur } from 'svelte/transition'
+    import { blur, fade } from 'svelte/transition'
 
     let expanded = false
+    let showCaption = false
 </script>
 
 <svelte:head>
@@ -51,7 +52,18 @@
             { #if !expanded }
                 <br />
                 <div class="align-center">
-                    <RoundButton variant="plus" size="L" on:click={() => expanded = true} />
+                    <RoundButton
+                        size="L"
+                        variant="plus"
+                        on:click={() => expanded = true}
+                        on:mouseover={ () => showCaption = true }
+                        on:mouseleave={ () => showCaption = false }
+                    />
+                    { #if showCaption }
+                        <div transition:fade={{ duration: 200 }}>
+                            <Text color="var(--blue)">Показать ещё</Text>
+                        </div>
+                    { /if }
                 </div>
             { /if }
         </div>
