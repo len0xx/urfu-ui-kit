@@ -1,11 +1,14 @@
 <script lang="ts">
-    import { Code, Heading, Button, Modal, Rainbow, Text, ParameterType } from '$lib/components'
+    import { Code, Icon, Heading, Button, Modal, Rainbow, Text, ParameterType } from '$lib/components'
     import CodeExample from '$lib/../codes/ButtonExample'
 
     let modal: {
         open: () => void,
         close: () => void
     }
+
+    const icons = ['pack/bookmark-outlined', 'pack/bookmark-fill']
+    let isBookmarked = false
 </script>
 
 <svelte:head>
@@ -28,7 +31,7 @@
             Кнопки являются неотъемлимой частью современных веб-приложений
         </Text>
         <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
-        <Button variant="primary" size="S" value="hello" on:click={ modal.open }>Открыть модальное окно</Button>
+        <Button variant="primary" size="S" on:click={ modal.open }>Открыть модальное окно</Button>
         <Button variant="blue" size="S" href="/">Вернуться на главную</Button>
         <br /><br />
         <Button variant="primary" size="M" on:click={ modal.open }>Открыть модальное окно</Button>
@@ -36,6 +39,13 @@
         <br /><br />
         <Button variant="primary" size="L" on:click={ modal.open }>Открыть модальное окно</Button>
         <Button variant="blue" size="L" href="/">Вернуться на главную</Button>
+        <br /><br />
+        <Button variant="primary" size="M" on:click={ () => isBookmarked = !isBookmarked }>
+            <Icon name={ isBookmarked ? icons[1] : icons[0] } slot="before" width={ 24 } height={ 24 } />
+            <svelte:fragment slot="default">
+                { isBookmarked ? 'Убрать из закладок' : 'Добавить в закладки' }
+            </svelte:fragment>
+        </Button>
         <br />
         <br />
         
@@ -84,5 +94,14 @@
         <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
         <Heading size={4} color="var(--blue)">on:mouseup</Heading>
         <Heading size={4} color="var(--blue)">on:mousedown</Heading>
+        <br />
+        
+        <Heading size={3} className="underlined-text">Слоты:</Heading>
+        <Heading size={4} color="var(--blue)">default</Heading>
+        <Text>Основное содержание кнопки</Text>
+        <Heading size={4} color="var(--blue)">before</Heading>
+        <Text>Контент перед основным содержанием</Text>
+        <Heading size={4} color="var(--blue)">after</Heading>
+        <Text>Контент после основного содержания</Text>
     </main>
 </div>

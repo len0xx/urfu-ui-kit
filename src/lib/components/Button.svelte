@@ -3,7 +3,7 @@
     import { getSizeName } from '$lib/utilities'
     import type { DefaultSizes } from 'urfu-ui-kit'
     
-    type Variant = 'primary' | 'blue'
+    type Variant = 'primary' | 'blue' | 'gray'
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let type = 'submit'
@@ -17,10 +17,6 @@
     let pressed = false
     const dispatch = createEventDispatcher()
     
-    // Only include value attribute if it's defined
-    $: attrs = { value }
-    if (attrs && Object.keys(attrs).includes('value') && !value) delete attrs.value
-
     const handleMouseDown = () => {
         pressed = true
         dispatch('mousedown')
@@ -42,7 +38,7 @@
 <button
     {id}
     {type}
-    {...attrs}
+    {value}
     bind:this={ node }
     class="kit-button variant-{variant} {className} {sizeClass}"
     class:pressed
@@ -54,7 +50,19 @@
     on:mouseover
     on:mouseleave
 >
-    <slot />
+    { #if $$slots.before }
+        <span class="before-content button-content">
+            <slot name="before" />
+        </span>
+    { /if }
+    <span class="default-content button-content">
+        <slot />
+    </span>
+    { #if $$slots.after }
+        <span class="after-content button-content">
+            <slot name="after" />
+        </span>
+    { /if }
 </button>
 
 <style>
@@ -95,6 +103,26 @@
     }
     button.variant-blue.pressed {
         background-color: var(--blue-darken-2);
+    }
+    button.variant-gray {
+        background-color: var(--gray);
+    }
+    button.variant-gray:hover {
+        background-color: var(--gray-darken);
+    }
+    button.variant-gray.pressed {
+        background-color: var(--gray-darken-2);
+    }
+    .button-content {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+    }
+    .before-content {
+        margin-right: 0.75em;
+    }
+    .after-content {
+        margin-left: 0.75em;
     }
     button.wide {
         width: 100%;

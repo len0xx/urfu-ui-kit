@@ -15,7 +15,7 @@
     export let extension: ImageExtension = 'svg'
     export let path = '/img/icons/'
 
-    let src = path + name + '.' + extension
+    $: src = path + name + '.' + extension
 </script>
 
 <img
