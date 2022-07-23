@@ -3,6 +3,7 @@ import Benefit from './Benefit.svelte'
 import Button from './Button.svelte'
 import Card from './Card.svelte'
 import Carousel from './Carousel.svelte'
+import Checkbox from './Checkbox.svelte'
 import Code from './Code.svelte'
 import DemoHeader from './DemoHeader.svelte'
 import Div from './Div.svelte'
@@ -22,6 +23,7 @@ import Partner from './Partner.svelte'
 import Preloader from './Preloader.svelte'
 import Profile from './Profile.svelte'
 import Progress from './Progress.svelte'
+import Radio from './Radio.svelte'
 import Rainbow from './Rainbow.svelte'
 import RoundButton from './RoundButton.svelte'
 import Section from './Section.svelte'
@@ -41,6 +43,7 @@ export {
     Button,
     Card,
     Carousel,
+    Checkbox,
     Code,
     DemoHeader,
     Div,
@@ -60,6 +63,7 @@ export {
     Preloader,
     Profile,
     Progress,
+    Radio,
     Rainbow,
     RoundButton,
     Section,

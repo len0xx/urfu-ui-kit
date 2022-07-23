@@ -25,6 +25,11 @@ export default [
         type: 'display'
     },
     {
+        name: 'Checkbox',
+        text: 'Чекбокс для множественного выбора',
+        type: 'base'
+    },
+    {
         name: 'Div',
         text: 'Стандартный блок для упрощения процесса вёрстки',
         type: 'other'
@@ -103,6 +108,11 @@ export default [
         name: 'Progress',
         text: 'Компонент, отображающий состояние загрузки',
         type: 'loading'
+    },
+    {
+        name: 'Radio',
+        text: 'Радио-кнопка для одиночного выбора',
+        type: 'base'
     },
     {
         name: 'Rainbow',
