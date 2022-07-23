@@ -1,8 +1,5 @@
-export default `<script lang="ts">
-    let modal: {
-        open: () => void,
-        close: () => void
-    }
+export default `<script>
+    let modal = undefined
 </script>
 
 <Button on:click={ modal.open }>Открыть модальное окно</Button>

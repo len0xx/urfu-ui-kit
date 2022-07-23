@@ -21,8 +21,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(handler)
 
 const options = {
-    key: fs.readFileSync('/etc/letsencrypt/live/masters-hti.urfu.ru/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/masters-hti.urfu.ru/fullchain.pem')
+    key: fs.readFileSync('/etc/letsencrypt/live/urfu-ui.len0xx.ru/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/urfu-ui.len0xx.ru/fullchain.pem')
 }
 
 // Use the SSL certificate

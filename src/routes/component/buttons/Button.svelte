@@ -32,17 +32,10 @@
         </Text>
         <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Button variant="primary" size="S" on:click={ modal.open }>Открыть модальное окно</Button>
-        <Button variant="blue" size="S" href="/">Вернуться на главную</Button>
-        <br /><br />
-        <Button variant="primary" size="M" on:click={ modal.open }>Открыть модальное окно</Button>
         <Button variant="blue" size="M" href="/">Вернуться на главную</Button>
-        <br /><br />
-        <Button variant="primary" size="L" on:click={ modal.open }>Открыть модальное окно</Button>
-        <Button variant="blue" size="L" href="/">Вернуться на главную</Button>
-        <br /><br />
-        <Button variant="primary" size="M" on:click={ () => isBookmarked = !isBookmarked }>
+        <Button variant="primary" size="L" on:click={ () => isBookmarked = !isBookmarked }>
             <Icon name={ isBookmarked ? icons[1] : icons[0] } slot="before" width={ 24 } height={ 24 } />
-            <svelte:fragment slot="default">
+            <svelte:fragment>
                 { isBookmarked ? 'Убрать из закладок' : 'Добавить в закладки' }
             </svelte:fragment>
         </Button>

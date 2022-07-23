@@ -89,7 +89,8 @@
         border-radius: 1.5em;
         padding: 1.5em 5.5em;
     }
-    button:hover {
+    button:hover,
+    button:focus {
         background-color: var(--red-darken);
     }
     button.pressed {
@@ -98,7 +99,8 @@
     button.variant-blue {
         background-color: var(--blue);
     }
-    button.variant-blue:hover {
+    button.variant-blue:hover,
+    button.variant-blue:focus {
         background-color: var(--blue-darken);
     }
     button.variant-blue.pressed {
@@ -107,7 +109,8 @@
     button.variant-gray {
         background-color: var(--gray);
     }
-    button.variant-gray:hover {
+    button.variant-gray:hover,
+    button.variant-gray:focus {
         background-color: var(--gray-darken);
     }
     button.variant-gray.pressed {
