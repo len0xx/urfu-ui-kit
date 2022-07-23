@@ -35,7 +35,9 @@
 </p>
 
 <style>
-    .kit-text-component {
+    p.kit-text-component {
+        display: block;
+        position: relative;
         color: var(--text-component-color);
         text-align: var(--local-align);
     }

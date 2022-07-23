@@ -40,7 +40,7 @@
 <section class="main">
     <aside class:open use:clickOutside={ handleClickOutsideMenu }>
         <Heading size={3}><a href="/">Главная</a></Heading>
-        <Heading size={3}><a href="/setup">Установка</a></Heading>
+        <Heading size={3}><a href="/usage">Как начать</a></Heading>
         <Heading size={3}><a href="/about">О проекте</a></Heading>
         <Heading size={3}><a href="https://github.com/len0xx/urfu-ui-kit">GitHub</a></Heading>
         <br />

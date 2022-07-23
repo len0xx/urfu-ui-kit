@@ -38,6 +38,8 @@
 
 <style>
     .kit-heading {
+        display: block;
+        position: relative;
         color: var(--heading-color);
         text-align: var(--local-align);
     }
