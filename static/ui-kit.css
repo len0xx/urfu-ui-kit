@@ -1,3 +1,6 @@
+/* Import stylesheet for the font */
+@import url(Mont/stylesheet.css);
+
 /* Colors */
 :root {
 	--blue: #1E4391;
