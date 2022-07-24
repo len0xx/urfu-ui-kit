@@ -10,25 +10,25 @@
     export let node: HTMLElement = undefined
 
     $: updateChekbox(group)
-	$: updateGroup(checked)
-	
-	const updateChekbox = (group: string[]) => checked = group.indexOf(value) >= 0
-	
-	function updateGroup(checked: boolean) {
-		const index = group.indexOf(value)
+    $: updateGroup(checked)
 
-		if (checked) {
-			if (index < 0) {
-				group.push(value)
-				group = group
-			}
-		} else {
-			if (index >= 0) {
-				group.splice(index, 1)
-				group = group
-			}
-		}
-	}
+    const updateChekbox = (group: string[]) => checked = group.indexOf(value) >= 0
+
+    function updateGroup(checked: boolean) {
+        const index = group.indexOf(value)
+
+        if (checked) {
+            if (index < 0) {
+                group.push(value)
+                group = group
+            }
+        } else {
+            if (index >= 0) {
+                group.splice(index, 1)
+                group = group
+            }
+        }
+}
 </script>
 
 <label class={ className } on:click on:mouseover on:mouseleave on:focus on:blur>

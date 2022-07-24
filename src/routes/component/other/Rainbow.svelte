@@ -39,6 +39,12 @@
             Поддерживаются два значения: <code>top</code> и <code>bottom</code>. <br />
             Значение по умолчанию: <code>null</code>
         </Text>
+        <Heading size={4} color="var(--blue)">width <ParameterType value="string" /></Heading>
+        <Text>
+            Ширина компонента. <br /> 
+            Поддерживаются любые валидные значения CSS (Пример: <code>50px</code>, <code>5em</code>, <code>12rem</code>, <code>30%</code>) <br />
+            Значение по умолчанию: <code>100%</code>
+        </Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>

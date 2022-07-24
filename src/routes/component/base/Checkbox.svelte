@@ -2,7 +2,7 @@
     import { Code, Heading, Checkbox, Text, Tag, ParameterType } from '$lib/components'
     import CodeExample from '$lib/../codes/CheckboxExample'
 
-    let group = ["hello", "bye"]
+    let group = ['hello', 'bye']
 </script>
 
 <svelte:head>

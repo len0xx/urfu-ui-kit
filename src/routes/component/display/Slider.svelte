@@ -18,7 +18,7 @@
     </main>
 </div>
 
-<Slider let:showPrevPage let:showNextPage background="white" duration={5} autoplay={true} dots={false}>
+<Slider let:showPrevPage let:showNextPage background="white" duration={5} autoplay={true}>
     <Slide img="/img/slide1-img.jpg">
         <Heading size={ 2 } color="var(--blue)">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
         <Text className="heading-3">Актуальная информация о поступлении в университет в 2022 году:</Text>
@@ -75,10 +75,10 @@
             Отображать стандартные кнопки для перелистывания слайдов <br />
             Значение по умолчанию: <code>false</code>
         </Text>
-        <Heading size={4} color="var(--blue)">dots <ParameterType value="boolean" /></Heading>
+        <Heading size={4} color="var(--blue)">progressBar <ParameterType value="boolean" /></Heading>
         <Text>
-            Отображать точки внизу компонента, отображающие количество слайдов и их состояние <br />
-            Значение по умолчанию: <code>false</code>
+            Отображать прогресс автоматического перелистывания (только при <code>autoplay = true</code>) <br />
+            Значение по умолчанию: <code>true</code>
         </Text>
         <Heading size={4} color="var(--blue)">progressBar <ParameterType value="boolean" /></Heading>
         <Text>

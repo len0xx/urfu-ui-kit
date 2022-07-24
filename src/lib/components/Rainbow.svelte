@@ -7,7 +7,6 @@
     export let size: DefaultSizes = 'S'
     export let fixed: 'top' | 'bottom' | null = null
     export let width = '100%'
-    export let transition = 'none'
     export let className = ''
 
     let sizeClass = 'size-' + getSizeName(size)
@@ -23,7 +22,6 @@
     on:mouseup
     on:mouseover
     style:width
-    style:transition
     class="kit-rainbow {sizeClass} {className}"
     class:fixedTop={ fixed == 'top' }
     class:fixedBottom={ fixed == 'bottom' }
