@@ -39,6 +39,8 @@
 
 <style>
     div {
+        display: block;
+        position: relative;
         color: var(--div-color);
         text-align: var(--local-align);
     }

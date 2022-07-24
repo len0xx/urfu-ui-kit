@@ -7,7 +7,7 @@
     export let className = ''
     export let align: Align = 'center'
     export let padding: Padding = { x: 0, y: 0 }
-    export let contentWidth: string = null
+    export let contentWidth: string = undefined
 
     let alignClass = 'section-align-' + align
 </script>
@@ -18,7 +18,7 @@
     class={['kit-section', className, alignClass].join(' ')}
     style:padding={ computePadding(padding) }
 >
-    <div class="content-wrapper" style:width={ contentWidth }>
+    <div class="content-wrapper" style:max-width={ contentWidth }>
         <slot />
     </div>
 </section>
