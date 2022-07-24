@@ -2,7 +2,7 @@
     import { Code, Heading, Radio, Text, Tag, ParameterType } from '$lib/components'
     import CodeExample from '$lib/../codes/RadioExample'
 
-    let group = undefined
+    let group: string = undefined
 </script>
 
 <svelte:head>

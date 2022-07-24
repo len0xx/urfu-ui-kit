@@ -26,7 +26,7 @@
     export let margin: Padding = { }
 
     const defaultSize = 6
-    let smallestSize = null
+    let smallestSize: GridSize = undefined
     let ratioClasses = ''
     if (xs !== null && smallestSize === null) smallestSize = xs
     if (s !== null && smallestSize === null) smallestSize = s
