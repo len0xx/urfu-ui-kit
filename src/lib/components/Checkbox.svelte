@@ -5,10 +5,12 @@
     export let value = ''
     export let group: string[] = undefined
     export let disabled = false
+    export let inline = false
     export let id: string = undefined
     export let className = ''
     export let node: HTMLElement = undefined
 
+    let inlineClass = inline ? 'inline-checkbox' : ''
     $: updateChekbox(group)
     $: updateGroup(checked)
 
@@ -31,7 +33,7 @@
 }
 </script>
 
-<label class={ className } on:click on:mouseover on:mouseleave on:focus on:blur>
+<label class={ [className, inlineClass].join(' ') } on:click on:mouseover on:mouseleave on:focus on:blur>
     <input type="checkbox" { id } bind:this={ node } { name } { disabled } { required } bind:checked { value } on:change on:input />
     <span>
         <slot />
@@ -39,6 +41,15 @@
 </label>
 
 <style>
+    label {
+        display: block;
+        position: relative;
+    }
+
+    label.inline-checkbox {
+        display: inline-block;
+    }
+
     label > input[type="checkbox"] {
         display: none;
     }

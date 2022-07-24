@@ -63,6 +63,12 @@
             Поддерживаются 5 значений: <code>unset</code>, <code>initial</code>, <code>left</code>, <code>center</code> и <code>right</code> <br />
             Значение по умолчанию: <code>unset</code>
         </Text>
+        <Heading size={4} color="var(--blue)">inline <ParameterType value="boolean" /></Heading>
+        <Text>
+            Если этот параметр установлен (имеет значение <code>true</code>), то к компоненту будет применено свойство <code>display: inline-block</code> <br />
+            Иначе – <code>display: block</code> <br />
+            Значение по умолчанию: <code>false</code>
+        </Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>

@@ -19,7 +19,7 @@
     </main>
 </div>
 
-<Slider let:showPrevPage let:showNextPage background="white" duration={5} autoplay={true} dots={false}>
+<Slider let:showPrevPage let:showNextPage background="white" duration={5} autoplay={true}>
     <Slide img="/img/slide1-img.jpg">
         <Heading size={ 2 } color="var(--blue)">Стань инженером будущего в Институте новых материалов и технологий УрФУ</Heading>
         <Text className="heading-3">Актуальная информация о поступлении в университет в 2022 году:</Text>

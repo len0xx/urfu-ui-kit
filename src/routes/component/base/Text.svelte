@@ -50,7 +50,7 @@
         </Text>
         <Heading size={4} color="var(--blue)">inline <ParameterType value="boolean" /></Heading>
         <Text>
-            Если значение <code>true</code>, то элемент будет иметь стиль <code>display: inline-block</code> <br />
+            Если этот параметр установлен (имеет значение <code>true</code>), то к компоненту будет применено свойство <code>display: inline-block</code> <br />
             Иначе – <code>display: block</code> <br />
             Значение по умолчанию: <code>false</code>
         </Text>
