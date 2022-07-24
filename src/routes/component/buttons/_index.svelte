@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Code, Heading, Button, Text } from '$lib/components'
+    import { Heading, Button, Text } from '$lib/components'
 </script>
 
 <svelte:head>

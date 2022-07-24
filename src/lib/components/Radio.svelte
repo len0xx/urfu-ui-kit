@@ -12,7 +12,14 @@
     let inlineClass = inline ? 'inline-checkbox' : ''
 </script>
 
-<label class={ [className, inlineClass].join(' ') } on:click on:mouseover on:mouseleave on:focus on:blur>
+<label
+    class={ [className, inlineClass].join(' ') }
+    on:click
+    on:mouseover
+    on:mouseleave
+    on:focus
+    on:blur
+>
     <input type="radio" bind:group { id } bind:this={ node } { name } { disabled } { required } { value } on:change on:input />
     <span>
         <slot />

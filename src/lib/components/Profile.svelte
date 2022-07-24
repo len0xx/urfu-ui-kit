@@ -1,12 +1,14 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { Text, Heading } from '$lib/components'
+    import { Div, Text, Heading } from '$lib/components'
+    import type { TransitionReceiver } from 'urfu-ui-kit'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let img = ''
     export let variant: 'white' | 'grey' = 'grey'
     export let className = ''
+    export let transition: TransitionReceiver = { in: undefined, out: undefined }
 
     let shadowText: HTMLParagraphElement
     let textExpanded = false
@@ -27,15 +29,17 @@
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<div
+<Div
     {id}
-    bind:this={ node }
+    bind:node
+    {transition}
+    padding={{ y: 1.25, x: 1.25 }}
+    className="kit-profile variant-{variant} {className}"
     on:click
     on:mouseleave
     on:mousedown
     on:mouseup
     on:mouseover
-    class="kit-profile variant-{variant} {className}"
 >
     <img class="kit-profile-image" src={ img || '/img/gradient-red-1.png' } alt="Profile">
     <div class="kit-profile-heading">
@@ -58,7 +62,7 @@
         { /if }
     </Text>
     <p class="hidden shadow-text" bind:this={ shadowText }><slot name="text" /></p>
-</div>
+</Div>
 
 <style>
     .inline-btn-s {
@@ -73,19 +77,18 @@
         height: 0px !important;
     }
 
-    .kit-profile {
+    :global(.kit-profile[data-kit-component="true"]) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1em;
         border: 1px solid rgba(34, 34, 34, 0.05);
         border-radius: 2px;
-        padding: 1.25em;
         grid-template-columns: 64px 1fr;
         background-color: #F6F6F6;
         align-content: start;
     }
 
-    .kit-profile.variant-white {
+    :global(.kit-profile[data-kit-component="true"].variant-white) {
         background: white;
     }
 

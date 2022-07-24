@@ -33,7 +33,14 @@
 }
 </script>
 
-<label class={ [className, inlineClass].join(' ') } on:click on:mouseover on:mouseleave on:focus on:blur>
+<label
+    class={ [className, inlineClass].join(' ') }
+    on:click
+    on:mouseover
+    on:mouseleave
+    on:focus
+    on:blur
+>
     <input type="checkbox" { id } bind:this={ node } { name } { disabled } { required } bind:checked { value } on:change on:input />
     <span>
         <slot />

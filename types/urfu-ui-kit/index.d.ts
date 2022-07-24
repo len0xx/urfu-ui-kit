@@ -1,7 +1,7 @@
 declare module 'urfu-ui-kit' {
     import type { EasingFunction } from 'svelte/transition'
     
-    export type Padding = {
+    export interface Padding {
         x?: PaddingValue,
         y?: PaddingValue,
         top?: PaddingValue,
@@ -10,7 +10,7 @@ declare module 'urfu-ui-kit' {
         right?: PaddingValue
     }
 
-    export type RangeGenerator = {
+    export interface RangeGenerator {
         (to: number, step?: number): number[]
         (from: number, to: number, step?: number): number[]
     }
@@ -25,7 +25,7 @@ declare module 'urfu-ui-kit' {
     
     export type PaddingValue = string | number
 
-    export type TransitionOptions = {
+    export interface TransitionOptions {
         delay?: number,
         duration?: number,
         easing?: EasingFunction
@@ -33,17 +33,17 @@ declare module 'urfu-ui-kit' {
 
     export type TransitionFunction = (node: HTMLElement, options: TransitionOptions) => SvelteTransitionReturnType
 
-    export type Transition = {
+    export interface Transition {
         func: TransitionFunction,
         options: TransitionOptions
     }
 
-    export type TransitionReceiver = {
+    export interface TransitionReceiver {
         in?: Transition,
         out?: Transition
     }
 
-    export type TransitionDescriber = {
+    export interface TransitionDescriber {
         inFunc: TransitionFunction,
         inOptions: TransitionOptions,
         outFunc: TransitionFunction,

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { computePadding } from '$lib/utilities'
-    import type { Padding } from 'urfu-ui-kit'
+    import { computePadding, applyTransitions } from '$lib/utilities'
+    import type { Padding, TransitionReceiver } from 'urfu-ui-kit'
 
     type ImageExtension = 'svg' | 'png' | 'jpg' | 'jpeg' | 'webp'
 
@@ -14,14 +14,18 @@
     export let className = ''
     export let extension: ImageExtension = 'svg'
     export let path = '/img/icons/'
+    export let transition: TransitionReceiver = { in: undefined, out: undefined }
 
     $: src = path + name + '.' + extension
+    const { inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition)
 </script>
 
 <img
     {id}
     {src}
     {alt}
+    in:inFunc={ inOptions }
+    out:outFunc={ outOptions }
     style:margin={ computePadding(margin) }
     style:--icon-width={ width + 'px' }
     style:--icon-height={ height + 'px' }

@@ -1,7 +1,7 @@
 <script lang="ts">
     import { Icon } from '.'
     import { getSizeIndex, getSizeName } from '$lib/utilities'
-    import type { DefaultSizes } from 'urfu-ui-kit'
+    import type { DefaultSizes, TransitionReceiver } from 'urfu-ui-kit'
     
     type RotationSpeed = 1 | 2 | 3
 
@@ -10,6 +10,7 @@
     export let className = ''
     export let size: DefaultSizes = 'M'
     export let speed: RotationSpeed = 2
+    export let transition: TransitionReceiver = { in: undefined, out: undefined }
     
     let iconSize = [40, 60, 80][getSizeIndex(size)]
     let sizeClass = 'size-' + getSizeName(size)
@@ -19,6 +20,7 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <Icon
     {id}
+    {transition}
     bind:node
     name="progress"
     className="kit-progress {className} {sizeClass} {speedClass}"

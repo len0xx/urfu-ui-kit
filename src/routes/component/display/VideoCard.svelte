@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Code, Heading, VideoCard, Text, ParameterType, Grid } from '$lib/components'
+    import { Code, Heading, VideoCard, Link, Text, ParameterType, Grid } from '$lib/components'
     import CodeExample from '$lib/codes/VideoCardExample'
 </script>
 
@@ -35,6 +35,16 @@
         <Text>Подпись первого порядка</Text>
         <Heading size={4} color="var(--blue)">description <ParameterType value="string" /></Heading>
         <Text>Подпись второго порядка</Text>
+        <Heading size={4} color="var(--blue)">transition <ParameterType value="object" /></Heading>
+        <Text>
+            Объект, описывающий переходы для компонента. Имеет следующие свойства: <br />
+            <code>in</code> – переход при монтировании компонента <br />
+            <code>out</code> – переход при демонтировании компонента <br /> <br />
+            Каждое из этих свойств может содержать в себе объект со следующими свойствами: <br />
+            <code>func</code> – функция, выполняющая переход от начального состояния к конечному <br />
+            <code>options</code> – опциональный объект с опциональными свойствами <code>delay</code>, <code>duration</code> и <code>easing</code> <br />
+            Подробнее: <Link href="https://svelte.dev/docs#template-syntax-element-directives-transition-fn" target="_BLANK">Документация по Svelte</Link>
+        </Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
@@ -45,5 +55,11 @@
     
         <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>
         <Heading size={4} color="var(--blue)">on:click</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseover</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:focus</Heading>
+        <Heading size={4} color="var(--blue)">on:blur</Heading>
+        <Heading size={4} color="var(--blue)">on:play</Heading>
+        <Heading size={4} color="var(--blue)">on:pause</Heading>
     </main>
 </div>

@@ -1,1 +1,1 @@
-export default `<Preloader size="L" />`
+export default '<Preloader size="L" />'

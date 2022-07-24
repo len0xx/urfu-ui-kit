@@ -12,6 +12,8 @@
 - Из компонента `Rainbow` удалён параметр `transition`
 - Добавлена поддержка параметра `inline` в компоненты `Radio` и `Checkbox`
 - Исправлены ошибки TypeScript в некоторых файлах проекта
+- Добавлена поддержка для параметра `transition` в компонентах `Benefit`, `Document`, `Expandable`, `Icon`, `Partner`, `Profile`, `Progress` и `VideoCard`
+- Компоненту `VideoCard` добавлена поддержка параметров `id` и `node`, а также события `on:mouseover`, `on:mouseleave`, `on:focus`, `on:blur`, `on:play` и `on:pause`
 
 ### 0.9.7 Beta (18.07.2022)
 - Версия `SvelteKit` повышена до 1.0.0@next377

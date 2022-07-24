@@ -1,15 +1,18 @@
 <script lang="ts">
-    import { Heading } from '$lib/components'
+    import { Div, Heading } from '$lib/components'
     import { createEventDispatcher } from 'svelte'
     import { slide } from 'svelte/transition'
+    import type { TransitionReceiver } from 'urfu-ui-kit'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let className = ''
     export let interactive = false
+    export let transition: TransitionReceiver = { in: undefined, out: undefined }
     
     let active = false
     const dispatch = createEventDispatcher()
+    $: activeClass = active ? 'active' : ''
 
     export const toggle = () => active = !active
 
@@ -24,15 +27,17 @@
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<div
+<Div
     {id}
-    bind:this={ node }
+    bind:node
+    {transition}
+    padding={{ y: 1.2 }}
+    className="kit-expandable {className} {activeClass}"
     on:click={ handleClick }
     on:mousedown
     on:mouseup
     on:mouseover
     on:mouseleave
-    class="kit-expandable {className}" class:active={active}
 >
     <div class="block-content">
         <div>
@@ -56,11 +61,10 @@
             { /if }           
         </div>
     </div>
-</div>
+</Div>
 
 <style>
-    .kit-expandable {
-        padding: 1.2em 0;
+    :global(.kit-expandable[data-kit-component="true"]) {
         border-width: 2px;
         border-style: solid;
         border-top-color: transparent;
@@ -70,32 +74,32 @@
         cursor: pointer;
     }
 
-    .kit-expandable .block-content {
+    :global(.kit-expandable[data-kit-component="true"] .block-content) {
         display: grid;
         position: relative;
         gap: 2em;
         grid-template-columns: 1fr 50px;
     }
 
-    .kit-expandable .block-content .icon {
+    :global(.kit-expandable[data-kit-component="true"] .block-content .icon) {
         justify-self: end;
         align-self: center;
     }
 
-    .kit-expandable:first-of-type {
+    :global(.kit-expandable[data-kit-component="true"]:first-of-type) {
         border-top-color: var(--light-grey);
     }
 
-    :global(.kit-expandable > h4) {
+    :global(.kit-expandable[data-kit-component="true"] > h4) {
         margin-top: 0.5em;
     }
 
-    :global(.kit-expandable p) {
+    :global(.kit-expandable[data-kit-component="true"] p) {
         margin: 0;
         transition: 0.1s ease-in-out;
     }
 
-    .kit-expandable.active {
+    :global(.kit-expandable[data-kit-component="true"].active) {
         border-top-color: var(--blue);
         border-bottom-color: var(--blue);
     }

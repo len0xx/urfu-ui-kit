@@ -19,12 +19,12 @@
     {transition}
     bind:node
     padding={{ x: 1, y: 1 }}
+    className="kit-card variant-{variant} gradient-{color} {className}"
     on:click
     on:mousedown
     on:mouseup
     on:mouseover
     on:mouseleave
-    className="kit-card variant-{variant} gradient-{color} {className}"
 >
     <div class="radial-icon"></div>
     <div class="top">

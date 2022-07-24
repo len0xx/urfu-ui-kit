@@ -1,1 +1,1 @@
-export default `<Switch bind:value={ currentValue } left="False" right="True" />`
+export default '<Switch bind:value={ currentValue } left="False" right="True" />'

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Code, Heading, Div, Text, ParameterType } from '$lib/components'
+    import { Code, Link, Heading, Div, Text, ParameterType } from '$lib/components'
     import CodeExample from '$lib/codes/DivExample'
 </script>
 
@@ -68,6 +68,16 @@
             Если этот параметр установлен (имеет значение <code>true</code>), то к компоненту будет применено свойство <code>display: inline-block</code> <br />
             Иначе – <code>display: block</code> <br />
             Значение по умолчанию: <code>false</code>
+        </Text>
+        <Heading size={4} color="var(--blue)">transition <ParameterType value="object" /></Heading>
+        <Text>
+            Объект, описывающий переходы для компонента. Имеет следующие свойства: <br />
+            <code>in</code> – переход при монтировании компонента <br />
+            <code>out</code> – переход при демонтировании компонента <br /> <br />
+            Каждое из этих свойств может содержать в себе объект со следующими свойствами: <br />
+            <code>func</code> – функция, выполняющая переход от начального состояния к конечному <br />
+            <code>options</code> – опциональный объект с опциональными свойствами <code>delay</code>, <code>duration</code> и <code>easing</code> <br />
+            Подробнее: <Link href="https://svelte.dev/docs#template-syntax-element-directives-transition-fn" target="_BLANK">Документация по Svelte</Link>
         </Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
