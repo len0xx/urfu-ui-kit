@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Checkbox, Text, Tag, ParameterType } from '$lib/components'
-    import CodeExample from '$lib/../codes/CheckboxExample'
+    import CodeExample from '$lib/codes/CheckboxExample'
 
     let group = ['hello', 'bye']
 </script>

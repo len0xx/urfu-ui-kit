@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Progress, Text, ParameterType, Window, Link } from '$lib/components'
-    import CodeExample from '$lib/../codes/PreloaderExample'
+    import CodeExample from '$lib/codes/PreloaderExample'
     import { onMount } from 'svelte'
     import { slide } from 'svelte/transition'
 

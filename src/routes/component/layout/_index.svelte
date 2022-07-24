@@ -1,6 +1,5 @@
 <script lang="ts">
     import { Code, Heading, Tag, Button, Text } from '$lib/components'
-    import ButtonExample from '$lib/../codes/ButtonExample'
 </script>
 
 <svelte:head>
@@ -20,7 +19,6 @@
         <br />
         <br />
         <Heading size={3} className="underlined-text">Пример использования:</Heading>
-        <Code val={ButtonExample} />
         <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">variant <Tag>string</Tag></Heading>
         <Text>Вариант отображения кнопки. Поддерживаются два стандартных значения: <code>primary</code> и <code>blue</code></Text>

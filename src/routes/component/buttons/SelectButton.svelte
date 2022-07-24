@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, SelectButton, Text, ParameterType } from '$lib/components'
-    import CodeExample from '$lib/../codes/SelectButtonExample'
+    import CodeExample from '$lib/codes/SelectButtonExample'
 
     let selected = 0
     let expanded = false

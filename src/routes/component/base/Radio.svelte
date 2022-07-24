@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Radio, Text, Tag, ParameterType } from '$lib/components'
-    import CodeExample from '$lib/../codes/RadioExample'
+    import CodeExample from '$lib/codes/RadioExample'
 
     let group: string = undefined
 </script>

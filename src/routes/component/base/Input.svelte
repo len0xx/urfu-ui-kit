@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Grid, Input, Link, Text, ParameterType } from '$lib/components'
-    import CodeExample from '$lib/../codes/InputExample'
+    import CodeExample from '$lib/codes/InputExample'
 
     let firstname = ''
     let email = ''

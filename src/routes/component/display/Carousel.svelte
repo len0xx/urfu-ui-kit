@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Carousel, Text, ParameterType } from '$lib/components'
-    import CodeExample from '$lib/../codes/CarouselExample'
+    import CodeExample from '$lib/codes/CarouselExample'
 </script>
 
 <svelte:head>

@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Switch, Text, ParameterType } from '$lib/components'
-    import CodeExample from '$lib/../codes/SwitchExample'
+    import CodeExample from '$lib/codes/SwitchExample'
 
     let currentValue = false
 </script>

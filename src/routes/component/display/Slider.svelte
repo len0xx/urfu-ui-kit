@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Link, Slider, RoundButton, Slide, Text, ParameterType } from '$lib/components'
-    import CodeExample from '$lib/../codes/SliderExample'
+    import CodeExample from '$lib/codes/SliderExample'
 </script>
 
 <svelte:head>

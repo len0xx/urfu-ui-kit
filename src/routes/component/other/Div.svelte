@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, Div, Text, ParameterType } from '$lib/components'
-    import CodeExample from '$lib/../codes/DivExample'
+    import CodeExample from '$lib/codes/DivExample'
 </script>
 
 <svelte:head>

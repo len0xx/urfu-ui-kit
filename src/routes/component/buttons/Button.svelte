@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Icon, Heading, Button, Modal, Rainbow, Text, ParameterType } from '$lib/components'
-    import CodeExample from '$lib/../codes/ButtonExample'
+    import CodeExample from '$lib/codes/ButtonExample'
 
     let modal: {
         open: () => void,

@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Code, Heading, RoundButton, Text, ParameterType } from '$lib/components'
-    import CodeExample from '$lib/../codes/RoundButtonExample'
+    import CodeExample from '$lib/codes/RoundButtonExample'
 </script>
 
 <svelte:head>
