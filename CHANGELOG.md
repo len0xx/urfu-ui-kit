@@ -14,6 +14,7 @@
 - Исправлены ошибки TypeScript в некоторых файлах проекта
 - Добавлена поддержка для параметра `transition` в компонентах `Benefit`, `Document`, `Expandable`, `Icon`, `Partner`, `Profile`, `Progress` и `VideoCard`
 - Компоненту `VideoCard` добавлена поддержка параметров `id` и `node`, а также события `on:mouseover`, `on:mouseleave`, `on:focus`, `on:blur`, `on:play` и `on:pause`
+- Добавлено свойство `customLayout` для компонента `Grid`, которое позволяет конфигурировать количество и размер колонок в компоненте
 
 ### 0.9.7 Beta (18.07.2022)
 - Версия `SvelteKit` повышена до 1.0.0@next377

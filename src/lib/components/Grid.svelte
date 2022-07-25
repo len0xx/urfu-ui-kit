@@ -17,6 +17,7 @@
     export let xl: GridSize = null
     export let ratio: TwoColumnsRatio = null
     export let gap = 1
+    export let customLayout: string = undefined
     export let alignItems: ItemsAlignment = 'normal'
     export let justifyItems: ItemsAlignment = 'normal'
     export let alignContent: ContentAlignment = 'normal'
@@ -28,6 +29,7 @@
     const defaultSize = 6
     let smallestSize: GridSize = undefined
     let ratioClasses = ''
+    let customLayoutClass = customLayout ? 'has-custom-layout' : ''
     if (xs !== null && smallestSize === null) smallestSize = xs
     if (s !== null && smallestSize === null) smallestSize = s
     if (m !== null && smallestSize === null) smallestSize = m
@@ -64,7 +66,8 @@
     style:justify-content={ justifyContent }
     style:align-items={ alignItems }
     style:justify-items={ justifyItems }
-    class="grid-container xsmall-viewport-{xs} small-viewport-{s} medium-viewport-{m} large-viewport-{l} xlarge-viewport-{xl} {className} {ratioClasses}"
+    style:--custom-grid-layout={ customLayout }
+    class="grid-container xsmall-viewport-{xs} small-viewport-{s} medium-viewport-{m} large-viewport-{l} xlarge-viewport-{xl} {className} {ratioClasses} {customLayoutClass}"
     on:click
 >
     <slot />
@@ -76,59 +79,59 @@
         position: relative;
     }
 
-    .grid-1-2 {
+    .grid-1-2:not(.has-custom-layout) {
         grid-template-columns: 1fr 2fr;
     }
 
-    .grid-1-3 {
+    .grid-1-3:not(.has-custom-layout) {
         grid-template-columns: 1fr 3fr;
     }
 
-    .grid-1-4 {
+    .grid-1-4:not(.has-custom-layout) {
         grid-template-columns: 1fr 4fr;
     }
 
-    .grid-2-1 {
+    .grid-2-1:not(.has-custom-layout) {
         grid-template-columns: 2fr 1fr;
     }
 
-    .grid-2-3 {
+    .grid-2-3:not(.has-custom-layout) {
         grid-template-columns: 2fr 3fr;
     }
 
-    .grid-3-1 {
+    .grid-3-1:not(.has-custom-layout) {
         grid-template-columns: 3fr 1fr;
     }
 
-    .grid-3-2 {
+    .grid-3-2:not(.has-custom-layout) {
         grid-template-columns: 3fr 2fr;
     }
 
-    .grid-3-4 {
+    .grid-3-4:not(.has-custom-layout) {
         grid-template-columns: 3fr 4fr;
     }
 
-    .grid-4-1 {
+    .grid-4-1:not(.has-custom-layout) {
         grid-template-columns: 4fr 1fr;
     }
 
-    .grid-4-3 {
+    .grid-4-3:not(.has-custom-layout) {
         grid-template-columns: 4fr 3fr;
     }
 
-    .grid-5-1 {
+    .grid-5-1:not(.has-custom-layout) {
         grid-template-columns: 5fr 1fr;
     }
 
-    .grid-5-2 {
+    .grid-5-2:not(.has-custom-layout) {
         grid-template-columns: 5fr 2fr;
     }
 
-    .grid-5-3 {
+    .grid-5-3:not(.has-custom-layout) {
         grid-template-columns: 5fr 3fr;
     }
 
-    .grid-5-4 {
+    .grid-5-4:not(.has-custom-layout) {
         grid-template-columns: 5fr 4fr;
     }
 
@@ -325,5 +328,9 @@
         .xsmall-viewport-12 {
             grid-template-columns: repeat(12, 1fr);
         }
+    }
+    
+    div.grid-container.has-custom-layout:not(.c) {
+        grid-template-columns: var(--custom-grid-layout);
     }
 </style>

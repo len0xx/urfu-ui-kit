@@ -67,6 +67,11 @@
             Количество колонок на самых широких экранах (от 1440 пикселей в ширину). <br />
             Поддерживаются значения от <code>1</code> до <code>12</code>
         </Text>
+        <Heading size={4} color="var(--blue)">customLayout <ParameterType value="string" /></Heading>
+        <Text>
+            Кастомное значение для свойства <code>grid-template-columns</code> <br />
+            Поддерживаются любые валидные CSS значения. Например: <code>repeat(4, 1fr)</code>, <code>150px 250px</code> или <code>4fr 3fr 10em</code>
+        </Text>
         <Heading size={4} color="var(--blue)">gap <ParameterType value="number" /></Heading>
         <Text>
             Расстояние между колонками и строчками. <br />
