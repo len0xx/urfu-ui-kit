@@ -47,8 +47,7 @@
 
     onMount(valueChanged)
 
-    let wideClass = ''
-    if (wide !== null) wideClass = 'kit-input-wide'
+    $: wideClass = wide ? 'kit-input-wide' : ''
 </script>
 
 <!-- svelte-ignore a11y-autofocus -->

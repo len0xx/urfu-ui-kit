@@ -13,7 +13,7 @@
     export let inline = false
     export let margin: Padding = defaultMargin
 
-    let inlineClass = inline ? 'inline-paragraph' : ''
+    $: inlineClass = inline ? 'inline-paragraph' : ''
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->

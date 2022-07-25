@@ -8,14 +8,14 @@
     export let node: HTMLElement = undefined
     export let href: string = undefined
     export let title = ''
-    export let target = '_SELF'
+    export let target = ''
     export let color = 'var(--blue)'
     export let lineWidth = 4
     export let prefetch = false
     export let variant: LinkVariant = 'regular'
     export let className = ''
 
-    let variantClass = variant + '-variant'
+    $: variantClass = variant + '-variant'
     const dispatch = createEventDispatcher()
 
     const mouseOverHandler = () => {

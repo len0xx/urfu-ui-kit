@@ -3,7 +3,6 @@
     import type { Align, Padding } from 'urfu-ui-kit'
     
     type HeadingSize = 1 | 2 | 3 | 4 | 5 | 6
-    type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
     const defaultMargin = { x: 0, y: 1 }
 
     export let id: string = undefined
@@ -14,7 +13,7 @@
     export let className = ''
     export let margin: Padding = defaultMargin
 
-    let tag: HeadingTag = `h${size}`
+    $: tag = `h${size}`
 </script>
 
 <svelte:element

@@ -15,10 +15,10 @@
     export let animate = true
 
     let pressed = false
+    $: sizeClass = 'size-' + getSizeName(size)
+    $: transparencyClass = transparent ? 'transparent-bg' : ''
+    $: iconSize = variant == 'plus' ? 24 : 16
     const dispatch = createEventDispatcher()
-    let sizeClass = 'size-' + getSizeName(size)
-    let transparencyClass = transparent ? 'transparent-bg' : ''
-    let iconSize = variant == 'plus' ? 24 : 16
 
     const handleMouseDown = () => {
         pressed = animate && true

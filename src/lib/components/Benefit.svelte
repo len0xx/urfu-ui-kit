@@ -14,9 +14,9 @@
     export let className = ''
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
 
-    let sizeClass = 'size-' + getSizeName(size)
-    let dividerSize = heights[getSizeIndex(size)]
-    let margin = margins[getSizeIndex(size)]
+    $: sizeClass = 'size-' + getSizeName(size)
+    $: dividerSize = heights[getSizeIndex(size)]
+    $: margin = margins[getSizeIndex(size)]
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->

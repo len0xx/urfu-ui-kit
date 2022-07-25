@@ -29,13 +29,7 @@
     const defaultSize = 6
     let smallestSize: GridSize = undefined
     let ratioClasses = ''
-    let customLayoutClass = customLayout ? 'has-custom-layout' : ''
-    if (xs !== null && smallestSize === null) smallestSize = xs
-    if (s !== null && smallestSize === null) smallestSize = s
-    if (m !== null && smallestSize === null) smallestSize = m
-    if (l !== null && smallestSize === null) smallestSize = l
-    if (xl !== null && smallestSize === null) smallestSize = xl
-    if (smallestSize === null) smallestSize = defaultSize
+    $: customLayoutClass = customLayout ? 'has-custom-layout' : ''
 
     const getClosestSize = (arr: GridSize[], ind: 0 | 1 | 2 | 3 | 4, smallest: GridSize): GridSize => {
         for (let i = ind; i >= 0; i--) {
@@ -44,15 +38,25 @@
         return smallest
     }
 
-    if (xs === null) xs = getClosestSize([xs, s, m, l, xl], 0, smallestSize)
-    if (s === null) s = getClosestSize([xs, s, m, l, xl], 1, smallestSize)
-    if (m === null) m = getClosestSize([xs, s, m, l, xl], 2, smallestSize)
-    if (l === null) l = getClosestSize([xs, s, m, l, xl], 3, smallestSize)
-    if (xl === null) xl = getClosestSize([xs, s, m, l, xl], 4, smallestSize)
+    $: {
+        if (xs !== null && smallestSize === null) smallestSize = xs
+        if (s !== null && smallestSize === null) smallestSize = s
+        if (m !== null && smallestSize === null) smallestSize = m
+        if (l !== null && smallestSize === null) smallestSize = l
+        if (xl !== null && smallestSize === null) smallestSize = xl
+        if (smallestSize === null) smallestSize = defaultSize
 
-    if (ratio !== null) {
-        ratioClasses = ['grid-ratio-selected', 'grid-' + ratio.replace(':', '-')].join(' ')
+        if (xs === null) xs = getClosestSize([xs, s, m, l, xl], 0, smallestSize)
+        if (s === null) s = getClosestSize([xs, s, m, l, xl], 1, smallestSize)
+        if (m === null) m = getClosestSize([xs, s, m, l, xl], 2, smallestSize)
+        if (l === null) l = getClosestSize([xs, s, m, l, xl], 3, smallestSize)
+        if (xl === null) xl = getClosestSize([xs, s, m, l, xl], 4, smallestSize)
+        
+        if (ratio !== null) {
+            ratioClasses = ['grid-ratio-selected', 'grid-' + ratio.replace(':', '-')].join(' ')
+        }
     }
+
 </script>
 
 <div

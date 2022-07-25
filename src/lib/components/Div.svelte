@@ -12,7 +12,7 @@
     export let padding: Padding = { }
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
 
-    let inlineClass = inline ? 'inline-block' : ''
+    $: inlineClass = inline ? 'inline-block' : ''
     const { inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition)
 </script>
 

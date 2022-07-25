@@ -9,7 +9,7 @@
     export let width = '100%'
     export let className = ''
 
-    let sizeClass = 'size-' + getSizeName(size)
+    $: sizeClass = 'size-' + getSizeName(size)
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->

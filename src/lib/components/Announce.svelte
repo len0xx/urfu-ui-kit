@@ -9,7 +9,7 @@
     export let className = ''
     export let imagePosition: 'left' | 'right' = 'right'
 
-    let imageClass = imagePosition + '-side-image'
+    $: imageClass = imagePosition + '-side-image'
 </script>
 
 <section

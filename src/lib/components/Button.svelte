@@ -32,7 +32,7 @@
         dispatch('click')
     }
 
-    let sizeClass = 'size-' + getSizeName(size)
+    $: sizeClass = 'size-' + getSizeName(size)
 </script>
 
 <button

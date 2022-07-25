@@ -9,7 +9,7 @@
     export let size: DefaultSizes = 'M'
     export let color: 'red' | 'blue' = 'red'
 
-    let sizeClass = 'size-' + getSizeName(size)
+    $: sizeClass = 'size-' + getSizeName(size)
 </script>
 
 <div

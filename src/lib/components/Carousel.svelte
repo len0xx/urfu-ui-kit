@@ -8,7 +8,7 @@
     export let className = ''
 
     let childSize = 750 // Size of the children
-    let dx = childSize + margin // Distance between the children
+    $: dx = childSize + margin // Distance between the children
 
     let carousel: HTMLElement
     let translate = 765

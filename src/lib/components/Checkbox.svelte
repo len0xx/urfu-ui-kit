@@ -10,7 +10,7 @@
     export let className = ''
     export let node: HTMLElement = undefined
 
-    let inlineClass = inline ? 'inline-checkbox' : ''
+    $: inlineClass = inline ? 'inline-checkbox' : ''
     $: updateChekbox(group)
     $: updateGroup(checked)
 

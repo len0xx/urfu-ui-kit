@@ -12,9 +12,9 @@
     export let speed: RotationSpeed = 2
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
     
-    let iconSize = [40, 60, 80][getSizeIndex(size)]
-    let sizeClass = 'size-' + getSizeName(size)
-    let speedClass = 'speed-' + speed
+    $: iconSize = [40, 60, 80][getSizeIndex(size)]
+    $: sizeClass = 'size-' + getSizeName(size)
+    $: speedClass = 'speed-' + speed
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->

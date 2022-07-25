@@ -33,7 +33,7 @@
     }
     
     // Duration in seconds
-    let sliderDuration = duration * 1000
+    $: sliderDuration = duration * 1000
 
     let sliderShifting = true
     let sliderProgress = '0%'
