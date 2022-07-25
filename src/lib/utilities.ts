@@ -157,6 +157,15 @@ export const applyPadding = (value: PaddingValue): string => (typeof value == 'n
 // Transform padding values from JS style to CSS (eg. "2em 4em 2em 4em")
 // where the order is from top to left clockwise
 export const computePadding = (padding: Padding): string => {
+    if (
+        padding.top === undefined &&
+        padding.bottom === undefined &&
+        padding.left === undefined &&
+        padding.right === undefined &&
+        padding.x === undefined &&
+        padding.y === undefined
+    ) return undefined
+
     return [
         applyPadding(padding.top !== undefined ? padding.top : padding.y),
         applyPadding(padding.right !== undefined ? padding.right : padding.x),
