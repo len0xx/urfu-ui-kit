@@ -2,7 +2,7 @@
     export let name: string
     export let required = false
     export let value = ''
-    export let group: string = undefined
+    export let group = ''
     export let disabled = false
     export let inline = false
     export let id: string = undefined

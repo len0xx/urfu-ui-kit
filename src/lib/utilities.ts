@@ -140,7 +140,7 @@ export function filterPropsOut(props: Record<string, unknown>, filter: string[])
     return result
 }
 
-export const rangeFrom: RangeGenerator = (from: number, to: number, step = 1) => {
+export const rangeFrom: RangeGenerator = (from: number, to: number, step: number = 1) => {
     const result = []
     for (let i = from; i < to; i += step) result.push(i)
     return result

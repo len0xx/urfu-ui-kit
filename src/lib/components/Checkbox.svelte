@@ -3,7 +3,7 @@
     export let required = false
     export let checked = false
     export let value = ''
-    export let group: string[] = undefined
+    export let group: string[] = []
     export let disabled = false
     export let inline = false
     export let id: string = undefined
