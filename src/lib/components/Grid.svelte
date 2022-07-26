@@ -27,7 +27,7 @@
     export let margin: Padding = { }
 
     const defaultSize = 6
-    let smallestSize: GridSize = undefined
+    let smallestSize: GridSize = null
     let ratioClasses = ''
     $: customLayoutClass = customLayout ? 'has-custom-layout' : ''
 

@@ -102,10 +102,6 @@
 </div>
 
 <style>
-    .kit-slider-wrapper {
-        border-top: 1px solid rgba(190, 190, 190, 0.25);
-    }
-
     .delimeter {
         display: block;
         position: relative;
