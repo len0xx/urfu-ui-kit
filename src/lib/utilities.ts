@@ -183,9 +183,9 @@ export const getSizeName = (size: ExtendedSizes) => extendedSizeNames[getSizeInd
 
 export const applyTransitions = (transitions: TransitionReceiver): TransitionDescriber => {
     return {
-        inFunc: transitions.in ? transitions.in.func : () => ({} as SvelteTransitionConfig),
+        inFunc: transitions.in ? transitions.in.func : () => undefined,
         inOptions: transitions.in ? transitions.in.options : undefined,
-        outFunc: transitions.out ? transitions.out.func : () => ({} as SvelteTransitionConfig),
+        outFunc: transitions.out ? transitions.out.func : () => undefined,
         outOptions: transitions.out ? transitions.out.options : undefined,
     }
 }
