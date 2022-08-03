@@ -55,7 +55,8 @@
             on:click
             on:mouseleave
             on:mouseover
-            in:blur="{{ delay: TRANSITION_DELAY, duration: TRANSITION_DURATION }}" out:blur="{{ duration: TRANSITION_DURATION }}"
+            in:blur="{{ delay: TRANSITION_DELAY, duration: TRANSITION_DURATION }}"
+            out:blur="{{ duration: TRANSITION_DURATION }}"
             use:clickOutside={ close }
         >
             { #if closable }

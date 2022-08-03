@@ -20,7 +20,7 @@
         "check": "svelte-check",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
-        "reexport": "./export-components.sh"
+        "reexport": "bash export-components.sh"
     },
     "dependencies": {
         "@lukeed/uuid": "^2.0.0",
