@@ -140,7 +140,7 @@ export function filterPropsOut(props: Record<string, unknown>, filter: string[])
     return result
 }
 
-export const rangeFrom: RangeGenerator = (from: number, to: number, step: number = 1) => {
+export const rangeFrom: RangeGenerator = (from: number, to: number, step: number = 1) => { /* eslint-disable-line @typescript-eslint/no-inferrable-types */
     const result = []
     for (let i = from; i < to; i += step) result.push(i)
     return result

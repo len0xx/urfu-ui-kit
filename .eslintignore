@@ -2,10 +2,11 @@ src/codes/*
 .svelte-kit/*
 server/build/*
 build/*
-build-prod/*
+bundle/*
 src/lib/img/*
 static/*
 *.config.js
 *.config.js
 node_modules/*
 types/*
+src/lib/components/Radio.svelte
