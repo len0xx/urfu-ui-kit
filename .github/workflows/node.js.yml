@@ -54,8 +54,8 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.SSH_PORT }}
-        source: "bundle/build/*,bundle/server/*,bundle/package.json"
-        target: "/var/www/urfu-ui.len0xx.ru"
+        source: bundle/*
+        target: ${{ secrets.DEST_PATH }}
         
     - name: Restart the app
       uses: appleboy/ssh-action@master
@@ -64,4 +64,12 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.SSH_PORT }}
-        script: pm2 restart urfu-ui
+        script: |
+          cd ${{ secrets.DEST_PATH }}
+          rm bundle/package-lock.json
+          tar -c bundle/build -f build.tar
+          tar -c bundle/server -f server.tar
+          mv bundle/package.json .
+          tar -xf build.tar -C .
+          tar -xf server.tar -C .
+          pm2 restart urfu-ui
