@@ -65,11 +65,12 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          cd ${{ secrets.DEST_PATH }}
-          rm bundle/package-lock.json
-          tar -c bundle/build -f build.tar
-          tar -c bundle/server -f server.tar
-          mv bundle/package.json .
-          tar -xf build.tar -C .
-          tar -xf server.tar -C .
+          cd ${{ secrets.DEST_PATH }}/bundle
+          rm package-lock.json
+          tar -c build -f build.tar
+          tar -c server -f server.tar
+          mv package.json ..
+          tar -xf build.tar -C .. --overwrite
+          tar -xf server.tar -C .. --overwrite
+          rm -rf build.tar server.tar bundle
           pm2 restart urfu-ui
