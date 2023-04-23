@@ -66,11 +66,8 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd ${{ secrets.DEST_PATH }}/bundle
-          rm package-lock.json
-          tar -c build -f build.tar
-          tar -c server -f server.tar
-          mv package.json ..
-          tar -xf build.tar -C .. --overwrite
-          tar -xf server.tar -C .. --overwrite
-          rm -rf .
+          tar -c build server package.json -f artifact.tar
+          cd ..
+          tar -xf bundle/artifact.tar -C . --overwrite
+          rm -rf bundle
           pm2 restart urfu-ui
