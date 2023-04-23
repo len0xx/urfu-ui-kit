@@ -24,14 +24,24 @@ jobs:
     - run: npm run build:frontend --if-present
     - run: npm run build:backend --if-present
     - run: npm run bundle --if-present
+    - name: upload artifacts
+      uses: actions/upload-artifact@master
+      with:
+        name: bundled-app
+        path: bundle
         
   deploy:
     needs: [build]
     runs-on: ubuntu-latest
 
     steps:
+    - name: download artifacts
+      uses: actions/download-artifact@master
+      with:
+        name: bundled-app
+        path: bundle
     - run: ls -la
-    - name: copy file via ssh password
+    - name: copy files via ssh
       uses: appleboy/scp-action@v0.1.4
       with:
         host: ${{ secrets.SSH_HOST }}
