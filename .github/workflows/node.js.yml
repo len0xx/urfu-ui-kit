@@ -72,5 +72,5 @@ jobs:
           mv package.json ..
           tar -xf build.tar -C .. --overwrite
           tar -xf server.tar -C .. --overwrite
-          rm -rf build.tar server.tar bundle
+          rm -rf .
           pm2 restart urfu-ui
