@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Build and deploy to remote server
 
 on:
   push:
@@ -21,9 +21,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
-    - run: npm run build:frontend --if-present
-    - run: npm run build:backend --if-present
-    - run: npm run bundle --if-present
+    - run: npm run build:frontend
+    - run: npm run build:backend
+    - run: npm run bundle
     - name: upload artifacts
       uses: actions/upload-artifact@master
       with:
@@ -40,7 +40,6 @@ jobs:
       with:
         name: bundled-app
         path: bundle
-    - run: ls -la
     - name: copy files via ssh
       uses: appleboy/scp-action@v0.1.4
       with:
@@ -48,5 +47,6 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.SSH_PORT }}
-        source: "bundle/*"
+        source: "bundle/build/*,bundle/server/*,bundle/package.json"
         target: "/var/www/urfu-ui.len0xx.ru"
+    - run: pm2 restart urfu-ui
