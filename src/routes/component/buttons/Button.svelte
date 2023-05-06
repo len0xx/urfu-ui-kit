@@ -61,7 +61,7 @@
         </Text>
         <Heading size={4} color="var(--blue)">type <ParameterType value="string" /></Heading>
         <Text>
-            Аналог стандартного атрибута type. <br />
+            Аналог стандартного атрибута <code>type</code> <br />
             Значение по умолчанию: <code>submit</code>
         </Text>
         <Heading size={4} color="var(--blue)">href <ParameterType value="string" /></Heading>
