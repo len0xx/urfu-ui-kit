@@ -68,6 +68,7 @@ jobs:
           cd ${{ secrets.DEST_PATH }}/bundle
           tar -c build server package.json -f artifact.tar
           cd ..
+          npm install
           tar -xf bundle/artifact.tar -C . --overwrite
           rm -rf bundle
           pm2 restart urfu-ui
