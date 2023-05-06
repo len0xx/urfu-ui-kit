@@ -42,53 +42,53 @@
         <Heading size={4} color="var(--blue)">mask <ParameterType value="object" /></Heading>
         <Text>Маска для поля ввода (Подробнее: <Link href="https://www.npmjs.com/package/imask" target="_BLANK">svelte-imask</Link>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
-        <Text>Аналог стандартного атрибута id</Text>
+        <Text>Аналог стандартного атрибута <code>id</code></Text>
         <Heading size={4} color="var(--blue)">min <ParameterType value="number" /></Heading>
-        <Text>Аналог стандартного атрибута min</Text>
+        <Text>Аналог стандартного атрибута <code>min</code></Text>
         <Heading size={4} color="var(--blue)">max <ParameterType value="number" /></Heading>
-        <Text>Аналог стандартного атрибута max</Text>
+        <Text>Аналог стандартного атрибута <code>max</code></Text>
         <Heading size={4} color="var(--blue)">name <ParameterType value="string" /></Heading>
-        <Text>Аналог стандартного атрибута name</Text>
+        <Text>Аналог стандартного атрибута <code>name</code></Text>
         <Heading size={4} color="var(--blue)">step <ParameterType value="number" /></Heading>
-        <Text>Аналог стандартного атрибута step</Text>
+        <Text>Аналог стандартного атрибута <code>step</code></Text>
         <Heading size={4} color="var(--blue)">list <ParameterType value="string" /></Heading>
-        <Text>Аналог стандартного атрибута list</Text>
+        <Text>Аналог стандартного атрибута <code>list</code></Text>
         <Heading size={4} color="var(--blue)">value <ParameterType value="string" /></Heading>
-        <Text>Аналог стандартного атрибута value</Text>
+        <Text>Аналог стандартного атрибута <code>value</code></Text>
         <Heading size={4} color="var(--blue)">pattern <ParameterType value="string" /></Heading>
-        <Text>Аналог стандартного атрибута pattern</Text>
+        <Text>Аналог стандартного атрибута <code>pattern</code></Text>
         <Heading size={4} color="var(--blue)">placeholder <ParameterType value="string" /></Heading>
-        <Text>Аналог стандартного атрибута placeholder</Text>
+        <Text>Аналог стандартного атрибута <code>placeholder</code></Text>
         <Heading size={4} color="var(--blue)">type <ParameterType value="enum" /></Heading>
-        <Text>Аналог стандартного атрибута type</Text>
+        <Text>Аналог стандартного атрибута <code>type</code></Text>
         <Heading size={4} color="var(--blue)">readonly <ParameterType value="boolean" /></Heading>
         <Text>
-            Аналог стандартного атрибута readonly <br />
+            Аналог стандартного атрибута <code>readonly</code> <br />
             Значение по умолчанию: <code>false</code>
         </Text>
         <Heading size={4} color="var(--blue)">multiple <ParameterType value="boolean" /></Heading>
         <Text>
-            Аналог стандартного атрибута multiple <br />
+            Аналог стандартного атрибута <code>multiple</code> <br />
             Значение по умолчанию: <code>false</code>
         </Text>
         <Heading size={4} color="var(--blue)">disabled <ParameterType value="boolean" /></Heading>
         <Text>
-            Аналог стандартного атрибута disabled <br />
+            Аналог стандартного атрибута <code>disabled</code> <br />
             Значение по умолчанию: <code>false</code>
         </Text>
         <Heading size={4} color="var(--blue)">autofocus <ParameterType value="boolean" /></Heading>
         <Text>
-            Аналог стандартного атрибута autofocus <br />
+            Аналог стандартного атрибута <code>autofocus</code> <br />
             Значение по умолчанию: <code>false</code>
         </Text>
         <Heading size={4} color="var(--blue)">required <ParameterType value="boolean" /></Heading>
-        <Text>Аналог стандартного атрибута required</Text>
+        <Text>Аналог стандартного атрибута <code>required</code></Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута <code>id</code></Text>
         <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
-        <Text>Аналог стандартного атрибута class</Text>
+        <Text>Аналог стандартного атрибута <code>class</code></Text>
         <br />
     
         <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>

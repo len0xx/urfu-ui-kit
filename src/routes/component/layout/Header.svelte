@@ -36,9 +36,7 @@
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута <code>id</code></Text>
-        <Heading size={4} color="var(--blue)">className</Heading>
-        <Text>Аналог стандартного атрибута class</Text>
-        <Heading size={4} color="var(--blue)">actionType</Heading>
-        <Text>Аналог стандартного атрибута action</Text>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута <code>class</code></Text>
     </main>
 </div>

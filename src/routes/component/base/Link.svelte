@@ -28,6 +28,11 @@
         <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">href <ParameterType value="string" /></Heading>
         <Text>Ссылка для перехода по нажатию</Text>
+		<Heading size={4} color="var(--blue)">target <ParameterType value="string" /></Heading>
+        <Text>
+            Определяет, где откроется ссылка из параметра <code>href</code> (в этом же окне, в новом и т.д.) <br />
+            Значение по умолчанию: <code>_SELF</code>
+        </Text>
         <Heading size={4} color="var(--blue)">variant <ParameterType value="enum" /></Heading>
         <Text>
             Вариант отображения <br />
@@ -43,7 +48,7 @@
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута <code>id</code></Text>
         <Heading size={4} color="var(--blue)">className <ParameterType value="number" /></Heading>
-        <Text>Отступ снизу. (Устанавливается в <code>em</code>)</Text>
+        <Text>Аналог стандартного атрибута <code>class</code></Text>
         <br />
         
         <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>
