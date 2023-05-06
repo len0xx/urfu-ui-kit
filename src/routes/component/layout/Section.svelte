@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Code, Heading, Section, Text, Tag, ParameterType } from '$lib/components'
+    import { Code, Heading, Section, Text, ParameterType } from '$lib/components'
     import CodeExample from '$lib/codes/SectionExample'
 </script>
 
@@ -48,11 +48,15 @@
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута <code>id</code></Text>
-        <Heading size={4} color="var(--blue)">className <Tag>string</Tag></Heading>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута class</Text>
-        <Heading size={4} color="var(--blue)">actionType <Tag>string</Tag></Heading>
-        <Text>Аналог стандартного атрибута type</Text>
-        <Heading size={4} color="var(--blue)">href <Tag>string</Tag></Heading>
-        <Text>Используется для добавления кнопке функционала ссылки (переход по страницам по нажатию)</Text>
+        <Heading size={4} color="var(--blue)">contentWidth <ParameterType value="string" /></Heading>
+        <Text>Максимальная ширина, которую может занимать компонент</Text>
+        <Heading size={4} color="var(--blue)">align <ParameterType value="enum" /></Heading>
+        <Text>
+            Выравнивание контента внутри компонента <br />
+            Поддерживаются 5 значений: <code>unset</code>, <code>initial</code>, <code>left</code>, <code>center</code> и <code>right</code> <br />
+            Значение по умолчанию: <code>center</code>
+        </Text>
     </main>
 </div>
