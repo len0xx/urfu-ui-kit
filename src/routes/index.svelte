@@ -13,7 +13,7 @@
 
 <div class="content">
     <main id="index-main">
-        <Heading size={1}>УрФУ UI Kit <Tag>beta 0.9.8</Tag></Heading>
+        <Heading size={1}>УрФУ UI Kit <Tag>beta 0.9.10</Tag></Heading>
         <Text className="medium">
             Расширяемая библиотека Svelte компонентов для упрощённого построения современных веб-приложений Уральского федерального университета
         </Text>
@@ -32,6 +32,7 @@
             <li><Link variant="hover" target="_BLANK" lineWidth={ 2 } href="https://masters-hti.urfu.ru">Магистратура Химико-технологического института</Link></li>
             <li><Link variant="hover" target="_BLANK" lineWidth={ 2 } href="https://masters-enin.urfu.ru">Магистратура Уральского энергетического института</Link></li>
             <li><Link variant="hover" target="_BLANK" lineWidth={ 2 } href="https://diplom.urfu.ru">Выпускной 2022: ВСЕМДИПЛОМЫ</Link></li>
+            <li><Link variant="hover" target="_BLANK" lineWidth={ 2 } href="https://online.urfu.ru">Центр развития онлайн-обучения Уральского федерального университета</Link></li>
         </ul>
         <br />
         <Heading size={3}>Компоненты:</Heading>

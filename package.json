@@ -1,11 +1,11 @@
 {
     "name": "urfu-ui-kit",
-    "description": "UI library for developing frontend web-applications",
+    "description": "Svelte UI-Kit for developing frontend web-applications",
     "author": {
         "name": "Prokhor Minin",
-        "email": "prokhor@len0xx.space"
+        "email": "len0xx@icloud.com"
     },
-    "version": "0.9.8",
+    "version": "0.9.10",
     "esModuleInterop": true,
     "type": "module",
     "scripts": {
