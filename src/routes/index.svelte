@@ -15,7 +15,7 @@
     <main id="index-main">
         <Heading size={1}>УрФУ UI Kit <Tag>beta 0.9.10</Tag></Heading>
         <Text className="medium">
-            Расширяемая библиотека Svelte компонентов для упрощённого построения современных веб-приложений Уральского федерального университета
+            Расширяемая библиотека Svelte компонентов с открытым исходным кодом для упрощённого построения современных веб-приложений Уральского федерального университета
         </Text>
         <a href="https://svelte.dev" target="_BLANK"><img src="/img/svelte.svg" width="48" height="48" alt="Svelte Logo" title="Svelte"></a>
         <a href="https://typescriptlang.org" target="_BLANK"><img style:margin-left="20px" src="/img/typescript.svg" height="48" alt="TypeScript Logo" title="TypeScript"></a>
