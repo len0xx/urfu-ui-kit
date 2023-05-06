@@ -12,7 +12,7 @@
         <!-- svelte-ignore a11y-invalid-attribute -->
         <Heading size={1}>Heading <a href="#" class="page-link" title="Ссылка на текущую страницу">🔗</a></Heading>
         <Text className="medium">
-            Аналог стандратных тегов h1 - h6 в HTML
+            Аналог стандартных тегов h1 - h6 в HTML
         </Text>
         <Heading size={3} className="underlined-text" margin={{ y: 1.5 }}>Пример использования:</Heading>
         <Heading size={1} margin={{ top: 0.75 }}>Heading 1</Heading>
