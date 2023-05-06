@@ -34,19 +34,17 @@
         
         <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">name <ParameterType value="string" /> <Tag title="Обязательное поле">required</Tag></Heading>
-        <Text>Аналог стандартного атрибута name.</Text>
+        <Text>Аналог стандартного атрибута <code>name</code></Text>
         <Heading size={4} color="var(--blue)">value <ParameterType value="string" /></Heading>
-        <Text>
-            Аналог стандартного атрибута value.
-        </Text>
+        <Text>Аналог стандартного атрибута <code>value</code></Text>
         <Heading size={4} color="var(--blue)">required <ParameterType value="boolean" /></Heading>
         <Text>
-            Аналог стандартного атрибута required. <br />
+            Аналог стандартного атрибута <code>required</code> <br />
             Значение по умолчанию: <code>false</code>
         </Text>
         <Heading size={4} color="var(--blue)">disabled <ParameterType value="boolean" /></Heading>
         <Text>
-            Аналог стандартного атрибута disabled. <br />
+            Аналог стандартного атрибута <code>disabled</code> <br />
             Значение по умолчанию: <code>false</code>
         </Text>
         <Heading size={4} color="var(--blue)">group <ParameterType value="object" /></Heading>
@@ -64,7 +62,7 @@
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута <code>id</code></Text>
         <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
-        <Text>Аналог стандартного атрибута class</Text>
+        <Text>Аналог стандартного атрибута <code>class</code></Text>
         <br />
         
         <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>

@@ -49,7 +49,7 @@
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута <code>id</code></Text>
         <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
-        <Text>Аналог стандартного атрибута class</Text>
+        <Text>Аналог стандартного атрибута <code>class</code></Text>
         <Heading size={4} color="var(--blue)">contentWidth <ParameterType value="string" /></Heading>
         <Text>Максимальная ширина, которую может занимать компонент</Text>
         <Heading size={4} color="var(--blue)">align <ParameterType value="enum" /></Heading>

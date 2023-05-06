@@ -48,7 +48,7 @@
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
         <Text>Аналог стандартного атрибута <code>id</code></Text>
         <Heading size={4} color="var(--blue)">className <ParameterType value="number" /></Heading>
-        <Text>Отступ снизу. (Устанавливается в <code>em</code>)</Text>
+        <Text>Аналог стандартного атрибута <code>class</code></Text>
         <br />
         
         <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>
