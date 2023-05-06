@@ -42,7 +42,7 @@
         <Heading size={3}><a href="/">Главная</a></Heading>
         <Heading size={3}><a href="/usage">Как начать</a></Heading>
         <Heading size={3}><a href="/about">О проекте</a></Heading>
-        <Heading size={3}><a href="https://github.com/len0xx/urfu-ui-kit">GitHub</a></Heading>
+        <Heading size={3}><a href="https://github.com/len0xx/urfu-ui-kit" target="_blank">GitHub</a></Heading>
         <br />
         <Heading size={3} margin={{ top: 0, bottom: 0.5 }}><a href="/component/base">Базовые элементы</a></Heading>
         <nav>
