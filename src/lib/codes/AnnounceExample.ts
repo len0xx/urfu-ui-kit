@@ -1,5 +1,5 @@
 export default `<Announce image="/img/graduates.jpg" vector="/img/text-vector.svg">
-    <Heading size={1} slot="first" marginTop={0}>Магистратура предоставляет возможности</Heading>
+    <Heading size={1} slot="first" margin={{ top: 0 }}>Магистратура предоставляет возможности</Heading>
     <svelte:fragment slot="second">
         <Text>В рейтинге «100 лучших российских вузов» по версии Forbes УрФУ занял 4-ое место, обогнав многие столичные вузы — это лучший результат среди нестоличных вузов России.</Text>
         <br />

@@ -47,24 +47,19 @@
             Высота разделителя (в <code>px</code>) <br />
             Значение по умолчанию: <code>4</code>
         </Text>
-        <Heading size={4} color="var(--blue)">marginY <ParameterType value="number" /></Heading>
+        <Heading size={4} color="var(--blue)">margin <ParameterType value="object" /></Heading>
         <Text>
-            Отступ по вертикали (в <code>em</code>) <br />
-            Значение по умолчанию: <code>1</code>
+            Объект, описывающий отступы компонента. Имеет следующие свойства: <br />
+            <code>x</code> – отступ по горизонтали <br />
+            <code>y</code> – отступ по вертикали <br />
+            <code>top</code> – отступ сверху <br />
+            <code>bottom</code> – отступ снизу <br />
+            <code>left</code> – отступ слева <br />
+            <code>right</code> – отступ справа <br />
+            Все значения могут иметь один из двух типов: <code>string</code> или <code>number</code> <br />
+            В случае, если значение одного из свойств имеет тип <code>number</code>, ему будет добавлена единица измерения <code>em</code> <br />
+            Пример: <code>margin={ '{{ top: 1, x: \'auto\' }}' }</code> будет преобразовано в <code>margin: 1em auto 0</code>
         </Text>
-        <Heading size={4} color="var(--blue)">marginX <ParameterType value="number" /></Heading>
-        <Text>
-            Отступ по горизонтали (в <code>em</code>) <br />
-            Значение по умолчанию: <code>0</code>
-        </Text>
-        <Heading size={4} color="var(--blue)">marginTop <ParameterType value="number" /></Heading>
-        <Text>Отступ сверху (в <code>em</code>) <br /> </Text>
-        <Heading size={4} color="var(--blue)">marginBottom <ParameterType value="number" /></Heading>
-        <Text>Отступ снизу (в <code>em</code>) <br /> </Text>
-        <Heading size={4} color="var(--blue)">marginLeft <ParameterType value="number" /></Heading>
-        <Text>Отступ слева (в <code>em</code>) <br /> </Text>
-        <Heading size={4} color="var(--blue)">marginRight <ParameterType value="number" /></Heading>
-        <Text>Отступ справа (в <code>em</code>) <br /> </Text>
         <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
         <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
         <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
