@@ -4,9 +4,11 @@
     import type { DefaultSizes } from 'urfu-ui-kit'
     
     type Variant = 'primary' | 'blue' | 'gray'
+	type ButtonType = 'submit' | 'reset' | 'button'
+
     export let id: string = undefined
     export let node: HTMLElement = undefined
-    export let type: 'submit' | 'reset' | 'button' = 'submit'
+    export let type: ButtonType = 'submit'
     export let value: string = undefined
     export let variant: Variant = 'primary'
     export let href = ''
