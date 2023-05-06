@@ -6,7 +6,7 @@
     type Variant = 'primary' | 'blue' | 'gray'
     export let id: string = undefined
     export let node: HTMLElement = undefined
-    export let type = 'submit'
+    export let type: 'submit' | 'reset' | 'button' = 'submit'
     export let value: string = undefined
     export let variant: Variant = 'primary'
     export let href = ''
