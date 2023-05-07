@@ -31,8 +31,11 @@ import SelectButton from './SelectButton.svelte'
 import Slide from './Slide.svelte'
 import Slider from './Slider.svelte'
 import Switch from './Switch.svelte'
+import Table from './Table.svelte'
 import Tag from './Tag.svelte'
 import Text from './Text.svelte'
+import TCell from './TCell.svelte'
+import TRow from './TRow.svelte'
 import VideoCard from './VideoCard.svelte'
 import Warning from './Warning.svelte'
 import Window from './Window.svelte'
@@ -71,8 +74,11 @@ export {
     Slide,
     Slider,
     Switch,
+    Table,
     Tag,
     Text,
+    TCell,
+	TRow,
     VideoCard,
     Warning,
     Window,
