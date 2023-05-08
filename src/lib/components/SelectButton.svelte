@@ -2,7 +2,10 @@
     import { getSizeName } from '$lib/utilities'
     import type { DefaultSizes } from 'urfu-ui-kit'
 
+	type ButtonType = 'submit' | 'button' | 'reset'
+
     export let id: string = undefined
+	export let type: ButtonType = 'button'
     export let node: HTMLElement = undefined
     export let variant: 'default' | 'active' | 'fill' = 'default'
     export let className = ''
@@ -14,8 +17,9 @@
 	$: colorClass = `btn-color-${color}`
 </script>
 
-<div
+<button
     {id}
+	{type}
     bind:this={ node }
     on:click|stopPropagation
     on:focus
@@ -27,7 +31,7 @@
     class={ ['kit-select-button', className, variantClass, sizeClass, colorClass].filter(Boolean).join(' ') }
 >
     <slot />
-</div>
+</button>
 
 <style>
     .kit-select-button {
@@ -42,6 +46,7 @@
         cursor: pointer;
         border-radius: 10em;
         cursor: pointer;
+		background: transparent;
     }
 
     .kit-select-button.size-small {
