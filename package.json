@@ -5,7 +5,7 @@
         "name": "Prokhor Minin",
         "email": "len0xx@icloud.com"
     },
-    "version": "0.9.11",
+    "version": "0.9.12",
     "esModuleInterop": true,
     "type": "module",
     "scripts": {
