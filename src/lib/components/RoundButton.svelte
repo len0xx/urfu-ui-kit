@@ -15,11 +15,17 @@
     export let className = ''
     export let transparent = true
     export let animate = true
+	export let stopPropagation = false
 
     let pressed = false
     $: sizeClass = `size-${getSizeName(size)}` 
     $: iconSize = variant == 'plus' ? 24 : 16
     const dispatch = createEventDispatcher()
+
+	const handleClick = (event: Event) => {
+		if (stopPropagation) event.stopPropagation()
+		dispatch('click')
+	}
 
     const handleMouseDown = () => {
         pressed = animate && true
@@ -49,7 +55,7 @@
     class={ ['kit-round-button', sizeClass, className].filter(Boolean).join(' ') }
 	class:transparent-bg={ transparent }
     class:pressed
-    on:click|stopPropagation
+    on:click={handleClick}
     on:mousedown={handleMouseDown}
     on:mouseup={handleMouseUp}
     on:focus={handleFocus}

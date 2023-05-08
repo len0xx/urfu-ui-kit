@@ -1,5 +1,6 @@
 <script lang="ts">
     import { getSizeName } from '$lib/utilities'
+    import { createEventDispatcher } from 'svelte'
     import type { DefaultSizes } from 'urfu-ui-kit'
 
 	type ButtonType = 'submit' | 'button' | 'reset'
@@ -11,6 +12,14 @@
     export let className = ''
     export let size: DefaultSizes = 'M'
     export let color: 'red' | 'blue' = 'red'
+	export let stopPropagation = false
+
+	const dispatch = createEventDispatcher()
+
+	const handleClick = (event: Event) => {
+		if (stopPropagation) event.stopPropagation()
+		dispatch('click')
+	}
 
 	$: variantClass = `variant-${variant}`
     $: sizeClass = `size-${getSizeName(size)}`
@@ -21,7 +30,7 @@
     {id}
 	{type}
     bind:this={ node }
-    on:click|stopPropagation
+    on:click={handleClick}
     on:focus
     on:blur
     on:mouseover
