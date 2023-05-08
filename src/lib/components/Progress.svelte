@@ -13,8 +13,8 @@
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
     
     $: iconSize = [40, 60, 80][getSizeIndex(size)]
-    $: sizeClass = 'size-' + getSizeName(size)
-    $: speedClass = 'speed-' + speed
+    $: sizeClass = `size-${getSizeName(size)}`
+    $: speedClass = `speed-${speed}`
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->

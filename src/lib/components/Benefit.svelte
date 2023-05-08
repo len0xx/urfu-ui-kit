@@ -15,7 +15,7 @@
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
     
 	$: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
-    $: sizeClass = 'size-' + getSizeName(size)
+    $: sizeClass = `size-${getSizeName(size)}`
     $: dividerSize = heights[getSizeIndex(size)]
     $: margin = margins[getSizeIndex(size)]
 </script>

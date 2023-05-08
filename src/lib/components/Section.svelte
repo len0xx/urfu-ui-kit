@@ -9,7 +9,7 @@
     export let padding: Padding = { x: 0, y: 0 }
     export let contentWidth: string = undefined
 
-    $: alignClass = 'section-align-' + align
+    $: alignClass = `section-align-${align}` 
 </script>
 
 <section

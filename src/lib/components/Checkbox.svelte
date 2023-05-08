@@ -10,7 +10,6 @@
     export let className = ''
     export let node: HTMLElement = undefined
 
-    $: inlineClass = inline ? 'inline-checkbox' : ''
     $: updateChekbox(group)
     $: updateGroup(checked)
 
@@ -34,7 +33,8 @@
 </script>
 
 <label
-    class={ [className, inlineClass].filter(Boolean).join(' ') }
+    class={ className }
+	class:inline-checkbox={ inline }
     on:click
     on:mouseover
     on:mouseleave

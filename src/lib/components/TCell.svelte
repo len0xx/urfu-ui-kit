@@ -8,7 +8,8 @@
 <div
 	{id}
 	bind:this={ node }
-	class={ ['kit-table-cell', head ? 'highlight-bottom' : '', className].filter(Boolean).join(' ') }
+	class={ ['kit-table-cell', className].filter(Boolean).join(' ') }
+	class:highlight-bottom={ head }
 	on:click
 	on:mouseover
 	on:mouseleave

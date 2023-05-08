@@ -29,6 +29,7 @@
     })
 
 	$: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
+	$: variantClass = `variant-${variant}`
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -38,7 +39,7 @@
     in:inFunc={ inOptions }
     out:outFunc={ outOptions }
 	style:padding={ computePadding({ y: 1.25, x: 1.25 }) }
-    class={ ['kit-profile', `variant-${variant}`, className].filter(Boolean).join(' ') }
+    class={ ['kit-profile', variantClass, className].filter(Boolean).join(' ') }
     on:click
     on:mouseleave
     on:mousedown

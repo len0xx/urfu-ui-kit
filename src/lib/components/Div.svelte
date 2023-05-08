@@ -12,7 +12,6 @@
     export let padding: Padding = { }
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
 
-    $: inlineClass = inline ? 'inline-block' : ''
     $: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
 </script>
 
@@ -22,7 +21,8 @@
     in:inFunc={ inOptions }
     out:outFunc={ outOptions }
     bind:this={ node }
-    class={ [className, inlineClass].filter(Boolean).join(' ') }
+    class={ className }
+	class:inline-block={ inline }
     style:margin={ computePadding(margin) }
     style:padding={ computePadding(padding) }
     style:--div-color={ color }

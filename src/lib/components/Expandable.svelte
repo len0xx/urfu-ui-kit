@@ -13,7 +13,6 @@
     
     let active = false
     const dispatch = createEventDispatcher()
-    $: activeClass = active ? 'active' : ''
 	$: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
 
     export const toggle = () => active = !active
@@ -35,7 +34,8 @@
     in:inFunc={ inOptions }
     out:outFunc={ outOptions }
 	style:padding={ computePadding({ y: 1.2 }) }
-    class={ ['kit-expandable', className, activeClass].filter(Boolean).join(' ') }
+    class={ ['kit-expandable', className].filter(Boolean).join(' ') }
+	class:active
     on:click={ handleClick }
     on:mousedown
     on:mouseup

@@ -14,6 +14,8 @@
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
 	
 	$: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
+	$: variantClass = `variant-${variant}`
+	$: gradientClass = `gradient-${color}`
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -23,7 +25,7 @@
     out:outFunc={ outOptions }
     bind:this={ node }
 	style:padding={ computePadding({ x: 1, y: 1 }) }
-    class= { ['kit-card', `variant-${variant}`, `gradient-${color}`, className].filter(Boolean).join(' ') }
+    class= { ['kit-card', variantClass, gradientClass, className].filter(Boolean).join(' ') }
     on:click
     on:mousedown
     on:mouseup

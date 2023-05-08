@@ -15,7 +15,7 @@
     export let variant: LinkVariant = 'regular'
     export let className = ''
 
-    $: variantClass = variant + '-variant'
+    $: variantClass = `${variant}-variant` 
     const dispatch = createEventDispatcher()
 
     const mouseOverHandler = () => {
