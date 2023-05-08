@@ -30,7 +30,7 @@
     on:mouseleave
     on:mouseup
     on:mousedown
-    class="kit-switch {className}"
+    class={ ['kit-switch', className].filter(Boolean).join(' ') }
 >
     { #if left }
         <span class="heading-3" class:blue-text={ !value } class:grey-text={ value } on:click={ () => setValue(false) }>{ left }</span>

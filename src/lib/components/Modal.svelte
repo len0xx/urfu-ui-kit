@@ -50,7 +50,7 @@
         <div
             {id}
             bind:this={ node }
-            class="kit-modal {className}"
+            class={ ['kit-modal', className].filter(Boolean).join(' ') }
             style:--local-align={ align }
             on:click
             on:mouseleave

@@ -34,7 +34,8 @@
         dispatch('click')
     }
 
-    $: sizeClass = 'size-' + getSizeName(size)
+	$: variantClass = `variant-${variant}`
+    $: sizeClass = `size-${getSizeName(size)}`
 </script>
 
 <button
@@ -42,9 +43,9 @@
     {type}
     {value}
     bind:this={ node }
-    class="kit-button variant-{variant} {className} {sizeClass}"
+    class={ ['kit-button', variantClass, className, sizeClass].filter(Boolean).join(' ') }
     class:pressed
-    on:click={ handleClick }
+    on:click|stopPropagation={ handleClick }
     on:mousedown={ handleMouseDown }
     on:mouseup={ handleMouseUp }
     on:focus

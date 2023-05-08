@@ -9,7 +9,9 @@
     export let size: DefaultSizes = 'M'
     export let color: 'red' | 'blue' = 'red'
 
-    $: sizeClass = 'size-' + getSizeName(size)
+	$: variantClass = `variant-${variant}`
+    $: sizeClass = `size-${getSizeName(size)}`
+	$: colorClass = `btn-color-${color}`
 </script>
 
 <div
@@ -22,7 +24,7 @@
     on:mouseleave
     on:mouseup
     on:mousedown
-    class="kit-select-button variant-{variant} {className} {sizeClass} btn-color-{color}"
+    class={ ['kit-select-button', className, variantClass, sizeClass, colorClass].filter(Boolean).join(' ') }
 >
     <slot />
 </div>

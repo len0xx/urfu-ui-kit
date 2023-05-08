@@ -48,5 +48,15 @@
 			Флаг, отвечающий за отображение разделителя внизу компонента <br />
 			Значение по умолчанию: <code>true</code>
 		</Text>
+		<br />
+    
+        <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>
+        <Heading size={4} color="var(--blue)">on:click</Heading>
+        <Heading size={4} color="var(--blue)">on:focus</Heading>
+        <Heading size={4} color="var(--blue)">on:blur</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseover</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseup</Heading>
+        <Heading size={4} color="var(--blue)">on:mousedown</Heading>
     </main>
 </div>

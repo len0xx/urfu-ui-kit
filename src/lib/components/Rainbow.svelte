@@ -22,7 +22,7 @@
     on:mouseup
     on:mouseover
     style:width
-    class="kit-rainbow {sizeClass} {className}"
+    class={ ['kit-rainbow', sizeClass, className].filter(Boolean).join(' ') }
     class:fixedTop={ fixed == 'top' }
     class:fixedBottom={ fixed == 'bottom' }
 >

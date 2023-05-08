@@ -23,7 +23,7 @@
     {transition}
     bind:node
     name="progress"
-    className="kit-progress {className} {sizeClass} {speedClass}"
+    className={ ['kit-progress', className, sizeClass, speedClass].filter(Boolean).join(' ') }
     width={ iconSize }
     height={ iconSize }
     on:click

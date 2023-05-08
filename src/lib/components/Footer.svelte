@@ -12,7 +12,7 @@
     export let contentWidth: string = null
 </script>
 
-<footer {id} class={className} bind:this={ node }>
+<footer {id} class={ className } bind:this={ node }>
     <Section
         {align}
         {contentWidth}

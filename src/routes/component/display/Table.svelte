@@ -45,5 +45,15 @@
         <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">columns <ParameterType value="number" /><Tag title="Обязательное поле">required</Tag></Heading>
         <Text>Количество столбцов в таблице</Text>
+		<br />
+    
+        <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>
+        <Heading size={4} color="var(--blue)">on:click</Heading>
+        <Heading size={4} color="var(--blue)">on:focus</Heading>
+        <Heading size={4} color="var(--blue)">on:blur</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseover</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseleave</Heading>
+        <Heading size={4} color="var(--blue)">on:mouseup</Heading>
+        <Heading size={4} color="var(--blue)">on:mousedown</Heading>
     </main>
 </div>

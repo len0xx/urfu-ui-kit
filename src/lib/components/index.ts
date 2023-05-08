@@ -78,7 +78,7 @@ export {
     Tag,
     Text,
     TCell,
-	TRow,
+    TRow,
     VideoCard,
     Warning,
     Window,

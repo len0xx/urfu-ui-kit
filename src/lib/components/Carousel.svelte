@@ -101,7 +101,7 @@
 
 <svelte:window on:resize={resizeHandler} />
 
-<div class="kit-carousel-wrapper {className}" {id} bind:this={ node }>
+<div class={ ['kit-carousel-wrapper', className].filter(Boolean).join(' ') } {id} bind:this={ node }>
     <div class="kit-carousel" bind:this={carousel}>
         <slot />
     </div>

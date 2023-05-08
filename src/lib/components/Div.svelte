@@ -13,7 +13,7 @@
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
 
     $: inlineClass = inline ? 'inline-block' : ''
-    const { inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition)
+    $: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -22,7 +22,7 @@
     in:inFunc={ inOptions }
     out:outFunc={ outOptions }
     bind:this={ node }
-    class="{ className } { inlineClass }"
+    class={ [className, inlineClass].filter(Boolean).join(' ') }
     style:margin={ computePadding(margin) }
     style:padding={ computePadding(padding) }
     style:--div-color={ color }

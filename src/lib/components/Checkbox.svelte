@@ -30,11 +30,11 @@
                 group = group
             }
         }
-}
+	}
 </script>
 
 <label
-    class={ [className, inlineClass].join(' ') }
+    class={ [className, inlineClass].filter(Boolean).join(' ') }
     on:click
     on:mouseover
     on:mouseleave

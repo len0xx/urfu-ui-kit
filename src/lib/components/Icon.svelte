@@ -17,7 +17,7 @@
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
 
     $: src = path + name + '.' + extension
-    const { inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition)
+    $: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
 </script>
 
 <img
@@ -29,7 +29,7 @@
     style:margin={ computePadding(margin) }
     style:--icon-width={ width + 'px' }
     style:--icon-height={ height + 'px' }
-    class="kit-icon { className }"
+    class={ ['kit-icon', className].filter(Boolean).join(' ') }
     bind:this={ node }
     on:click
     on:focus

@@ -15,7 +15,7 @@
 <section
     {id}
     bind:this={ node }
-    class={['kit-section', className, alignClass].join(' ')}
+    class={ ['kit-section', className, alignClass].filter(Boolean).join(' ') }
     style:padding={ computePadding(padding) }
 >
     <div class="content-wrapper" style:max-width={ contentWidth }>

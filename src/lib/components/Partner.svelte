@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Div } from '.'
+	import { applyTransitions } from '$lib/utilities'
     import type { TransitionReceiver } from 'urfu-ui-kit'
 
     export let id: string = undefined
@@ -8,14 +8,17 @@
     export let caption = ''
     export let className = ''
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
+
+	$: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<Div
+<div
     {id}
-    bind:node
-    {transition}
-    className="kit-partner {className}"
+    bind:this={ node }
+    in:inFunc={ inOptions }
+    out:outFunc={ outOptions }
+    class={ ['kit-partner', className].filter(Boolean).join(' ') }
     on:click
     on:mouseleave
     on:mousedown
@@ -26,20 +29,17 @@
     { #if caption }
         <div class="caption align-center">{ caption }</div>
     { /if }
-</Div>
+</div>
 
 <style>
-    :global(.kit-partner[data-kit-component="true"]) {
+    .kit-partner {
         display: grid;
         gap: 1em;
         grid-template-columns: 1fr;
-    }
-
-    :global(.kit-partner[data-kit-component="true"]) {
         width: 240px;
     }
 
-    :global(.grid-container .kit-partner[data-kit-component="true"]) {
+    :global(.grid-container .kit-partner) {
         width: 100%;
     }
 

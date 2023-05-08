@@ -1,9 +1,22 @@
 <script lang="ts">
+	export let id: string = undefined
+	export let node: HTMLElement = undefined
 	export let head = false
 	export let className = ''
 </script>
 
-<div class={ ['kit-table-cell', head ? 'highlight-bottom' : '', className].filter(Boolean).join(' ') }>
+<div
+	{id}
+	bind:this={ node }
+	class={ ['kit-table-cell', head ? 'highlight-bottom' : '', className].filter(Boolean).join(' ') }
+	on:click
+	on:mouseover
+	on:mouseleave
+	on:mouseup
+	on:mousedown
+	on:focus
+	on:blur
+>
 	<slot />
 </div>
 

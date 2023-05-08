@@ -1,8 +1,22 @@
 <script lang="ts">
+	export let id: string = undefined
+	export let node: HTMLElement = undefined
 	export let underline = true
+	export let className = ''
 </script>
 
-<div class="kit-table-row">
+<div
+	{id}
+	bind:this={ node }
+	class={ ['kit-table-row', className].filter(Boolean).join(' ') }
+	on:click
+	on:mouseover
+	on:mouseleave
+	on:mouseup
+	on:mousedown
+	on:focus
+	on:blur
+>
 	<slot />
 </div>
 { #if underline }
@@ -17,7 +31,7 @@
 		grid-template-columns: var(--table-columns);
 	}
 
-	:global(.kit-table hr) {
+	hr {
 		height: 1px;
 		margin-top: 0.5em;
 		margin-bottom: 0;

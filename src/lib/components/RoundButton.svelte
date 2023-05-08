@@ -44,9 +44,9 @@
 <button
     {id}
     bind:this={ node }
-    class="kit-round-button {sizeClass} {transparencyClass} {className}"
+    class={ ['kit-round-button', sizeClass, transparencyClass, className].filter(Boolean).join(' ') }
     class:pressed
-    on:click
+    on:click|stopPropagation
     on:mousedown={handleMouseDown}
     on:mouseup={handleMouseUp}
     on:focus={handleFocus}

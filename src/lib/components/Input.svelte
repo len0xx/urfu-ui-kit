@@ -78,7 +78,7 @@
     on:mousedown
     on:input={ inputHandler }
     on:change={ changeHandler }
-    class="{ wideClass } { className }"
+    class={ [wideClass, className].filter(Boolean).join(' ') }
     class:filledIn
     use:imask={ mask || undefined }
     placeholder={ placeholder || undefined }

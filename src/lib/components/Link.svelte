@@ -37,7 +37,7 @@
     on:mousedown
     on:mouseup
     on:mouseover={ mouseOverHandler }
-    class="kit-link {className} {variantClass}"
+    class={ ['kit-link', className, variantClass].filter(Boolean).join(' ') }
     style:--link-color={color}
 >
     <slot />
