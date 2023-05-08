@@ -9,13 +9,13 @@
     export let className = ''
     export let imagePosition: 'left' | 'right' = 'right'
 
-    $: imageClass = imagePosition + '-side-image'
+    $: imageClass = `${ imagePosition }-side-image`
 </script>
 
 <section
     {id}
     bind:this={ node }
-    class="kit-announce { className } { imageClass }"
+    class={ ['kit-announce', className, imageClass].filter(Boolean).join(' ') }
     style:--announce-bg-color={ color }
     style:--announce-vector-image={ `url('${vector}')` }
     style:--announce-image={ `url('${image}')` }
