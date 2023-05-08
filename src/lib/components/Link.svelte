@@ -15,7 +15,7 @@
     export let variant: LinkVariant = 'regular'
     export let className = ''
 
-    $: variantClass = variant + '-variant'
+    $: variantClass = `${variant}-variant` 
     const dispatch = createEventDispatcher()
 
     const mouseOverHandler = () => {
@@ -37,7 +37,7 @@
     on:mousedown
     on:mouseup
     on:mouseover={ mouseOverHandler }
-    class="kit-link {className} {variantClass}"
+    class={ ['kit-link', className, variantClass].filter(Boolean).join(' ') }
     style:--link-color={color}
 >
     <slot />

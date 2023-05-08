@@ -8,12 +8,11 @@
     export let id: string = undefined
     export let className = ''
     export let node: HTMLElement = undefined
-    
-    $: inlineClass = inline ? 'inline-checkbox' : ''
 </script>
 
 <label
-    class={ [className, inlineClass].join(' ') }
+    class={ className }
+	class:inline-checkbox={ inline }
     on:click
     on:mouseover
     on:mouseleave

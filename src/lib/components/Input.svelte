@@ -46,8 +46,6 @@
     }
 
     onMount(valueChanged)
-
-    $: wideClass = wide ? 'kit-input-wide' : ''
 </script>
 
 <!-- svelte-ignore a11y-autofocus -->
@@ -78,7 +76,8 @@
     on:mousedown
     on:input={ inputHandler }
     on:change={ changeHandler }
-    class="{ wideClass } { className }"
+    class={ className }
+	class:kit-input-wide={ wide }
     class:filledIn
     use:imask={ mask || undefined }
     placeholder={ placeholder || undefined }

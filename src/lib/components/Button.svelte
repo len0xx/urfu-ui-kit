@@ -15,6 +15,7 @@
     export let target = '_SELF'
     export let className = ''
     export let size: DefaultSizes = 'M'
+	export let stopPropagation = false
 
     let pressed = false
     const dispatch = createEventDispatcher()
@@ -29,12 +30,14 @@
         dispatch('mouseup')
     }
 
-    const handleClick = () => {
+    const handleClick = (event: Event) => {
+		if (stopPropagation) event.stopPropagation()
         if (href) window.open(href, target)
         dispatch('click')
     }
 
-    $: sizeClass = 'size-' + getSizeName(size)
+	$: variantClass = `variant-${variant}`
+    $: sizeClass = `size-${getSizeName(size)}`
 </script>
 
 <button
@@ -42,7 +45,7 @@
     {type}
     {value}
     bind:this={ node }
-    class="kit-button variant-{variant} {className} {sizeClass}"
+    class={ ['kit-button', variantClass, className, sizeClass].filter(Boolean).join(' ') }
     class:pressed
     on:click={ handleClick }
     on:mousedown={ handleMouseDown }

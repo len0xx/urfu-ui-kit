@@ -1,7 +1,8 @@
 <script lang="ts">
     import { createEventDispatcher } from 'svelte'
     import { fade } from 'svelte/transition'
-    import { Div, Heading } from '.'
+    import { Heading } from '.'
+    import { applyTransitions } from '$lib/utilities'
     import type { TransitionReceiver } from 'urfu-ui-kit'
 
     export let id: string = undefined
@@ -11,10 +12,13 @@
     export let description = ''
     export let src = ''
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
+	export let className = ''
 
     let video: HTMLVideoElement
     let videoPlaying = false
     const dispatch = createEventDispatcher()
+
+    $: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
 
     const toggleVideo = () => {
         if (src) {
@@ -33,11 +37,12 @@
     }
 </script>
 
-<Div
+<div
     {id}
-    bind:node
-    className="video-card"
-    {transition}
+	bind:this={ node }
+    class={ ['kit-video-card', className].filter(Boolean).join(' ') }
+    in:inFunc={ inOptions }
+    out:outFunc={ outOptions }
     on:click={ toggleVideo }
     on:mouseover
     on:mouseleave
@@ -58,10 +63,10 @@
     { #if description }
         <p class="description">{ @html description }</p>
     { /if }
-</Div>
+</div>
 
 <style>
-    :global(.video-card[data-kit-component="true"] .img) {
+    .kit-video-card .img {
         display: grid;
         position: relative;
         place-items: center;
@@ -73,32 +78,31 @@
         cursor: pointer;
     }
 
-    :global(.video-card[data-kit-component="true"] .img > *) {
+    :global(.kit-video-card .img > *) {
         grid-row: 1;
         grid-column: 1;
     }
 
-    :global(.video-card[data-kit-component="true"] .img video) {
+    .kit-video-card .img video {
         object-fit: cover;
-        /* max-width: 239px; */
     }
 
-    :global(.video-card[data-kit-component="true"] .img img) {
+    .kit-video-card .img img {
         transition: 0.1s ease-in-out;
         transform: scale(1);
     }
 
-    :global(.video-card[data-kit-component="true"]:hover .img img) {
+    .kit-video-card:hover .img img {
         transform: scale(1.2);
     }
 
     @media screen and (max-width: 768px) {
-        :global(.video-card[data-kit-component="true"] .img) {
+        .kit-video-card .img {
             min-width: 220px;
         }
     }
 
-    :global(.video-card[data-kit-component="true"] p.description) {
+    .kit-video-card p.description {
         color: rgba(0, 0, 0, .6);
     }
 </style>

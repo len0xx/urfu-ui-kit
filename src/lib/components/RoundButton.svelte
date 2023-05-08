@@ -5,20 +5,27 @@
     import type { DefaultSizes } from 'urfu-ui-kit'
 
     type IconName = 'left' | 'right' | 'up' | 'down' | 'plus'
+	type ButtonType = 'submit' | 'button' | 'reset'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let variant: IconName = 'plus'
     export let size: DefaultSizes = 'M'
+	export let type: ButtonType = 'button'
     export let className = ''
     export let transparent = true
     export let animate = true
+	export let stopPropagation = false
 
     let pressed = false
-    $: sizeClass = 'size-' + getSizeName(size)
-    $: transparencyClass = transparent ? 'transparent-bg' : ''
+    $: sizeClass = `size-${getSizeName(size)}` 
     $: iconSize = variant == 'plus' ? 24 : 16
     const dispatch = createEventDispatcher()
+
+	const handleClick = (event: Event) => {
+		if (stopPropagation) event.stopPropagation()
+		dispatch('click')
+	}
 
     const handleMouseDown = () => {
         pressed = animate && true
@@ -43,10 +50,12 @@
 
 <button
     {id}
+	{type}
     bind:this={ node }
-    class="kit-round-button {sizeClass} {transparencyClass} {className}"
+    class={ ['kit-round-button', sizeClass, className].filter(Boolean).join(' ') }
+	class:transparent-bg={ transparent }
     class:pressed
-    on:click
+    on:click={handleClick}
     on:mousedown={handleMouseDown}
     on:mouseup={handleMouseUp}
     on:focus={handleFocus}

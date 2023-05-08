@@ -9,7 +9,7 @@
     export let width = '100%'
     export let className = ''
 
-    $: sizeClass = 'size-' + getSizeName(size)
+    $: sizeClass = `size-${getSizeName(size)}` 
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -22,7 +22,7 @@
     on:mouseup
     on:mouseover
     style:width
-    class="kit-rainbow {sizeClass} {className}"
+    class={ ['kit-rainbow', sizeClass, className].filter(Boolean).join(' ') }
     class:fixedTop={ fixed == 'top' }
     class:fixedBottom={ fixed == 'bottom' }
 >

@@ -20,7 +20,7 @@
     {id}
     bind:this={ node }
     this={ tag }
-    class="kit-heading { className }"
+    class={ ['kit-heading', className].filter(Boolean).join(' ') }
     style:margin={ computePadding({ ...defaultMargin, ...margin }) }
     style:--heading-color={ color }
     style:--local-align={ align }

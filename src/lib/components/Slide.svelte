@@ -4,9 +4,10 @@
     export let id: string = undefined
     export let node: HTMLElement = undefined
     export let img = ''
+	export let className = ''
 </script>
 
-<Grid s={1} m={2} className="kit-slide" justifyItems="start" {id} bind:node>
+<Grid s={1} m={2} className={ ['kit-slide', className].filter(Boolean).join(' ') } justifyItems="start" {id} bind:node>
     <Grid m={1}>
         <div class="kit-slide-content">
             <slot />

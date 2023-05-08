@@ -22,8 +22,8 @@
     on:mouseleave
     on:mousedown
     on:mouseup
-    class="kit-visual-divider {className}"
-    style:background-color={ color }
+    class={ ['kit-visual-divider', className].filter(Boolean).join(' ') }
+	style:background-color={ color }
     style:width
     style:height={ height + 'px' }
     style:margin={ computePadding({ ...defaultMargin, ...margin }) }

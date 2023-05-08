@@ -9,13 +9,13 @@
     export let padding: Padding = { x: 0, y: 0 }
     export let contentWidth: string = undefined
 
-    $: alignClass = 'section-align-' + align
+    $: alignClass = `section-align-${align}` 
 </script>
 
 <section
     {id}
     bind:this={ node }
-    class={['kit-section', className, alignClass].join(' ')}
+    class={ ['kit-section', className, alignClass].filter(Boolean).join(' ') }
     style:padding={ computePadding(padding) }
 >
     <div class="content-wrapper" style:max-width={ contentWidth }>

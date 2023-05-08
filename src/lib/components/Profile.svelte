@@ -1,7 +1,8 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { Div, Text, Heading } from '$lib/components'
+    import { Text, Heading } from '$lib/components'
     import type { TransitionReceiver } from 'urfu-ui-kit'
+    import { computePadding, applyTransitions } from '$lib/utilities'
 
     export let id: string = undefined
     export let node: HTMLElement = undefined
@@ -26,15 +27,19 @@
         }
         shadowText.parentNode.removeChild(shadowText)
     })
+
+	$: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
+	$: variantClass = `variant-${variant}`
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<Div
+<div
     {id}
-    bind:node
-    {transition}
-    padding={{ y: 1.25, x: 1.25 }}
-    className="kit-profile variant-{variant} {className}"
+    bind:this={ node }
+    in:inFunc={ inOptions }
+    out:outFunc={ outOptions }
+	style:padding={ computePadding({ y: 1.25, x: 1.25 }) }
+    class={ ['kit-profile', variantClass, className].filter(Boolean).join(' ') }
     on:click
     on:mouseleave
     on:mousedown
@@ -62,7 +67,7 @@
         { /if }
     </Text>
     <p class="hidden shadow-text" bind:this={ shadowText }><slot name="text" /></p>
-</Div>
+</div>
 
 <style>
     .inline-btn-s {
@@ -77,7 +82,7 @@
         height: 0px !important;
     }
 
-    :global(.kit-profile[data-kit-component="true"]) {
+    .kit-profile {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1em;
@@ -88,7 +93,7 @@
         align-content: start;
     }
 
-    :global(.kit-profile[data-kit-component="true"].variant-white) {
+    .kit-profile.variant-white {
         background: white;
     }
 

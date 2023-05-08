@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { Div, Heading } from '$lib/components'
+    import { Heading } from '$lib/components'
+    import { computePadding, applyTransitions } from '$lib/utilities'
     import { createEventDispatcher } from 'svelte'
     import { slide } from 'svelte/transition'
     import type { TransitionReceiver } from 'urfu-ui-kit'
@@ -12,7 +13,7 @@
     
     let active = false
     const dispatch = createEventDispatcher()
-    $: activeClass = active ? 'active' : ''
+	$: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
 
     export const toggle = () => active = !active
 
@@ -27,12 +28,14 @@
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<Div
+<div
     {id}
-    bind:node
-    {transition}
-    padding={{ y: 1.2 }}
-    className="kit-expandable {className} {activeClass}"
+    bind:this={ node }
+    in:inFunc={ inOptions }
+    out:outFunc={ outOptions }
+	style:padding={ computePadding({ y: 1.2 }) }
+    class={ ['kit-expandable', className].filter(Boolean).join(' ') }
+	class:active
     on:click={ handleClick }
     on:mousedown
     on:mouseup
@@ -41,7 +44,7 @@
 >
     <div class="block-content">
         <div>
-            <Heading size={ 3 } color="var(--blue)"><slot name="header" /></Heading>
+            <Heading size={ 4 } color="var(--blue)"><slot name="header" /></Heading>
             { #if active }
                 <p transition:slide="{{ duration: 200 }}">
                     <slot name="text" />
@@ -61,10 +64,10 @@
             { /if }           
         </div>
     </div>
-</Div>
+</div>
 
 <style>
-    :global(.kit-expandable[data-kit-component="true"]) {
+    .kit-expandable {
         border-width: 2px;
         border-style: solid;
         border-top-color: transparent;
@@ -74,32 +77,32 @@
         cursor: pointer;
     }
 
-    :global(.kit-expandable[data-kit-component="true"] .block-content) {
+    .kit-expandable .block-content {
         display: grid;
         position: relative;
         gap: 2em;
         grid-template-columns: 1fr 50px;
     }
 
-    :global(.kit-expandable[data-kit-component="true"] .block-content .icon) {
+    .kit-expandable .block-content .icon {
         justify-self: end;
         align-self: center;
     }
 
-    :global(.kit-expandable[data-kit-component="true"]:first-of-type) {
+    .kit-expandable:first-of-type {
         border-top-color: var(--light-grey);
     }
 
-    :global(.kit-expandable[data-kit-component="true"] > h4) {
+    :global(.kit-expandable > h4) {
         margin-top: 0.5em;
     }
 
-    :global(.kit-expandable[data-kit-component="true"] p) {
+    .kit-expandable p {
         margin: 0;
         transition: 0.1s ease-in-out;
     }
 
-    :global(.kit-expandable[data-kit-component="true"].active) {
+    .kit-expandable.active {
         border-top-color: var(--blue);
         border-bottom-color: var(--blue);
     }

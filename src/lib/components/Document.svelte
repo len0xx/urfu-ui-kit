@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { Div, Heading } from '$lib/components'
+    import { Heading } from '$lib/components'
+    import { computePadding, applyTransitions } from '$lib/utilities'
     import type { TransitionReceiver } from 'urfu-ui-kit'
 
     export let id: string = undefined
@@ -9,15 +10,18 @@
     export let link = ''
     export let className = ''
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
+
+	$: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<Div
+<div
     {id}
-    bind:node
-    {transition}
-    padding={{ y: 2.5 }}
-    className="kit-document {className}"
+    bind:this={ node }
+    in:inFunc={ inOptions }
+    out:outFunc={ outOptions }
+	style:padding={ computePadding({ y: 2.5 }) }
+    class={ ['kit-document', className].filter(Boolean).join(' ') }
     on:click
     on:mousedown
     on:mouseup
@@ -34,10 +38,10 @@
             { filename }.{ extension }
         { /if }
     </Heading>
-</Div>
+</div>
 
 <style>
-    :global(.kit-document[data-kit-component="true"]) {
+    .kit-document {
         display: grid;
         grid-template-columns: 70px 1fr;
         gap: 2em;
@@ -46,11 +50,11 @@
         align-items: center;
     }
 
-    :global(.kit-document[data-kit-component="true"]:first-of-type) {
+    .kit-document:first-of-type {
         border-top: 2px solid rgba(0, 0, 0, 0.1);
     }
 
-    :global(.kit-document[data-kit-component="true"] .extension) {
+    .kit-document .extension {
         display: inline-block;
         position: relative;
         padding: 0.5em;
@@ -62,21 +66,21 @@
         cursor: default;
     }
 
-    :global(.kit-document[data-kit-component="true"] .extension.doc),
-    :global(.kit-document[data-kit-component="true"] .extension.docx) {
+    .kit-document .extension.doc,
+    .kit-document .extension.docx {
         background: var(--blue);
     }
 
-    :global(.kit-document[data-kit-component="true"] .extension.xls),
-    :global(.kit-document[data-kit-component="true"] .extension.xlsx) {
+    .kit-document .extension.xls,
+    .kit-document .extension.xlsx {
         background: var(--green);
     }
 
-    :global(.kit-document[data-kit-component="true"] a) {
+    .kit-document a {
         color: black;
     }
 
-    :global(.kit-document[data-kit-component="true"] a:hover) {
+    .kit-document a:hover {
         color: var(--blue);
         text-decoration: underline;
     }

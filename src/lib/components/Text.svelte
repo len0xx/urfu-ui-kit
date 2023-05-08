@@ -12,15 +12,14 @@
     export let opacity = 1
     export let inline = false
     export let margin: Padding = defaultMargin
-
-    $: inlineClass = inline ? 'inline-paragraph' : ''
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <p
     {id}
     bind:this={ node }
-    class="kit-text-component { className } { inlineClass }"
+    class={ ['kit-text-component', className].filter(Boolean).join(' ') }
+	class:inline-paragraph={ inline }
     style:opacity
     style:--text-component-color={color}
     style:--local-align={ align }

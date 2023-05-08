@@ -34,14 +34,13 @@
     onMount(() => {
         if ($page.status > 399) hide()
 
-        // Development feature. Delete it when using in production
-        if ($page.url.port == '3000') hide()
+        if ($page.url.hostname === 'localhost') hide()
     })
 </script>
 
 <svelte:window on:load={ handleLoad }></svelte:window>
 
-<section class="kit-preloader {className}" class:transparent class:hidden bind:this={ node } on:click>
+<section class={ ['kit-preloader', className].filter(Boolean).join(' ') } class:transparent class:hidden bind:this={ node } on:click>
     <Progress {size} />
 </section>
 

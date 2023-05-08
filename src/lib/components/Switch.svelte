@@ -8,6 +8,7 @@
     export let left = ''
     export let right = ''
     export let value = false
+	export let stopPropagation = false
 
     const dispatch = createEventDispatcher()
 
@@ -19,18 +20,24 @@
     }
 
     const toggleValue = () => setValue(!value)
+	
+	const handleClick = (event: Event) => {
+		if (stopPropagation) event.stopPropagation()
+		dispatch('click')
+	}
 </script>
 
 <div
     {id}
     bind:this={ node }
+	on:click={handleClick}
     on:focus
     on:blur
     on:mouseover
     on:mouseleave
     on:mouseup
     on:mousedown
-    class="kit-switch {className}"
+    class={ ['kit-switch', className].filter(Boolean).join(' ') }
 >
     { #if left }
         <span class="heading-3" class:blue-text={ !value } class:grey-text={ value } on:click={ () => setValue(false) }>{ left }</span>

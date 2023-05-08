@@ -1,31 +1,46 @@
 <script lang="ts">
     import { getSizeName } from '$lib/utilities'
+    import { createEventDispatcher } from 'svelte'
     import type { DefaultSizes } from 'urfu-ui-kit'
 
+	type ButtonType = 'submit' | 'button' | 'reset'
+
     export let id: string = undefined
+	export let type: ButtonType = 'button'
     export let node: HTMLElement = undefined
     export let variant: 'default' | 'active' | 'fill' = 'default'
     export let className = ''
     export let size: DefaultSizes = 'M'
     export let color: 'red' | 'blue' = 'red'
+	export let stopPropagation = false
 
-    $: sizeClass = 'size-' + getSizeName(size)
+	const dispatch = createEventDispatcher()
+
+	const handleClick = (event: Event) => {
+		if (stopPropagation) event.stopPropagation()
+		dispatch('click')
+	}
+
+	$: variantClass = `variant-${variant}`
+    $: sizeClass = `size-${getSizeName(size)}`
+	$: colorClass = `btn-color-${color}`
 </script>
 
-<div
+<button
     {id}
+	{type}
     bind:this={ node }
-    on:click|stopPropagation
+    on:click={handleClick}
     on:focus
     on:blur
     on:mouseover
     on:mouseleave
     on:mouseup
     on:mousedown
-    class="kit-select-button variant-{variant} {className} {sizeClass} btn-color-{color}"
+    class={ ['kit-select-button', className, variantClass, sizeClass, colorClass].filter(Boolean).join(' ') }
 >
     <slot />
-</div>
+</button>
 
 <style>
     .kit-select-button {
@@ -40,6 +55,7 @@
         cursor: pointer;
         border-radius: 10em;
         cursor: pointer;
+		background: transparent;
     }
 
     .kit-select-button.size-small {

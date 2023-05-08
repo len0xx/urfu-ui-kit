@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { Text, Heading, Div } from '$lib/components'
+    import { Text, Heading } from '$lib/components'
+    import { applyTransitions, computePadding } from '$lib/utilities'
     import type { TransitionReceiver } from 'urfu-ui-kit'
 
     type ColorVariant = 'white' | 'grey'
@@ -11,15 +12,20 @@
     export let variant: ColorVariant = 'grey'
     export let className = ''
     export let transition: TransitionReceiver = { in: undefined, out: undefined }
+	
+	$: ({ inFunc, inOptions, outFunc, outOptions } = applyTransitions(transition))
+	$: variantClass = `variant-${variant}`
+	$: gradientClass = `gradient-${color}`
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<Div
+<div
     {id}
-    {transition}
-    bind:node
-    padding={{ x: 1, y: 1 }}
-    className="kit-card variant-{variant} gradient-{color} {className}"
+    in:inFunc={ inOptions }
+    out:outFunc={ outOptions }
+    bind:this={ node }
+	style:padding={ computePadding({ x: 1, y: 1 }) }
+    class= { ['kit-card', variantClass, gradientClass, className].filter(Boolean).join(' ') }
     on:click
     on:mousedown
     on:mouseup
@@ -41,10 +47,10 @@
             <slot name="right" />
         </div>
     </div>
-</Div>
+</div>
 
 <style>
-    :global(.kit-card[data-kit-component="true"]) {
+    .kit-card {
         display: grid;
         position: relative;
         grid-template-columns: 1fr;
@@ -57,18 +63,18 @@
         min-width: 200px;
     }
 
-    :global(.kit-card[data-kit-component="true"].variant-white) {
+    .kit-card.variant-white {
         background: #FFFFFF;
     }
-    :global(.kit-card[data-kit-component="true"].variant-grey) {
+    .kit-card.variant-grey {
         background: #F6F6F6;
     }
 
-    :global(.kit-card[data-kit-component="true"] *) {
+    :global(.kit-card *) {
         transition: 0.2s ease-in-out;
     }
 
-    :global(.kit-card[data-kit-component="true"] .radial-icon) {
+    .kit-card .radial-icon {
         display: block;
         position: absolute;
         top: 1em;
@@ -81,54 +87,48 @@
         background-repeat: no-repeat;
     }
 
-    :global(.kit-card[data-kit-component="true"].gradient-red-1 .radial-icon) {
+    .kit-card.gradient-red-1 .radial-icon {
         background-image: url(/img/gradient-red-1.png);
     }
-    :global(.kit-card[data-kit-component="true"].gradient-red-2 .radial-icon) {
+    .kit-card.gradient-red-2 .radial-icon {
         background-image: url(/img/gradient-red-2.png);
     }
-    :global(.kit-card[data-kit-component="true"].gradient-blue-1 .radial-icon) {
+    .kit-card.gradient-blue-1 .radial-icon {
         background-image: url(/img/gradient-blue-1.png);
     }
-    :global(.kit-card[data-kit-component="true"].gradient-blue-2 .radial-icon) {
+    .kit-card.gradient-blue-2 .radial-icon {
         background-image: url(/img/gradient-blue-2.png);
     }
 
-    :global(.kit-card[data-kit-component="true"]:hover .radial-icon) {
+    .kit-card:hover .radial-icon {
         transform: scale(12) rotate(200deg);
     }
 
-    @media screen and (max-width: 768px) {
-        :global(.kit-card[data-kit-component="true"]:hover .radial-icon) {
-            transform: scale(12) rotate(200deg);
-        }
-    }
-
-    :global(.kit-card[data-kit-component="true"] h3) {
+    :global(.kit-card h3) {
         max-width: 80%;
     }
 
-    :global(.kit-card[data-kit-component="true"] .top) {
+    .kit-card .top {
         align-self: start;
     }
 
-    :global(.kit-card[data-kit-component="true"] .bottom) {
+    .kit-card .bottom {
         display: grid;
         grid-template-columns: 3fr 2fr;
         align-self: end;
     }
 
-    :global(.kit-card[data-kit-component="true"] .bottom > .right) {
+    .kit-card .bottom > .right {
         text-align: right;
     }
 
-    :global(.kit-card[data-kit-component="true"] .description) {
+    :global(.kit-card .description) {
         font-size: 0.9em;
         margin-bottom: 1.5em;
         max-width: 80%;
     }
 
-    :global(.kit-card[data-kit-component="true"] .right) {
+    .kit-card .right {
         color: var(--blue);
     }
 </style>

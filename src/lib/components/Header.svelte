@@ -49,7 +49,7 @@
     on:mouseover
     on:mouseleave
     class:scrolled
-    class="kit-header {className}"
+    class={ ['kit-header', className].filter(Boolean).join(' ') }
     class:kit-hidden={ hide }
     class:transparent-bg={ transparent }
 >

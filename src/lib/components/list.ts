@@ -150,9 +150,24 @@ export default [
         type: 'buttons'
     },
     {
+        name: 'Table',
+        text: 'Таблица',
+        type: 'display'
+    },
+    {
+        name: 'TCell',
+        text: 'Ячейка таблицы',
+        type: 'display'
+    },
+    {
         name: 'Text',
         text: 'Текстовый блок',
         type: 'base'
+    },
+    {
+        name: 'TRow',
+        text: 'Строка таблицы',
+        type: 'display'
     },
     {
         name: 'VideoCard',

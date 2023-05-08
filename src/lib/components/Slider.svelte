@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount, createEventDispatcher } from 'svelte'
+    import { Rainbow } from '.'
     import type SvelteCarousel from 'svelte-carousel'
-    import { Rainbow } from '$lib/components'
 
     type BorderStyle = {
         top?: boolean,
@@ -72,7 +72,7 @@
     style:border-left={ border.left ? borderSetting : '' }
     style:border-right={ border.right ? borderSetting : '' }
     style:background={ background }
-    class="kit-slider-wrapper { className }"
+    class={ ['kit-slider-wrapper', className].filter(Boolean).join(' ') }
 >
     <svelte:component 
         this={ Slider }

@@ -5,7 +5,7 @@
         "name": "Prokhor Minin",
         "email": "len0xx@icloud.com"
     },
-    "version": "0.9.11",
+    "version": "0.9.12",
     "esModuleInterop": true,
     "type": "module",
     "scripts": {
@@ -33,7 +33,7 @@
     },
     "devDependencies": {
         "@sveltejs/adapter-node": "1.0.0-next.78",
-        "@sveltejs/kit": "^1.0.0-next.375",
+        "@sveltejs/kit": "1.0.0-next.375",
         "@tsconfig/svelte": "^1.0.10",
         "@types/cookie-parser": "^1.4.2",
         "@types/express": "^4.17.13",
@@ -41,7 +41,7 @@
         "@types/node": "^14.11.1",
         "@typescript-eslint/eslint-plugin": "^5.18.0",
         "@typescript-eslint/parser": "^5.18.0",
-        "eslint": "^8.12.0",
+        "eslint": "^8.40.0",
         "eslint-plugin-svelte3": "^3.4.1",
         "svelte": "^3.48.0",
         "svelte-carousel": "^1.0.19",
