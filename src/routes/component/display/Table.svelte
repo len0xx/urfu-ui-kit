@@ -45,6 +45,12 @@
         <Heading size={3} className="underlined-text">Параметры:</Heading>
         <Heading size={4} color="var(--blue)">columns <ParameterType value="number" /><Tag title="Обязательное поле">required</Tag></Heading>
         <Text>Количество столбцов в таблице</Text>
+        <Heading size={4} color="var(--blue)">node <ParameterType value="HTMLElement" /></Heading>
+        <Text>Параметр для связки с HTML-элементом, который лежит в основе компонента <br /> (аналог стандартного <code>bind:this</code>)</Text>
+        <Heading size={4} color="var(--blue)">id <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута <code>id</code></Text>
+        <Heading size={4} color="var(--blue)">className <ParameterType value="string" /></Heading>
+        <Text>Аналог стандартного атрибута <code>class</code></Text>
 		<br />
     
         <Heading size={3} className="underlined-text">Поддерживаемые события:</Heading>
